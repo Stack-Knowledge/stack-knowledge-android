@@ -1,17 +1,18 @@
 plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
 }
 
 android {
-    namespace 'com.kdn.di'
-    compileSdk 33
+    namespace = "com.kdn.domain"
+    compileSdk = Version.COMPILE_SDK_VERSION
 
     defaultConfig {
-        minSdk 24
+        minSdk = Version.MIN_SDK_VERSION
+        targetSdk = Version.TARGET_SDK_VERSION
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
