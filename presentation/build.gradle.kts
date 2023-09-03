@@ -7,30 +7,30 @@ plugins {
 
 android {
     namespace = "com.example.stack_knowledge_android"
-    compileSdk 33
+    compileSdk = Version.COMPILE_SDK_VERSION
 
     defaultConfig {
-        applicationId "com.example.stack_knowledge_android"
-        minSdk 24
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        minSdk = Version.MIN_SDK_VERSION
+        targetSdk = Version.TARGET_SDK_VERSION
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        getByName("release") {
+            isMinifyEnabled = false
+            proguardFiles (
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = Version.JAVA_VERSION
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = Version.JAVA_VERSION.toString()
     }
 }
 
@@ -40,7 +40,9 @@ dependencies {
 
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.LIFECYCLE)
-    implementation(Dependency.AndroidX.PAGING_COMPOSE)
+    implementation(Dependency.AndroidX.CONSTRAINT_LAYOUT)
+    implementation(Dependency.AndroidX.APP_COMPAT)
+    implementation(Dependency.Google.MATERIAL)
 
     implementation(Dependency.Retrofit.RETROFIT)
     implementation(Dependency.Retrofit.RETROFIT_CONVERTER_GSON)
@@ -55,12 +57,4 @@ dependencies {
 
     implementation(Dependency.Coil.COIL)
 
-    implementation(Dependency.ExoPlayer.EXO_PLAYER_CORE)
-    implementation(Dependency.ExoPlayer.EXO_PLAYER_UI)
-
-    implementation(Dependency.BootPay.BOOT_PAY)
-
-    debugImplementation(Dependency.AndroidTest.COMPOSE_TOOL)
-    debugImplementation(Dependency.AndroidTest.COMPOSE_MANIFEST)
-    androidTestImplementation(Dependency.AndroidTest.COMPOSE_TEST)
 }

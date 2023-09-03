@@ -1,4 +1,5 @@
 object Dependency {
+
     object GradlePlugin {
         const val GRADLE_ANDROID = "com.android.tools.build:gradle:${Version.GRADLE_ANDROID}"
         const val GRADLE_KOTLIN =
@@ -75,5 +76,9 @@ object Dependency {
 
     object JavaX {
         const val INJECT = "javax.inject:javax.inject:${Version.INJECT}"
+    }
+
+    object Google {
+        const val MATERIAL = "com.google.android.material:material:${Version.MATERIAL}"
     }
 }

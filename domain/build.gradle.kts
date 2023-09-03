@@ -16,26 +16,31 @@ android {
     }
 
     buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        getByName("release") {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = Version.JAVA_VERSION
+        targetCompatibility = Version.JAVA_VERSION
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = Version.JAVA_VERSION.toString()
     }
 }
 
 dependencies {
+    implementation(Dependency.JavaX.INJECT)
 
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation(Dependency.Kotlin.COROUTINES_CORE)
+
+    implementation(Dependency.AndroidX.PAGING)
+
+    testImplementation(Dependency.UnitTest.JUNIT)
+    testImplementation(Dependency.UnitTest.MOCKITO_KOTLIN)
+    testImplementation(Dependency.UnitTest.MOCKITO_INLINE)
 }

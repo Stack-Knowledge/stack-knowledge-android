@@ -14,6 +14,7 @@ object Version {
     const val VERSION_CODE = 1
     const val VERSION_NAME = "1.0.0"
 
+    const val MATERIAL = "1.3.0"
     const val CORE_KTX = "1.9.0"
     const val LIFECYCLE_KTX = "2.5.1"
     const val APP_COMPAT = "1.6.0"
