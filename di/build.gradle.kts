@@ -53,4 +53,6 @@ dependencies {
     implementation(Dependency.Libraries.OKHTTP_LOGGING_INTERCEPTOR)
 
     implementation(Dependency.UnitTest.JUNIT)
+
+    implementation(Dependency.DataStore.PREFERENCES)
 }

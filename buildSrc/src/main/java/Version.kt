@@ -5,11 +5,11 @@ object Version {
     const val GRADLE_KOTLIN = "1.8.10"
     const val GRADLE_KTLINT = "11.1.0"
 
-    val JAVA_VERSION = JavaVersion.VERSION_1_8
+    val JAVA_VERSION = JavaVersion.VERSION_17
     const val KOTLINX_COROUTINES = "1.6.4"
 
     const val COMPILE_SDK_VERSION = 33
-    const val MIN_SDK_VERSION = 28
+    const val MIN_SDK_VERSION = 29
     const val TARGET_SDK_VERSION = 33
     const val VERSION_CODE = 1
     const val VERSION_NAME = "1.0.0"
@@ -46,14 +46,20 @@ object Version {
     const val MOCKITO_INLINE = "5.1.1"
     const val ANDROID_JUNIT = "1.1.2"
     const val ESPRESSO_CORE = "3.3.0"
+    const val RECYCLERVIEW = "1.1.0"
+
+    const val GAUTH = "1.1.2"
 
     const val COIL = "2.2.2"
 
     const val BARCODE_SCANNING = "17.1.0"
     const val BARCODE_DRAWING = "1.1.1"
 
-
     const val BOOT_PAY = "4.0.8"
 
     const val INJECT = "1"
+
+    const val PREFERENCES = "1.0.0"
+
+    const val GMS_GOOGLE_SERVICE = "4.3.10"
 }

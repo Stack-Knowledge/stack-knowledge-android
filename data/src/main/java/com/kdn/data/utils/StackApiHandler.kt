@@ -1,4 +1,4 @@
-package com.kdn.di.utils
+package com.kdn.data.utils
 
 import com.kdn.domain.exception.BadRequestException
 import com.kdn.domain.exception.ConflictDataException

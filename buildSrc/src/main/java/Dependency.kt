@@ -1,6 +1,7 @@
 object Dependency {
 
     object GradlePlugin {
+        const val ANDROID_APPLICATION = "com.androd.application"
         const val GRADLE_ANDROID = "com.android.tools.build:gradle:${Version.GRADLE_ANDROID}"
         const val GRADLE_KOTLIN =
             "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.GRADLE_KOTLIN}"
@@ -80,6 +81,11 @@ object Dependency {
 
     object Google {
         const val MATERIAL = "com.google.android.material:material:${Version.MATERIAL}"
+        const val GMS_GOOGLE_SERVICE =
+            "com.google.gms:google-services:${Version.GMS_GOOGLE_SERVICE}"
     }
 
+    object DataStore {
+        const val PREFERENCES = "androidx.datastore:datastore-preferences:${Version.PREFERENCES}"
+    }
 }
