@@ -4,6 +4,10 @@ plugins {
     kotlin("kapt")
 }
 
+kotlin {
+    jvmToolchain(17)
+}
+
 android {
     namespace = "com.kdn.data"
     compileSdk = Version.COMPILE_SDK_VERSION

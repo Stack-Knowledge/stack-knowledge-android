@@ -5,6 +5,9 @@ plugins {
     kotlin("kapt")
 }
 
+kotlin {
+    jvmToolchain(17)
+}
 android {
     namespace = "com.example.stack_knowledge_android"
     compileSdk = Version.COMPILE_SDK_VERSION
