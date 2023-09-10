@@ -43,4 +43,6 @@ dependencies {
     testImplementation(Dependency.UnitTest.JUNIT)
     testImplementation(Dependency.UnitTest.MOCKITO_KOTLIN)
     testImplementation(Dependency.UnitTest.MOCKITO_INLINE)
+
+    implementation(Dependency.Libraries.OKHTTP)
 }

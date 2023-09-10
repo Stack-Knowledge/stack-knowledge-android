@@ -44,8 +44,8 @@ dependencies {
     implementation(Dependency.AndroidX.APP_COMPAT)
     implementation(Dependency.Google.MATERIAL)
 
-    implementation(Dependency.Retrofit.RETROFIT)
-    implementation(Dependency.Retrofit.RETROFIT_CONVERTER_GSON)
+    implementation(Dependency.Libraries.RETROFIT)
+    implementation(Dependency.Libraries.RETROFIT_CONVERTER_GSON)
 
     implementation(Dependency.Accompanist.ANIMATE_NAVIGATION)
 

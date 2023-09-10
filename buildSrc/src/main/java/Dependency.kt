@@ -46,7 +46,7 @@ object Dependency {
         const val ROOM_COMPILER = "androidx.room:room-compiler:${Version.ROOM}"
     }
 
-    object Retrofit {
+    object Libraries {
         const val RETROFIT = "com.squareup.retrofit2:retrofit:${Version.RETROFIT}"
         const val RETROFIT_CONVERTER_GSON =
             "com.squareup.retrofit2:converter-gson:${Version.RETROFIT}"
@@ -81,4 +81,5 @@ object Dependency {
     object Google {
         const val MATERIAL = "com.google.android.material:material:${Version.MATERIAL}"
     }
+
 }

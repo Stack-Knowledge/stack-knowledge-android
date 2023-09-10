@@ -47,10 +47,10 @@ dependencies {
     implementation(Dependency.Room.ROOM)
     kapt(Dependency.Room.ROOM_COMPILER)
 
-    implementation(Dependency.Retrofit.RETROFIT)
-    implementation(Dependency.Retrofit.RETROFIT_CONVERTER_GSON)
-    implementation(Dependency.Retrofit.OKHTTP)
-    implementation(Dependency.Retrofit.OKHTTP_LOGGING_INTERCEPTOR)
+    implementation(Dependency.Libraries.RETROFIT)
+    implementation(Dependency.Libraries.RETROFIT_CONVERTER_GSON)
+    implementation(Dependency.Libraries.OKHTTP)
+    implementation(Dependency.Libraries.OKHTTP_LOGGING_INTERCEPTOR)
 
     implementation(Dependency.UnitTest.JUNIT)
 }
