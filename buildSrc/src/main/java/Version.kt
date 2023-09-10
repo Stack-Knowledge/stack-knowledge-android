@@ -32,7 +32,7 @@ object Version {
 
     const val ACCOMPANIST = "0.31.0-alpha"
 
-    const val HILT = "2.44"
+    const val HILT = "2.45"
 
     const val ROOM = "2.4.3"
 

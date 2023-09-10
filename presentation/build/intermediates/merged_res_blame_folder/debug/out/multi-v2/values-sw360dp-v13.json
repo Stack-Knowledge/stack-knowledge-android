@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.stack_knowledge_android.presentation-mergeDebugResources-71:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "outputFile": "com.example.stack_knowledge_android.presentation-mergeDebugResources-73:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/881610395d3833e90466b97cb601aa8c/transformed/preference-1.2.0/res/values-sw360dp-v13/values-sw360dp-v13.xml",
+                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/f5505421fa3e4ede8bea7ba67ba67190/transformed/preference-1.2.0/res/values-sw360dp-v13/values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

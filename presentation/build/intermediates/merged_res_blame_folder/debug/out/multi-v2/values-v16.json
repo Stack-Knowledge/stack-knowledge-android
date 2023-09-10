@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.stack_knowledge_android.presentation-mergeDebugResources-71:/values-v16/values-v16.xml",
+            "outputFile": "com.example.stack_knowledge_android.presentation-mergeDebugResources-73:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/56fa1d7c957d6aa863ee3859b9525af4/transformed/core-1.11.0-alpha01/res/values-v16/values-v16.xml",
+                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/dfec901e93ae9517957310494693720c/transformed/core-1.11.0-alpha01/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/82bdbde3dffa1c9a23e969ede51113e1/transformed/appcompat-1.6.0/res/values-v16/values-v16.xml",
+                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/8263abac3930185c68a18ea8e76e32c2/transformed/appcompat-1.6.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

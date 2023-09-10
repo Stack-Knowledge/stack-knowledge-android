@@ -3,7 +3,7 @@
     package="com.example.stack_knowledge_android" >
 
     <uses-sdk
-        android:minSdkVersion="28"
+        android:minSdkVersion="29"
         android:targetSdkVersion="33" />
 
     <permission

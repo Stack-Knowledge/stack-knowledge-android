@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.stack_knowledge_android.presentation-mergeDebugResources-71:/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "com.example.stack_knowledge_android.presentation-mergeDebugResources-73:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/82bdbde3dffa1c9a23e969ede51113e1/transformed/appcompat-1.6.0/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/8263abac3930185c68a18ea8e76e32c2/transformed/appcompat-1.6.0/res/values-hdpi-v4/values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
