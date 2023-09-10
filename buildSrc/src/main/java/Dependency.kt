@@ -2,90 +2,90 @@ object Dependency {
 
     object GradlePlugin {
         const val ANDROID_APPLICATION = "com.androd.application"
-        const val GRADLE_ANDROID = "com.android.tools.build:gradle:${Version.GRADLE_ANDROID}"
+        const val GRADLE_ANDROID = "com.android.tools.build:gradle:${Versions.GRADLE_ANDROID}"
         const val GRADLE_KOTLIN =
-            "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.GRADLE_KOTLIN}"
-        const val GRADLE_HILT = "com.google.dagger:hilt-android-gradle-plugin:${Version.HILT}"
+            "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.GRADLE_KOTLIN}"
+        const val GRADLE_HILT = "com.google.dagger:hilt-android-gradle-plugin:${Versions.HILT}"
         const val GRADLE_KTLINT = "org.jlleitschuh.gradle.ktlint"
     }
 
     object Kotlin {
         const val COROUTINES_CORE =
-            "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.KOTLINX_COROUTINES}"
+            "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.KOTLINX_COROUTINES}"
         const val COROUTINES_ANDROID =
-            "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Version.KOTLINX_COROUTINES}"
+            "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.KOTLINX_COROUTINES}"
     }
 
     object AndroidX {
-        const val CORE_KTX = "androidx.core:core-ktx:${Version.CORE_KTX}"
-        const val LIFECYCLE = "androidx.lifecycle:lifecycle-runtime-ktx:${Version.LIFECYCLE_KTX}"
-        const val APP_COMPAT = "androidx.appcompat:appcompat:${Version.APP_COMPAT}"
-        const val PREFERENCE_KTX = "androidx.preference:preference-ktx:${Version.PREFERENCE_KTX}"
+        const val CORE_KTX = "androidx.core:core-ktx:${Versions.CORE_KTX}"
+        const val LIFECYCLE = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.LIFECYCLE_KTX}"
+        const val APP_COMPAT = "androidx.appcompat:appcompat:${Versions.APP_COMPAT}"
+        const val PREFERENCE_KTX = "androidx.preference:preference-ktx:${Versions.PREFERENCE_KTX}"
         const val LIFECYCLE_VIEWMODEL_KTX =
-            "androidx.lifecycle:lifecycle-viewmodel-ktx:${Version.LIFECYCLE_KTX}"
+            "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.LIFECYCLE_KTX}"
         const val CONSTRAINT_LAYOUT =
-            "androidx.constraintlayout:constraintlayout:${Version.CONTRAINT_LAYOUT}"
-        const val PAGING = "androidx.paging:paging-runtime:${Version.PAGING}"
-        const val PAGING_COMPOSE = "androidx.paging:paging-compose:${Version.PAGING_COMPOSE}"
-        const val LEANBACK = "androidx.leanback:leanback:${Version.LEANBACK}"
+            "androidx.constraintlayout:constraintlayout:${Versions.CONTRAINT_LAYOUT}"
+        const val PAGING = "androidx.paging:paging-runtime:${Versions.PAGING}"
+        const val PAGING_COMPOSE = "androidx.paging:paging-compose:${Versions.PAGING_COMPOSE}"
+        const val LEANBACK = "androidx.leanback:leanback:${Versions.LEANBACK}"
     }
 
     object Accompanist {
         const val ANIMATE_NAVIGATION =
-            "com.google.accompanist:accompanist-navigation-animation:${Version.ACCOMPANIST}"
+            "com.google.accompanist:accompanist-navigation-animation:${Versions.ACCOMPANIST}"
         const val VIEW_PAGER =
-            "com.google.accompanist:accompanist-pager:${Version.ACCOMPANIST}"
+            "com.google.accompanist:accompanist-pager:${Versions.ACCOMPANIST}"
     }
 
     object Hilt {
-        const val HILT_ANDROID = "com.google.dagger:hilt-android:${Version.HILT}"
-        const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Version.HILT}"
+        const val HILT_ANDROID = "com.google.dagger:hilt-android:${Versions.HILT}"
+        const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Versions.HILT}"
     }
 
     object Room {
-        const val ROOM = "androidx.room:room-ktx:${Version.ROOM}"
-        const val ROOM_COMPILER = "androidx.room:room-compiler:${Version.ROOM}"
+        const val ROOM = "androidx.room:room-ktx:${Versions.ROOM}"
+        const val ROOM_COMPILER = "androidx.room:room-compiler:${Versions.ROOM}"
     }
 
     object Libraries {
-        const val RETROFIT = "com.squareup.retrofit2:retrofit:${Version.RETROFIT}"
+        const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
         const val RETROFIT_CONVERTER_GSON =
-            "com.squareup.retrofit2:converter-gson:${Version.RETROFIT}"
-        const val OKHTTP = "com.squareup.okhttp3:okhttp:${Version.OKHTTP}"
+            "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}"
+        const val OKHTTP = "com.squareup.okhttp3:okhttp:${Versions.OKHTTP}"
         const val OKHTTP_LOGGING_INTERCEPTOR =
-            "com.squareup.okhttp3:logging-interceptor:${Version.OKHTTP}"
-        const val SSE = "com.squareup.okhttp3:okhttp-sse:${Version.OKHTTP}"
+            "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP}"
+        const val SSE = "com.squareup.okhttp3:okhttp-sse:${Versions.OKHTTP}"
     }
 
     object UnitTest {
-        const val JUNIT = "junit:junit:${Version.JUNIT}"
-        const val MOCKITO_KOTLIN = "org.mockito.kotlin:mockito-kotlin:${Version.MOCKITO_KOTLIN}"
-        const val MOCKITO_INLINE = "org.mockito:mockito-inline:${Version.MOCKITO_KOTLIN}"
+        const val JUNIT = "junit:junit:${Versions.JUNIT}"
+        const val MOCKITO_KOTLIN = "org.mockito.kotlin:mockito-kotlin:${Versions.MOCKITO_KOTLIN}"
+        const val MOCKITO_INLINE = "org.mockito:mockito-inline:${Versions.MOCKITO_KOTLIN}"
     }
 
     object AndroidTest {
-        const val ANDROID_JUNIT = "androidx.test.ext:junit:${Version.ANDROID_JUNIT}"
-        const val ESPRESSO_CORE = "androidx.test.espresso:espresso-core:${Version.ESPRESSO_CORE}"
-        const val COMPOSE_TEST = "androidx.compose.ui:ui-test-junit4:${Version.COMPOSE}"
-        const val COMPOSE_TOOL = "androidx.compose.ui:ui-tooling:${Version.COMPOSE}"
-        const val COMPOSE_MANIFEST = "androidx.compose.ui:ui-test-manifest:${Version.COMPOSE}"
+        const val ANDROID_JUNIT = "androidx.test.ext:junit:${Versions.ANDROID_JUNIT}"
+        const val ESPRESSO_CORE = "androidx.test.espresso:espresso-core:${Versions.ESPRESSO_CORE}"
+        const val COMPOSE_TEST = "androidx.compose.ui:ui-test-junit4:${Versions.COMPOSE}"
+        const val COMPOSE_TOOL = "androidx.compose.ui:ui-tooling:${Versions.COMPOSE}"
+        const val COMPOSE_MANIFEST = "androidx.compose.ui:ui-test-manifest:${Versions.COMPOSE}"
     }
 
     object Coil {
-        const val COIL = "io.coil-kt:coil-compose:${Version.COIL}"
+        const val COIL = "io.coil-kt:coil-compose:${Versions.COIL}"
     }
 
     object JavaX {
-        const val INJECT = "javax.inject:javax.inject:${Version.INJECT}"
+        const val INJECT = "javax.inject:javax.inject:${Versions.INJECT}"
     }
 
     object Google {
-        const val MATERIAL = "com.google.android.material:material:${Version.MATERIAL}"
+        const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
         const val GMS_GOOGLE_SERVICE =
-            "com.google.gms:google-services:${Version.GMS_GOOGLE_SERVICE}"
+            "com.google.gms:google-services:${Versions.GMS_GOOGLE_SERVICE}"
     }
 
     object DataStore {
-        const val PREFERENCES = "androidx.datastore:datastore-preferences:${Version.PREFERENCES}"
+        const val PREFERENCES = "androidx.datastore:datastore-preferences:${Versions.PREFERENCES}"
     }
 }

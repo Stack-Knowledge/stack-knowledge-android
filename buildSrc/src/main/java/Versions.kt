@@ -1,12 +1,12 @@
 import org.gradle.api.JavaVersion
 
-object Version {
+object Versions {
     const val GRADLE_ANDROID = "7.4.2"
     const val GRADLE_KOTLIN = "1.8.10"
     const val GRADLE_KTLINT = "11.1.0"
 
     val JAVA_VERSION = JavaVersion.VERSION_17
-    const val KOTLINX_COROUTINES = "1.6.4"
+    const val KOTLINX_COROUTINES = "1.6.0"
 
     const val COMPILE_SDK_VERSION = 33
     const val MIN_SDK_VERSION = 29
@@ -34,12 +34,10 @@ object Version {
 
     const val HILT = "2.45"
 
-    const val ROOM = "2.4.3"
+    const val ROOM = "2.3.0"
 
-    const val ORBIT = "4.5.0"
-
-    const val RETROFIT = "2.9.0"
-    const val OKHTTP = "4.10.0"
+    const val RETROFIT = "2.7.1"
+    const val OKHTTP = "4.9.3"
 
     const val JUNIT = "4.13.2"
     const val MOCKITO_KOTLIN = "4.1.0"
@@ -50,12 +48,7 @@ object Version {
 
     const val GAUTH = "1.1.2"
 
-    const val COIL = "2.2.2"
-
-    const val BARCODE_SCANNING = "17.1.0"
-    const val BARCODE_DRAWING = "1.1.1"
-
-    const val BOOT_PAY = "4.0.8"
+    const val COIL = "2.1.0"
 
     const val INJECT = "1"
 

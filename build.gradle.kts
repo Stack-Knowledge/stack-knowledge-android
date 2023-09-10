@@ -12,7 +12,7 @@ buildscript {
 }
 
 plugins {
-    id(Dependency.GradlePlugin.GRADLE_KTLINT) version Version.GRADLE_KTLINT
+    id(Dependency.GradlePlugin.GRADLE_KTLINT) version Versions.GRADLE_KTLINT
 }
 
 tasks.register("clean", Delete::class) {

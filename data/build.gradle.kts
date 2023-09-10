@@ -10,11 +10,11 @@ kotlin {
 
 android {
     namespace = "com.kdn.data"
-    compileSdk = Version.COMPILE_SDK_VERSION
+    compileSdk = Versions.COMPILE_SDK_VERSION
 
     defaultConfig {
-                minSdk = Version.MIN_SDK_VERSION
-                targetSdk = Version.TARGET_SDK_VERSION
+                minSdk = Versions.MIN_SDK_VERSION
+                targetSdk = Versions.TARGET_SDK_VERSION
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -29,11 +29,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = Version.JAVA_VERSION
-        targetCompatibility = Version.JAVA_VERSION
+        sourceCompatibility = Versions.JAVA_VERSION
+        targetCompatibility = Versions.JAVA_VERSION
     }
     kotlinOptions {
-        jvmTarget = Version.JAVA_VERSION.toString()
+        jvmTarget = Versions.JAVA_VERSION.toString()
     }
 }
 
@@ -55,6 +55,4 @@ dependencies {
     implementation(Dependency.AndroidX.PAGING)
 
     testImplementation(Dependency.UnitTest.JUNIT)
-    testImplementation(Dependency.UnitTest.MOCKITO_KOTLIN)
-    testImplementation(Dependency.UnitTest.MOCKITO_INLINE)
 }
