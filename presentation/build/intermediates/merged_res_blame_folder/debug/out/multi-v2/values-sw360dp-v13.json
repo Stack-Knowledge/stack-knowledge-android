@@ -4,7 +4,7 @@
             "outputFile": "com.example.stack_knowledge_android.presentation-mergeDebugResources-71:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/90420bc81e8da4f07553972d37979663/transformed/preference-1.2.0/res/values-sw360dp-v13/values-sw360dp-v13.xml",
+                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/881610395d3833e90466b97cb601aa8c/transformed/preference-1.2.0/res/values-sw360dp-v13/values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
