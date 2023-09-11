@@ -13,4 +13,7 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Stack-Knowledge-Android"
-include ':app'
+include ':presentation'
+include ':domain'
+include ':di'
+include ':data'
