@@ -13,6 +13,7 @@ object Versions {
     const val TARGET_SDK_VERSION = 33
     const val VERSION_CODE = 1
     const val VERSION_NAME = "1.0.0"
+    const val FRAGMENT_KTX = "1.5.5"
 
     const val MATERIAL = "1.3.0"
     const val CORE_KTX = "1.9.0"

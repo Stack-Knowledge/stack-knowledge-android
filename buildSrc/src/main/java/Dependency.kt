@@ -16,6 +16,19 @@ object Dependency {
             "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.KOTLINX_COROUTINES}"
     }
 
+    object Compose {
+        const val ACTIVITY_COMPOSE =
+            "androidx.activity:activity-compose:${Versions.COMPOSE_ACTIVITY}"
+        const val COMPOSE = "androidx.compose.ui:ui:${Versions.COMPOSE}"
+        const val COMPOSE_TOOLING = "androidx.compose.ui.ui-tooling:${Versions.COMPOSE}"
+        const val VIEW_BINDING = "androidx.compose.ui:ui-viewbinding:${Versions.COMPOSE}"
+        const val COMPOSE_PREVIEW = "androidx.compose.ui:ui-tooling-preview:${Versions.COMPOSE}"
+        const val MATERIAL = "androidx.compose.material:material:${Versions.COMPOSE_MATERIAL}"
+        const val MATERIAL3 = "androidx.compose.material3:material3:${Versions.COMPOSE_MATERIAL3}"
+        const val COMPOSE_HILT_NAV = "androidx.hilt:hilt-navigation-compose:${Versions.HILT_NAV}"
+        const val FOUNDATION = "androidx.compose.foundation:foundation:${Versions.COMPOSE}"
+    }
+
     object AndroidX {
         const val CORE_KTX = "androidx.core:core-ktx:${Versions.CORE_KTX}"
         const val LIFECYCLE = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.LIFECYCLE_KTX}"
@@ -28,6 +41,7 @@ object Dependency {
         const val PAGING = "androidx.paging:paging-runtime:${Versions.PAGING}"
         const val PAGING_COMPOSE = "androidx.paging:paging-compose:${Versions.PAGING_COMPOSE}"
         const val LEANBACK = "androidx.leanback:leanback:${Versions.LEANBACK}"
+        const val FRAGMENT_KTX = "androidx.fragment:fragment-ktx:${Versions.FRAGMENT_KTX}"
     }
 
     object Accompanist {
@@ -87,5 +101,9 @@ object Dependency {
 
     object DataStore {
         const val PREFERENCES = "androidx.datastore:datastore-preferences:${Versions.PREFERENCES}"
+    }
+
+    object GAuth {
+        const val GAUTH = "com.github.GSM-MSG:GAuth-Signin-Android:${Versions.GAUTH}"
     }
 }

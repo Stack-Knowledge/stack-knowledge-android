@@ -28,6 +28,10 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        compose = true
+    }
     compileOptions {
         sourceCompatibility = Versions.JAVA_VERSION
         targetCompatibility = Versions.JAVA_VERSION
@@ -41,11 +45,16 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":di"))
 
+    implementation(Dependency.Compose.COMPOSE)
+    implementation(Dependency.Compose.COMPOSE_HILT_NAV)
+    implementation(Dependency.AndroidX.FRAGMENT_KTX)
+    implementation(Dependency.Compose.ACTIVITY_COMPOSE)
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.LIFECYCLE)
     implementation(Dependency.AndroidX.CONSTRAINT_LAYOUT)
     implementation(Dependency.AndroidX.APP_COMPAT)
     implementation(Dependency.Google.MATERIAL)
+    implementation(Dependency.Compose.MATERIAL3)
 
     implementation(Dependency.Libraries.RETROFIT)
     implementation(Dependency.Libraries.RETROFIT_CONVERTER_GSON)
@@ -62,4 +71,5 @@ dependencies {
 
     implementation(Dependency.Coil.COIL)
 
+    implementation(Dependency.GAuth.GAUTH)
 }
