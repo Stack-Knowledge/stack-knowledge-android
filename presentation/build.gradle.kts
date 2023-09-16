@@ -28,16 +28,18 @@ android {
             )
         }
     }
-
-    buildFeatures {
-        compose = true
-    }
     compileOptions {
         sourceCompatibility = Versions.JAVA_VERSION
         targetCompatibility = Versions.JAVA_VERSION
     }
     kotlinOptions {
         jvmTarget = Versions.JAVA_VERSION.toString()
+    }
+
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+        compose = true
     }
 }
 

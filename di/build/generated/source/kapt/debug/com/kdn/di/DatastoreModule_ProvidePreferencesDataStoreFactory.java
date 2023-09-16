@@ -20,7 +20,9 @@ import javax.inject.Provider;
 )
 @SuppressWarnings({
     "unchecked",
-    "rawtypes"
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava"
 })
 public final class DatastoreModule_ProvidePreferencesDataStoreFactory implements Factory<DataStore<Preferences>> {
   private final Provider<Context> contextProvider;

@@ -11,18 +11,20 @@ n
 >domain/src/main/java/com/kdn/domain/exception/HttpException.kt,b/d/bda7ae3a6e7b57921bfb6955888a6bc35c0e46d4
 l
 <domain/src/main/java/com/kdn/domain/exception/IOException.kt,a/0/a06bd410db093b8fff5fd0a2cd29598df374682b
-?
-settings.gradle,0/5/05efc8b1657769a27696d478ded1e95f38737233
 A
 gradle.properties,2/a/2afbb999f001938c88fa43fc2ef52abf0f8213e4
-d
-4di/src/main/java/com/kdn/di/LocalDataSourceModule.kt,7/2/72f5f8d7f48937df3cc23a0874afb72710eb899e
 q
 Adomain/src/main/java/com/kdn/domain/exception/NetworkException.kt,0/7/07e7fc580c6040404190b0bb3ab547e3b1a3f11d
 X
 (gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
+~
+Npresentation/src/main/java/com/example/stack_knowledge_android/MainActivity.kt,1/8/185fd7cfb5fdd8ebbcf3b2b79b8343741e9c1742
+†
+Vpresentation/src/main/java/com/example/stack_knowledge_android/ui/base/BaseActivity.kt,8/e/8e71d81d3fec850e00fd25f1e3c2f90b24803a18
+I
+buildSrc/build.gradle.kts,d/9/d90b697280fada81e52ec92d24725920f1cb087b
+@
+build.gradle.kts,d/b/dbcff70658daf80b53ce624f6adcaa529df5ed8d
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-G
-domain/build.gradle.kts,d/7/d72c8b69b8da0b3b02b699ccd509295dbd783baa

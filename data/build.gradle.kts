@@ -55,4 +55,6 @@ dependencies {
     implementation(Dependency.AndroidX.PAGING)
 
     testImplementation(Dependency.UnitTest.JUNIT)
+
+    implementation(Dependency.DataStore.PREFERENCES)
 }

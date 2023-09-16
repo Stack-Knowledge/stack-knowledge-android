@@ -47,7 +47,7 @@ object Versions {
     const val ESPRESSO_CORE = "3.3.0"
     const val RECYCLERVIEW = "1.1.0"
 
-    const val GAUTH = "1.1.2"
+    const val GAUTH = "1.5.0"
 
     const val COIL = "2.1.0"
 
