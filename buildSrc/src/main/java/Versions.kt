@@ -55,5 +55,10 @@ object Versions {
 
     const val PREFERENCES = "1.0.0"
 
-    const val GMS_GOOGLE_SERVICE = "4.3.10"
+    const val GMS_GOOGLE_SERVICE = "4.3.15"
+
+    const val FIREBASE_BOM = "31.2.3"
+    const val FIREBASE_ANALYTICS = "21.2.0"
+    const val FIREBASE = "21.0.3"
+    const val FIREBASE_MESSAGING = "23.1.2"
 }

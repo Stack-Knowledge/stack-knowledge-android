@@ -60,4 +60,20 @@ class LocalAuthDataSourceImpl @Inject constructor(
         }
     }
 
+    override suspend fun getAuthorityInfo(): Flow<String> = dataStore.data.map{
+        it[AuthPreferenceKey.AUTHORITY] ?: ""
+    }
+
+    override suspend fun setAuthorityInfo(authority: String) {
+        dataStore.edit {
+            it[AuthPreferenceKey.AUTHORITY] = authority
+        }
+    }
+
+    override suspend fun removeAuthorityInfo() {
+        dataStore.edit {
+            it.remove(AuthPreferenceKey.AUTHORITY)
+        }
+    }
+
 }

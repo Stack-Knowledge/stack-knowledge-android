@@ -18,4 +18,8 @@ interface LocalAuthDataSource {
     suspend fun setExpiredAt(ExpiredAt: String)
     suspend fun removeExpiredAt()
 
+    // Authority
+    suspend fun getAuthorityInfo(): Flow<String>
+    suspend fun setAuthorityInfo(authority: String)
+    suspend fun removeAuthorityInfo()
 }

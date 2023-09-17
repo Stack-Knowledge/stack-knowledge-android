@@ -7,5 +7,7 @@ object  AuthPreferenceKey {
 
     val REFRESH_TOKEN = stringPreferencesKey("refresh_token")
 
-    val EXPIRE_AT = stringPreferencesKey("expired_at")
+    val EXPIRE_AT = stringPreferencesKey("refresh_token_expired_at")
+
+    val AUTHORITY = stringPreferencesKey("authority")
 }

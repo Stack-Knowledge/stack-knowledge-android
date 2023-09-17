@@ -9,7 +9,7 @@ kotlin {
     jvmToolchain(17)
 }
 android {
-    namespace = "com.example.stack_knowledge_android"
+    namespace = "com.kdn.stack_knowledge_android"
     compileSdk = Versions.COMPILE_SDK_VERSION
 
     defaultConfig {
@@ -57,6 +57,9 @@ dependencies {
     implementation(Dependency.AndroidX.APP_COMPAT)
     implementation(Dependency.Google.MATERIAL)
     implementation(Dependency.Compose.MATERIAL3)
+
+    implementation(Dependency.Google.FIREBASE_BOM)
+    implementation(Dependency.Google.GMS_GOOGLE_SERVICE)
 
     implementation(Dependency.Libraries.RETROFIT)
     implementation(Dependency.Libraries.RETROFIT_CONVERTER_GSON)

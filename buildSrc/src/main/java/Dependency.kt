@@ -94,9 +94,11 @@ object Dependency {
     }
 
     object Google {
+        const val FIREBASE_ANALYTICS = "com.google.firebase:firebase-analytics-ktx:${Versions.FIREBASE_ANALYTICS}"
+        const val FIREBASE_MESSAGING = "com.google.firebase:firebase-messaging-ktx:${Versions.FIREBASE_MESSAGING}"
+        const val FIREBASE_BOM = "com.google.firebase:firebase-bom:${Versions.FIREBASE_BOM}"
         const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
-        const val GMS_GOOGLE_SERVICE =
-            "com.google.gms:google-services:${Versions.GMS_GOOGLE_SERVICE}"
+        const val GMS_GOOGLE_SERVICE = "com.google.gms.google-services:${Versions.GMS_GOOGLE_SERVICE}"
     }
 
     object DataStore {

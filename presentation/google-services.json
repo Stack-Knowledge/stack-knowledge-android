@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1077564353902",
+    "project_id": "stack-knowledge-7c332",
+    "storage_bucket": "stack-knowledge-7c332.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077564353902:android:8603b3867913ffb0ffe57f",
+        "android_client_info": {
+          "package_name": "com.kdn.stack_knowledge_android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpB9C-_cCQi0Sho0_y5t3uO5Agb_3JK6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
