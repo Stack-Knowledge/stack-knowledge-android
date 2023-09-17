@@ -4,6 +4,7 @@ import com.kdn.data.local.datasource.LocalAuthDataSource
 import com.kdn.data.remote.datasource.RemoteAuthDataSource
 import com.kdn.data.remote.dto.auth.request.GAuthLoginRequest
 import com.kdn.data.remote.dto.auth.response.toLoginModel
+import com.kdn.data.remote.dto.auth.response.toRefreshModel
 import com.kdn.domain.model.request.GAuthLoginRequestModel
 import com.kdn.domain.model.response.GAuthLoginResponseModel
 import com.kdn.domain.model.response.RefreshTokenResponseModel
@@ -36,7 +37,7 @@ class AuthRepositoryImpl @Inject constructor(
     override suspend fun provideRefreshToken(refreshToken: String): Flow<RefreshTokenResponseModel> {
         return flow{
             remoteDataSource.refreshToken(refreshToken).collect {
-                emit(it as RefreshTokenResponseModel)
+                emit(it.toRefreshModel())
             }
         }
     }

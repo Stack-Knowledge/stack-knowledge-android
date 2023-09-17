@@ -17,8 +17,6 @@ q
 Adomain/src/main/java/com/kdn/domain/exception/NetworkException.kt,0/7/07e7fc580c6040404190b0bb3ab547e3b1a3f11d
 X
 (gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
-~
-Npresentation/src/main/java/com/example/stack_knowledge_android/MainActivity.kt,1/8/185fd7cfb5fdd8ebbcf3b2b79b8343741e9c1742
 †
 Vpresentation/src/main/java/com/example/stack_knowledge_android/ui/base/BaseActivity.kt,8/e/8e71d81d3fec850e00fd25f1e3c2f90b24803a18
 I
