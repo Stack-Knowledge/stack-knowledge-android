@@ -8,6 +8,7 @@ import com.example.stack_knowledge_android.utils.Event
 import com.example.stack_knowledge_android.utils.errorHandling
 import com.kdn.domain.model.request.GAuthLoginRequestModel
 import com.kdn.domain.model.response.GAuthLoginResponseModel
+import com.kdn.domain.usecase.auth.DeleteTokenUseCase
 import com.kdn.domain.usecase.auth.GAuthLoginUseCase
 import com.kdn.domain.usecase.auth.GetAuthorityInfoUseCase
 import com.kdn.domain.usecase.auth.SaveTheLoginDataUseCase
@@ -24,6 +25,7 @@ class AuthViewModel @Inject constructor(
     private val gAuthLoginUseCase: GAuthLoginUseCase,
     private val saveTheLoginDataUseCase: SaveTheLoginDataUseCase,
     private val getAuthorityInfoUseCase: GetAuthorityInfoUseCase,
+    private val deleteTokenUseCase: DeleteTokenUseCase,
 ) : ViewModel(){
     private val _gAuthLoginRequest = MutableLiveData<Event<GAuthLoginResponseModel>>()
     val gAuthLoginRequest: LiveData<Event<GAuthLoginResponseModel>> get() = _gAuthLoginRequest
@@ -73,5 +75,9 @@ class AuthViewModel @Inject constructor(
             }.onFailure { error ->
                 _getAuthorityResponse.value = error.errorHandling(unknownAction = {})
             }
+    }
+
+    fun deleteToken() = viewModelScope.launch {
+        deleteTokenUseCase()
     }
 }
