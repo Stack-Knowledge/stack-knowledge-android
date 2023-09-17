@@ -1,4 +1,4 @@
-package com.kdn.domain.usecase
+package com.kdn.domain.usecase.auth
 
 import com.kdn.domain.model.request.GAuthLoginRequestModel
 import com.kdn.domain.repository.AuthRepository

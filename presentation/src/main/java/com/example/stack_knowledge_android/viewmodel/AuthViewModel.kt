@@ -1,6 +1,6 @@
 package com.example.stack_knowledge_android.viewmodel
 
-import com.kdn.domain.usecase.GAuthLoginUseCase
+import com.kdn.domain.usecase.auth.GAuthLoginUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
