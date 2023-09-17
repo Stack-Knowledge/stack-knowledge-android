@@ -1,15 +1,14 @@
-package com.example.stack_knowledge_android.ui.login
+package com.kdn.stack_knowledge_android.ui.login
 
 import android.util.DisplayMetrics
 import android.view.Display
 import android.view.View
 import androidx.activity.viewModels
 import androidx.compose.ui.unit.dp
-import com.example.stack_knowledge_android.BuildConfig
-import com.example.stack_knowledge_android.R
-import com.example.stack_knowledge_android.databinding.ActivityLoginBinding
-import com.example.stack_knowledge_android.ui.base.BaseActivity
-import com.example.stack_knowledge_android.viewmodel.AuthViewModel
+import com.kdn.stack_knowledge_android.ui.base.BaseActivity
+import com.kdn.stack_knowledge_android.viewmodel.AuthViewModel
+import com.kdn.stack_knowledge_android.R
+import com.kdn.stack_knowledge_android.databinding.ActivityLoginBinding
 import com.msg.gauthsignin.GAuthSigninWebView
 import com.msg.gauthsignin.component.GAuthButton
 import com.msg.gauthsignin.component.utils.Types

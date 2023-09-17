@@ -1,4 +1,4 @@
-package com.example.stack_knowledge_android.utils
+package com.kdn.stack_knowledge_android.utils
 
 import android.util.Log
 import com.kdn.domain.exception.ConflictDataException

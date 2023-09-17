@@ -28,8 +28,6 @@ E
 data/build.gradle.kts,9/f/9f5470ef43fd1acab01d54a63bdece9a90dec1b7
 {
 Kdomain/src/main/java/com/kdn/domain/model/request/GAuthLoginRequestModel.kt,0/d/0deefd5923a8920253f680846545cd7ea26b8163
-}
-Mdomain/src/main/java/com/kdn/domain/model/request/RefreshTokenRequestModel.kt,2/4/241a703342389031e0da923d4e33d238a5ac0067
 ~
 Ndata/src/main/java/com/kdn/data/remote/dto/auth/request/RefreshTokenRequest.kt,f/9/f98c1fcc6c7091728cebd09f5d9f463c8a11e1b1
 e
@@ -64,14 +62,10 @@ Mdomain/src/main/java/com/kdn/domain/model/response/GAuthLoginResponseModel.kt,
 Ndata/src/main/java/com/kdn/data/remote/dto/auth/response/GAuthLoginResponse.kt,5/9/596c097ac25d59cfd644ec0297f70e2122d0f3ea
 {
 Kdomain/src/main/java/com/kdn/domain/usecase/auth/GetAuthorityInfoUseCase.kt,9/5/9531cb9775b88751a6231f7045b4177e61927990
-Å
-Qpresentation/src/main/java/com/kdn/stack_knowledge_android/utils/ErrorHandling.kt,6/8/685ddebb66726469001940622c400f84d5d110c1
 p
 @domain/src/main/java/com/kdn/domain/repository/AuthRepository.kt,3/b/3b0c4c9a5e29f76fbf154280bf2d2456aefb8f2b
 v
 Fdomain/src/main/java/com/kdn/domain/usecase/auth/DeleteTokenUseCase.kt,5/f/5f56cc6032785b977f4a1b8eaee133873fcb9e44
-Ö
-Upresentation/src/main/java/com/kdn/stack_knowledge_android/viewmodel/AuthViewModel.kt,2/6/26bb1047460be282881d0c32200185c32793c39c
 w
 Gdata/src/main/java/com/kdn/data/local/datasource/LocalAuthDataSource.kt,5/e/5e2640f4572af35df42dfef96e3b254b654c18b1
 n
@@ -82,3 +76,7 @@ Kdata/src/main/java/com/kdn/data/local/datasource/LocalAuthDataSourceImpl.kt,2/
 Mdata/src/main/java/com/kdn/data/remote/datasource/RemoteAuthDataSourceImpl.kt,c/8/c856f298c70b386b5cfc9527e3763f07c6efd808
 p
 @data/src/main/java/com/kdn/data/repository/AuthRepositoryImpl.kt,0/8/084f1feacab47f9ff2ba353a18fbd84afb8edeef
+T
+$buildSrc/src/main/java/Dependency.kt,0/5/05e18f13e16e2ae760966dac11c3d26643594bdc
+R
+"buildSrc/src/main/java/Versions.kt,1/7/17cc39576120ea39e86f37255d0843f33952bb99

@@ -1,4 +1,4 @@
-package com.example.stack_knowledge_android.utils
+package com.kdn.stack_knowledge_android.utils
 
 import android.graphics.Rect
 import android.view.View

@@ -1,4 +1,4 @@
-package com.example.stack_knowledge_android.ui.base
+package com.kdn.stack_knowledge_android.ui.base
 
 import android.os.Bundle
 import android.widget.Toast

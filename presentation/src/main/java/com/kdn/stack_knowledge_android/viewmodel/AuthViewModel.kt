@@ -1,11 +1,11 @@
-package com.example.stack_knowledge_android.viewmodel
+package com.kdn.stack_knowledge_android.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.stack_knowledge_android.utils.Event
-import com.example.stack_knowledge_android.utils.errorHandling
+import com.kdn.stack_knowledge_android.utils.Event
+import com.kdn.stack_knowledge_android.utils.errorHandling
 import com.kdn.domain.model.request.GAuthLoginRequestModel
 import com.kdn.domain.model.response.GAuthLoginResponseModel
 import com.kdn.domain.usecase.auth.DeleteTokenUseCase
