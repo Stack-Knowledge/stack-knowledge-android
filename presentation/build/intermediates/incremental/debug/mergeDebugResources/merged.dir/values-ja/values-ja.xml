@@ -44,6 +44,7 @@
     <string name="clear_text_end_icon_content_description">テキストを消去</string>
     <string msgid="406453423630273620" name="close_drawer">"ナビゲーションメニューを閉じる"</string>
     <string msgid="7573152094250666567" name="close_sheet">"シートを閉じる"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"閉じています"</string>
     <string msgid="6083905920877235314" name="copy">"コピー"</string>
     <string msgid="8038256446254964252" name="default_error_message">"入力値が無効です"</string>
@@ -53,6 +54,14 @@
     <string name="error_icon_content_description">エラー</string>
     <string msgid="2427401033573778270" name="expand_button_title">"詳細設定"</string>
     <string msgid="5974471714631304645" name="expanded">"開いています"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"コピー"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"入力値が無効です"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"ポップアップウィンドウ"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"プルダウン メニュー"</string>
+    <string name="error_icon_content_description">エラー</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"詳細設定"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">プルダウン メニューを表示</string>
     <string name="icon_content_description">ダイアログ アイコン</string>
     <string msgid="6827826412747255547" name="in_progress">"処理しています"</string>

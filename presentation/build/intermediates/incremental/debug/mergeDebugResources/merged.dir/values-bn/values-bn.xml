@@ -44,6 +44,7 @@
     <string name="clear_text_end_icon_content_description">টেক্সট মুছুন</string>
     <string msgid="406453423630273620" name="close_drawer">"নেভিগেশন মেনু বন্ধ করুন"</string>
     <string msgid="7573152094250666567" name="close_sheet">"শিট বন্ধ করুন"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"আড়াল করা হয়েছে"</string>
     <string msgid="6083905920877235314" name="copy">"কপি করুন"</string>
     <string msgid="8038256446254964252" name="default_error_message">"ভুল ইনপুট"</string>
@@ -53,6 +54,14 @@
     <string name="error_icon_content_description">সমস্যা</string>
     <string msgid="2427401033573778270" name="expand_button_title">"উন্নত"</string>
     <string msgid="5974471714631304645" name="expanded">"বড় করা হয়েছে"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"কপি করুন"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"ভুল ইনপুট"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"পপ-আপ উইন্ডো"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"ড্রপডাউন মেনু"</string>
+    <string name="error_icon_content_description">সমস্যা</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"উন্নত"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">ড্রপ-ডাউন মেনু দেখুন</string>
     <string name="icon_content_description">ডায়ালগ আইকন</string>
     <string msgid="6827826412747255547" name="in_progress">"কাজ চলছে"</string>

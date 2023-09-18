@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "com.kdn.stack_knowledge_android.presentation-mergeDebugResources-80:/values-v23/values-v23.xml",
             "map": [
                 {
                     "source": "/Users/chaejong-in/.gradle/caches/transforms-3/148e4d1b5662caf21c05c073cca00a22/transformed/appcompat-1.6.0/res/values-v23/values-v23.xml",
+=======
+            "outputFile": "com.example.stack_knowledge_android.presentation-mergeDebugResources-73:/values-v23/values-v23.xml",
+            "map": [
+                {
+                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/8263abac3930185c68a18ea8e76e32c2/transformed/appcompat-1.6.0/res/values-v23/values-v23.xml",
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +22,11 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "/Users/chaejong-in/.gradle/caches/transforms-3/8da47dd586527d10ccd854b3a5bfb002/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
+=======
+                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/87efbbe6627af3c8ee60a4381f861c93/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -34,7 +45,11 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "/Users/chaejong-in/.gradle/caches/transforms-3/17ef85c0c05ac3a06387367c2a814519/transformed/material-1.3.0/res/values-v23/values-v23.xml",
+=======
+                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/9f46c7250348cac8db8245b4cba70e3a/transformed/material-1.3.0/res/values-v23/values-v23.xml",
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
                     "from": {
                         "startLines": "2,6",
                         "startColumns": "4,4",

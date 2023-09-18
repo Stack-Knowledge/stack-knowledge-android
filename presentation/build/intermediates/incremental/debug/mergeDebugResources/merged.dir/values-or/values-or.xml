@@ -44,6 +44,7 @@
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string msgid="406453423630273620" name="close_drawer">"ନାଭିଗେସନ୍ ମେନୁ ବନ୍ଦ କରନ୍ତୁ"</string>
     <string msgid="7573152094250666567" name="close_sheet">"ସିଟ୍ ବନ୍ଦ କରନ୍ତୁ"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"ସଙ୍କୁଚିତ କରାଯାଇଛି"</string>
     <string msgid="6083905920877235314" name="copy">"କପି କରନ୍ତୁ"</string>
     <string msgid="8038256446254964252" name="default_error_message">"ଅବୈଧ ଇନପୁଟ୍"</string>
@@ -53,6 +54,14 @@
     <string name="error_icon_content_description">Error</string>
     <string msgid="2427401033573778270" name="expand_button_title">"ଅଧିକ ଉନ୍ନତ"</string>
     <string msgid="5974471714631304645" name="expanded">"ବିସ୍ତାର କରାଯାଇଛି"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"କପି କରନ୍ତୁ"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"ଅବୈଧ ଇନପୁଟ୍"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"ପପ୍-ଅପ୍ ୱିଣ୍ଡୋ"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"ଡ୍ରପଡାଉନ ମେନୁ"</string>
+    <string name="error_icon_content_description">Error</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"ଅଧିକ ଉନ୍ନତ"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="icon_content_description">Dialog Icon</string>
     <string msgid="6827826412747255547" name="in_progress">"ଚାଲିଛି"</string>

@@ -45,6 +45,7 @@
     <string name="clear_text_end_icon_content_description">Obriši tekst</string>
     <string msgid="406453423630273620" name="close_drawer">"Zatvaranje navigacionog menija"</string>
     <string msgid="7573152094250666567" name="close_sheet">"Zatvaranje tabele"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"Suženo"</string>
     <string msgid="6083905920877235314" name="copy">"Kopiraj"</string>
     <string msgid="8038256446254964252" name="default_error_message">"Pogrešan unos"</string>
@@ -54,6 +55,14 @@
     <string name="error_icon_content_description">Greška</string>
     <string msgid="2427401033573778270" name="expand_button_title">"Napredno"</string>
     <string msgid="5974471714631304645" name="expanded">"Prošireno"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"Kopiraj"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Pogrešan unos"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Skočni prozor"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Padajući meni"</string>
+    <string name="error_icon_content_description">Greška</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Napredno"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">Prikaži padajući meni</string>
     <string name="icon_content_description">ikona dijaloškog okvira</string>
     <string msgid="6827826412747255547" name="in_progress">"U toku"</string>

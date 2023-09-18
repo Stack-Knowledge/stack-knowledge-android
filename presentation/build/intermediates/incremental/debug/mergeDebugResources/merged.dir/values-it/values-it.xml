@@ -44,6 +44,7 @@
     <string name="clear_text_end_icon_content_description">Cancella testo</string>
     <string msgid="406453423630273620" name="close_drawer">"Chiudi il menu di navigazione"</string>
     <string msgid="7573152094250666567" name="close_sheet">"Chiudi il foglio"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"Controllo compresso"</string>
     <string msgid="6083905920877235314" name="copy">"Copia"</string>
     <string msgid="8038256446254964252" name="default_error_message">"Valore non valido"</string>
@@ -53,6 +54,14 @@
     <string name="error_icon_content_description">Errore</string>
     <string msgid="2427401033573778270" name="expand_button_title">"Avanzate"</string>
     <string msgid="5974471714631304645" name="expanded">"Controllo espanso"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"Copia"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Valore non valido"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Finestra popup"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Menu a discesa"</string>
+    <string name="error_icon_content_description">Errore</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Avanzate"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">Mostra il menu a discesa</string>
     <string name="icon_content_description">Icona della finestra di dialogo</string>
     <string msgid="6827826412747255547" name="in_progress">"In corso"</string>

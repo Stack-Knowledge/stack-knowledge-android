@@ -44,6 +44,7 @@
     <string name="clear_text_end_icon_content_description">ടെക്‌സ്‌റ്റ് മായ്‌ക്കുക</string>
     <string msgid="406453423630273620" name="close_drawer">"നാവിഗേഷൻ മെനു അടയ്‌ക്കുക"</string>
     <string msgid="7573152094250666567" name="close_sheet">"ഷീറ്റ് അടയ്ക്കുക"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"ചുരുക്കിയത്"</string>
     <string msgid="6083905920877235314" name="copy">"പകർത്തുക"</string>
     <string msgid="8038256446254964252" name="default_error_message">"ഇൻപുട്ട് അസാധുവാണ്"</string>
@@ -53,6 +54,14 @@
     <string name="error_icon_content_description">പിശക്</string>
     <string msgid="2427401033573778270" name="expand_button_title">"വിപുലമായത്"</string>
     <string msgid="5974471714631304645" name="expanded">"വിപുലീകരിച്ചത്"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"പകർത്തുക"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"ഇൻപുട്ട് അസാധുവാണ്"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"പോപ്പ്-അപ്പ് വിൻഡോ"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"ഡ്രോപ്പ്‌ഡൗൺ മെനു"</string>
+    <string name="error_icon_content_description">പിശക്</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"വിപുലമായത്"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">ഡ്രോപ്പ്‌ ഡൗൺ മെനു കാണിക്കുക</string>
     <string name="icon_content_description">ഡയലോഗ് ഐക്കൺ</string>
     <string msgid="6827826412747255547" name="in_progress">"പുരോഗമിക്കുന്നു"</string>

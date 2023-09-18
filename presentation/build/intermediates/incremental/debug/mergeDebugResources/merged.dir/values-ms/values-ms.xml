@@ -44,6 +44,7 @@
     <string name="clear_text_end_icon_content_description">Kosongkan teks</string>
     <string msgid="406453423630273620" name="close_drawer">"Tutup menu navigasi"</string>
     <string msgid="7573152094250666567" name="close_sheet">"Tutup helaian"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"Dikuncupkan"</string>
     <string msgid="6083905920877235314" name="copy">"Salin"</string>
     <string msgid="8038256446254964252" name="default_error_message">"Input tidak sah"</string>
@@ -53,6 +54,14 @@
     <string name="error_icon_content_description">Ralat</string>
     <string msgid="2427401033573778270" name="expand_button_title">"Terperinci"</string>
     <string msgid="5974471714631304645" name="expanded">"Dikembangkan"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"Salin"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Input tidak sah"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Tetingkap Timbul"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Menu lungsur"</string>
+    <string name="error_icon_content_description">Ralat</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Terperinci"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">Tunjukkan menu lungsur</string>
     <string name="icon_content_description">Ikon Dialog</string>
     <string msgid="6827826412747255547" name="in_progress">"Dalam proses"</string>

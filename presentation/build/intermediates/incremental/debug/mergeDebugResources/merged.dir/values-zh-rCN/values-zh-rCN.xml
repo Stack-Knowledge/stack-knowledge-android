@@ -44,6 +44,7 @@
     <string name="clear_text_end_icon_content_description">清除文字</string>
     <string msgid="406453423630273620" name="close_drawer">"关闭导航菜单"</string>
     <string msgid="7573152094250666567" name="close_sheet">"关闭工作表"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"已收起"</string>
     <string msgid="6083905920877235314" name="copy">"复制"</string>
     <string msgid="8038256446254964252" name="default_error_message">"输入无效"</string>
@@ -53,6 +54,14 @@
     <string name="error_icon_content_description">错误</string>
     <string msgid="2427401033573778270" name="expand_button_title">"高级"</string>
     <string msgid="5974471714631304645" name="expanded">"已展开"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"复制"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"输入无效"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"弹出式窗口"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"下拉菜单"</string>
+    <string name="error_icon_content_description">错误</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"高级"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">显示下拉菜单</string>
     <string name="icon_content_description">对话框图标</string>
     <string msgid="6827826412747255547" name="in_progress">"进行中"</string>

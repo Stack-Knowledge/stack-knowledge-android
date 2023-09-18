@@ -44,6 +44,7 @@
     <string name="clear_text_end_icon_content_description">텍스트 삭제</string>
     <string msgid="406453423630273620" name="close_drawer">"탐색 메뉴 닫기"</string>
     <string msgid="7573152094250666567" name="close_sheet">"시트 닫기"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"접힘"</string>
     <string msgid="6083905920877235314" name="copy">"복사"</string>
     <string msgid="8038256446254964252" name="default_error_message">"입력이 잘못됨"</string>
@@ -53,6 +54,14 @@
     <string name="error_icon_content_description">오류</string>
     <string msgid="2427401033573778270" name="expand_button_title">"고급"</string>
     <string msgid="5974471714631304645" name="expanded">"펼침"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"복사"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"입력이 잘못됨"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"팝업 창"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"드롭다운 메뉴"</string>
+    <string name="error_icon_content_description">오류</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"고급"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">드롭다운 메뉴 표시</string>
     <string name="icon_content_description">대화상자 아이콘</string>
     <string msgid="6827826412747255547" name="in_progress">"진행 중"</string>

@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     package="com.kdn.stack_knowledge_android" >
+=======
+    package="com.example.stack_knowledge_android" >
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 
     <uses-sdk
         android:minSdkVersion="29"
         android:targetSdkVersion="33" />
 
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -17,6 +22,15 @@
 
     <application
         android:name="com.kdn.stack_knowledge_android.application.StackKnowledgeApplication"
+=======
+    <permission
+        android:name="com.example.stack_knowledge_android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.stack_knowledge_android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -25,12 +39,19 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+<<<<<<< HEAD
         android:requestLegacyExternalStorage="true"
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.StackKnowledgeAndroid" >
         <activity
+<<<<<<< HEAD
             android:name="com.kdn.stack_knowledge_android.ui.login.LoginActivity"
+=======
+            android:name="com.example.stack_knowledge_android.MainActivity"
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,6 +59,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity
             android:name="com.kdn.stack_knowledge_android.ui.main.MainActivity"
             android:exported="true" />
@@ -45,6 +67,12 @@
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.kdn.stack_knowledge_android.androidx-startup"
+=======
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.example.stack_knowledge_android.androidx-startup"
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"
@@ -64,6 +92,14 @@
             android:name="androidx.window.sidecar"
             android:required="false" />
 
+<<<<<<< HEAD
+=======
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
+
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"
             android:directBootAware="false"
@@ -83,11 +119,14 @@
                 <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
             </intent-filter>
         </receiver>
+<<<<<<< HEAD
 
         <service
             android:name="androidx.room.MultiInstanceInvalidationService"
             android:directBootAware="true"
             android:exported="false" />
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     </application>
 
 </manifest>

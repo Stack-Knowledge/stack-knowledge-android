@@ -46,6 +46,7 @@
     <string name="clear_text_end_icon_content_description">Išvalyti tekstą</string>
     <string msgid="406453423630273620" name="close_drawer">"Uždaryti naršymo meniu"</string>
     <string msgid="7573152094250666567" name="close_sheet">"Uždaryti lapą"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"Sutraukta"</string>
     <string msgid="6083905920877235314" name="copy">"Kopijuoti"</string>
     <string msgid="8038256446254964252" name="default_error_message">"Netinkama įvestis"</string>
@@ -55,6 +56,14 @@
     <string name="error_icon_content_description">Klaida</string>
     <string msgid="2427401033573778270" name="expand_button_title">"Išplėstiniai"</string>
     <string msgid="5974471714631304645" name="expanded">"Išskleista"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"Kopijuoti"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Netinkama įvestis"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Iššokantysis langas"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Išskleidžiamasis meniu"</string>
+    <string name="error_icon_content_description">Klaida</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Išplėstiniai"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">Rodyti išskleidžiamąjį meniu</string>
     <string name="icon_content_description">Dialogo lango piktograma</string>
     <string msgid="6827826412747255547" name="in_progress">"Vyksta"</string>

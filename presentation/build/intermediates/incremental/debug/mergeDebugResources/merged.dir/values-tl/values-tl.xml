@@ -44,6 +44,7 @@
     <string name="clear_text_end_icon_content_description">I-clear ang text</string>
     <string msgid="406453423630273620" name="close_drawer">"Isara ang menu ng navigation"</string>
     <string msgid="7573152094250666567" name="close_sheet">"Isara ang sheet"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"Naka-collapse"</string>
     <string msgid="6083905920877235314" name="copy">"Kopyahin"</string>
     <string msgid="8038256446254964252" name="default_error_message">"Invalid na input"</string>
@@ -53,6 +54,14 @@
     <string name="error_icon_content_description">Error</string>
     <string msgid="2427401033573778270" name="expand_button_title">"Advanced"</string>
     <string msgid="5974471714631304645" name="expanded">"Naka-expand"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"Kopyahin"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Invalid na input"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Window ng Pop-Up"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Drop-down na menu"</string>
+    <string name="error_icon_content_description">Error</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Advanced"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">Ipakita ang dropdown na menu</string>
     <string name="icon_content_description">Icon ng Dialog</string>
     <string msgid="6827826412747255547" name="in_progress">"Isinasagawa"</string>

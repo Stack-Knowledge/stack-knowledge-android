@@ -44,6 +44,7 @@
     <string name="clear_text_end_icon_content_description">សម្អាតអក្សរ</string>
     <string msgid="406453423630273620" name="close_drawer">"បិទម៉ឺនុយរុករក"</string>
     <string msgid="7573152094250666567" name="close_sheet">"បិទសន្លឹក"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"បាន​បង្រួម"</string>
     <string msgid="6083905920877235314" name="copy">"ចម្លង"</string>
     <string msgid="8038256446254964252" name="default_error_message">"ការបញ្ចូល​មិនត្រឹមត្រូវ"</string>
@@ -53,6 +54,14 @@
     <string name="error_icon_content_description">បញ្ហា</string>
     <string msgid="2427401033573778270" name="expand_button_title">"កម្រិតខ្ពស់"</string>
     <string msgid="5974471714631304645" name="expanded">"បាន​ពង្រីក"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"ចម្លង"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"ការបញ្ចូល​មិនត្រឹមត្រូវ"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"វិនដូ​លោតឡើង"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"ម៉ឺនុយធ្លាក់ចុះ"</string>
+    <string name="error_icon_content_description">បញ្ហា</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"កម្រិតខ្ពស់"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">បង្ហាញ​ម៉ឺនុយ​ធ្លាក់ចុះ</string>
     <string name="icon_content_description">រូប​ប្រអប់បញ្ចូល</string>
     <string msgid="6827826412747255547" name="in_progress">"កំពុងដំណើរការ"</string>

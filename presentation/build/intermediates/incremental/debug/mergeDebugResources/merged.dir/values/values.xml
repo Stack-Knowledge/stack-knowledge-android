@@ -546,7 +546,10 @@
     <color name="foreground_material_light">@android:color/black</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
+<<<<<<< HEAD
     <color name="ic_launcher_background">#F4943D</color>
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -1042,7 +1045,10 @@
     <item name="coil_request_manager" type="id"/>
     <item name="compose_view_saveable_id_tag" type="id"/>
     <item name="consume_window_insets_tag" type="id"/>
+<<<<<<< HEAD
     <item name="dataBinding" type="id"/>
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <item name="fragment_container_view_tag" type="id"/>
     <item name="ghost_view" type="id"/>
     <item name="ghost_view_holder" type="id"/>
@@ -1063,8 +1069,11 @@
     <item name="mtrl_motion_snapshot_view" type="id"/>
     <item name="mtrl_view_tag_bottom_padding" type="id"/>
     <item name="nav_controller_view_tag" type="id"/>
+<<<<<<< HEAD
     <item name="onAttachStateChangeListener" type="id"/>
     <item name="onDateChanged" type="id"/>
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <item name="parent_matrix" type="id"/>
     <item name="pooling_container_listener_holder_tag" type="id"/>
     <item name="preferences_detail" type="id"/>
@@ -1096,7 +1105,10 @@
     <item name="tag_window_insets_animation_callback" type="id"/>
     <item name="text" type="id"/>
     <item name="text2" type="id"/>
+<<<<<<< HEAD
     <item name="textWatcher" type="id"/>
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <item name="text_input_error_icon" type="id"/>
     <item name="textinput_counter" type="id"/>
     <item name="textinput_error" type="id"/>
@@ -1174,7 +1186,11 @@
     <string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
+<<<<<<< HEAD
     <string name="app_name">Stack Knowledge</string>
+=======
+    <string name="app_name">Stack-Knowledge-Android</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string description="A description of an action that a user of an accessibility service can perform to expand a bottomsheet halfway to its full height. [CHAR LIMIT=25]" name="bottomsheet_action_expand_halfway">Expand halfway</string>
@@ -1192,6 +1208,7 @@
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="close_drawer">"Close navigation menu"</string>
     <string name="close_sheet">"Close sheet"</string>
+<<<<<<< HEAD
     <string name="collapsed">Collapsed</string>
     <string name="copy">Copy</string>
     <string name="default_error_message">"Invalid input"</string>
@@ -1201,6 +1218,14 @@
     <string name="error_icon_content_description">Error</string>
     <string name="expand_button_title">Advanced</string>
     <string name="expanded">Expanded</string>
+=======
+    <string name="copy">Copy</string>
+    <string name="default_error_message">"Invalid input"</string>
+    <string name="default_popup_window_title" ns2:ignore="ExtraTranslation">"Pop-Up Window"</string>
+    <string name="dropdown_menu">"Dropdown menu"</string>
+    <string name="error_icon_content_description">Error</string>
+    <string name="expand_button_title">Advanced</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>

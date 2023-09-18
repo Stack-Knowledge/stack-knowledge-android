@@ -46,6 +46,7 @@
     <string name="clear_text_end_icon_content_description">Ачысціць тэкст</string>
     <string msgid="406453423630273620" name="close_drawer">"Закрыць меню навігацыі"</string>
     <string msgid="7573152094250666567" name="close_sheet">"Закрыць аркуш"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"Згорнута"</string>
     <string msgid="6083905920877235314" name="copy">"Капіраваць"</string>
     <string msgid="8038256446254964252" name="default_error_message">"Памылка ўводу"</string>
@@ -55,6 +56,14 @@
     <string name="error_icon_content_description">Памылка</string>
     <string msgid="2427401033573778270" name="expand_button_title">"Пашыраныя налады"</string>
     <string msgid="5974471714631304645" name="expanded">"Разгорнута"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"Капіраваць"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Памылка ўводу"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Усплывальнае акно"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Выпадное меню"</string>
+    <string name="error_icon_content_description">Памылка</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Пашыраныя налады"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">Паказаць выпадное меню</string>
     <string name="icon_content_description">Значок дыялогавага акна</string>
     <string msgid="6827826412747255547" name="in_progress">"У працэсе"</string>

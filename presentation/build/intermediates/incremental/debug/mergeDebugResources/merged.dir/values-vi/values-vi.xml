@@ -44,6 +44,7 @@
     <string name="clear_text_end_icon_content_description">Xóa văn bản</string>
     <string msgid="406453423630273620" name="close_drawer">"Đóng trình đơn điều hướng"</string>
     <string msgid="7573152094250666567" name="close_sheet">"Đóng trang tính"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"Đã thu gọn"</string>
     <string msgid="6083905920877235314" name="copy">"Sao chép"</string>
     <string msgid="8038256446254964252" name="default_error_message">"Giá trị nhập không hợp lệ"</string>
@@ -53,6 +54,14 @@
     <string name="error_icon_content_description">Lỗi</string>
     <string msgid="2427401033573778270" name="expand_button_title">"Nâng cao"</string>
     <string msgid="5974471714631304645" name="expanded">"Đã mở rộng"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"Sao chép"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Giá trị nhập không hợp lệ"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Cửa sổ bật lên"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Trình đơn thả xuống"</string>
+    <string name="error_icon_content_description">Lỗi</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Nâng cao"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">Hiển thị menu thả xuống</string>
     <string name="icon_content_description">Biểu tượng hộp thoại</string>
     <string msgid="6827826412747255547" name="in_progress">"Đang thực hiện"</string>

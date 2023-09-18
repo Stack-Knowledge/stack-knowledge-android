@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 com.kdn.stack_knowledge_android
+=======
+com.example.stack_knowledge_android
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -1229,7 +1233,10 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+<<<<<<< HEAD
 color ic_launcher_background
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1846,12 +1853,17 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+<<<<<<< HEAD
 drawable gauth_black_ic
 drawable gauth_blue_ic
 drawable gauth_white_ic
 drawable ic_100tb
 drawable ic_arrow_down_24dp
 drawable ic_black_stack_logo
+=======
+drawable ic_100tb
+drawable ic_arrow_down_24dp
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 drawable ic_call_answer
 drawable ic_call_answer_low
 drawable ic_call_answer_video
@@ -1859,12 +1871,18 @@ drawable ic_call_answer_video_low
 drawable ic_call_decline
 drawable ic_call_decline_low
 drawable ic_clock_black_24dp
+<<<<<<< HEAD
 drawable ic_kdn_logo
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_login_background_b
 drawable ic_login_background_t
+=======
+drawable ic_keyboard_black_24dp
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -1907,11 +1925,14 @@ drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+<<<<<<< HEAD
 font font
 font pretendard_bold
 font pretendard_regular
 font pretendard_semibold
 font pretendardsemibold
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -2011,7 +2032,10 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+<<<<<<< HEAD
 id btn_gauth_login_button
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2055,7 +2079,10 @@ id currentState
 id custom
 id customPanel
 id cut
+<<<<<<< HEAD
 id dataBinding
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2110,6 +2137,7 @@ id floating
 id forever
 id fragment_container_view_tag
 id frost
+<<<<<<< HEAD
 id g_black_stack_knowledge_e
 id g_black_stack_knowledge_s
 id g_ic_background_b_s
@@ -2119,6 +2147,8 @@ id g_ic_stack_black_logo_b
 id g_ic_stack_black_logo_e
 id g_ic_stack_black_logo_s
 id g_ic_stack_black_logo_t
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 id ghost_view
 id ghost_view_holder
 id gone
@@ -2238,8 +2268,11 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
+<<<<<<< HEAD
 id onAttachStateChangeListener
 id onDateChanged
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 id onInterceptTouchReturnSwipe
 id outline
 id outward
@@ -2368,7 +2401,10 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+<<<<<<< HEAD
 id textWatcher
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2394,16 +2430,22 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+<<<<<<< HEAD
 id tv_black_stack_knowledge
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 id unchecked
 id uniform
 id unlabeled
 id up
 id useLogo
+<<<<<<< HEAD
 id v_black_stack_logo
 id v_gauth_web_view
 id v_ic_background_b
 id v_ic_background_t
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -2485,7 +2527,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+<<<<<<< HEAD
 layout activity_login
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2588,7 +2633,10 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 mipmap ic_launcher
+<<<<<<< HEAD
 mipmap ic_launcher_foreground
+=======
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
@@ -2637,6 +2685,7 @@ string chip_text
 string clear_text_end_icon_content_description
 string close_drawer
 string close_sheet
+<<<<<<< HEAD
 string collapsed
 string copy
 string default_error_message
@@ -2646,6 +2695,14 @@ string dropdown_menu
 string error_icon_content_description
 string expand_button_title
 string expanded
+=======
+string copy
+string default_error_message
+string default_popup_window_title
+string dropdown_menu
+string error_icon_content_description
+string expand_button_title
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior

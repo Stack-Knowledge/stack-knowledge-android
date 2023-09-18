@@ -44,6 +44,7 @@
     <string name="clear_text_end_icon_content_description">உரையை அழிக்கும்</string>
     <string msgid="406453423630273620" name="close_drawer">"வழிசெலுத்தல் மெனுவை மூடும்"</string>
     <string msgid="7573152094250666567" name="close_sheet">"ஷீட்டை மூடும்"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"சுருக்கப்பட்டது"</string>
     <string msgid="6083905920877235314" name="copy">"நகலெடு"</string>
     <string msgid="8038256446254964252" name="default_error_message">"தவறான உள்ளீடு"</string>
@@ -53,6 +54,14 @@
     <string name="error_icon_content_description">பிழை</string>
     <string msgid="2427401033573778270" name="expand_button_title">"மேம்பட்டவை"</string>
     <string msgid="5974471714631304645" name="expanded">"விரிக்கப்பட்டது"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"நகலெடு"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"தவறான உள்ளீடு"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"பாப்-அப் சாளரம்"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"கீழ்த்தோன்றல் மெனு"</string>
+    <string name="error_icon_content_description">பிழை</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"மேம்பட்டவை"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">கீழ் தோன்றல் மெனுவைக் காட்டும் பட்டன்</string>
     <string name="icon_content_description">உரையாடல் ஐகான்</string>
     <string msgid="6827826412747255547" name="in_progress">"செயலிலுள்ளது"</string>

@@ -44,6 +44,7 @@
     <string name="clear_text_end_icon_content_description">Futa maandishi</string>
     <string msgid="406453423630273620" name="close_drawer">"Funga menyu ya kusogeza"</string>
     <string msgid="7573152094250666567" name="close_sheet">"Funga laha"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"Imekunjwa"</string>
     <string msgid="6083905920877235314" name="copy">"Nakili"</string>
     <string msgid="8038256446254964252" name="default_error_message">"Ulichoweka si sahihi"</string>
@@ -53,6 +54,14 @@
     <string name="error_icon_content_description">Hitilafu</string>
     <string msgid="2427401033573778270" name="expand_button_title">"Mipangilio ya Kina"</string>
     <string msgid="5974471714631304645" name="expanded">"Imepanuliwa"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"Nakili"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Ulichoweka si sahihi"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Dirisha Ibukizi"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Menyu kunjuzi"</string>
+    <string name="error_icon_content_description">Hitilafu</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Mipangilio ya Kina"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">Onyesha menyu kunjuzi</string>
     <string name="icon_content_description">Aikoni ya Kidirisha</string>
     <string msgid="6827826412747255547" name="in_progress">"Inaendelea"</string>

@@ -45,6 +45,7 @@
     <string name="clear_text_end_icon_content_description">Обриши текст</string>
     <string msgid="406453423630273620" name="close_drawer">"Затвори мени за навигацију"</string>
     <string msgid="7573152094250666567" name="close_sheet">"Затворите табелу"</string>
+<<<<<<< HEAD
     <string msgid="5389587048670450460" name="collapsed">"Скупљено је"</string>
     <string msgid="6083905920877235314" name="copy">"Копирај"</string>
     <string msgid="8038256446254964252" name="default_error_message">"Унос је неважећи"</string>
@@ -54,6 +55,14 @@
     <string name="error_icon_content_description">Грешка</string>
     <string msgid="2427401033573778270" name="expand_button_title">"Напредно"</string>
     <string msgid="5974471714631304645" name="expanded">"Проширено је"</string>
+=======
+    <string msgid="6083905920877235314" name="copy">"Копирај"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Унос је неважећи"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Искачући прозор"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Падајући мени"</string>
+    <string name="error_icon_content_description">Грешка</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Напредно"</string>
+>>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
     <string name="exposed_dropdown_menu_content_description">Прикажи падајући мени</string>
     <string name="icon_content_description">Икона дијалога</string>
     <string msgid="6827826412747255547" name="in_progress">"У току"</string>
