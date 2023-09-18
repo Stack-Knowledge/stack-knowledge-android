@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -17,6 +20,7 @@ android {
         targetSdk = Versions.TARGET_SDK_VERSION
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "CLIENT_ID", getApiKey("CLIENT_ID", ""))
     }
 
     buildTypes {
@@ -77,4 +81,10 @@ dependencies {
     implementation(Dependency.Coil.COIL)
 
     implementation(Dependency.GAuth.GAUTH)
+}
+fun getApiKey(propertyKey: String, defalutValue: String): String {
+    val propFile = rootProject.file("./local.properties")
+    val properties = Properties()
+    properties.load(FileInputStream(propFile))
+    return properties.getProperty(propertyKey,defalutValue)
 }

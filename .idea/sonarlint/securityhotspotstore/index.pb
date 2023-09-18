@@ -22,10 +22,6 @@ X
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 c
 3domain/src/main/java/com/kdn/domain/utils/Result.kt,6/0/60c5c55658e5ab502d6b05de181112c89a822c7f
-C
-di/build.gradle.kts,f/c/fc7ade2e46dc8a134071b1709727646dac5c507c
-E
-data/build.gradle.kts,9/f/9f5470ef43fd1acab01d54a63bdece9a90dec1b7
 e
 5data/src/main/java/com/kdn/data/remote/api/AuthAPI.kt,f/7/f71b66cab2d4da388c11f803e6965eb3503e93ae
 {
