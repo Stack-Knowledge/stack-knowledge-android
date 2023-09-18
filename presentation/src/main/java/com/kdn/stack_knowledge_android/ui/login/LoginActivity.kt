@@ -1,28 +1,37 @@
 package com.kdn.stack_knowledge_android.ui.login
 
 import android.util.DisplayMetrics
+import android.util.Log
 import android.view.Display
 import android.view.View
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.compose.ui.unit.dp
+import com.google.firebase.messaging.FirebaseMessaging
+import com.kdn.stack_knowledge_android.BuildConfig
 import com.kdn.stack_knowledge_android.ui.base.BaseActivity
 import com.kdn.stack_knowledge_android.viewmodel.AuthViewModel
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.ActivityLoginBinding
+import com.kdn.stack_knowledge_android.utils.Event
 import com.msg.gauthsignin.GAuthSigninWebView
 import com.msg.gauthsignin.component.GAuthButton
 import com.msg.gauthsignin.component.utils.Types
 import dagger.hilt.android.AndroidEntryPoint
+import kotlin.system.exitProcess
 
 @AndroidEntryPoint
 class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login) {
     private val authViewModel by viewModels<AuthViewModel>()
-    override fun createView() {
+    private var backButtonWait: Long = 0
 
+    override fun createView() {
+        setGAuthButtonComponent()
+        setGAuthWebViewComponent()
     }
 
     override fun observeEvent() {
-        TODO("Not yet implemented")
+        observeLoginEvent()
     }
 
     private fun setGAuthButtonComponent() {
@@ -46,7 +55,54 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
 
     private fun setGAuthWebViewComponent() {
         binding.vGauthWebView.setContent {
-            GAuthSigninWebView(clientId = ., redirectUri = , callBack = )
+            GAuthSigninWebView(
+                clientId = BuildConfig.CLIENT_ID,
+                redirectUri = BuildConfig.REDIRECT_URI
+            ) {
+                binding.vGauthWebView.visibility = View.INVISIBLE
+                FirebaseMessaging.getInstance().token
+                    .addOnCompleteListener { token ->
+                        if (token.isSuccessful) {
+                            authViewModel.gAuthLogin(
+                                code = it
+                            )
+                        }
+                    }
+            }
         }
     }
+
+    private fun observeLoginEvent() {
+        authViewModel.gAuthLoginRequest.observe(this) { event ->
+            when (event) {
+                is Event.Success -> {
+                    authViewModel.saveTheLoginData(event.data!!)
+                }
+                else -> {
+                    Log.d("login", event.toString())
+                }
+            }
+        }
+    }
+
+    override fun onBackPressed() {
+        supportFragmentManager.fragments.filter { it is OnBackPressedListener }
+            .map { it as OnBackPressedListener }
+            .forEach { it.onBackPressed(); return }
+
+        if (System.currentTimeMillis() - backButtonWait >= 2000) {
+            backButtonWait = System.currentTimeMillis()
+            Toast.makeText(this, "뒤로 가기 버튼을 한 번 더 누르면 종료됩니다.", Toast.LENGTH_LONG).show()
+        } else {
+            super.onBackPressed()
+            finishAffinity()
+            System.runFinalization()
+            exitProcess(0)
+        }
+    }
+
+    interface OnBackPressedListener {
+        fun onBackPressed()
+    }
+
 }

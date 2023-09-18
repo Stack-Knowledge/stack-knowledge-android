@@ -62,6 +62,7 @@ dependencies {
     implementation(Dependency.Google.MATERIAL)
     implementation(Dependency.Compose.MATERIAL3)
 
+    implementation(Dependency.Google.FIREBASE_MESSAGING)
     implementation(Dependency.Google.FIREBASE_BOM)
     implementation(Dependency.Google.GMS_GOOGLE_SERVICE)
 
