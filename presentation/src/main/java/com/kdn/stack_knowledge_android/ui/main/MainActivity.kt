@@ -1,4 +1,4 @@
-package com.example.stack_knowledge_android.ui.main
+package com.kdn.stack_knowledge_android.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

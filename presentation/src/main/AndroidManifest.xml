@@ -24,6 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.kdn.stack_knowledge_android.ui.main.MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

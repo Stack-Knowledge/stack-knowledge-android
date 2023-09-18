@@ -13,9 +13,6 @@ l
 <domain/src/main/java/com/kdn/domain/exception/IOException.kt,a/0/a06bd410db093b8fff5fd0a2cd29598df374682b
 q
 Adomain/src/main/java/com/kdn/domain/exception/NetworkException.kt,0/7/07e7fc580c6040404190b0bb3ab547e3b1a3f11d
-:
-
-.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 c
 3domain/src/main/java/com/kdn/domain/utils/Result.kt,6/0/60c5c55658e5ab502d6b05de181112c89a822c7f
 e
@@ -24,8 +21,6 @@ e
 Kdomain/src/main/java/com/kdn/domain/model/request/GAuthLoginRequestModel.kt,0/d/0deefd5923a8920253f680846545cd7ea26b8163
 ~
 Ndata/src/main/java/com/kdn/data/remote/dto/auth/request/RefreshTokenRequest.kt,f/9/f98c1fcc6c7091728cebd09f5d9f463c8a11e1b1
-\
-,di/src/main/java/com/kdn/di/NetworkModule.kt,b/3/b3d2ab49ddcf18b5a398c8c665307c2277a68c4f
 e
 5di/src/main/java/com/kdn/di/RemoteDataSourceModule.kt,2/9/29f009cb78bfc6ae0bf742cda0102ae32dfa9e08
 ^
@@ -60,10 +55,6 @@ n
 >data/src/main/java/com/kdn/data/local/key/AuthPreferenceKey.kt,8/7/874f01ca969abfd8070626abf0e9d89a37d8003f
 p
 @data/src/main/java/com/kdn/data/repository/AuthRepositoryImpl.kt,0/8/084f1feacab47f9ff2ba353a18fbd84afb8edeef
-Ç
-Rpresentation/src/main/java/com/kdn/stack_knowledge_android/ui/base/BaseActivity.kt,8/c/8caf5838a5f6a5bb79ba4ab24125c141b7ce3ab4
-Ç
-Rpresentation/src/main/java/com/kdn/stack_knowledge_android/ui/base/BaseFragment.kt,d/4/d42b1407667995cde2b332ee4a5fa784fdc48141
 |
 Lpresentation/src/main/java/com/kdn/stack_knowledge_android/utils/FileUtil.kt,2/a/2a89b6e1a440632346d450f2e8c2c44e3cef5872
 Å
@@ -88,14 +79,6 @@ G
 \presentation/src/androidTest/java/com/kdn/stack_knowledge_android/ExampleInstrumentedTest.kt,a/9/a999db3987744fc1fef966826ea80247fb135574
 }
 Mpresentation/src/test/java/com/kdn/stack_knowledge_android/ExampleUnitTest.kt,7/1/71d593faa1a6a6a25fe6456ccf83e172a1d6b880
-?
-settings.gradle,0/5/05efc8b1657769a27696d478ded1e95f38737233
-I
-buildSrc/build.gradle.kts,d/9/d90b697280fada81e52ec92d24725920f1cb087b
-E
-data/build.gradle.kts,9/f/9f5470ef43fd1acab01d54a63bdece9a90dec1b7
-G
-domain/build.gradle.kts,d/7/d72c8b69b8da0b3b02b699ccd509295dbd783baa
 ì
 cpresentation/src/main/java/com/kdn/stack_knowledge_android/application/StackKnowledgeApplication.kt,3/a/3a89e9cf804f67d760804044262cf799e9696e62
 y

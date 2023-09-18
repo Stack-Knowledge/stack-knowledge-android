@@ -4,6 +4,7 @@ object Versions {
     const val GRADLE_ANDROID = "7.4.2"
     const val GRADLE_KOTLIN = "1.8.10"
     const val GRADLE_KTLINT = "11.1.0"
+    const val GRADLE_GOOGLE = "4.3.15"
 
     val JAVA_VERSION = JavaVersion.VERSION_17
     const val KOTLINX_COROUTINES = "1.6.0"

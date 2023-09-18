@@ -1,12 +1,12 @@
 object Dependency {
 
     object GradlePlugin {
-        const val ANDROID_APPLICATION = "com.androd.application"
-        const val GRADLE_ANDROID = "com.android.tools.build:gradle:${Versions.GRADLE_ANDROID}"
-        const val GRADLE_KOTLIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.GRADLE_KOTLIN}"
+        const val ANDROID_APPLICATION_PLUGIN = "com.android.application"
+        const val KOTLIN_ANDROID_PLUGIN = "org.jetbrains.kotlin.android"
+        const val ANDROID_LIBRARY_PLUGIN = "com.android.library"
+        const val KTLINT_PLUGIN = "org.jlleitschuh.gradle.ktlint"
         const val GRADLE_HILT = "com.google.dagger:hilt-android-gradle-plugin:${Versions.HILT}"
-        const val GRADLE_KTLINT = "org.jlleitschuh.gradle.ktlint"
-        const val GMS_GOOGLE_SERVICE = "com.google.gms:google-services:${Versions.GMS_GOOGLE_SERVICE}"
+        const val GOOGLE_PLUGIN = "com.google.gms:google-services:${Versions.GRADLE_GOOGLE}"
     }
 
     object Kotlin {

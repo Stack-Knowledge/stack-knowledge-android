@@ -56,7 +56,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
         binding.vGauthWebView.setContent {
             GAuthSigninWebView(
                 clientId = BuildConfig.GAUTH_CLIENT_ID,
-                redirectUri = BuildConfig.BASE_URL,
+                redirectUri = BuildConfig.REDIRECT_URI
             ) {
                 binding.vGauthWebView.visibility = View.INVISIBLE
                 println(it)

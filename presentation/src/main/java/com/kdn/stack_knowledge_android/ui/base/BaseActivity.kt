@@ -26,12 +26,12 @@ abstract class BaseActivity<B: ViewDataBinding>(
 
     abstract fun observeEvent()
 
-    protected fun shortToast(msg: String){
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+    protected fun shortToast(kdn: String){
+        Toast.makeText(this, kdn, Toast.LENGTH_SHORT).show()
     }
 
-    protected fun longToast(msg: String){
-        Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
+    protected fun longToast(kdn: String){
+        Toast.makeText(this, kdn, Toast.LENGTH_LONG).show()
     }
 
 }
