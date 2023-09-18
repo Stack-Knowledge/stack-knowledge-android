@@ -38,7 +38,7 @@ object Versions {
     const val ROOM = "2.3.0"
 
     const val RETROFIT = "2.7.1"
-    const val OKHTTP = "4.9.3"
+    const val OKHTTP = "4.10.0"
 
     const val JUNIT = "4.13.2"
     const val MOCKITO_KOTLIN = "4.1.0"

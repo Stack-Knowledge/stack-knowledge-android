@@ -20,7 +20,10 @@ android {
         targetSdk = Versions.TARGET_SDK_VERSION
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "CLIENT_ID", getApiKey("CLIENT_ID", ""))
+        buildConfigField("String","BASE_URL", getApiKey("BASE_URL"))
+        buildConfigField("String","REDIRECT_URI", getApiKey("REDIRECT_URI"))
+        buildConfigField("String", "GAUTH_CLIENT_ID", getApiKey("GAUTH_CLIENT_ID"))
+        buildConfigField("String", "GOOGLE_CLIENT_ID", getApiKey("GOOGLE_CLIENT_ID"))
     }
 
     buildTypes {
@@ -39,7 +42,9 @@ android {
     kotlinOptions {
         jvmTarget = Versions.JAVA_VERSION.toString()
     }
-
+    composeOptions{
+        kotlinCompilerExtensionVersion = Versions.COMPOSE
+    }
     buildFeatures {
         dataBinding = true
         viewBinding = true
@@ -62,10 +67,6 @@ dependencies {
     implementation(Dependency.Google.MATERIAL)
     implementation(Dependency.Compose.MATERIAL3)
 
-    implementation(Dependency.Google.FIREBASE_MESSAGING)
-    implementation(Dependency.Google.FIREBASE_BOM)
-    implementation(Dependency.Google.GMS_GOOGLE_SERVICE)
-
     implementation(Dependency.Libraries.RETROFIT)
     implementation(Dependency.Libraries.RETROFIT_CONVERTER_GSON)
 
@@ -77,15 +78,18 @@ dependencies {
     implementation(Dependency.Hilt.HILT_ANDROID)
     kapt(Dependency.Hilt.HILT_ANDROID_COMPILER)
 
+    implementation(Dependency.UnitTest.JUNIT)
+    androidTestImplementation(Dependency.AndroidTest.ANDROID_JUNIT)
     testImplementation(Dependency.UnitTest.JUNIT)
 
     implementation(Dependency.Coil.COIL)
 
     implementation(Dependency.GAuth.GAUTH)
 }
-fun getApiKey(propertyKey: String, defalutValue: String): String {
+
+fun getApiKey(propertyKey: String): String {
     val propFile = rootProject.file("./local.properties")
     val properties = Properties()
     properties.load(FileInputStream(propFile))
-    return properties.getProperty(propertyKey,defalutValue)
+    return properties.getProperty(propertyKey)
 }

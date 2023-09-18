@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.compose.ui.unit.dp
-import com.google.firebase.messaging.FirebaseMessaging
 import com.kdn.stack_knowledge_android.BuildConfig
 import com.kdn.stack_knowledge_android.ui.base.BaseActivity
 import com.kdn.stack_knowledge_android.viewmodel.AuthViewModel
@@ -56,18 +55,11 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
     private fun setGAuthWebViewComponent() {
         binding.vGauthWebView.setContent {
             GAuthSigninWebView(
-                clientId = BuildConfig.CLIENT_ID,
-                redirectUri = BuildConfig.REDIRECT_URI
+                clientId = BuildConfig.GAUTH_CLIENT_ID,
+                redirectUri = BuildConfig.BASE_URL,
             ) {
                 binding.vGauthWebView.visibility = View.INVISIBLE
-                FirebaseMessaging.getInstance().token
-                    .addOnCompleteListener { token ->
-                        if (token.isSuccessful) {
-                            authViewModel.gAuthLogin(
-                                code = it
-                            )
-                        }
-                    }
+                println(it)
             }
         }
     }

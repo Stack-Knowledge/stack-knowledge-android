@@ -28,6 +28,7 @@ id g_ic_stack_black_logo_s
 id g_ic_stack_black_logo_t
 id tv_black_stack_knowledge
 id v_black_stack_logo
+id v_gauth_web_view
 id v_ic_background_b
 id v_ic_background_t
 layout activity_login

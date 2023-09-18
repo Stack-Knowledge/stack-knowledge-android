@@ -3,22 +3,19 @@ object Dependency {
     object GradlePlugin {
         const val ANDROID_APPLICATION = "com.androd.application"
         const val GRADLE_ANDROID = "com.android.tools.build:gradle:${Versions.GRADLE_ANDROID}"
-        const val GRADLE_KOTLIN =
-            "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.GRADLE_KOTLIN}"
+        const val GRADLE_KOTLIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.GRADLE_KOTLIN}"
         const val GRADLE_HILT = "com.google.dagger:hilt-android-gradle-plugin:${Versions.HILT}"
         const val GRADLE_KTLINT = "org.jlleitschuh.gradle.ktlint"
+        const val GMS_GOOGLE_SERVICE = "com.google.gms:google-services:${Versions.GMS_GOOGLE_SERVICE}"
     }
 
     object Kotlin {
-        const val COROUTINES_CORE =
-            "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.KOTLINX_COROUTINES}"
-        const val COROUTINES_ANDROID =
-            "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.KOTLINX_COROUTINES}"
+        const val COROUTINES_CORE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.KOTLINX_COROUTINES}"
+        const val COROUTINES_ANDROID = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.KOTLINX_COROUTINES}"
     }
 
     object Compose {
-        const val ACTIVITY_COMPOSE =
-            "androidx.activity:activity-compose:${Versions.COMPOSE_ACTIVITY}"
+        const val ACTIVITY_COMPOSE = "androidx.activity:activity-compose:${Versions.COMPOSE_ACTIVITY}"
         const val COMPOSE = "androidx.compose.ui:ui:${Versions.COMPOSE}"
         const val COMPOSE_TOOLING = "androidx.compose.ui.ui-tooling:${Versions.COMPOSE}"
         const val VIEW_BINDING = "androidx.compose.ui:ui-viewbinding:${Versions.COMPOSE}"
@@ -34,10 +31,8 @@ object Dependency {
         const val LIFECYCLE = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.LIFECYCLE_KTX}"
         const val APP_COMPAT = "androidx.appcompat:appcompat:${Versions.APP_COMPAT}"
         const val PREFERENCE_KTX = "androidx.preference:preference-ktx:${Versions.PREFERENCE_KTX}"
-        const val LIFECYCLE_VIEWMODEL_KTX =
-            "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.LIFECYCLE_KTX}"
-        const val CONSTRAINT_LAYOUT =
-            "androidx.constraintlayout:constraintlayout:${Versions.CONTRAINT_LAYOUT}"
+        const val LIFECYCLE_VIEWMODEL_KTX = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.LIFECYCLE_KTX}"
+        const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:${Versions.CONTRAINT_LAYOUT}"
         const val PAGING = "androidx.paging:paging-runtime:${Versions.PAGING}"
         const val PAGING_COMPOSE = "androidx.paging:paging-compose:${Versions.PAGING_COMPOSE}"
         const val LEANBACK = "androidx.leanback:leanback:${Versions.LEANBACK}"
@@ -45,10 +40,8 @@ object Dependency {
     }
 
     object Accompanist {
-        const val ANIMATE_NAVIGATION =
-            "com.google.accompanist:accompanist-navigation-animation:${Versions.ACCOMPANIST}"
-        const val VIEW_PAGER =
-            "com.google.accompanist:accompanist-pager:${Versions.ACCOMPANIST}"
+        const val ANIMATE_NAVIGATION = "com.google.accompanist:accompanist-navigation-animation:${Versions.ACCOMPANIST}"
+        const val VIEW_PAGER = "com.google.accompanist:accompanist-pager:${Versions.ACCOMPANIST}"
     }
 
     object Hilt {
@@ -63,11 +56,9 @@ object Dependency {
 
     object Libraries {
         const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
-        const val RETROFIT_CONVERTER_GSON =
-            "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}"
+        const val RETROFIT_CONVERTER_GSON = "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}"
         const val OKHTTP = "com.squareup.okhttp3:okhttp:${Versions.OKHTTP}"
-        const val OKHTTP_LOGGING_INTERCEPTOR =
-            "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP}"
+        const val OKHTTP_LOGGING_INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP}"
         const val SSE = "com.squareup.okhttp3:okhttp-sse:${Versions.OKHTTP}"
     }
 
@@ -98,7 +89,7 @@ object Dependency {
         const val FIREBASE_MESSAGING = "com.google.firebase:firebase-messaging-ktx:${Versions.FIREBASE_MESSAGING}"
         const val FIREBASE_BOM = "com.google.firebase:firebase-bom:${Versions.FIREBASE_BOM}"
         const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
-        const val GMS_GOOGLE_SERVICE = "com.google.gms.google-services:${Versions.GMS_GOOGLE_SERVICE}"
+        const val GMS_GOOGLE_SERVICE = "com.google.gms.google-services${Versions.GMS_GOOGLE_SERVICE}"
     }
 
     object DataStore {
