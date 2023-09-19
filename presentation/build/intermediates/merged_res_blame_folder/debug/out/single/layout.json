@@ -1,10 +1,14 @@
 [
     {
-        "merged": "com.kdn.stack_knowledge_android.presentation-mergeDebugResources-81:/layout/activity_login.xml",
-        "source": "com.kdn.stack_knowledge_android.presentation-main-84:/layout/activity_login.xml"
+        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-mergeDebugResources-82:/layout/activity_login.xml",
+        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/layout/activity_login.xml"
     },
     {
-        "merged": "com.kdn.stack_knowledge_android.presentation-mergeDebugResources-81:/layout/activity_main.xml",
-        "source": "com.kdn.stack_knowledge_android.presentation-main-84:/layout/activity_main.xml"
+        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-mergeDebugResources-82:/layout/activity_main.xml",
+        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.kdn.stack_knowledge_android.presentation-mergeDebugResources-82:/layout/activity_main.xml",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/layout/activity_main.xml"
     }
 ]

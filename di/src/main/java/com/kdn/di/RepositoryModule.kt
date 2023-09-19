@@ -1,19 +1,19 @@
 package com.kdn.di
 
-import android.content.Context
-import android.content.SharedPreferences
-import androidx.preference.PreferenceManager
+import com.kdn.data.repository.AuthRepositoryImpl
+import com.kdn.domain.repository.AuthRepository
+import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 abstract class RepositoryModule {
-    @Provides
-    fun provideSharedPreference(
-        @ApplicationContext context: Context
-    ): SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+    @Singleton
+    @Binds
+    abstract fun provideAuthRepository(
+        authRepositoryImpl: AuthRepositoryImpl,
+    ): AuthRepository
 }

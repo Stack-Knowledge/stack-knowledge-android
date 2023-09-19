@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 com.kdn.stack_knowledge_android
-=======
-com.example.stack_knowledge_android
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -798,6 +794,22 @@ attr percentX
 attr percentY
 attr perpendicularPath_percent
 attr persistent
+attr piv_animationDuration
+attr piv_animationType
+attr piv_autoVisibility
+attr piv_count
+attr piv_dynamicCount
+attr piv_interactiveAnimation
+attr piv_orientation
+attr piv_padding
+attr piv_radius
+attr piv_rtl_mode
+attr piv_scaleFactor
+attr piv_select
+attr piv_selectedColor
+attr piv_strokeWidth
+attr piv_unselectedColor
+attr piv_viewPager
 attr pivotAnchor
 attr placeholderActivityName
 attr placeholderText
@@ -901,6 +913,25 @@ attr singleLine
 attr singleLineTitle
 attr singleSelection
 attr sizePercent
+attr sliderAnimationDuration
+attr sliderAutoCycleDirection
+attr sliderAutoCycleEnabled
+attr sliderIndicatorAnimationDuration
+attr sliderIndicatorEnabled
+attr sliderIndicatorGravity
+attr sliderIndicatorMargin
+attr sliderIndicatorMarginBottom
+attr sliderIndicatorMarginLeft
+attr sliderIndicatorMarginRight
+attr sliderIndicatorMarginTop
+attr sliderIndicatorOrientation
+attr sliderIndicatorPadding
+attr sliderIndicatorRadius
+attr sliderIndicatorRtlMode
+attr sliderIndicatorSelectedColor
+attr sliderIndicatorUnselectedColor
+attr sliderScrollTimeInSec
+attr sliderStartAutoCycle
 attr sliderStyle
 attr snackbarButtonStyle
 attr snackbarStyle
@@ -1233,10 +1264,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
-<<<<<<< HEAD
 color ic_launcher_background
-=======
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1853,17 +1881,11 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
-<<<<<<< HEAD
 drawable gauth_black_ic
 drawable gauth_blue_ic
 drawable gauth_white_ic
-drawable ic_100tb
 drawable ic_arrow_down_24dp
 drawable ic_black_stack_logo
-=======
-drawable ic_100tb
-drawable ic_arrow_down_24dp
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 drawable ic_call_answer
 drawable ic_call_answer_low
 drawable ic_call_answer_video
@@ -1871,18 +1893,12 @@ drawable ic_call_answer_video_low
 drawable ic_call_decline
 drawable ic_call_decline_low
 drawable ic_clock_black_24dp
-<<<<<<< HEAD
 drawable ic_kdn_logo
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_login_background_b
 drawable ic_login_background_t
-=======
-drawable ic_keyboard_black_24dp
-drawable ic_launcher_background
-drawable ic_launcher_foreground
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -1925,14 +1941,11 @@ drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
-<<<<<<< HEAD
 font font
 font pretendard_bold
 font pretendard_regular
 font pretendard_semibold
 font pretendardsemibold
-=======
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -2021,6 +2034,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id back_and_forth
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2032,10 +2046,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-<<<<<<< HEAD
 id btn_gauth_login_button
-=======
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2061,8 +2072,8 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id closest
-id coil_request_manager
 id collapseActionView
+id color
 id compose_view_saveable_id_tag
 id confirm_button
 id constraint
@@ -2079,10 +2090,7 @@ id currentState
 id custom
 id customPanel
 id cut
-<<<<<<< HEAD
 id dataBinding
-=======
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2111,6 +2119,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drop
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -2137,7 +2146,6 @@ id floating
 id forever
 id fragment_container_view_tag
 id frost
-<<<<<<< HEAD
 id g_black_stack_knowledge_e
 id g_black_stack_knowledge_s
 id g_ic_background_b_s
@@ -2147,10 +2155,16 @@ id g_ic_stack_black_logo_b
 id g_ic_stack_black_logo_e
 id g_ic_stack_black_logo_s
 id g_ic_stack_black_logo_t
-=======
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
+id g_tv_black_stack_knowledge_b
+id g_tv_black_stack_knowledge_e
+id g_tv_black_stack_knowledge_s
+id g_tv_black_stack_knowledge_t
+id g_v_black_stack_logo_b
+id g_v_black_stack_logo_s
+id g_v_black_stack_logo_t
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -2164,6 +2178,7 @@ id hideable
 id home
 id homeAsUp
 id honorRequest
+id horizontal
 id horizontal_only
 id icon
 id icon_frame
@@ -2268,11 +2283,8 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
-<<<<<<< HEAD
 id onAttachStateChangeListener
 id onDateChanged
-=======
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 id onInterceptTouchReturnSwipe
 id outline
 id outward
@@ -2314,6 +2326,7 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scale_down
 id screen
 id scroll
 id scrollIndicatorDown
@@ -2375,6 +2388,7 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id swap
 id switchWidget
 id tabMode
 id tag_accessibility_actions
@@ -2401,10 +2415,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-<<<<<<< HEAD
 id textWatcher
-=======
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2414,6 +2425,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id thinWorm
 id time
 id title
 id titleDividerNoCustom
@@ -2430,22 +2442,17 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-<<<<<<< HEAD
 id tv_black_stack_knowledge
-=======
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 id unchecked
 id uniform
 id unlabeled
 id up
 id useLogo
-<<<<<<< HEAD
 id v_black_stack_logo
 id v_gauth_web_view
 id v_ic_background_b
 id v_ic_background_t
-=======
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
+id vertical
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -2458,6 +2465,7 @@ id visible_removing_fragment_view_tag
 id west
 id withText
 id withinBounds
+id worm
 id wrap
 id wrap_content
 id wrap_content_constrained
@@ -2527,10 +2535,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-<<<<<<< HEAD
 layout activity_login
-=======
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2633,10 +2638,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 mipmap ic_launcher
-<<<<<<< HEAD
 mipmap ic_launcher_foreground
-=======
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
@@ -2685,7 +2687,6 @@ string chip_text
 string clear_text_end_icon_content_description
 string close_drawer
 string close_sheet
-<<<<<<< HEAD
 string collapsed
 string copy
 string default_error_message
@@ -2695,14 +2696,6 @@ string dropdown_menu
 string error_icon_content_description
 string expand_button_title
 string expanded
-=======
-string copy
-string default_error_message
-string default_popup_window_title
-string dropdown_menu
-string error_icon_content_description
-string expand_button_title
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -3654,6 +3647,7 @@ styleable NavigationView android_background android_fitsSystemWindows android_ma
 styleable Navigator android_label android_id route
 styleable OnClick clickAction targetId
 styleable OnSwipe autoCompleteMode dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp rotationCenterId springBoundary springDamping springMass springStiffness springStopThreshold touchAnchorId touchAnchorSide touchRegionId
+styleable PageIndicatorView piv_animationDuration piv_animationType piv_autoVisibility piv_count piv_dynamicCount piv_interactiveAnimation piv_orientation piv_padding piv_radius piv_rtl_mode piv_scaleFactor piv_select piv_selectedColor piv_strokeWidth piv_unselectedColor piv_viewPager
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable Preference android_icon android_persistent android_enabled android_layout android_title android_selectable android_key android_summary android_order android_widgetLayout android_dependency android_defaultValue android_shouldDisableView android_fragment android_singleLineTitle android_iconSpaceReserved allowDividerAbove allowDividerBelow defaultValue dependency enableCopying enabled fragment icon iconSpaceReserved isPreferenceVisible key layout order persistent selectable shouldDisableView singleLineTitle summary title widgetLayout
@@ -3674,6 +3668,7 @@ styleable SeekBarPreference android_layout android_max adjustable min seekBarInc
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingEnd contentPaddingLeft contentPaddingRight contentPaddingStart contentPaddingTop shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius thumbStrokeColor thumbStrokeWidth tickColor tickColorActive tickColorInactive tickVisible trackColor trackColorActive trackColorInactive trackHeight
+styleable SliderView sliderAnimationDuration sliderAutoCycleDirection sliderAutoCycleEnabled sliderIndicatorAnimationDuration sliderIndicatorEnabled sliderIndicatorGravity sliderIndicatorMargin sliderIndicatorMarginBottom sliderIndicatorMarginLeft sliderIndicatorMarginRight sliderIndicatorMarginTop sliderIndicatorOrientation sliderIndicatorPadding sliderIndicatorRadius sliderIndicatorRtlMode sliderIndicatorSelectedColor sliderIndicatorUnselectedColor sliderScrollTimeInSec sliderStartAutoCycle
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme

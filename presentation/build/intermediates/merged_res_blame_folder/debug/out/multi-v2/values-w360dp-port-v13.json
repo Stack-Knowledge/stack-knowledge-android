@@ -1,17 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
-            "outputFile": "com.kdn.stack_knowledge_android.presentation-mergeDebugResources-80:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "com.kdn.stack_knowledge_android.presentation-mergeDebugResources-81:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/17ef85c0c05ac3a06387367c2a814519/transformed/material-1.3.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
-=======
-            "outputFile": "com.example.stack_knowledge_android.presentation-mergeDebugResources-73:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
-            "map": [
-                {
-                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/9f46c7250348cac8db8245b4cba70e3a/transformed/material-1.3.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
+                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/824a57be24821782eae35654ea181ad1/transformed/material-1.3.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

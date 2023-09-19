@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 {"hilt-android-compiler-2.45.jar (com.google.dagger:hilt-android-compiler:2.45)":"INCREMENTAL_AP","databinding-compiler-7.4.2.jar (androidx.databinding:databinding-compiler:7.4.2)":"INCREMENTAL_AP","dagger-compiler-2.45.jar (com.google.dagger:dagger-compiler:2.45)":"INCREMENTAL_AP"}
-=======
-{"hilt-android-compiler-2.44.jar (com.google.dagger:hilt-android-compiler:2.44)":"INCREMENTAL_AP","dagger-compiler-2.44.jar (com.google.dagger:dagger-compiler:2.44)":"INCREMENTAL_AP"}
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d

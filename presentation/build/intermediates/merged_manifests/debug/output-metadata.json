@@ -4,11 +4,7 @@
     "type": "MERGED_MANIFESTS",
     "kind": "Directory"
   },
-<<<<<<< HEAD
   "applicationId": "com.kdn.stack_knowledge_android",
-=======
-  "applicationId": "com.example.stack_knowledge_android",
->>>>>>> 6f39e71fcf00eab2afe7db8050b19eb0c136005d
   "variantName": "debug",
   "elements": [
     {
