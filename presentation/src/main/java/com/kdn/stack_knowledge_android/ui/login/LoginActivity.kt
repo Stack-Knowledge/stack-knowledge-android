@@ -1,5 +1,6 @@
 package com.kdn.stack_knowledge_android.ui.login
 
+import android.content.Intent
 import android.util.DisplayMetrics
 import android.util.Log
 import android.view.Display
@@ -7,16 +8,19 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.lifecycleScope
 import com.kdn.stack_knowledge_android.BuildConfig
 import com.kdn.stack_knowledge_android.ui.base.BaseActivity
 import com.kdn.stack_knowledge_android.viewmodel.AuthViewModel
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.ActivityLoginBinding
+import com.kdn.stack_knowledge_android.ui.main.MainActivity
 import com.kdn.stack_knowledge_android.utils.Event
 import com.msg.gauthsignin.GAuthSigninWebView
 import com.msg.gauthsignin.component.GAuthButton
 import com.msg.gauthsignin.component.utils.Types
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import kotlin.system.exitProcess
 
 @AndroidEntryPoint
@@ -25,6 +29,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
     private var backButtonWait: Long = 0
 
     override fun createView() {
+        binding.login = this
         setGAuthButtonComponent()
         setGAuthWebViewComponent()
     }
@@ -44,10 +49,10 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
             GAuthButton(
                 style = Types.Style.DEFAULT,
                 actionType = Types.ActionType.SIGNIN,
-                colors = Types.Colors.OUTLINE,
+                colors = Types.Colors.COLORED,
                 horizontalMargin = (dpWidth / 2 - 120).dp
             ){
-                binding.btnGauthLoginButton.visibility = View.VISIBLE
+                binding.vGauthWebView.visibility = View.VISIBLE
             }
         }
     }
@@ -56,10 +61,16 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
         binding.vGauthWebView.setContent {
             GAuthSigninWebView(
                 clientId = BuildConfig.GAUTH_CLIENT_ID,
-                redirectUri = BuildConfig.REDIRECT_URI
-            ) {
+                redirectUri = BuildConfig.REDIRECT_URI,
+                ) {code ->
                 binding.vGauthWebView.visibility = View.INVISIBLE
-                println(it)
+
+                authViewModel.gAuthLogin(
+                    code = code
+                )
+//                lifecycleScope.launch {
+//                    authViewModel.isLoading
+//                }
             }
         }
     }
@@ -91,6 +102,15 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
             System.runFinalization()
             exitProcess(0)
         }
+    }
+
+    private fun pageController() {
+        startActivity(
+            Intent(
+                this, MainActivity::class.java
+            )
+        )
+        finish()
     }
 
     interface OnBackPressedListener {

@@ -9,9 +9,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.compose.ui.platform.ComposeView;
 import androidx.constraintlayout.widget.Guideline;
+import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.kdn.stack_knowledge_android.R;
+import com.kdn.stack_knowledge_android.ui.login.LoginActivity;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -24,6 +26,12 @@ public abstract class ActivityLoginBinding extends ViewDataBinding {
 
   @NonNull
   public final Guideline gBlackStackKnowledgeS;
+
+  @NonNull
+  public final Guideline gBtnGauthLoginB;
+
+  @NonNull
+  public final Guideline gBtnGauthLoginT;
 
   @NonNull
   public final Guideline gIcBackgroundBS;
@@ -61,16 +69,22 @@ public abstract class ActivityLoginBinding extends ViewDataBinding {
   @NonNull
   public final View vIcBackgroundT;
 
+  @Bindable
+  protected LoginActivity mLogin;
+
   protected ActivityLoginBinding(Object _bindingComponent, View _root, int _localFieldCount,
       ComposeView btnGauthLoginButton, Guideline gBlackStackKnowledgeE,
-      Guideline gBlackStackKnowledgeS, Guideline gIcBackgroundBS, Guideline gIcBackgroundBT,
-      Guideline gIcBackgroundTB, Guideline gIcStackBlackLogoB, Guideline gIcStackBlackLogoE,
-      Guideline gIcStackBlackLogoS, Guideline gIcStackBlackLogoT, TextView tvBlackStackKnowledge,
-      View vBlackStackLogo, ComposeView vGauthWebView, View vIcBackgroundB, View vIcBackgroundT) {
+      Guideline gBlackStackKnowledgeS, Guideline gBtnGauthLoginB, Guideline gBtnGauthLoginT,
+      Guideline gIcBackgroundBS, Guideline gIcBackgroundBT, Guideline gIcBackgroundTB,
+      Guideline gIcStackBlackLogoB, Guideline gIcStackBlackLogoE, Guideline gIcStackBlackLogoS,
+      Guideline gIcStackBlackLogoT, TextView tvBlackStackKnowledge, View vBlackStackLogo,
+      ComposeView vGauthWebView, View vIcBackgroundB, View vIcBackgroundT) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnGauthLoginButton = btnGauthLoginButton;
     this.gBlackStackKnowledgeE = gBlackStackKnowledgeE;
     this.gBlackStackKnowledgeS = gBlackStackKnowledgeS;
+    this.gBtnGauthLoginB = gBtnGauthLoginB;
+    this.gBtnGauthLoginT = gBtnGauthLoginT;
     this.gIcBackgroundBS = gIcBackgroundBS;
     this.gIcBackgroundBT = gIcBackgroundBT;
     this.gIcBackgroundTB = gIcBackgroundTB;
@@ -83,6 +97,13 @@ public abstract class ActivityLoginBinding extends ViewDataBinding {
     this.vGauthWebView = vGauthWebView;
     this.vIcBackgroundB = vIcBackgroundB;
     this.vIcBackgroundT = vIcBackgroundT;
+  }
+
+  public abstract void setLogin(@Nullable LoginActivity login);
+
+  @Nullable
+  public LoginActivity getLogin() {
+    return mLogin;
   }
 
   @NonNull

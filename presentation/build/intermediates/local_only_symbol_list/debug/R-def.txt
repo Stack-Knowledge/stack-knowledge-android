@@ -21,6 +21,8 @@ font pretendard_semibold
 id btn_gauth_login_button
 id g_black_stack_knowledge_e
 id g_black_stack_knowledge_s
+id g_btn_gauth_login_b
+id g_btn_gauth_login_t
 id g_ic_background_b_s
 id g_ic_background_b_t
 id g_ic_background_t_b

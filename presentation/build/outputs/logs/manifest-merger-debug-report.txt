@@ -1,7 +1,7 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:2:1-34:12
+ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:2:1-33:12
 MERGED from [androidx.databinding:databinding-adapters:7.4.2] /Users/chaejong-in/.gradle/caches/transforms-3/a967da79d74b437f13b72f0e4033105b/transformed/databinding-adapters-7.4.2/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-ktx:7.4.2] /Users/chaejong-in/.gradle/caches/transforms-3/7547ff03a0867d0674da5bba1cd85ca1/transformed/databinding-ktx-7.4.2/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-runtime:7.4.2] /Users/chaejong-in/.gradle/caches/transforms-3/c68c2e07a164a205ae852817e8deb57b/transformed/databinding-runtime-7.4.2/AndroidManifest.xml:2:1-7:12
@@ -106,10 +106,10 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/
 MERGED from [androidx.print:print:1.0.0] /Users/chaejong-in/.gradle/caches/transforms-3/1755424a2bd12c3d06fdb241bf209a25/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/0462c2fce2921db693e4ca7e2f1ae7cd/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.45] /Users/chaejong-in/.gradle/caches/transforms-3/db51db2bce8427d65b74496797f91fe7/transformed/dagger-lint-aar-2.45/AndroidManifest.xml:16:1-19:12
-INJECTED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:2:1-33:12
 	package
 		INJECTED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:2:1-34:12
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:2:1-33:12
 		INJECTED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:3:5-51
@@ -125,12 +125,8 @@ uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:5:5-80
 	android:name
 		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:5:22-77
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:6:5-78
-	android:name
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:6:22-76
 application
-ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:8:5-32:19
+ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:7:5-31:19
 MERGED from [com.google.android.material:material:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/824a57be24821782eae35654ea181ad1/transformed/material-1.3.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/824a57be24821782eae35654ea181ad1/transformed/material-1.3.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/chaejong-in/.gradle/caches/transforms-3/34b7fd643a57de97e103e980ef16057c/transformed/constraintlayout-2.1.3/AndroidManifest.xml:9:5-20
@@ -158,49 +154,49 @@ MERGED from [androidx.room:room-runtime:2.3.0] /Users/chaejong-in/.gradle/caches
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/chaejong-in/.gradle/caches/transforms-3/5ec5a5b304b71beeb2e7068b0bba96a3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/chaejong-in/.gradle/caches/transforms-3/5ec5a5b304b71beeb2e7068b0bba96a3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 	android:requestLegacyExternalStorage
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:10:9-52
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:9:9-52
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.11.0-alpha01] /Users/chaejong-in/.gradle/caches/transforms-3/5b86c5d50a7b373fe4d11b3ceb1741ea/transformed/core-1.11.0-alpha01/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:16:9-35
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:15:9-41
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:14:9-41
 	android:fullBackupContent
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:13:9-54
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:12:9-54
 	tools:targetApi
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:18:9-29
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:17:9-29
 	android:icon
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:14:9-43
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:11:9-35
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:17:9-59
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:16:9-59
 	android:dataExtractionRules
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:12:9-65
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:11:9-65
 	android:name
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:9:9-62
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:8:9-62
 activity#com.kdn.stack_knowledge_android.ui.login.LoginActivity
-ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:19:9-27:20
+ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:18:9-26:20
 	android:exported
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:21:13-36
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:20:13-36
 	android:name
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:20:13-51
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:19:13-51
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:22:13-26:29
+ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:23:17-69
+ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:23:25-66
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:25:17-77
+ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:25:27-74
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:24:27-74
 activity#com.kdn.stack_knowledge_android.ui.main.MainActivity
-ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:29:9-31:39
+ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:28:9-30:39
 	android:exported
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:31:13-36
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:30:13-36
 	android:name
-		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:30:13-80
+		ADDED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:29:13-80
 uses-sdk
 INJECTED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml

@@ -1,4 +1,4 @@
-#Tue Sep 19 20:00:04 KST 2023
+#Wed Sep 20 12:16:05 KST 2023
 base.0=/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/build/intermediates/dex/debug/mergeLibDexDebug/10/classes.dex
 base.10=/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/build/intermediates/dex/debug/mergeLibDexDebug/7/classes.dex

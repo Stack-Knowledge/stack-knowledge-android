@@ -1,130 +1,126 @@
 [
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/drawable_ic_black_stack_logo.xml.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/drawable/ic_black_stack_logo.xml"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/font_pretendard_regular.ttf.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/font/pretendard_regular.ttf"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xxhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/xml_data_extraction_rules.xml.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/xml/data_extraction_rules.xml"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/font_pretendard_semibold.ttf.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/font/pretendard_semibold.ttf"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xhdpi/ic_launcher_foreground.webp"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/font_pretendard_regular.ttf.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/font/pretendard_regular.ttf"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/drawable_ic_kdn_logo.xml.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/drawable/ic_kdn_logo.xml"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-mdpi/ic_launcher_foreground.webp"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/font_pretendard_bold.ttf.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/font/pretendard_bold.ttf"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-hdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/drawable_ic_launcher_background.xml.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/drawable/ic_launcher_background.xml"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/xml_backup_rules.xml.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/xml/backup_rules.xml"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/drawable_ic_login_background_b.xml.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/drawable/ic_login_background_b.xml"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/drawable_ic_black_stack_logo.xml.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/drawable/ic_black_stack_logo.xml"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/drawable_ic_kdn_logo.xml.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/drawable/ic_kdn_logo.xml"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/drawable_ic_login_background_t.xml.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/drawable/ic_login_background_t.xml"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-mdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/layout_activity_login.xml.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/layout/activity_login.xml"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-hdpi/ic_launcher_foreground.webp"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/font_pretendard_semibold.ttf.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/font/pretendard_semibold.ttf"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/drawable_ic_login_background_t.xml.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/drawable/ic_login_background_t.xml"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/font_pretendard_bold.ttf.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/font/pretendard_bold.ttf"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/layout_activity_login.xml.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/layout/activity_login.xml"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/xml_data_extraction_rules.xml.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xxhdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
     },
     {
         "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/layout_activity_main.xml.flat",
         "source": "com.kdn.stack_knowledge_android.presentation-main-85:/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/layout_activity_main.xml.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/layout/activity_main.xml"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/xml_backup_rules.xml.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/xml/backup_rules.xml"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/font_font.xml.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/font/font.xml"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/font_font.xml.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/font/font.xml"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/drawable_ic_login_background_b.xml.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/drawable/ic_login_background_b.xml"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "/Users/chaejong-in/.gradle/daemon/7.5/com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.kdn.stack_knowledge_android.presentation-merged_res-83:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/mipmap-anydpi-v26/ic_launcher.xml"
     }
 ]

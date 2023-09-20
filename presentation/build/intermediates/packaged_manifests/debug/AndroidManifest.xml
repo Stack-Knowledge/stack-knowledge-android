@@ -8,7 +8,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <permission
         android:name="com.kdn.stack_knowledge_android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -29,7 +28,7 @@
         android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.StackKnowledgeAndroid" >
+        android:theme="@style/Theme.AppCompat.NoActionBar" >
         <activity
             android:name="com.kdn.stack_knowledge_android.ui.login.LoginActivity"
             android:exported="true" >

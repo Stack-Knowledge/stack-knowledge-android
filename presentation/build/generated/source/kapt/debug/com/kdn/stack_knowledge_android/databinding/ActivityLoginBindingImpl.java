@@ -23,12 +23,14 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding  {
         sViewsWithIds.put(R.id.g_ic_stack_black_logo_e, 7);
         sViewsWithIds.put(R.id.g_black_stack_knowledge_s, 8);
         sViewsWithIds.put(R.id.g_black_stack_knowledge_e, 9);
-        sViewsWithIds.put(R.id.v_ic_background_t, 10);
-        sViewsWithIds.put(R.id.v_ic_background_b, 11);
-        sViewsWithIds.put(R.id.v_black_stack_logo, 12);
-        sViewsWithIds.put(R.id.tv_black_stack_knowledge, 13);
-        sViewsWithIds.put(R.id.btn_gauth_login_button, 14);
-        sViewsWithIds.put(R.id.v_gauth_web_view, 15);
+        sViewsWithIds.put(R.id.g_btn_gauth_login_t, 10);
+        sViewsWithIds.put(R.id.g_btn_gauth_login_b, 11);
+        sViewsWithIds.put(R.id.v_ic_background_t, 12);
+        sViewsWithIds.put(R.id.v_ic_background_b, 13);
+        sViewsWithIds.put(R.id.v_black_stack_logo, 14);
+        sViewsWithIds.put(R.id.tv_black_stack_knowledge, 15);
+        sViewsWithIds.put(R.id.btn_gauth_login_button, 16);
+        sViewsWithIds.put(R.id.v_gauth_web_view, 17);
     }
     // views
     @NonNull
@@ -39,13 +41,15 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityLoginBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 18, sIncludes, sViewsWithIds));
     }
     private ActivityLoginBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (androidx.compose.ui.platform.ComposeView) bindings[14]
+            , (androidx.compose.ui.platform.ComposeView) bindings[16]
             , (androidx.constraintlayout.widget.Guideline) bindings[9]
             , (androidx.constraintlayout.widget.Guideline) bindings[8]
+            , (androidx.constraintlayout.widget.Guideline) bindings[11]
+            , (androidx.constraintlayout.widget.Guideline) bindings[10]
             , (androidx.constraintlayout.widget.Guideline) bindings[3]
             , (androidx.constraintlayout.widget.Guideline) bindings[2]
             , (androidx.constraintlayout.widget.Guideline) bindings[1]
@@ -53,11 +57,11 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding  {
             , (androidx.constraintlayout.widget.Guideline) bindings[7]
             , (androidx.constraintlayout.widget.Guideline) bindings[6]
             , (androidx.constraintlayout.widget.Guideline) bindings[4]
-            , (android.widget.TextView) bindings[13]
+            , (android.widget.TextView) bindings[15]
+            , (android.view.View) bindings[14]
+            , (androidx.compose.ui.platform.ComposeView) bindings[17]
+            , (android.view.View) bindings[13]
             , (android.view.View) bindings[12]
-            , (androidx.compose.ui.platform.ComposeView) bindings[15]
-            , (android.view.View) bindings[11]
-            , (android.view.View) bindings[10]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
@@ -69,7 +73,7 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x1L;
+                mDirtyFlags = 0x2L;
         }
         requestRebind();
     }
@@ -87,7 +91,17 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding  {
     @Override
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
+        if (BR.login == variableId) {
+            setLogin((com.kdn.stack_knowledge_android.ui.login.LoginActivity) variable);
+        }
+        else {
+            variableSet = false;
+        }
             return variableSet;
+    }
+
+    public void setLogin(@Nullable com.kdn.stack_knowledge_android.ui.login.LoginActivity Login) {
+        this.mLogin = Login;
     }
 
     @Override
@@ -111,7 +125,8 @@ public class ActivityLoginBindingImpl extends ActivityLoginBinding  {
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): null
+        flag 0 (0x1L): login
+        flag 1 (0x2L): null
     flag mapping end*/
     //end
 }
