@@ -18,6 +18,7 @@
 .externalNativeBuild
 .cxx
 local.properties
+data/build
 *.idea
 buildSrc/build
 **/google-services.json
