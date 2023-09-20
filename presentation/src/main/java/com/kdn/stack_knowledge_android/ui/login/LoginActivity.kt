@@ -68,9 +68,6 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
                 authViewModel.gAuthLogin(
                     code = code
                 )
-//                lifecycleScope.launch {
-//                    authViewModel.isLoading
-//                }
             }
         }
     }
