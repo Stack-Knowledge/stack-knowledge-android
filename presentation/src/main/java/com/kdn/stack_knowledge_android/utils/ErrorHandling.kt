@@ -2,7 +2,7 @@ package com.kdn.stack_knowledge_android.utils
 
 import android.util.Log
 import com.kdn.domain.exception.ConflictDataException
-import com.kdn.domain.exception.ExpiredTokenException
+import com.kdn.domain.exception.NeedLoginException
 import com.kdn.domain.exception.ForBiddenException
 import com.kdn.domain.exception.InvalidTokenException
 import com.kdn.domain.exception.NotFoundException
@@ -19,7 +19,7 @@ suspend fun<T> Throwable.errorHandling(
     notFoundException: suspend () -> Unit = unknownAction,
     conflictException: suspend () -> Unit = unknownAction,
     serverErrorException: suspend () -> Unit = unknownAction,
-    expiredTokenException: suspend () -> Unit = unknownAction,
+    needLoginException: suspend () -> Unit = unknownAction,
     tooManyRequestException: suspend () -> Unit = unknownAction,
     forBiddenException: suspend() -> Unit = unknownAction,
 ): Event<T> =
@@ -59,9 +59,9 @@ suspend fun<T> Throwable.errorHandling(
             Event.Server
         }
 
-        is ExpiredTokenException -> {
-            errorLog("ExpiredTokenException", message)
-            expiredTokenException()
+        is NeedLoginException -> {
+            errorLog("NeedLoginException", message)
+            needLoginException()
             Event.TokenExpired
         }
 
