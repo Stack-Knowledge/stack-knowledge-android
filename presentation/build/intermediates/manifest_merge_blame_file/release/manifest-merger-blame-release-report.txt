@@ -1,0 +1,233 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.kdn.stack_knowledge_android" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="29"
+6-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml
+7        android:targetSdkVersion="33" />
+7-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.INTERNET" />
+9-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:4:5-67
+9-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:4:22-64
+10    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+10-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:5:5-80
+10-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:5:22-77
+11    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+11-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:6:5-76
+11-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:6:22-74
+12
+13    <permission
+13-->[androidx.core:core:1.11.0-alpha01] /Users/chaejong-in/.gradle/caches/transforms-3/4037b1167cfb5a61362cdd00caa2ac9a/transformed/core-1.11.0-alpha01/AndroidManifest.xml:22:5-24:47
+14        android:name="com.kdn.stack_knowledge_android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.11.0-alpha01] /Users/chaejong-in/.gradle/caches/transforms-3/4037b1167cfb5a61362cdd00caa2ac9a/transformed/core-1.11.0-alpha01/AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.11.0-alpha01] /Users/chaejong-in/.gradle/caches/transforms-3/4037b1167cfb5a61362cdd00caa2ac9a/transformed/core-1.11.0-alpha01/AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="com.kdn.stack_knowledge_android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.11.0-alpha01] /Users/chaejong-in/.gradle/caches/transforms-3/4037b1167cfb5a61362cdd00caa2ac9a/transformed/core-1.11.0-alpha01/AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.11.0-alpha01] /Users/chaejong-in/.gradle/caches/transforms-3/4037b1167cfb5a61362cdd00caa2ac9a/transformed/core-1.11.0-alpha01/AndroidManifest.xml:26:22-94
+18    <uses-permission android:name="android.permission.REORDER_TASKS" />
+18-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:24:5-72
+18-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:24:22-69
+19
+20    <queries>
+20-->[androidx.test:runner:1.5.2] /Users/chaejong-in/.gradle/caches/transforms-3/0862478c53841971d24de106b9f05451/transformed/runner-1.5.2/AndroidManifest.xml:24:5-28:15
+21        <package android:name="androidx.test.orchestrator" />
+21-->[androidx.test:runner:1.5.2] /Users/chaejong-in/.gradle/caches/transforms-3/0862478c53841971d24de106b9f05451/transformed/runner-1.5.2/AndroidManifest.xml:25:9-62
+21-->[androidx.test:runner:1.5.2] /Users/chaejong-in/.gradle/caches/transforms-3/0862478c53841971d24de106b9f05451/transformed/runner-1.5.2/AndroidManifest.xml:25:18-59
+22        <package android:name="androidx.test.services" />
+22-->[androidx.test:runner:1.5.2] /Users/chaejong-in/.gradle/caches/transforms-3/0862478c53841971d24de106b9f05451/transformed/runner-1.5.2/AndroidManifest.xml:26:9-58
+22-->[androidx.test:runner:1.5.2] /Users/chaejong-in/.gradle/caches/transforms-3/0862478c53841971d24de106b9f05451/transformed/runner-1.5.2/AndroidManifest.xml:26:18-55
+23        <package android:name="com.google.android.apps.common.testing.services" />
+23-->[androidx.test:runner:1.5.2] /Users/chaejong-in/.gradle/caches/transforms-3/0862478c53841971d24de106b9f05451/transformed/runner-1.5.2/AndroidManifest.xml:27:9-83
+23-->[androidx.test:runner:1.5.2] /Users/chaejong-in/.gradle/caches/transforms-3/0862478c53841971d24de106b9f05451/transformed/runner-1.5.2/AndroidManifest.xml:27:18-80
+24    </queries>
+25
+26    <application
+26-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:8:5-32:19
+27        android:name="com.kdn.stack_knowledge_android.application.StackKnowledgeApplication"
+27-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:9:9-62
+28        android:allowBackup="true"
+28-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:11:9-35
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.11.0-alpha01] /Users/chaejong-in/.gradle/caches/transforms-3/4037b1167cfb5a61362cdd00caa2ac9a/transformed/core-1.11.0-alpha01/AndroidManifest.xml:28:18-86
+30        android:dataExtractionRules="@xml/data_extraction_rules"
+30-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:12:9-65
+31        android:extractNativeLibs="false"
+32        android:fullBackupContent="@xml/backup_rules"
+32-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:13:9-54
+33        android:icon="@mipmap/ic_launcher"
+33-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:14:9-43
+34        android:label="@string/app_name"
+34-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:15:9-41
+35        android:requestLegacyExternalStorage="true"
+35-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:10:9-52
+36        android:supportsRtl="true"
+36-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:16:9-35
+37        android:theme="@style/Theme.AppCompat.NoActionBar" >
+37-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:17:9-59
+38        <activity
+38-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:19:9-27:20
+39            android:name="com.kdn.stack_knowledge_android.ui.login.LoginActivity"
+39-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:20:13-51
+40            android:exported="true" >
+40-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:21:13-36
+41            <intent-filter>
+41-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:22:13-26:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:23:17-69
+42-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:23:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:25:17-77
+44-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:25:27-74
+45            </intent-filter>
+46        </activity>
+47        <activity
+47-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:29:9-31:39
+48            android:name="com.kdn.stack_knowledge_android.ui.main.MainActivity"
+48-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:30:13-80
+49            android:exported="true" />
+49-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:31:13-36
+50
+51        <provider
+51-->[androidx.emoji2:emoji2:1.4.0-alpha01] /Users/chaejong-in/.gradle/caches/transforms-3/419b3513fe31a747e924383f240b2693/transformed/emoji2-1.4.0-alpha01/AndroidManifest.xml:24:9-32:20
+52            android:name="androidx.startup.InitializationProvider"
+52-->[androidx.emoji2:emoji2:1.4.0-alpha01] /Users/chaejong-in/.gradle/caches/transforms-3/419b3513fe31a747e924383f240b2693/transformed/emoji2-1.4.0-alpha01/AndroidManifest.xml:25:13-67
+53            android:authorities="com.kdn.stack_knowledge_android.androidx-startup"
+53-->[androidx.emoji2:emoji2:1.4.0-alpha01] /Users/chaejong-in/.gradle/caches/transforms-3/419b3513fe31a747e924383f240b2693/transformed/emoji2-1.4.0-alpha01/AndroidManifest.xml:26:13-68
+54            android:exported="false" >
+54-->[androidx.emoji2:emoji2:1.4.0-alpha01] /Users/chaejong-in/.gradle/caches/transforms-3/419b3513fe31a747e924383f240b2693/transformed/emoji2-1.4.0-alpha01/AndroidManifest.xml:27:13-37
+55            <meta-data
+55-->[androidx.emoji2:emoji2:1.4.0-alpha01] /Users/chaejong-in/.gradle/caches/transforms-3/419b3513fe31a747e924383f240b2693/transformed/emoji2-1.4.0-alpha01/AndroidManifest.xml:29:13-31:52
+56                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+56-->[androidx.emoji2:emoji2:1.4.0-alpha01] /Users/chaejong-in/.gradle/caches/transforms-3/419b3513fe31a747e924383f240b2693/transformed/emoji2-1.4.0-alpha01/AndroidManifest.xml:30:17-75
+57                android:value="androidx.startup" />
+57-->[androidx.emoji2:emoji2:1.4.0-alpha01] /Users/chaejong-in/.gradle/caches/transforms-3/419b3513fe31a747e924383f240b2693/transformed/emoji2-1.4.0-alpha01/AndroidManifest.xml:31:17-49
+58            <meta-data
+58-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/chaejong-in/.gradle/caches/transforms-3/8c51be2b96aa65cc228e1b8da4f38a73/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+59                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+59-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/chaejong-in/.gradle/caches/transforms-3/8c51be2b96aa65cc228e1b8da4f38a73/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+60                android:value="androidx.startup" />
+60-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/chaejong-in/.gradle/caches/transforms-3/8c51be2b96aa65cc228e1b8da4f38a73/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+61            <meta-data
+61-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+62                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+62-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+63                android:value="androidx.startup" />
+63-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+64        </provider>
+65
+66        <uses-library
+66-->[androidx.window:window:1.0.0] /Users/chaejong-in/.gradle/caches/transforms-3/4198359fea34022805355569b4c19aaf/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+67            android:name="androidx.window.extensions"
+67-->[androidx.window:window:1.0.0] /Users/chaejong-in/.gradle/caches/transforms-3/4198359fea34022805355569b4c19aaf/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+68            android:required="false" />
+68-->[androidx.window:window:1.0.0] /Users/chaejong-in/.gradle/caches/transforms-3/4198359fea34022805355569b4c19aaf/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+69        <uses-library
+69-->[androidx.window:window:1.0.0] /Users/chaejong-in/.gradle/caches/transforms-3/4198359fea34022805355569b4c19aaf/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+70            android:name="androidx.window.sidecar"
+70-->[androidx.window:window:1.0.0] /Users/chaejong-in/.gradle/caches/transforms-3/4198359fea34022805355569b4c19aaf/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+71            android:required="false" />
+71-->[androidx.window:window:1.0.0] /Users/chaejong-in/.gradle/caches/transforms-3/4198359fea34022805355569b4c19aaf/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+72
+73        <activity
+73-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:27:9-34:20
+74            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+74-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:28:13-99
+75            android:exported="true"
+75-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:29:13-36
+76            android:theme="@style/WhiteBackgroundTheme" >
+76-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:30:13-56
+77            <intent-filter android:priority="-100" >
+77-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:31:13-33:29
+77-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:31:28-51
+78                <category android:name="android.intent.category.LAUNCHER" />
+78-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:25:17-77
+78-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:25:27-74
+79            </intent-filter>
+80        </activity>
+81        <activity
+81-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:35:9-42:20
+82            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+82-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:36:13-95
+83            android:exported="true"
+83-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:37:13-36
+84            android:theme="@style/WhiteBackgroundTheme" >
+84-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:38:13-56
+85            <intent-filter android:priority="-100" >
+85-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:31:13-33:29
+85-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:31:28-51
+86                <category android:name="android.intent.category.LAUNCHER" />
+86-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:25:17-77
+86-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:25:27-74
+87            </intent-filter>
+88        </activity>
+89        <activity
+89-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:43:9-50:20
+90            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+90-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:44:13-103
+91            android:exported="true"
+91-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:45:13-36
+92            android:theme="@style/WhiteBackgroundDialogTheme" >
+92-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:46:13-62
+93            <intent-filter android:priority="-100" >
+93-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:31:13-33:29
+93-->[androidx.test:core:1.5.0] /Users/chaejong-in/.gradle/caches/transforms-3/18d73cebe69b21edebb8ca383d08fd2a/transformed/core-1.5.0/AndroidManifest.xml:31:28-51
+94                <category android:name="android.intent.category.LAUNCHER" />
+94-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:25:17-77
+94-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/presentation/src/main/AndroidManifest.xml:25:27-74
+95            </intent-filter>
+96        </activity>
+97
+98        <receiver
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+99            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+99-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+100            android:directBootAware="false"
+100-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+101            android:enabled="true"
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+102            android:exported="true"
+102-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+103            android:permission="android.permission.DUMP" >
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+104            <intent-filter>
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+105                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+105-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+105-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+106            </intent-filter>
+107            <intent-filter>
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+108                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+109            </intent-filter>
+110            <intent-filter>
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+111                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+112            </intent-filter>
+113            <intent-filter>
+113-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+114                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/db3c73b71d7b33633f7693d38cbc14e8/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+115            </intent-filter>
+116        </receiver>
+117
+118        <service
+118-->[androidx.room:room-runtime:2.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/14637289af293d38f05056721a91ac3d/transformed/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
+119            android:name="androidx.room.MultiInstanceInvalidationService"
+119-->[androidx.room:room-runtime:2.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/14637289af293d38f05056721a91ac3d/transformed/room-runtime-2.3.0/AndroidManifest.xml:26:13-74
+120            android:directBootAware="true"
+120-->[androidx.room:room-runtime:2.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/14637289af293d38f05056721a91ac3d/transformed/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
+121            android:exported="false" />
+121-->[androidx.room:room-runtime:2.3.0] /Users/chaejong-in/.gradle/caches/transforms-3/14637289af293d38f05056721a91ac3d/transformed/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
+122    </application>
+123
+124</manifest>

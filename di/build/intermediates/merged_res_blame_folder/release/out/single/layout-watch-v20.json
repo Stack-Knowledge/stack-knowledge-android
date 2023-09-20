@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.kdn.di-merged_res-36:/layout-watch-v20/abc_alert_dialog_title_material.xml",
+        "source": "com.kdn.di-appcompat-1.6.0-17:/layout-watch-v20/abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "com.kdn.di-merged_res-36:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+        "source": "com.kdn.di-appcompat-1.6.0-17:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml"
+    }
+]

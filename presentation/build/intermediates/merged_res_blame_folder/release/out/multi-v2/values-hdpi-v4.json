@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.kdn.stack_knowledge_android.presentation-mergeReleaseResources-82:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/78ccd1432d2dc0b46b84c2c2433d9db2/transformed/appcompat-1.6.0/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.kdn.stack_knowledge_android.presentation-mergeReleaseResources-82:/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/78ccd1432d2dc0b46b84c2c2433d9db2/transformed/appcompat-1.6.0/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}

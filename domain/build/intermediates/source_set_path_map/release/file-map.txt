@@ -1,0 +1,11 @@
+com.kdn.domain-core-1.3.2-0 /Users/chaejong-in/.gradle/caches/transforms-3/767df079173e6629bf2ede591b542307/transformed/core-1.3.2/res
+com.kdn.domain-recyclerview-1.2.0-1 /Users/chaejong-in/.gradle/caches/transforms-3/caa9fa3bf94cbacbe95824b860af235b/transformed/recyclerview-1.2.0/res
+com.kdn.domain-paging-runtime-3.1.1-2 /Users/chaejong-in/.gradle/caches/transforms-3/d199c0f0f8135a02bd2ea563b0834823/transformed/paging-runtime-3.1.1/res
+com.kdn.domain-pngs-3 /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/generated/res/pngs/release
+com.kdn.domain-resValues-4 /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/generated/res/resValues/release
+com.kdn.domain-rs-5 /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/generated/res/rs/release
+com.kdn.domain-mergeReleaseResources-6 /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.kdn.domain-mergeReleaseResources-7 /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.kdn.domain-merged_res-8 /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/intermediates/merged_res/release
+com.kdn.domain-main-9 /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/src/main/res
+com.kdn.domain-release-10 /Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/src/release/res

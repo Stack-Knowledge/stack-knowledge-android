@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.kdn.di-merged_res-36:/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/78ccd1432d2dc0b46b84c2c2433d9db2/transformed/appcompat-1.6.0/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.kdn.di-mergeReleaseResources-34:/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/Users/chaejong-in/.gradle/caches/transforms-3/78ccd1432d2dc0b46b84c2c2433d9db2/transformed/appcompat-1.6.0/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                }
+            ]
+        }
+    ]
+}
