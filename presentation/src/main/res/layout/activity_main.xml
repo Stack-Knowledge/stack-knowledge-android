@@ -79,4 +79,5 @@
         app:layout_constraintStart_toStartOf="@id/g_v_black_stack_logo_s"
         app:layout_constraintTop_toTopOf="@id/g_v_black_stack_logo_t" />
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>
