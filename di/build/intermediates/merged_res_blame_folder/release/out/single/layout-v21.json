@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.kdn.di-merged_res-36:/layout-v21/notification_action_tombstone.xml",
+        "source": "com.kdn.di-core-1.9.0-7:/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "com.kdn.di-merged_res-36:/layout-v21/notification_template_icon_group.xml",
+        "source": "com.kdn.di-core-1.9.0-7:/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "com.kdn.di-merged_res-36:/layout-v21/notification_template_custom_big.xml",
+        "source": "com.kdn.di-core-1.9.0-7:/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "com.kdn.di-merged_res-36:/layout-v21/notification_action.xml",
+        "source": "com.kdn.di-core-1.9.0-7:/layout-v21/notification_action.xml"
+    }
+]

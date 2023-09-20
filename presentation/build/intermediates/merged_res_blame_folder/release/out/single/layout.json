@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.kdn.stack_knowledge_android.presentation-mergeReleaseResources-83:/layout/activity_login.xml",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.kdn.stack_knowledge_android.presentation-mergeReleaseResources-83:/layout/activity_main.xml",
+        "source": "com.kdn.stack_knowledge_android.presentation-main-85:/layout/activity_main.xml"
+    }
+]

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kdn.di.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-20T10:46:07" hostname="chaejong-in-ui-MacBookPro.local" time="0.0">
+  <properties/>
+  <testcase name="addition_isCorrect" classname="com.kdn.di.ExampleUnitTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

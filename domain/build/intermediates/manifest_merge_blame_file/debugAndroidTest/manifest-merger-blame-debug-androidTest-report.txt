@@ -1,0 +1,36 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.kdn.domain.test" >
+4
+5    <uses-sdk
+5-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest1698607414909982499.xml:5:5-74
+6        android:minSdkVersion="29"
+6-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest1698607414909982499.xml:5:15-41
+7        android:targetSdkVersion="33" />
+7-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest1698607414909982499.xml:5:42-71
+8
+9    <instrumentation
+9-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest1698607414909982499.xml:11:5-15:69
+10        android:name="androidx.test.runner.AndroidJUnitRunner"
+10-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest1698607414909982499.xml:11:22-76
+11        android:functionalTest="false"
+11-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest1698607414909982499.xml:14:22-52
+12        android:handleProfiling="false"
+12-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest1698607414909982499.xml:13:22-53
+13        android:label="Tests for com.kdn.domain.test"
+13-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest1698607414909982499.xml:15:22-67
+14        android:targetPackage="com.kdn.domain.test" />
+14-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest1698607414909982499.xml:12:22-65
+15
+16    <application
+16-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest1698607414909982499.xml:7:5-9:19
+17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+17-->[androidx.core:core:1.3.2] /Users/chaejong-in/.gradle/caches/transforms-3/767df079173e6629bf2ede591b542307/transformed/core-1.3.2/AndroidManifest.xml:24:18-86
+18        android:debuggable="true"
+19        android:extractNativeLibs="false" >
+20        <uses-library android:name="android.test.runner" />
+20-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest1698607414909982499.xml:8:9-60
+20-->/Users/chaejong-in/AndroidStudioProjects/StackKnowledgeAndroid/domain/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest1698607414909982499.xml:8:23-57
+21    </application>
+22
+23</manifest>
