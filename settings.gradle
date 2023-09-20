@@ -10,12 +10,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url "https://jitpack.io" }
-        maven {  url "https://jcenter.bintray.com" }
     }
 }
 rootProject.name = "Stack-Knowledge-Android"
-include ':presentation'
-include ':domain'
-include ':di'
-include ':data'
+include ':app'
