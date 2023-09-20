@@ -87,6 +87,8 @@ dependencies {
     implementation(Dependency.Glide.GLIDE)
 
     implementation(Dependency.GAuth.GAUTH)
+
+    implementation(Dependency.AndroidTest.ESPRESSO_CORE)
 }
 
 fun getApiKey(propertyKey: String): String {

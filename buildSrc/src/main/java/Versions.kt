@@ -45,7 +45,7 @@ object Versions {
     const val MOCKITO_KOTLIN = "4.1.0"
     const val MOCKITO_INLINE = "5.1.1"
     const val ANDROID_JUNIT = "1.1.2"
-    const val ESPRESSO_CORE = "3.3.0"
+    const val ESPRESSO_CORE = "3.5.1"
     const val RECYCLERVIEW = "1.1.0"
 
     const val GAUTH = "v1.1.2"
