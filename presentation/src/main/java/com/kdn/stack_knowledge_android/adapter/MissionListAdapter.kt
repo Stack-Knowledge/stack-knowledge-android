@@ -1,4 +1,6 @@
 package com.kdn.stack_knowledge_android.adapter
 
-class MissionListAdapter {
+import com.kdn.domain.model.response.MissionResponseModel
+
+class MissionListAdapter(private val missionList: List<MissionResponseModel>) {
 }
