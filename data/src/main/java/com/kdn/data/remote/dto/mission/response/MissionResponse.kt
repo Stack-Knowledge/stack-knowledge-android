@@ -10,14 +10,21 @@ data class MissionResponse(
     val id: UUID,
     @SerializedName("title")
     val title: String,
+    @SerializedName("point")
     val point: Int,
+    @SerializedName("missionStatus")
     val missionStatus: String,
+    @SerializedName("user")
     val user: User,
 ) {
     data class User(
+        @SerializedName("id")
         val id: UUID,
+        @SerializedName("email")
         val email: String,
+        @SerializedName("name")
         val name: String,
+        @SerializedName("profileImage")
         val profileImage: String
     )
 }

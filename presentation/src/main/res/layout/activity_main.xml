@@ -232,6 +232,5 @@
             app:layout_constraintTop_toTopOf="@id/g_rv_mission_t"
             tools:listitem="@layout/item_mission" />
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
