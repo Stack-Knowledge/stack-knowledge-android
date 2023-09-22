@@ -37,6 +37,7 @@ object Dependency {
         const val PAGING_COMPOSE = "androidx.paging:paging-compose:${Versions.PAGING_COMPOSE}"
         const val LEANBACK = "androidx.leanback:leanback:${Versions.LEANBACK}"
         const val FRAGMENT_KTX = "androidx.fragment:fragment-ktx:${Versions.FRAGMENT_KTX}"
+        const val RECYCLER_VIEW = "androidx.recyclerview:recyclerview:${Versions.RECYCLERVIEW}"
     }
 
     object Accompanist {

@@ -7,6 +7,10 @@
 
     <font
         android:fontStyle="normal"
+        android:fontWeight="500"
+        android:font="@font/pretendard_medium"/>
+    <font
+        android:fontStyle="normal"
         android:fontWeight="600"
         android:font="@font/pretendard_semibold" />
     <font

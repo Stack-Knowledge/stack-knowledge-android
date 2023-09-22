@@ -77,6 +77,7 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":di"))
 
+    implementation(Dependency.AndroidX.RECYCLER_VIEW)
     implementation(Dependency.Compose.COMPOSE)
     implementation(Dependency.Compose.COMPOSE_HILT_NAV)
     implementation(Dependency.AndroidX.FRAGMENT_KTX)
