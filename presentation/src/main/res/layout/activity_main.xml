@@ -1,82 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.main.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/g_tv_black_stack_knowledge_t"
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.0529" />
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.main.MainActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/g_tv_black_stack_knowledge_b"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.0870" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_black_stack_knowledge_t"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0206" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/g_tv_black_stack_knowledge_s"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1222" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_black_stack_knowledge_b"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0554" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/g_tv_black_stack_knowledge_e"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5111" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_black_stack_knowledge_s"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1111" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/g_v_black_stack_logo_t"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.0500" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_black_stack_knowledge_e"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5111" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/g_v_black_stack_logo_b"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.0920" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_v_black_stack_logo_t"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0206" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/g_v_black_stack_logo_s"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.0300" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_v_black_stack_logo_b"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0490" />
 
-    <TextView
-        android:id="@+id/tv_black_stack_knowledge"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/pretendard_bold"
-        android:text="@string/app_name"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@id/g_tv_black_stack_knowledge_b"
-        app:layout_constraintEnd_toEndOf="@id/g_tv_black_stack_knowledge_e"
-        app:layout_constraintStart_toStartOf="@id/g_tv_black_stack_knowledge_s"
-        app:layout_constraintTop_toTopOf="@id/g_tv_black_stack_knowledge_t" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_v_black_stack_logo_s"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.0250" />
 
-    <View
-        android:id="@+id/v_black_stack_logo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginRight="6dp"
-        android:background="@drawable/ic_black_stack_logo"
-        app:layout_constraintBottom_toBottomOf="@id/g_v_black_stack_logo_b"
-        app:layout_constraintEnd_toStartOf="@id/g_tv_black_stack_knowledge_s"
-        app:layout_constraintStart_toStartOf="@id/g_v_black_stack_logo_s"
-        app:layout_constraintTop_toTopOf="@id/g_v_black_stack_logo_t" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_v_black_stack_logo_e"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.0890" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_vp_view_pager_t"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0652" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_vp_view_pager_b"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3000" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_notice_resolve_question_time_s"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.0444" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_rv_mission_t"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4214" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_rv_mission_b"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.60" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_rv_mission_s"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.0444" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_rv_mission_e"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9556" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_rv_ranking_b"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9188" />
+
+
+        <TextView
+            android:id="@+id/tv_black_stack_knowledge"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/g_tv_black_stack_knowledge_b"
+            app:layout_constraintEnd_toEndOf="@id/g_tv_black_stack_knowledge_e"
+            app:layout_constraintStart_toStartOf="@id/g_tv_black_stack_knowledge_s"
+            app:layout_constraintTop_toTopOf="@id/g_tv_black_stack_knowledge_t" />
+
+        <View
+            android:id="@+id/v_black_stack_logo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_black_stack_logo"
+            app:layout_constraintBottom_toBottomOf="@id/g_v_black_stack_logo_b"
+            app:layout_constraintEnd_toEndOf="@id/g_v_black_stack_logo_e"
+            app:layout_constraintStart_toStartOf="@id/g_v_black_stack_logo_s"
+            app:layout_constraintTop_toTopOf="@id/g_v_black_stack_logo_t" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_main_view_pager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/g_vp_view_pager_b"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/g_vp_view_pager_t" />
+
+        <LinearLayout
+            android:id="@+id/main_banner_indicators"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vp_main_view_pager" />
+
+        <TextView
+            android:id="@+id/tv_notice_resolve_question_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_regular"
+            android:text="* 문제는 12:30 ~ 19:30분까지 풀 수 있습니다."
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/g_tv_notice_resolve_question_time_s"
+            app:layout_constraintTop_toBottomOf="@id/vp_main_view_pager" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/main_banner_tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="166dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/vp_main_view_pager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tabBackground="@drawable/tab_dot"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"
+            app:tabRippleColor="@null">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/first_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/tab_dot" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/second_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/tab_dot" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/third_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/tab_dot" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <TextView
+            android:id="@+id/tv_do_mission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:text="문제 풀기"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/rv_mission"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_mission"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/bg_main_recycler_view"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="@id/g_rv_mission_b"
+            app:layout_constraintEnd_toEndOf="@id/g_rv_mission_e"
+            app:layout_constraintStart_toStartOf="@id/g_rv_mission_s"
+            app:layout_constraintTop_toTopOf="@id/g_rv_mission_t"
+            tools:listitem="@layout/item_mission" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_ranking"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_main_recycler_view"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="@id/g_rv_ranking_b"
+            app:layout_constraintEnd_toEndOf="@id/g_rv_mission_e"
+            app:layout_constraintStart_toStartOf="@id/g_rv_mission_s"
+            app:layout_constraintTop_toBottomOf="@id/rv_mission"
+            tools:listitem="@layout/item_ranking" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bn_main_bottom_navi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:itemRippleColor="@color/black"
+                app:itemIconTint="@color/black"
+                app:itemTextColor="@color/black"
+                app:labelVisibilityMode="labeled"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:menu="@menu/main_menu" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
