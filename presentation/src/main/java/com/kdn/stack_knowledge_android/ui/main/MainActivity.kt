@@ -3,6 +3,7 @@ package com.kdn.stack_knowledge_android.ui.main
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.MissionListAdapter
+import com.kdn.stack_knowledge_android.adapter.RankingListAdapter
 import com.kdn.stack_knowledge_android.adapter.viewpager.MainViewPagerAdapter
 import com.kdn.stack_knowledge_android.databinding.ActivityMainBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseActivity
@@ -13,9 +14,10 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main){
     private val mainViewPagerAdapter by lazy { MainViewPagerAdapter(this) }
     private lateinit var missionListAdapter: MissionListAdapter
+    private lateinit var rankingListAdapter: RankingListAdapter
     override fun createView() {
-        binding.vpMainViewPager.adapter = mainViewPagerAdapter
-        indicator()
+        showViewPager()
+        showIndicator()
         initRecyclerView()
     }
 
@@ -24,7 +26,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main){
     }
 
 
-    private fun indicator() {
+    private fun showViewPager() {
+        binding.vpMainViewPager.adapter = mainViewPagerAdapter
+    }
+    private fun showIndicator() {
         binding.vpMainViewPager.registerOnPageChangeCallback(object : OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
@@ -35,5 +40,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main){
 
     private fun initRecyclerView() {
         binding.rvMission.addItemDecoration(ItemDecorator(16))
+        binding.rvRanking.addItemDecoration(ItemDecorator(16))
     }
 }

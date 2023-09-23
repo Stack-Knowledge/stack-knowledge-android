@@ -55,6 +55,7 @@ class MissionListAdapter(private val missionList: List<MissionResponseModel>?) :
     fun setItemOnClickListener(onItemClickListener: OnItemClickListener) {
         this.itemClickListener = onItemClickListener
     }
+
     companion object {
         val diffUtil = object : DiffUtil.ItemCallback<MissionResponseModel>() {
             override fun areItemsTheSame(
