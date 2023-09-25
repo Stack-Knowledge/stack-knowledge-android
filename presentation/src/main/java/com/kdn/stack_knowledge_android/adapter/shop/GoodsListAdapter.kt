@@ -8,6 +8,7 @@ import com.kdn.domain.model.response.GoodsResponseModel
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.kdn.domain.model.response.RankingResponseModel
 import com.kdn.stack_knowledge_android.databinding.ItemGoodsBinding
 
 class GoodsListAdapter() :
@@ -18,9 +19,9 @@ class GoodsListAdapter() :
         private val binding: ItemGoodsBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: GoodsResponseModel) = binding.apply {
-            Glide.with(ivGoods).load(item?.image)
-            tvGoodsName.text = item?.name
-            tvPrice.text = item?.price.toString()
+            Glide.with(context).load(item.image).into(ivGoods)
+            tvGoodsName.text = item.name
+            tvPrice.text = item.price.toString()
         }
     }
 

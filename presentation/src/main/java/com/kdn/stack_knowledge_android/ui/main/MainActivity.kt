@@ -14,16 +14,16 @@ import com.kdn.stack_knowledge_android.utils.ItemDecorator
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main){
+class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     private val mainViewPagerAdapter by lazy { MainViewPagerAdapter(this) }
     private val fragmentManager: FragmentManager = supportFragmentManager
     private lateinit var missionListAdapter: MissionListAdapter
     private lateinit var rankingListAdapter: RankingListAdapter
 
     override fun createView() {
-//        showViewPager()
-//        showIndicator()
-//        initRecyclerView()
+        showViewPager()
+        showIndicator()
+        initRecyclerView()
         initBottomNav()
     }
 
@@ -33,7 +33,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main){
 
     private fun initBottomNav() {
         val navController =
-            supportFragmentManager.findFragmentById(R.id.fcv_fragment_container)?.findNavController()
+            supportFragmentManager.findFragmentById(R.id.fcv_fragment_container)
+                ?.findNavController()
         val nav = binding.bnMainBottomNavi
         navController?.let {
             nav.setupWithNavController(navController)
@@ -43,6 +44,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main){
     private fun showViewPager() {
         binding.vpMainViewPager.adapter = mainViewPagerAdapter
     }
+
     private fun showIndicator() {
         binding.vpMainViewPager.registerOnPageChangeCallback(object : OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
@@ -53,6 +55,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main){
     }
 
     private fun initRecyclerView() {
+        missionListAdapter = MissionListAdapter(listOf())
+        rankingListAdapter = RankingListAdapter(listOf())
+        binding.rvMission.adapter = missionListAdapter
+        binding.rvRanking.adapter = rankingListAdapter
         binding.rvMission.addItemDecoration(ItemDecorator(16))
         binding.rvRanking.addItemDecoration(ItemDecorator(16))
     }

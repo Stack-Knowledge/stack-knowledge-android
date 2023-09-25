@@ -13,15 +13,6 @@
         android:background="@color/white"
         tools:context=".ui.main.MainActivity">
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fcv_fragment_container"
-            android:layout_width="match_parent"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_height="0dp"
-            app:defaultNavHost="true"
-            app:navGraph="@navigation/bottom_nav_graph"
-            app:layout_constraintBottom_toTopOf="@id/bn_main_bottom_navi"
-            app:layout_constraintTop_toTopOf="@id/g_vp_view_pager_t" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/g_tv_black_stack_knowledge_t"
@@ -263,6 +254,16 @@
             app:layout_constraintStart_toStartOf="@id/g_rv_mission_s"
             app:layout_constraintTop_toBottomOf="@id/rv_mission"
             tools:listitem="@layout/item_ranking" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fcv_fragment_container"
+            android:layout_width="match_parent"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/bottom_nav_graph"
+            app:layout_constraintBottom_toTopOf="@id/bn_main_bottom_navi"
+            app:layout_constraintTop_toTopOf="@id/g_vp_view_pager_t" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bn_main_bottom_navi"
