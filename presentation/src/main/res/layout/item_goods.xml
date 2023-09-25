@@ -8,8 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="156dp"
-        android:layout_height="202dp"
-        android:background="@color/white">
+        android:layout_height="202dp">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/g_iv_goods_b"
