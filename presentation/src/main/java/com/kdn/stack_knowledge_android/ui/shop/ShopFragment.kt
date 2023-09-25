@@ -1,23 +1,26 @@
 package com.kdn.stack_knowledge_android.ui.shop
 
 import android.view.View
-import android.widget.AdapterView
-import android.widget.CheckedTextView
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.kdn.domain.model.response.GoodsResponseModel
-import com.kdn.domain.model.response.RankingResponseModel
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.shop.GoodsListAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentShopBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
+import com.kdn.stack_knowledge_android.ui.main.MainActivity
 import com.kdn.stack_knowledge_android.utils.ItemDecorator
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.UUID
 
 @AndroidEntryPoint
 class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
+    private lateinit var mainActivity: MainActivity
     private lateinit var goodsListAdapter: GoodsListAdapter
     override fun createView() {
+        mainActivity = context as MainActivity
         initRecyclerView()
+        actionBottomSheet()
     }
 
     override fun observeEvent() {
@@ -40,23 +43,29 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
                 )
             )
         }
-        goodsListAdapter = GoodsListAdapter()
+        goodsListAdapter = GoodsListAdapter { isChecked ->
+            println("안녕 $isChecked")
+            if (isChecked) {
+                binding.btnSelect.visibility = View.VISIBLE
+            } else {
+                binding.btnSelect.visibility = View.INVISIBLE
+            }
+        }
         binding.rvGoods.adapter = goodsListAdapter
         binding.rvGoods.addItemDecoration(ItemDecorator(16))
-        binding.rvGoods.setOnClickListener {
-            onItemClick()
-        }
         goodsListAdapter.submitList(testList)
     }
 
-    fun onItemClick() {
-        val check = view as CheckedTextView
-        check.isChecked = !check.isChecked
-        val click = !check.isChecked
-        check.isChecked = click
+    private fun actionBottomSheet() {
+        val bottomSheetView = layoutInflater.inflate(R.layout.bottom_sheet_buy, null)
+        val bottomSheetDialog = BottomSheetDialog(this.mainActivity)
+        bottomSheetDialog.setContentView(bottomSheetView)
+        bottomSheetDialog.behavior.state = BottomSheetBehavior.STATE_COLLAPSED
 
-        if (click) {
-            // click 시 bottomSheet 나오게 하기
+        binding.btnSelect.setOnClickListener {
+            bottomSheetDialog.show()
         }
     }
+
+
 }

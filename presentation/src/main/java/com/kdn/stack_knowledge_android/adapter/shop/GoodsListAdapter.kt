@@ -1,20 +1,22 @@
 package com.kdn.stack_knowledge_android.adapter.shop
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.kdn.domain.model.response.GoodsResponseModel
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.kdn.domain.model.response.RankingResponseModel
+import com.kdn.stack_knowledge_android.databinding.FragmentShopBinding
 import com.kdn.stack_knowledge_android.databinding.ItemGoodsBinding
 
-class GoodsListAdapter() :
+class GoodsListAdapter(private val onCheckBoxClickListener: (Boolean) -> Unit) :
     ListAdapter<GoodsResponseModel, GoodsListAdapter.GoodsListViewHolder>(diffUtil) {
 
-    class GoodsListViewHolder(
+    inner class GoodsListViewHolder(
         val context: Context,
         private val binding: ItemGoodsBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
@@ -22,19 +24,22 @@ class GoodsListAdapter() :
             Glide.with(context).load(item.image).into(ivGoods)
             tvGoodsName.text = item.name
             tvPrice.text = item.price.toString()
+            checkbox.setOnClickListener {
+                onCheckBoxClickListener(checkbox.isChecked)
+            }
         }
     }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        viewType: Int
+        viewType: Int,
     ): GoodsListViewHolder = GoodsListViewHolder(
         parent.context,
         ItemGoodsBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false
-        ),
+        )
     )
 
     override fun onBindViewHolder(holder: GoodsListViewHolder, position: Int) {
@@ -59,5 +64,4 @@ class GoodsListAdapter() :
 
         }
     }
-
 }
