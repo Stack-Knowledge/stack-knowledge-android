@@ -1,6 +1,5 @@
 package com.kdn.stack_knowledge_android.ui.shop
 
-import androidx.recyclerview.widget.GridLayoutManager
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.FragmentShopBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment

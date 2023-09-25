@@ -21,9 +21,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main){
     private lateinit var rankingListAdapter: RankingListAdapter
 
     override fun createView() {
-        showViewPager()
-        showIndicator()
-        initRecyclerView()
+//        showViewPager()
+//        showIndicator()
+//        initRecyclerView()
         initBottomNav()
     }
 
