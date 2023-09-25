@@ -2,22 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_home"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/ic_action_home"
         android:title="홈" />
 
     <item
-        android:id="@+id/action_mission"
+        android:id="@+id/missionFragment"
         android:icon="@drawable/ic_action_mission"
         android:title="문제" />
 
     <item
-        android:id="@+id/action_shop"
+        android:id="@+id/shopFragment"
         android:icon="@drawable/ic_action_shop"
         android:title="상점" />
 
     <item
-        android:id="@+id/action_ranking"
+        android:id="@+id/rankingFragment"
         android:icon="@drawable/ic_action_ranking"
         android:title="랭킹" />
 
