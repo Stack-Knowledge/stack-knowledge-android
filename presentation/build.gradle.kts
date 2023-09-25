@@ -110,4 +110,7 @@ dependencies {
     implementation(Dependency.GAuth.GAUTH)
 
     implementation(Dependency.AndroidTest.ESPRESSO_CORE)
+
+    implementation(Dependency.AndroidX.NAVIGATION_FRAGMENT)
+    implementation(Dependency.AndroidX.NAVIGATION_UI)
 }

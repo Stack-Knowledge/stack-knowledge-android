@@ -1,4 +1,4 @@
-package com.kdn.stack_knowledge_android.adapter
+package com.kdn.stack_knowledge_android.adapter.main
 
 import android.content.Context
 import android.view.LayoutInflater

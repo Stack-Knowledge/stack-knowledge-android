@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_current_point_t"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1556" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_current_point_b"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1958" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_current_point_e"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6806" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_current_point_s"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3167" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_mileage_s"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3250" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_mileage_b"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2847" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_mileage_unit_b"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2792" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_mileage_unit_t"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2389" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_goods_t"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3681" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_goods_b"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3972" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:id="@+id/g_rv_goods_s"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.0444"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:id="@+id/g_rv_goods_e"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9556"/>
+
+        <TextView
+            android:id="@+id/tv_current_point"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="현재 마일리지"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/g_tv_current_point_b"
+            app:layout_constraintEnd_toEndOf="@id/g_tv_current_point_e"
+            app:layout_constraintStart_toStartOf="@id/g_tv_current_point_s"
+            app:layout_constraintTop_toTopOf="@id/g_tv_current_point_t" />
+
+        <TextView
+            android:id="@+id/tv_mileage"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="@id/g_tv_mileage_b"
+            app:layout_constraintStart_toStartOf="@id/g_tv_mileage_s"
+            app:layout_constraintTop_toBottomOf="@id/tv_current_point" />
+
+
+        <TextView
+            android:id="@+id/tv_mileage_unit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="M"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/g_tv_mileage_unit_b"
+            app:layout_constraintStart_toEndOf="@id/tv_mileage"
+            app:layout_constraintTop_toTopOf="@id/g_tv_mileage_unit_t" />
+
+        <TextView
+            android:id="@+id/tv_goods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:text="상품"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/g_tv_goods_b"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/g_tv_goods_t" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_goods"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:spanCount="2"
+            android:layout_marginTop="16dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="@id/g_rv_goods_e"
+            app:layout_constraintStart_toStartOf="@id/g_rv_goods_s"
+            app:layout_constraintTop_toBottomOf="@id/g_tv_goods_b"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/item_goods" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
