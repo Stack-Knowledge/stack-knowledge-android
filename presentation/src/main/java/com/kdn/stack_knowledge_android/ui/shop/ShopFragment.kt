@@ -1,8 +1,7 @@
 package com.kdn.stack_knowledge_android.ui.shop
 
 import android.view.View
-import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.google.android.material.bottomsheet.BottomSheetDialog
+import androidx.fragment.app.FragmentManager
 import com.kdn.domain.model.response.GoodsResponseModel
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.shop.GoodsListAdapter
@@ -15,25 +14,27 @@ import java.util.UUID
 
 @AndroidEntryPoint
 class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
-    private lateinit var mainActivity: MainActivity
+    private lateinit var orderBottomSheet: OrderBottomSheet
     private lateinit var goodsListAdapter: GoodsListAdapter
+    private lateinit var supportFragmentManager: FragmentManager
     override fun createView() {
-        mainActivity = context as MainActivity
         initRecyclerView()
-        actionBottomSheet()
+        initBottomSheet()
     }
 
     override fun observeEvent() {
     }
 
     private fun initRecyclerView() {
-        var testList = listOf(GoodsResponseModel(
-            UUID.randomUUID(),
-            "test",
-            0,
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTucUcNa1Hut31BAJWZtc-tHfEGJ40Y0fQ0br0alGCi9VW0LT23jakx6KneC5GtwEggxZM&usqp=CAU"
-        ))
-        for (i in 0..100) {
+        var testList = listOf(
+            GoodsResponseModel(
+                UUID.randomUUID(),
+                "test",
+                0,
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTucUcNa1Hut31BAJWZtc-tHfEGJ40Y0fQ0br0alGCi9VW0LT23jakx6KneC5GtwEggxZM&usqp=CAU"
+            )
+        )
+        for (i in 0..20) {
             testList = testList.plus(
                 GoodsResponseModel(
                     UUID.randomUUID(),
@@ -44,7 +45,6 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
             )
         }
         goodsListAdapter = GoodsListAdapter { isChecked ->
-            println("안녕 $isChecked")
             if (isChecked) {
                 binding.btnSelect.visibility = View.VISIBLE
             } else {
@@ -56,16 +56,8 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
         goodsListAdapter.submitList(testList)
     }
 
-    private fun actionBottomSheet() {
-        val bottomSheetView = layoutInflater.inflate(R.layout.bottom_sheet_buy, null)
-        val bottomSheetDialog = BottomSheetDialog(this.mainActivity)
-        bottomSheetDialog.setContentView(bottomSheetView)
-        bottomSheetDialog.behavior.state = BottomSheetBehavior.STATE_COLLAPSED
-
-        binding.btnSelect.setOnClickListener {
-            bottomSheetDialog.show()
-        }
+    fun initBottomSheet() {
+        orderBottomSheet = OrderBottomSheet()
+        orderBottomSheet.showBottomSheet()
     }
-
-
 }
