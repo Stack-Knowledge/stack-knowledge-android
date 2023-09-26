@@ -10,22 +10,10 @@
         android:id="@+id/homeFragment"
         android:name="com.kdn.stack_knowledge_android.ui.shop.ShopFragment"
         android:label="ShopFragment" />
-
     <fragment
-        tools:layout="@layout/fragment_shop"
-        android:id="@+id/missionFragment"
-        android:name="com.kdn.stack_knowledge_android.ui.shop.ShopFragment"
-        android:label="ShopFragment" />
+        tools:layout="@layout/fragment_main"
+        android:id="@+id/mainFragment"
+        android:name="com.kdn.stack_knowledge_android.ui.main.MainFragment"
+        android:label="MainFragment" />
 
-    <fragment
-        tools:layout="@layout/fragment_shop"
-        android:id="@+id/shopFragment"
-        android:name="com.kdn.stack_knowledge_android.ui.shop.ShopFragment"
-        android:label="ShopFragment" />
-
-    <fragment
-        tools:layout="@layout/fragment_shop"
-        android:id="@+id/rankingFragment"
-        android:name="com.kdn.stack_knowledge_android.ui.shop.ShopFragment"
-        android:label="ShopFragment" />
 </navigation>

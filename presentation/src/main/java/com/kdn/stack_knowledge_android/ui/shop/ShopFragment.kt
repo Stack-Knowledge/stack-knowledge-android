@@ -1,9 +1,7 @@
 package com.kdn.stack_knowledge_android.ui.shop
 
-import android.app.ProgressDialog.show
 import android.view.View
 import androidx.fragment.app.FragmentManager
-import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.kdn.domain.model.response.GoodsResponseModel
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.shop.GoodsListAdapter
