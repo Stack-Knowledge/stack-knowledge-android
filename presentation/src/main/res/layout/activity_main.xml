@@ -13,6 +13,12 @@
         android:background="@color/white"
         tools:context=".ui.main.MainActivity">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_vp_view_pager_t"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0652" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/g_tv_black_stack_knowledge_t"
