@@ -3,43 +3,37 @@ package com.kdn.stack_knowledge_android.adapter.shop
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.ListAdapter
-import com.kdn.domain.model.response.GoodsResponseModel
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.kdn.stack_knowledge_android.databinding.ItemGoodsBinding
+import com.kdn.domain.model.response.GoodsResponseModel
+import com.kdn.stack_knowledge_android.databinding.ItemDetailOrderBinding
 
-class GoodsListAdapter(private val onCheckBoxClickListener: (Boolean) -> Unit) :
-    ListAdapter<GoodsResponseModel, GoodsListAdapter.GoodsListViewHolder>(diffUtil) {
-
-    inner class GoodsListViewHolder(
+class OrderDetailListAdapter(private val context: Context) :
+    ListAdapter<GoodsResponseModel, OrderDetailListAdapter.OrderDetailListViewHolder>(diffUtil) {
+    class OrderDetailListViewHolder(
         val context: Context,
-        private val binding: ItemGoodsBinding,
+        val binding: ItemDetailOrderBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: GoodsResponseModel) = binding.apply {
-            Glide.with(context).load(item.image).into(ivGoods)
-            tvGoodsName.text = item.name
-            tvPrice.text = item.price.toString()
-            checkbox.setOnClickListener {
-                onCheckBoxClickListener(checkbox.isChecked)
-            }
+        fun bind(item: GoodsResponseModel) = binding.apply{
+            tvDetailGoodsName.text = item.name
+            tvDetailGoodsPrice.text = item.price.toString()
         }
     }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        viewType: Int,
-    ): GoodsListViewHolder = GoodsListViewHolder(
+        viewType: Int
+    ): OrderDetailListViewHolder = OrderDetailListViewHolder(
         parent.context,
-        ItemGoodsBinding.inflate(
+        ItemDetailOrderBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false
         )
     )
 
-    override fun onBindViewHolder(holder: GoodsListViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: OrderDetailListViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
 

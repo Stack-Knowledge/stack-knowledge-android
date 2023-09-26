@@ -1,7 +1,9 @@
 package com.kdn.stack_knowledge_android.ui.shop
 
+import android.app.ProgressDialog.show
 import android.view.View
 import androidx.fragment.app.FragmentManager
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.kdn.domain.model.response.GoodsResponseModel
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.shop.GoodsListAdapter
@@ -17,9 +19,10 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
     private lateinit var orderBottomSheet: OrderBottomSheet
     private lateinit var goodsListAdapter: GoodsListAdapter
     private lateinit var supportFragmentManager: FragmentManager
+    private lateinit var mainActivity: MainActivity
     override fun createView() {
         initRecyclerView()
-        initBottomSheet()
+        showBottomSheet()
     }
 
     override fun observeEvent() {
@@ -54,10 +57,17 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
         binding.rvGoods.adapter = goodsListAdapter
         binding.rvGoods.addItemDecoration(ItemDecorator(16))
         goodsListAdapter.submitList(testList)
+
+
     }
 
-    fun initBottomSheet() {
+    fun showBottomSheet() {
         orderBottomSheet = OrderBottomSheet()
-        orderBottomSheet.showBottomSheet()
+        binding.btnSelect.setOnClickListener {
+            orderBottomSheet.show(
+                requireActivity().supportFragmentManager,
+                "OrderBottomSheet"
+            )
+        }
     }
 }
