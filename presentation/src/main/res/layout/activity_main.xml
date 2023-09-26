@@ -13,6 +13,7 @@
         android:background="@color/white"
         tools:context=".ui.main.MainActivity">
 
+
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/g_tv_black_stack_knowledge_t"
             android:layout_width="match_parent"
@@ -254,19 +255,29 @@
             app:layout_constraintTop_toBottomOf="@id/rv_mission"
             tools:listitem="@layout/item_ranking" />
 
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bn_main_bottom_navi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                app:itemRippleColor="@color/black"
-                app:itemIconTint="@color/black"
-                app:itemTextColor="@color/black"
-                app:labelVisibilityMode="labeled"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:menu="@menu/main_menu" />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fcv_fragment_container"
+            android:layout_width="match_parent"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/bottom_nav_graph"
+            app:layout_constraintBottom_toTopOf="@id/bn_main_bottom_navi"
+            app:layout_constraintTop_toTopOf="@id/g_vp_view_pager_t" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bn_main_bottom_navi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:itemIconTint="@color/black"
+            app:itemRippleColor="@color/black"
+            app:itemTextColor="@color/black"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/main_menu" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

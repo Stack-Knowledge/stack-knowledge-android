@@ -1,4 +1,4 @@
-package com.kdn.stack_knowledge_android.adapter
+package com.kdn.stack_knowledge_android.adapter.main
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -42,7 +42,7 @@ class RankingListAdapter(private val rankingList: List<RankingResponseModel>?) :
         )
 
 
-    override fun onBindViewHolder(holder: RankingListAdapter.RankingListViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RankingListViewHolder, position: Int) {
         holder.bind(rankingList?.get(position))
     }
 
