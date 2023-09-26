@@ -15,21 +15,18 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
-    private val mainViewPagerAdapter by lazy { MainViewPagerAdapter(this) }
     private val fragmentManager: FragmentManager = supportFragmentManager
     private lateinit var missionListAdapter: MissionListAdapter
     private lateinit var rankingListAdapter: RankingListAdapter
 
     override fun createView() {
-        showViewPager()
-        showIndicator()
-        initRecyclerView()
         initBottomNav()
     }
 
     override fun observeEvent() {
 
     }
+
 
     private fun initBottomNav() {
         val navController =
@@ -41,25 +38,4 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
         }
     }
 
-    private fun showViewPager() {
-        binding.vpMainViewPager.adapter = mainViewPagerAdapter
-    }
-
-    private fun showIndicator() {
-        binding.vpMainViewPager.registerOnPageChangeCallback(object : OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-                binding.mainBannerTabLayout.getTabAt(position)?.select()
-            }
-        })
-    }
-
-    private fun initRecyclerView() {
-        missionListAdapter = MissionListAdapter(listOf())
-        rankingListAdapter = RankingListAdapter(listOf())
-        binding.rvMission.adapter = missionListAdapter
-        binding.rvRanking.adapter = rankingListAdapter
-        binding.rvMission.addItemDecoration(ItemDecorator(16))
-        binding.rvRanking.addItemDecoration(ItemDecorator(16))
-    }
 }
