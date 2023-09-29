@@ -18,6 +18,7 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
     private lateinit var goodsListAdapter: GoodsListAdapter
     private lateinit var supportFragmentManager: FragmentManager
     private lateinit var mainActivity: MainActivity
+    private var selectedGoodsList: MutableList<Int> = mutableListOf()
     override fun createView() {
         initRecyclerView()
         showBottomSheet()
@@ -45,10 +46,15 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
                 )
             )
         }
-        goodsListAdapter = GoodsListAdapter { isChecked ->
+        goodsListAdapter = GoodsListAdapter { isChecked, GoodsResponseModel ->
             if (isChecked) {
+                for(i in 0 .. testList.size) {
+                    selectedGoodsList = MutableList(i) { i -> i }
+                    selectedGoodsList.add(i, i)
+                }
                 binding.btnSelect.visibility = View.VISIBLE
             } else {
+                    selectedGoodsList.remove(0)
                 binding.btnSelect.visibility = View.INVISIBLE
             }
         }

@@ -97,6 +97,8 @@ object Dependency {
         const val FIREBASE_BOM = "com.google.firebase:firebase-bom:${Versions.FIREBASE_BOM}"
         const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
         const val GMS_GOOGLE_SERVICE = "com.google.gms.google-services${Versions.GMS_GOOGLE_SERVICE}"
+        const val HILT_ANDROID = "com.google.dagger:hilt-android:${Versions.HILT}"
+        const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Versions.HILT}"
     }
 
     object DataStore {

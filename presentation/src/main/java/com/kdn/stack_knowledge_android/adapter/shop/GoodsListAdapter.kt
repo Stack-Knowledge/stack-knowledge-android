@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.kdn.stack_knowledge_android.databinding.ItemGoodsBinding
 
-class GoodsListAdapter(private val onCheckBoxClickListener: (Boolean) -> Unit) :
+class GoodsListAdapter(private val onCheckBoxClickListener: (Boolean, GoodsResponseModel) -> Unit) :
     ListAdapter<GoodsResponseModel, GoodsListAdapter.GoodsListViewHolder>(diffUtil) {
 
     inner class GoodsListViewHolder(
@@ -22,7 +22,7 @@ class GoodsListAdapter(private val onCheckBoxClickListener: (Boolean) -> Unit) :
             tvGoodsName.text = item.name
             tvPrice.text = item.price.toString()
             checkbox.setOnClickListener {
-                onCheckBoxClickListener(checkbox.isChecked)
+                onCheckBoxClickListener(checkbox.isChecked, item)
             }
         }
     }

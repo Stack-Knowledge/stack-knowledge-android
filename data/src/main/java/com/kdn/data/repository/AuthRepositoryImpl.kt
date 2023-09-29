@@ -1,7 +1,7 @@
 package com.kdn.data.repository
 
 import com.kdn.data.local.datasource.LocalAuthDataSource
-import com.kdn.data.remote.datasource.RemoteAuthDataSource
+import com.kdn.data.remote.datasource.auth.RemoteAuthDataSource
 import com.kdn.data.remote.dto.auth.request.GAuthLoginRequest
 import com.kdn.data.remote.dto.auth.response.toLoginModel
 import com.kdn.data.remote.dto.auth.response.toRefreshModel

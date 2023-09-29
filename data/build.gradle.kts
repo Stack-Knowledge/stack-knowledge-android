@@ -79,6 +79,9 @@ dependencies {
     implementation(Dependency.Libraries.SSE)
     testImplementation(Dependency.Libraries.SSE)
 
+    implementation(Dependency.Google.HILT_ANDROID)
+    implementation(Dependency.Google.HILT_ANDROID_COMPILER)
+
     implementation(Dependency.AndroidX.PAGING)
 
     testImplementation(Dependency.UnitTest.JUNIT)

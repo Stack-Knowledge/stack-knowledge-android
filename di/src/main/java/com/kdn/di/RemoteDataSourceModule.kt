@@ -1,7 +1,7 @@
 package com.kdn.di
 
-import com.kdn.data.remote.datasource.RemoteAuthDataSource
-import com.kdn.data.remote.datasource.RemoteAuthDataSourceImpl
+import com.kdn.data.remote.datasource.auth.RemoteAuthDataSource
+import com.kdn.data.remote.datasource.auth.RemoteAuthDataSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
