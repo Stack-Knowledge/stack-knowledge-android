@@ -19,12 +19,7 @@ class AuthorizationInterceptor @Inject constructor(
         val request = chain.request()
         val path = request.url.encodedPath
         val ignorePath = listOf(
-            "/mission",
             "/auth",
-            "/solve",
-            "/user/scoring",
-            "/student/image",
-            "/order"
         )
         if (ignorePath.contains(path)) return chain.proceed(request)
         val refreshToken = authDataStorage.getRefreshToken()
