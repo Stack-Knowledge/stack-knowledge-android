@@ -1,4 +1,4 @@
-package com.kdn.data.local.datasource
+package com.kdn.data.local.auth.datasource
 
 import kotlinx.coroutines.flow.Flow
 

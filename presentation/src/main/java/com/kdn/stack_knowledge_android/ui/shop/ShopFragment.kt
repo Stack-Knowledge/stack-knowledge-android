@@ -2,7 +2,6 @@ package com.kdn.stack_knowledge_android.ui.shop
 
 import android.view.View
 import androidx.fragment.app.FragmentManager
-import com.kdn.domain.model.response.GoodsResponseModel
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.shop.GoodsListAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentShopBinding

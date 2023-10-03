@@ -1,4 +1,4 @@
-package com.kdn.data.local.datasource
+package com.kdn.data.local.auth.datasource
 
 import androidx.datastore.core.DataStore
 import com.kdn.data.local.key.AuthPreferenceKey

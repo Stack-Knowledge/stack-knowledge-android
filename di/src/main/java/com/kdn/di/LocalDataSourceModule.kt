@@ -1,7 +1,7 @@
 package com.kdn.di
 
-import com.kdn.data.local.datasource.LocalAuthDataSource
-import com.kdn.data.local.datasource.LocalAuthDataSourceImpl
+import com.kdn.data.local.auth.datasource.LocalAuthDataSource
+import com.kdn.data.local.auth.datasource.LocalAuthDataSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

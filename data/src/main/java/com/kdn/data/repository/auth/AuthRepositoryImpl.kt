@@ -1,6 +1,6 @@
-package com.kdn.data.repository
+package com.kdn.data.repository.auth
 
-import com.kdn.data.local.datasource.LocalAuthDataSource
+import com.kdn.data.local.auth.datasource.LocalAuthDataSource
 import com.kdn.data.remote.datasource.auth.RemoteAuthDataSource
 import com.kdn.data.remote.dto.auth.request.GAuthLoginRequest
 import com.kdn.data.remote.dto.auth.response.toLoginModel
