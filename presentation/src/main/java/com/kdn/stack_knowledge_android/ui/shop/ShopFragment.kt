@@ -2,6 +2,7 @@ package com.kdn.stack_knowledge_android.ui.shop
 
 import android.view.View
 import androidx.fragment.app.FragmentManager
+import com.kdn.domain.entity.GoodsEntity
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.shop.GoodsListAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentShopBinding
@@ -28,7 +29,7 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
 
     private fun initRecyclerView() {
         var testList = listOf(
-            GoodsResponseModel(
+            GoodsEntity(
                 UUID.randomUUID(),
                 "test",
                 0,
@@ -37,7 +38,7 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
         )
         for (i in 0..20) {
             testList = testList.plus(
-                GoodsResponseModel(
+                GoodsEntity(
                     UUID.randomUUID(),
                     "test$i",
                     i,
@@ -45,7 +46,7 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
                 )
             )
         }
-        goodsListAdapter = GoodsListAdapter { isChecked, GoodsResponseModel ->
+        goodsListAdapter = GoodsListAdapter { isChecked, GoodsEntity ->
             if (isChecked) {
                 for(i in 0 .. testList.size) {
                     selectedGoodsList = MutableList(i) { i -> i }

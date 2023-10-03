@@ -14,6 +14,10 @@
         tools:layout="@layout/fragment_main"
         android:id="@+id/mainFragment"
         android:name="com.kdn.stack_knowledge_android.ui.main.MainFragment"
-        android:label="MainFragment" />
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 
 </navigation>

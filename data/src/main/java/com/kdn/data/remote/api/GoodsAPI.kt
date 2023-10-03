@@ -7,6 +7,5 @@ import retrofit2.http.GET
 interface GoodsAPI {
 
     @GET("/item")
-    suspend fun getGoodsList(
-    ): List<GoodsResponse>
+    suspend fun getGoodsList(): List<GoodsResponse>
 }
