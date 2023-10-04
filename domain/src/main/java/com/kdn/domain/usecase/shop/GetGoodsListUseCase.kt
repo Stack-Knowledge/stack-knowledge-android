@@ -1,4 +1,4 @@
-package com.kdn.domain.usecase.goods
+package com.kdn.domain.usecase.shop
 
 import com.kdn.domain.repository.GoodsRepository
 import javax.inject.Inject

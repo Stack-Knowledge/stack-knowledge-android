@@ -1,5 +1,6 @@
 package com.kdn.data.utils
 
+import com.kdn.data.remote.dto.goods.response.GoodsResponse
 import com.kdn.domain.exception.BadRequestException
 import com.kdn.domain.exception.ConflictDataException
 import com.kdn.domain.exception.ForBiddenException

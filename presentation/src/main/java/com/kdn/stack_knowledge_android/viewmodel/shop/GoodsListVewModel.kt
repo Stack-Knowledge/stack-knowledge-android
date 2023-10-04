@@ -1,13 +1,10 @@
 package com.kdn.stack_knowledge_android.viewmodel.shop
 
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kdn.domain.entity.GoodsEntity
-import com.kdn.domain.usecase.auth.SaveTheLoginDataUseCase
-import com.kdn.domain.usecase.goods.GetGoodsListUseCase
+import com.kdn.domain.usecase.shop.GetGoodsListUseCase
 import com.kdn.stack_knowledge_android.utils.MutableEventFlow
 import com.kdn.stack_knowledge_android.utils.asEvetFlow
 import dagger.hilt.android.lifecycle.HiltViewModel
