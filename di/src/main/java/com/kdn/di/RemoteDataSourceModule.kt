@@ -2,7 +2,7 @@ package com.kdn.di
 
 import com.kdn.data.remote.datasource.auth.RemoteAuthDataSource
 import com.kdn.data.remote.datasource.auth.RemoteAuthDataSourceImpl
-import com.kdn.data.remote.datasource.goods.RemoteGoodsDataSourceImpl
+import com.kdn.data.remote.datasource.item.RemoteItemDataSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -17,7 +17,7 @@ abstract class RemoteDataSourceModule {
     ): RemoteAuthDataSource
 
     @Binds
-    abstract fun provideRemoteGoodsDataSource(
-        remoteGoodsDataSourceImpl: RemoteGoodsDataSourceImpl,
+    abstract fun provideRemoteItemDataSource(
+        remoteItemDataSourceImpl: RemoteItemDataSourceImpl,
     )
 }

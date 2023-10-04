@@ -1,7 +1,7 @@
 package com.kdn.di
 
 import com.kdn.data.repository.auth.*
-import com.kdn.data.repository.goods.GoodsRepositoryImpl
+import com.kdn.data.repository.item.ItemRepositoryImpl
 import com.kdn.domain.repository.*
 import dagger.Binds
 import dagger.Module
@@ -20,7 +20,7 @@ abstract class RepositoryModule {
 
     @Singleton
     @Binds
-    abstract fun provideGoodsRepository(
-        goodsRepositoryImpl: GoodsRepositoryImpl,
-    ): GoodsRepository
+    abstract fun provideItemRepository(
+        goodsRepositoryImpl: ItemRepositoryImpl,
+    ): ItemRepository
 }

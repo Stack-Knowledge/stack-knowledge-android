@@ -6,16 +6,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.kdn.domain.entity.GoodsEntity
+import com.kdn.domain.entity.ItemEntity
 import com.kdn.stack_knowledge_android.databinding.ItemDetailOrderBinding
 
 class OrderDetailListAdapter(private val context: Context) :
-    ListAdapter<GoodsEntity, OrderDetailListAdapter.OrderDetailListViewHolder>(diffUtil) {
+    ListAdapter<ItemEntity, OrderDetailListAdapter.OrderDetailListViewHolder>(diffUtil) {
     class OrderDetailListViewHolder(
         val context: Context,
         val binding: ItemDetailOrderBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: GoodsEntity) = binding.apply{
+        fun bind(item: ItemEntity) = binding.apply{
             tvDetailGoodsName.text = item.name
             tvDetailGoodsPrice.text = item.price.toString()
         }
@@ -38,17 +38,17 @@ class OrderDetailListAdapter(private val context: Context) :
     }
 
     companion object {
-        val diffUtil = object : DiffUtil.ItemCallback<GoodsEntity>() {
+        val diffUtil = object : DiffUtil.ItemCallback<ItemEntity>() {
             override fun areItemsTheSame(
-                oldItem: GoodsEntity,
-                newItem: GoodsEntity
+                oldItem: ItemEntity,
+                newItem: ItemEntity
             ): Boolean {
                 return oldItem == newItem
             }
 
             override fun areContentsTheSame(
-                oldItem: GoodsEntity,
-                newItem: GoodsEntity
+                oldItem: ItemEntity,
+                newItem: ItemEntity
             ): Boolean {
                 return oldItem == newItem
             }

@@ -1,11 +1,7 @@
-package com.kdn.data.remote.api
+package com.kdn.data.remote.datasource.item
 
 import com.kdn.data.remote.dto.item.response.GoodsResponse
-import retrofit2.http.GET
 
-
-interface GoodsAPI {
-
-    @GET("/item")
+interface RemoteItemDataSource {
     suspend fun getGoodsList(): List<GoodsResponse>
 }
