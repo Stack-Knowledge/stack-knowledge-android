@@ -15,10 +15,6 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
-    private val fragmentManager: FragmentManager = supportFragmentManager
-    private lateinit var missionListAdapter: MissionListAdapter
-    private lateinit var rankingListAdapter: RankingListAdapter
-
     override fun createView() {
         initBottomNav()
     }
