@@ -1,4 +1,4 @@
-package com.kdn.stack_knowledge_android.viewmodel
+package com.kdn.stack_knowledge_android.viewmodel.auth
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
