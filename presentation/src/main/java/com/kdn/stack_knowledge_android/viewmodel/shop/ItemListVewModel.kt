@@ -19,7 +19,7 @@ class ItemListVewModel @Inject constructor(
     private val _eventFlow = MutableEventFlow<Event>()
     val eventFlow = _eventFlow.asEvetFlow()
 
-    fun getGoodsList() = viewModelScope.launch {
+    fun getItemList() = viewModelScope.launch {
         getItemListUseCase().onSuccess {
             event(Event.Item(it))
         }.onFailure {

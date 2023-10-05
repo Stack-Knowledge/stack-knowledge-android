@@ -16,7 +16,7 @@
         android:name="com.kdn.stack_knowledge_android.ui.main.MainFragment"
         android:label="MainFragment" />
     <fragment
-        android:id="@+id/missionFragment2"
+        android:id="@+id/missionFragment"
         android:name="com.kdn.stack_knowledge_android.ui.mission.MissionFragment"
         android:label="MissionFragment" />
 

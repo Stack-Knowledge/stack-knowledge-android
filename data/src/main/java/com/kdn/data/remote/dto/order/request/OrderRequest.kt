@@ -1,7 +1,7 @@
 package com.kdn.data.remote.dto.order.request
 
 import com.google.gson.annotations.SerializedName
-import com.kdn.domain.param.BuyGoodsParam
+import com.kdn.domain.param.OrderParam
 import java.util.UUID
 
 data class OrderRequest(
@@ -11,7 +11,7 @@ data class OrderRequest(
     val count: Int,
 )
 
-fun BuyGoodsParam.toRequest() = OrderRequest(
+fun OrderParam.toRequest() = OrderRequest(
     itemId = itemId,
     count = count,
 )
