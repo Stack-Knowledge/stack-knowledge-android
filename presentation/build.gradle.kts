@@ -70,6 +70,9 @@ android {
         dataBinding = true
         compose = true
     }
+    packagingOptions {
+        exclude("META-INF/gradle/incremental.annotation.processors")
+    }
 }
 
 dependencies {

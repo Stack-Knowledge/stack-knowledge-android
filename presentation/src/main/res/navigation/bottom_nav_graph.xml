@@ -3,21 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottom_nav_graph"
-    app:startDestination="@id/shopFragment">
+    app:startDestination="@id/mainActivity">
 
     <fragment
-        tools:layout="@layout/fragment_shop"
         android:id="@+id/homeFragment"
         android:name="com.kdn.stack_knowledge_android.ui.shop.ShopFragment"
-        android:label="ShopFragment" />
+        android:label="ShopFragment"
+        tools:layout="@layout/fragment_shop" />
     <fragment
-        tools:layout="@layout/fragment_main"
         android:id="@+id/mainFragment"
         android:name="com.kdn.stack_knowledge_android.ui.main.MainFragment"
-        android:label="MainFragment" />
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main" />
     <fragment
         android:id="@+id/missionFragment"
         android:name="com.kdn.stack_knowledge_android.ui.mission.MissionFragment"
         android:label="MissionFragment" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.kdn.stack_knowledge_android.ui.main.MainActivity"
+        android:label="MainActivity" />
 
 </navigation>

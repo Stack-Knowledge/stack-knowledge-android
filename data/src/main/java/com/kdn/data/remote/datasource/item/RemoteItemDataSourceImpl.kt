@@ -12,7 +12,6 @@ class RemoteItemDataSourceImpl @Inject constructor(
         return StackApiHandler<List<GoodsResponse>>()
             .httpRequest { service.getGoodsList() }
             .sendRequest()
-
     }
 
 }
