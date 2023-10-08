@@ -14,7 +14,7 @@ class BuyViewModel @Inject constructor(
     private val buyItemUseCase: BuyItemUseCase,
 ) : ViewModel() {
     var orderMap = mapOf<ItemEntity, Int>()
-    private fun buyItem() = viewModelScope.launch {
+    fun buyItem() = viewModelScope.launch {
         val order = mutableListOf<OrderParam>()
         orderMap.forEach { (itemEntity, count) ->
             order.plus(

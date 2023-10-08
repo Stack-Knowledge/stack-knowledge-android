@@ -6,6 +6,7 @@ import androidx.fragment.app.viewModels
 import com.kdn.domain.entity.ItemEntity
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.shop.ItemListAdapter
+import com.kdn.stack_knowledge_android.adapter.shop.OrderDetailListAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentShopBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
 import com.kdn.stack_knowledge_android.ui.main.MainActivity
@@ -19,6 +20,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
     private lateinit var orderBottomSheet: OrderBottomSheet
     private lateinit var itemListAdapter: ItemListAdapter
+    private lateinit var orderDetailListAdapter: OrderDetailListAdapter
     private val buyViewModel by viewModels<BuyViewModel>()
     private val itemListViewModel by viewModels<ItemListVewModel>()
     private var selectedItemList = mutableMapOf<ItemEntity, Int>()
@@ -46,7 +48,6 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
         }
         binding.rvGoods.adapter = itemListAdapter
         binding.rvGoods.addItemDecoration(ItemDecorator(16))
-
     }
 
     private fun observeItemData(event: ItemListVewModel.Event) = when (event) {
