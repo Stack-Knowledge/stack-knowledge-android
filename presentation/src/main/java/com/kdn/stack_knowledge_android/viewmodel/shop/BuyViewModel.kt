@@ -12,10 +12,19 @@ import javax.inject.Inject
 @HiltViewModel
 class BuyViewModel @Inject constructor(
     private val buyItemUseCase: BuyItemUseCase,
+    private val itemListVewModel: ItemListVewModel,
 ) : ViewModel() {
+
     var orderMap = mapOf<ItemEntity, Int>()
+    val order = mutableListOf<OrderParam>()
+
     fun buyItem() = viewModelScope.launch {
-        val order = mutableListOf<OrderParam>()
+        val checkedItems = itemListVewModel.getCheckedItems()
+
+        checkedItems.forEach { itemEntity ->
+            order.add(OrderParam(itemId = itemEntity.itemId, count = orderMap[itemEntity] ?: 0))
+        }
+
         orderMap.forEach { (itemEntity, count) ->
             order.plus(
                 OrderParam(
@@ -24,6 +33,7 @@ class BuyViewModel @Inject constructor(
                 )
             )
         }
+
         buyItemUseCase(order)
     }
 }

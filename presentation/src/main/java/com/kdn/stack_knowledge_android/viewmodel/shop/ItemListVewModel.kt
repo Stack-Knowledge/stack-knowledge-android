@@ -19,12 +19,26 @@ class ItemListVewModel @Inject constructor(
     private val _eventFlow = MutableEventFlow<Event>()
     val eventFlow = _eventFlow.asEvetFlow()
 
+    private val checkedItems = mutableListOf<ItemEntity>()
+
     fun getItemList() = viewModelScope.launch {
         getItemListUseCase().onSuccess {
             event(Event.Item(it))
         }.onFailure {
-             Log.e("아이템 가져오기 실패", "실패 $it")
+            Log.e("아이템 가져오기 실패", "실패 $it")
         }
+    }
+
+    fun toggleItemChecked(item: ItemEntity, isChecked: Boolean) {
+        if (isChecked) {
+            checkedItems.add(item)
+        } else {
+            checkedItems.remove(item)
+        }
+    }
+
+    fun getCheckedItems(): List<ItemEntity> {
+        return checkedItems
     }
 
     private fun event(event: Event) = viewModelScope.launch {

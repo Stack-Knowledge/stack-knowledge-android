@@ -4,7 +4,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.main.MissionListAdapter
 import com.kdn.stack_knowledge_android.adapter.main.RankingListAdapter
-import com.kdn.stack_knowledge_android.adapter.shop.OrderDetailListAdapter
 import com.kdn.stack_knowledge_android.adapter.viewpager.MainViewPagerAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentMainBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
