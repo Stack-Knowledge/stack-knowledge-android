@@ -3,6 +3,7 @@ package com.kdn.stack_knowledge_android.ui.shop
 import androidx.core.view.isVisible
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.kdn.domain.entity.ItemEntity
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.shop.ItemListAdapter
@@ -45,6 +46,7 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
                 selectedItemList.remove(itemEntity)
             }
             binding.btnSelect.isVisible = selectedItemList.isNotEmpty()
+            buyViewModel.updateSelectedItems(selectedItemList.keys.toList())
         }
         binding.rvGoods.adapter = itemListAdapter
         binding.rvGoods.addItemDecoration(ItemDecorator(16))
@@ -57,7 +59,10 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
     }
 
     private fun initBottomSheet() {
-        buyViewModel.orderMap = selectedItemList
+        orderBottomSheet = OrderBottomSheet()
+        buyViewModel.selectedItems.observe(viewLifecycleOwner, Observer { selectedItems ->
+            orderBottomSheet.setSelectedItems(selectedItems)
+        })
         orderBottomSheet = OrderBottomSheet()
         binding.btnSelect.setOnClickListener {
             orderBottomSheet.show(
