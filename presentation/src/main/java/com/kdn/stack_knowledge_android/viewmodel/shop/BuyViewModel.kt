@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.kdn.domain.entity.ItemEntity
 import com.kdn.domain.param.OrderParam
 import com.kdn.domain.usecase.shop.BuyItemUseCase
+import com.kdn.stack_knowledge_android.data.order.DetailOrderData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 
@@ -21,6 +22,23 @@ class BuyViewModel(
 
     private var orderMap = mapOf<ItemEntity, Int>()
     val order = mutableListOf<OrderParam>()
+
+    val orderDataList: List<DetailOrderData>
+        get() {
+            val detailOrderList = mutableListOf<DetailOrderData>()
+
+            orderMap.forEach { (itemEntity, count) ->
+                val detailOrderData = DetailOrderData(
+                    itemId = itemEntity.itemId,
+                    name = itemEntity.name,
+                    count = count,
+                    price = itemEntity.price,
+                )
+                detailOrderList.add(detailOrderData)
+            }
+
+            return detailOrderList
+        }
 
     fun buyItem() = viewModelScope.launch {
         val checkedItems = selectedItems.value ?: emptyList()
@@ -38,7 +56,22 @@ class BuyViewModel(
             )
         }
 
-        buyItemUseCase(order)
+        val orderParams = convertToOrderParams(orderDataList)
+        buyItemUseCase(orderParams)
+    }
+
+    private fun convertToOrderParams(detailsOrderList: List<DetailOrderData>): List<OrderParam> {
+        val orderParams = mutableListOf<OrderParam>()
+
+        detailsOrderList.forEach { detailOrderData ->
+            val orderParam = OrderParam(
+                itemId = detailOrderData.itemId,
+                count = detailOrderData.count,
+            )
+            orderParams.add(orderParam)
+        }
+
+        return orderParams
     }
 
     fun updateSelectedItems(items: List<ItemEntity>) {
