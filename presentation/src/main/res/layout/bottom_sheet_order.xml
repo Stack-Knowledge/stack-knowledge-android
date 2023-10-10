@@ -23,9 +23,48 @@
             android:gravity="center"
             android:text="구매하기"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="248dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="총금액 : "
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_detail_order" />
+
+        <TextView
+            android:id="@+id/tv_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:text=""
+            app:layout_constraintStart_toEndOf="@id/tv_total"
+            app:layout_constraintTop_toBottomOf="@id/rv_detail_order" />
+
+        <TextView
+            android:id="@+id/tv_mileage_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/pretendard_medium"
+            android:text="M"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/tv_total_price"
+            app:layout_constraintTop_toBottomOf="@id/rv_detail_order" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_detail_order"
@@ -34,6 +73,8 @@
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="34dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toTopOf="@id/btn_buy"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

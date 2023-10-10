@@ -1,16 +1,15 @@
 package com.kdn.stack_knowledge_android.ui.shop
 
+import android.util.Log
 import androidx.core.view.isVisible
-import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import com.kdn.domain.entity.ItemEntity
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.shop.ItemListAdapter
 import com.kdn.stack_knowledge_android.adapter.shop.OrderDetailListAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentShopBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
-import com.kdn.stack_knowledge_android.ui.main.MainActivity
 import com.kdn.stack_knowledge_android.utils.ItemDecorator
 import com.kdn.stack_knowledge_android.utils.repeatOnStart
 import com.kdn.stack_knowledge_android.viewmodel.shop.BuyViewModel
@@ -21,10 +20,10 @@ import dagger.hilt.android.AndroidEntryPoint
 class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
     private lateinit var orderBottomSheet: OrderBottomSheet
     private lateinit var itemListAdapter: ItemListAdapter
-    private lateinit var orderDetailListAdapter: OrderDetailListAdapter
-    private val buyViewModel by viewModels<BuyViewModel>()
+    private lateinit var detailListAdapter: OrderDetailListAdapter
+    private val buyViewModel by activityViewModels<BuyViewModel>()
     private val itemListViewModel by viewModels<ItemListVewModel>()
-    private var selectedItemList = mutableMapOf<ItemEntity, Int>()
+    private var selectedItemList = mutableListOf<ItemEntity>()
 
     override fun createView() {
         initRecyclerView()
@@ -41,12 +40,11 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
         itemListViewModel.getItemList()
         itemListAdapter = ItemListAdapter { isChecked, itemEntity ->
             if (isChecked) {
-                selectedItemList[itemEntity] = 1
-            } else {
+                selectedItemList.add(itemEntity)
+            } else if (!isChecked){
                 selectedItemList.remove(itemEntity)
             }
             binding.btnSelect.isVisible = selectedItemList.isNotEmpty()
-            buyViewModel.updateSelectedItems(selectedItemList.keys.toList())
         }
         binding.rvGoods.adapter = itemListAdapter
         binding.rvGoods.addItemDecoration(ItemDecorator(16))
@@ -60,11 +58,8 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
 
     private fun initBottomSheet() {
         orderBottomSheet = OrderBottomSheet()
-        buyViewModel.selectedItems.observe(viewLifecycleOwner, Observer { selectedItems ->
-            orderBottomSheet.setSelectedItems(selectedItems)
-        })
-        orderBottomSheet = OrderBottomSheet()
         binding.btnSelect.setOnClickListener {
+            buyViewModel.setOrderDataList(selectedItemList)
             orderBottomSheet.show(
                 requireActivity().supportFragmentManager,
                 "OrderBottomSheet"

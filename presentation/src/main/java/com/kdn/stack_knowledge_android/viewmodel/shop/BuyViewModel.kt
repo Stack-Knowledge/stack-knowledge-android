@@ -1,7 +1,6 @@
 package com.kdn.stack_knowledge_android.viewmodel.shop
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kdn.domain.entity.ItemEntity
@@ -10,71 +9,51 @@ import com.kdn.domain.usecase.shop.BuyItemUseCase
 import com.kdn.stack_knowledge_android.data.order.DetailOrderData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
-class BuyViewModel(
+class BuyViewModel @Inject constructor(
     private val buyItemUseCase: BuyItemUseCase,
 ) : ViewModel() {
+    val orderDataList: MutableList<DetailOrderData> = mutableListOf()
 
-
-    private val _selectedItems = MutableLiveData<List<ItemEntity>>()
-    val selectedItems: LiveData<List<ItemEntity>> get() = _selectedItems
-
-    private var orderMap = mapOf<ItemEntity, Int>()
-    val order = mutableListOf<OrderParam>()
-
-    val orderDataList: List<DetailOrderData>
-        get() {
-            val detailOrderList = mutableListOf<DetailOrderData>()
-
-            orderMap.forEach { (itemEntity, count) ->
-                val detailOrderData = DetailOrderData(
-                    itemId = itemEntity.itemId,
-                    name = itemEntity.name,
-                    count = count,
-                    price = itemEntity.price,
-                )
-                detailOrderList.add(detailOrderData)
-            }
-
-            return detailOrderList
+    fun setOrderDataList(orderDataList: List<ItemEntity>) {
+        this.orderDataList.clear()
+        orderDataList.forEach { itemEntity ->
+            val detailOrderData = DetailOrderData(
+                itemId = itemEntity.itemId,
+                name = itemEntity.name,
+                count = 1,
+                price = itemEntity.price,
+            )
+            this.orderDataList.add(detailOrderData)
         }
+    }
 
     fun buyItem() = viewModelScope.launch {
-        val checkedItems = selectedItems.value ?: emptyList()
-
-        checkedItems.forEach { itemEntity ->
-            order.add(OrderParam(itemId = itemEntity.itemId, count = orderMap[itemEntity] ?: 0))
+        val orderParams = orderDataList.map {
+            OrderParam(it.itemId, it.count)
         }
-
-        orderMap.forEach { (itemEntity, count) ->
-            order.plus(
-                OrderParam(
-                    itemId = itemEntity.itemId,
-                    count = count
-                )
-            )
-        }
-
-        val orderParams = convertToOrderParams(orderDataList)
         buyItemUseCase(orderParams)
     }
 
-    private fun convertToOrderParams(detailsOrderList: List<DetailOrderData>): List<OrderParam> {
-        val orderParams = mutableListOf<OrderParam>()
-
-        detailsOrderList.forEach { detailOrderData ->
-            val orderParam = OrderParam(
-                itemId = detailOrderData.itemId,
-                count = detailOrderData.count,
-            )
-            orderParams.add(orderParam)
+    fun plusItem(item: DetailOrderData) {
+        orderDataList.replaceAll {
+            if (it.itemId == item.itemId) {
+                it.copy(count = it.count + 1)
+            } else {
+                it
+            }
         }
-
-        return orderParams
     }
 
-    fun updateSelectedItems(items: List<ItemEntity>) {
-        _selectedItems.value = items
+    fun minusItem(item: DetailOrderData) {
+        orderDataList.replaceAll {
+            if (it.itemId == item.itemId) {
+                it.copy(count = it.count - 1)
+            } else {
+                it
+            }
+        }
     }
 }
