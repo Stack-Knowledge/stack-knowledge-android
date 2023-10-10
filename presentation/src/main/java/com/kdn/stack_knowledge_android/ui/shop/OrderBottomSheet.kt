@@ -11,14 +11,16 @@ import com.kdn.stack_knowledge_android.adapter.shop.OrderDetailListAdapter
 import com.kdn.stack_knowledge_android.databinding.BottomSheetOrderBinding
 import com.kdn.stack_knowledge_android.ui.main.MainActivity
 import com.kdn.stack_knowledge_android.viewmodel.shop.BuyViewModel
+import com.kdn.stack_knowledge_android.viewmodel.shop.ItemListVewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class OrderBottomSheet() : BottomSheetDialogFragment() {
+class OrderBottomSheet : BottomSheetDialogFragment() {
     private lateinit var mainActivity: MainActivity
     private lateinit var binding: BottomSheetOrderBinding
     private lateinit var orderDetailListAdapter: OrderDetailListAdapter
     private val buyViewModel by activityViewModels<BuyViewModel>()
+    private val itemListViewModel by activityViewModels<ItemListVewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -39,7 +41,10 @@ class OrderBottomSheet() : BottomSheetDialogFragment() {
     fun setSelectedItems(selectedItems: List<ItemEntity>){
 
     }
+
     private fun initRecyclerView() {
+        orderDetailListAdapter = OrderDetailListAdapter()
+        binding.rvDetailOrder.adapter = orderDetailListAdapter
         orderDetailListAdapter.submitList(buyViewModel.order)
     }
 

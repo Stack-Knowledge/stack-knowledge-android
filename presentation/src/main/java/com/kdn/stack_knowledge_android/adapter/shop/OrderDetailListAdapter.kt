@@ -10,7 +10,7 @@ import com.kdn.domain.entity.ItemEntity
 import com.kdn.domain.param.OrderParam
 import com.kdn.stack_knowledge_android.databinding.ItemDetailOrderBinding
 
-class OrderDetailListAdapter(private val context: Context) :
+class OrderDetailListAdapter :
     ListAdapter<OrderParam, OrderDetailListAdapter.OrderDetailListViewHolder>(diffUtil) {
     class OrderDetailListViewHolder(
         val context: Context,
