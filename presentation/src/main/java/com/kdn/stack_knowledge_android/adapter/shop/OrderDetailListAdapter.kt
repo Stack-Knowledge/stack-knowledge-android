@@ -23,6 +23,7 @@ class OrderDetailListAdapter :
             tvDetailGoodsName.text = item.name
             tvDetailGoodsPrice.text = item.price.toString()
             tvGoodsCount.text = item.count.toString()
+
             vPlus.setOnClickListener {
                 listener.plus(item)
                 tvGoodsCount.text = (tvGoodsCount.text.toString().toInt() + 1).toString()
