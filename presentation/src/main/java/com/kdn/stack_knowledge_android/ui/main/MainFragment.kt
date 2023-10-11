@@ -12,8 +12,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
-    private lateinit var mainActivity: MainActivity
-    private val mainViewPagerAdapter by lazy { MainViewPagerAdapter(mainActivity) }
+    private val mainViewPagerAdapter by lazy { MainViewPagerAdapter(this.requireContext()) }
     private lateinit var missionListAdapter: MissionListAdapter
     private lateinit var rankingListAdapter: RankingListAdapter
     override fun createView() {
@@ -23,7 +22,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     }
 
     override fun observeEvent() {
-        TODO("Not yet implemented")
+
     }
 
     private fun showViewPager() {
@@ -31,7 +30,8 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     }
 
     private fun showIndicator() {
-        binding.vpMainViewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+        binding.vpMainViewPager.registerOnPageChangeCallback(object :
+            ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 binding.mainBannerTabLayout.getTabAt(position)?.select()

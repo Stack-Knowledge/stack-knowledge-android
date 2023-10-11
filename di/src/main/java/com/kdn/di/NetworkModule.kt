@@ -2,6 +2,8 @@ package com.kdn.di
 
 import android.util.Log
 import com.kdn.data.remote.api.AuthAPI
+import com.kdn.data.remote.api.ItemAPI
+import com.kdn.data.remote.api.OrderAPI
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -10,6 +12,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -55,5 +58,17 @@ object NetworkModule {
     @Singleton
     fun provideAuthService(retrofit: Retrofit): AuthAPI {
         return retrofit.create(AuthAPI::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideItemService(retrofit: Retrofit): ItemAPI {
+        return retrofit.create(ItemAPI::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideOrderService(retrofit: Retrofit): OrderAPI {
+        return retrofit.create(OrderAPI::class.java)
     }
 }

@@ -1,7 +1,7 @@
-package com.kdn.data.remote.dto.goods.response
+package com.kdn.data.remote.dto.item.response
 
 import com.google.gson.annotations.SerializedName
-import com.kdn.domain.model.response.GoodsResponseModel
+import com.kdn.domain.entity.ItemEntity
 import java.util.UUID
 
 data class GoodsResponse(
@@ -15,7 +15,7 @@ data class GoodsResponse(
     val image: String,
 )
 
-fun GoodsResponse.toGoodsModel() = GoodsResponseModel(
+fun GoodsResponse.toEntity() = ItemEntity(
     itemId = itemId,
     name = name,
     price= price,

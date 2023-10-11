@@ -8,10 +8,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.lifecycleScope
 import com.kdn.stack_knowledge_android.BuildConfig
 import com.kdn.stack_knowledge_android.ui.base.BaseActivity
-import com.kdn.stack_knowledge_android.viewmodel.AuthViewModel
+import com.kdn.stack_knowledge_android.viewmodel.auth.AuthViewModel
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.ActivityLoginBinding
 import com.kdn.stack_knowledge_android.ui.main.MainActivity
@@ -20,7 +19,6 @@ import com.msg.gauthsignin.GAuthSigninWebView
 import com.msg.gauthsignin.component.GAuthButton
 import com.msg.gauthsignin.component.utils.Types
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
 import kotlin.system.exitProcess
 
 @AndroidEntryPoint

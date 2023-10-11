@@ -35,6 +35,9 @@ android {
     kotlinOptions {
         jvmTarget = Versions.JAVA_VERSION.toString()
     }
+    packagingOptions {
+        exclude("META-INF/gradle/incremental.annotation.processors")
+    }
 }
 
 dependencies {

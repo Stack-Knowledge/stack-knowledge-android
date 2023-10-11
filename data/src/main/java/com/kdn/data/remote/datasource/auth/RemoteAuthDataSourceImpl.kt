@@ -1,4 +1,4 @@
-package com.kdn.data.remote.datasource
+package com.kdn.data.remote.datasource.auth
 
 import com.kdn.data.remote.api.AuthAPI
 import com.kdn.data.remote.dto.auth.request.GAuthLoginRequest

@@ -1,7 +1,9 @@
 package com.kdn.di
 
-import com.kdn.data.repository.AuthRepositoryImpl
-import com.kdn.domain.repository.AuthRepository
+import com.kdn.data.repository.auth.*
+import com.kdn.data.repository.item.ItemRepositoryImpl
+import com.kdn.data.repository.order.OrderRepositoryImpl
+import com.kdn.domain.repository.*
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -16,4 +18,16 @@ abstract class RepositoryModule {
     abstract fun provideAuthRepository(
         authRepositoryImpl: AuthRepositoryImpl,
     ): AuthRepository
+
+    @Singleton
+    @Binds
+    abstract fun provideItemRepository(
+        itemRepositoryImpl: ItemRepositoryImpl,
+    ): ItemRepository
+
+    @Singleton
+    @Binds
+    abstract fun provideOrderRepository(
+        orderRepositoryImpl: OrderRepositoryImpl,
+    ): OrderRepository
 }

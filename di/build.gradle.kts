@@ -63,6 +63,9 @@ android {
     kotlinOptions {
         jvmTarget = Versions.JAVA_VERSION.toString()
     }
+    packagingOptions {
+        exclude("META-INF/gradle/incremental.annotation.processors")
+    }
 }
 dependencies {
     implementation(project(":data"))
@@ -74,9 +77,6 @@ dependencies {
 
     implementation(Dependency.Hilt.HILT_ANDROID)
     kapt(Dependency.Hilt.HILT_ANDROID_COMPILER)
-
-    implementation(Dependency.Room.ROOM)
-    kapt(Dependency.Room.ROOM_COMPILER)
 
     implementation(Dependency.Libraries.RETROFIT)
     implementation(Dependency.Libraries.RETROFIT_CONVERTER_GSON)

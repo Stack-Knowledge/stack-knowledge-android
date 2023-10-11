@@ -1,67 +1,65 @@
 package com.kdn.stack_knowledge_android.ui.shop
 
-import android.view.View
-import androidx.fragment.app.FragmentManager
-import com.kdn.domain.model.response.GoodsResponseModel
+import android.util.Log
+import androidx.core.view.isVisible
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
+import com.kdn.domain.entity.ItemEntity
 import com.kdn.stack_knowledge_android.R
-import com.kdn.stack_knowledge_android.adapter.shop.GoodsListAdapter
+import com.kdn.stack_knowledge_android.adapter.shop.ItemListAdapter
+import com.kdn.stack_knowledge_android.adapter.shop.OrderDetailListAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentShopBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
-import com.kdn.stack_knowledge_android.ui.main.MainActivity
 import com.kdn.stack_knowledge_android.utils.ItemDecorator
+import com.kdn.stack_knowledge_android.utils.repeatOnStart
+import com.kdn.stack_knowledge_android.viewmodel.shop.BuyViewModel
+import com.kdn.stack_knowledge_android.viewmodel.shop.ItemListVewModel
 import dagger.hilt.android.AndroidEntryPoint
-import java.util.UUID
 
 @AndroidEntryPoint
 class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
     private lateinit var orderBottomSheet: OrderBottomSheet
-    private lateinit var goodsListAdapter: GoodsListAdapter
-    private lateinit var supportFragmentManager: FragmentManager
-    private lateinit var mainActivity: MainActivity
+    private lateinit var itemListAdapter: ItemListAdapter
+    private lateinit var detailListAdapter: OrderDetailListAdapter
+    private val buyViewModel by activityViewModels<BuyViewModel>()
+    private val itemListViewModel by viewModels<ItemListVewModel>()
+    private var selectedItemList = mutableListOf<ItemEntity>()
+
     override fun createView() {
         initRecyclerView()
-        showBottomSheet()
+        initBottomSheet()
     }
 
     override fun observeEvent() {
+        repeatOnStart {
+            itemListViewModel.eventFlow.collect { event -> observeItemData(event) }
+        }
     }
 
     private fun initRecyclerView() {
-        var testList = listOf(
-            GoodsResponseModel(
-                UUID.randomUUID(),
-                "test",
-                0,
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTucUcNa1Hut31BAJWZtc-tHfEGJ40Y0fQ0br0alGCi9VW0LT23jakx6KneC5GtwEggxZM&usqp=CAU"
-            )
-        )
-        for (i in 0..20) {
-            testList = testList.plus(
-                GoodsResponseModel(
-                    UUID.randomUUID(),
-                    "test$i",
-                    i,
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTucUcNa1Hut31BAJWZtc-tHfEGJ40Y0fQ0br0alGCi9VW0LT23jakx6KneC5GtwEggxZM&usqp=CAU"
-                )
-            )
-        }
-        goodsListAdapter = GoodsListAdapter { isChecked ->
+        itemListViewModel.getItemList()
+        itemListAdapter = ItemListAdapter { isChecked, itemEntity ->
             if (isChecked) {
-                binding.btnSelect.visibility = View.VISIBLE
-            } else {
-                binding.btnSelect.visibility = View.INVISIBLE
+                selectedItemList.add(itemEntity)
+            } else if (!isChecked){
+                selectedItemList.remove(itemEntity)
             }
+            binding.btnSelect.isVisible = selectedItemList.isNotEmpty()
         }
-        binding.rvGoods.adapter = goodsListAdapter
+        binding.rvGoods.adapter = itemListAdapter
         binding.rvGoods.addItemDecoration(ItemDecorator(16))
-        goodsListAdapter.submitList(testList)
-
-
     }
 
-    fun showBottomSheet() {
+    private fun observeItemData(event: ItemListVewModel.Event) = when (event) {
+        is ItemListVewModel.Event.Item -> {
+            itemListAdapter.submitList(event.itemList)
+        }
+    }
+
+    private fun initBottomSheet() {
         orderBottomSheet = OrderBottomSheet()
         binding.btnSelect.setOnClickListener {
+            buyViewModel.setOrderDataList(selectedItemList)
             orderBottomSheet.show(
                 requireActivity().supportFragmentManager,
                 "OrderBottomSheet"
