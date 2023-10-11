@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.kdn.domain.model.response.MissionResponseModel
 import androidx.recyclerview.widget.RecyclerView
 import com.kdn.stack_knowledge_android.databinding.ItemMissionBinding
 

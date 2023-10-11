@@ -1,9 +1,7 @@
 package com.kdn.data.remote.dto.mission.response
 
 import com.google.gson.annotations.SerializedName
-import com.kdn.domain.model.response.MissionResponseModel
 import java.util.UUID
-import com.kdn.domain.model.response.MissionResponseModel.User as DomainUser
 
 data class MissionResponse(
     @SerializedName("id")
