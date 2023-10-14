@@ -1,4 +1,4 @@
-package com.kdn.domain.repository
+package com.kdn.domain.repository.order
 
 import com.kdn.domain.entity.ItemEntity
 import com.kdn.domain.param.OrderParam

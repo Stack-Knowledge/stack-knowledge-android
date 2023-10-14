@@ -17,4 +17,5 @@ class MissionFragment : BaseFragment<FragmentMissionBinding>(R.layout.fragment_m
 
     }
 
+
 }

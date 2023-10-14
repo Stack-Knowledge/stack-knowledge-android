@@ -1,4 +1,4 @@
-package com.kdn.domain.repository
+package com.kdn.domain.repository.auth
 
 import com.kdn.domain.model.request.GAuthLoginRequestModel
 import com.kdn.domain.model.response.GAuthLoginResponseModel

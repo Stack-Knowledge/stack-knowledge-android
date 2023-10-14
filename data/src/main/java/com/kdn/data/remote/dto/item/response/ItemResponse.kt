@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 import com.kdn.domain.entity.ItemEntity
 import java.util.UUID
 
-data class GoodsResponse(
+data class ItemResponse(
     @SerializedName("itemId")
     val itemId: UUID,
     @SerializedName("name")
@@ -15,7 +15,7 @@ data class GoodsResponse(
     val image: String,
 )
 
-fun GoodsResponse.toEntity() = ItemEntity(
+fun ItemResponse.toEntity() = ItemEntity(
     itemId = itemId,
     name = name,
     price= price,

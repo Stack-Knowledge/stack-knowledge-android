@@ -4,6 +4,9 @@ import com.kdn.data.repository.auth.*
 import com.kdn.data.repository.item.ItemRepositoryImpl
 import com.kdn.data.repository.order.OrderRepositoryImpl
 import com.kdn.domain.repository.*
+import com.kdn.domain.repository.auth.AuthRepository
+import com.kdn.domain.repository.item.ItemRepository
+import com.kdn.domain.repository.order.OrderRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

@@ -7,6 +7,7 @@ data class MissionEntity(
     val title: String,
     val point: Int,
     val missionStatus: String,
+    val user:User,
 ) {
     data class User(
         val id: UUID,

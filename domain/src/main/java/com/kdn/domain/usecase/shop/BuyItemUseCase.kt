@@ -1,7 +1,7 @@
 package com.kdn.domain.usecase.shop
 
 import com.kdn.domain.param.OrderParam
-import com.kdn.domain.repository.OrderRepository
+import com.kdn.domain.repository.order.OrderRepository
 import javax.inject.Inject
 
 class BuyItemUseCase @Inject constructor(

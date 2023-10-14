@@ -1,6 +1,7 @@
 package com.kdn.data.remote.dto.mission.response
 
 import com.google.gson.annotations.SerializedName
+import com.kdn.domain.entity.MissionEntity
 import java.util.UUID
 
 data class MissionResponse(
@@ -27,10 +28,15 @@ data class MissionResponse(
     )
 }
 
-fun MissionResponse.toMissionModel() = MissionResponseModel(
+fun MissionResponse.toEntity() = MissionEntity(
     id = id,
     title = title,
     point = point,
     missionStatus = missionStatus,
-    user = DomainUser(id = user.id, email = user.email, name = user.name, profileImage = user.profileImage)
+    user = MissionEntity.User(
+        id = user.id,
+        email = user.email,
+        name = user.name,
+        profileImage = user.profileImage
+    )
 )

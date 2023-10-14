@@ -1,5 +1,6 @@
 package com.kdn.stack_knowledge_android.ui.main
 
+import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.main.MissionListAdapter
@@ -8,6 +9,8 @@ import com.kdn.stack_knowledge_android.adapter.viewpager.MainViewPagerAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentMainBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
 import com.kdn.stack_knowledge_android.utils.ItemDecorator
+import com.kdn.stack_knowledge_android.viewmodel.mission.MissionViewModel
+import com.kdn.stack_knowledge_android.viewmodel.shop.ItemListVewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -15,6 +18,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     private val mainViewPagerAdapter by lazy { MainViewPagerAdapter(this.requireContext()) }
     private lateinit var missionListAdapter: MissionListAdapter
     private lateinit var rankingListAdapter: RankingListAdapter
+    private val missionViewModel by viewModels<MissionViewModel>()
     override fun createView() {
         showViewPager()
         showIndicator()
@@ -40,6 +44,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     }
 
     private fun initRecyclerView() {
+        missionViewModel.getMissionList()
         missionListAdapter = MissionListAdapter(listOf())
         rankingListAdapter = RankingListAdapter(listOf())
         binding.rvMission.adapter = missionListAdapter
@@ -48,4 +53,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
         binding.rvRanking.addItemDecoration(ItemDecorator(16))
     }
 
+    private fun observeMissionData(event: MissionViewModel.Event) = when (event) {
+        is MissionViewModel.Event.Mission -> {
+            missionListAdapter.submitList(event.missionList)
+        }
+    }
 }
