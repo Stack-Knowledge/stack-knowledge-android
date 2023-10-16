@@ -13,13 +13,13 @@ interface MissionAPI {
     @GET("/mission")
     suspend fun getMission(): List<MissionResponse>
 
-    @GET("/mission/{mission_id}")
+    @GET("/mission/{missionId}")
     suspend fun getDetailMission(
-        @Path("missionId") missionId: UUID
+        @Path("missionId") missionId: UUID,
     ): DetailMissionResponse
 
     @POST("/mission")
     suspend fun createMission(
-        @Body body: CreateMissionRequest
+        @Body body: CreateMissionRequest,
     )
 }

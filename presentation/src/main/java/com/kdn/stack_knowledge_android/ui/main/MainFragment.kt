@@ -1,7 +1,9 @@
 package com.kdn.stack_knowledge_android.ui.main
 
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import androidx.viewpager2.widget.ViewPager2
+import com.kdn.domain.entity.MissionEntity
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.main.MissionListAdapter
 import com.kdn.stack_knowledge_android.adapter.main.RankingListAdapter
@@ -43,6 +45,13 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
 
     private fun initRecyclerView() {
         missionViewModel.getMissionList()
+        missionListAdapter.apply {
+            setItemOnClickListener(object: MissionListAdapter.OnItemClickListener{
+                override fun detail(item: MissionEntity?) {
+                    item?.id?.let { missionViewModel.getDetailMission(it) }
+                }
+            })
+        }
         missionListAdapter = MissionListAdapter(listOf())
         rankingListAdapter = RankingListAdapter(listOf())
         binding.rvMission.adapter = missionListAdapter
@@ -54,6 +63,13 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     private fun observeMissionData(event: MissionViewModel.Event) = when (event) {
         is MissionViewModel.Event.Mission -> {
             missionListAdapter.submitList(event.missionList)
+        }
+        is MissionViewModel.Event.DetailMission -> {
+            requireActivity().findNavController(R.id.missionFragment)
+                .navigate(R.id.missionFragment)
+        }
+        is MissionViewModel.Event.CreateMission -> {
+
         }
     }
 }
