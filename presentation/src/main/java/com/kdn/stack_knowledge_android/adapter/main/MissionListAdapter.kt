@@ -6,11 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.kdn.domain.entity.MissionEntity
 import com.kdn.stack_knowledge_android.databinding.ItemMissionBinding
 
 
-class MissionListAdapter(private val missionList: List<MissionResponseModel>?) :
-    ListAdapter<MissionResponseModel, MissionListAdapter.MissionListViewHolder>(diffUtil) {
+class MissionListAdapter(private val missionList: List<MissionEntity>?) :
+    ListAdapter<MissionEntity, MissionListAdapter.MissionListViewHolder>(diffUtil) {
 
     private lateinit var itemClickListener: OnItemClickListener
 
@@ -20,7 +21,7 @@ class MissionListAdapter(private val missionList: List<MissionResponseModel>?) :
         val listener: OnItemClickListener
     ) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: MissionResponseModel?) = binding.apply {
+        fun bind(item: MissionEntity?) = binding.apply {
             tvTeacherName.text = item?.user?.name
             tvTitle.text = item?.title
             tvMileage.text = item?.point.toString()
@@ -48,7 +49,7 @@ class MissionListAdapter(private val missionList: List<MissionResponseModel>?) :
         )
 
     interface OnItemClickListener {
-        fun detail(item: MissionResponseModel?)
+        fun detail(item: MissionEntity?)
     }
 
     fun setItemOnClickListener(onItemClickListener: OnItemClickListener) {
@@ -56,17 +57,17 @@ class MissionListAdapter(private val missionList: List<MissionResponseModel>?) :
     }
 
     companion object {
-        val diffUtil = object : DiffUtil.ItemCallback<MissionResponseModel>() {
+        val diffUtil = object : DiffUtil.ItemCallback<MissionEntity>() {
             override fun areItemsTheSame(
-                oldItem: MissionResponseModel,
-                newItem: MissionResponseModel
+                oldItem: MissionEntity,
+                newItem: MissionEntity,
             ): Boolean {
                 return oldItem == newItem
             }
 
             override fun areContentsTheSame(
-                oldItem: MissionResponseModel,
-                newItem: MissionResponseModel
+                oldItem: MissionEntity,
+                newItem: MissionEntity,
             ): Boolean {
                 return oldItem == newItem
             }

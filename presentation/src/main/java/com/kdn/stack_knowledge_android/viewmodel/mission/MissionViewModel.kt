@@ -3,12 +3,10 @@ package com.kdn.stack_knowledge_android.viewmodel.mission
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kdn.domain.entity.ItemEntity
 import com.kdn.domain.entity.MissionEntity
 import com.kdn.domain.usecase.mission.GetMissionListUseCase
 import com.kdn.stack_knowledge_android.utils.MutableEventFlow
 import com.kdn.stack_knowledge_android.utils.asEvetFlow
-import com.kdn.stack_knowledge_android.viewmodel.shop.ItemListVewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

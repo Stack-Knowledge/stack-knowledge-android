@@ -9,8 +9,8 @@ import javax.inject.Inject
 class ItemRepositoryImpl @Inject constructor(
     private val remoteDataSource: RemoteItemDataSource,
 ) : ItemRepository {
-    override suspend fun getGoodsList(): List<ItemEntity> =
-        remoteDataSource.getGoodsList().map {
+    override suspend fun getItemList(): List<ItemEntity> =
+        remoteDataSource.getItemList().map {
             it.toEntity()
         }
 }

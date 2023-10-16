@@ -11,9 +11,7 @@ import com.kdn.stack_knowledge_android.ui.base.BaseFragment
 import com.kdn.stack_knowledge_android.utils.ItemDecorator
 import com.kdn.stack_knowledge_android.utils.repeatOnStart
 import com.kdn.stack_knowledge_android.viewmodel.mission.MissionViewModel
-import com.kdn.stack_knowledge_android.viewmodel.shop.ItemListVewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 
 @AndroidEntryPoint
 class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
