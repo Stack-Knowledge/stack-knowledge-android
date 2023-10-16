@@ -13,5 +13,4 @@ class RemoteItemDataSourceImpl @Inject constructor(
             .httpRequest { service.getItemList() }
             .sendRequest()
     }
-
 }

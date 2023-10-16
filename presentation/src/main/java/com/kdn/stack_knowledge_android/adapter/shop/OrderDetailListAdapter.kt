@@ -14,7 +14,7 @@ class OrderDetailListAdapter :
 
     private lateinit var countControlButtonClickListener: OnItemClickListener
 
-    class OrderDetailListViewHolder(
+    inner class OrderDetailListViewHolder(
         val context: Context,
         val binding: ItemDetailOrderBinding,
         val listener: OnItemClickListener,

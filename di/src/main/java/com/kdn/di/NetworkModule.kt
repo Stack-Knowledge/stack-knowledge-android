@@ -3,6 +3,7 @@ package com.kdn.di
 import android.util.Log
 import com.kdn.data.remote.api.AuthAPI
 import com.kdn.data.remote.api.ItemAPI
+import com.kdn.data.remote.api.MissionAPI
 import com.kdn.data.remote.api.OrderAPI
 import dagger.Module
 import dagger.Provides
@@ -70,5 +71,11 @@ object NetworkModule {
     @Singleton
     fun provideOrderService(retrofit: Retrofit): OrderAPI {
         return retrofit.create(OrderAPI::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideMissionService(retrofit: Retrofit): MissionAPI {
+        return retrofit.create(MissionAPI::class.java)
     }
 }
