@@ -2,6 +2,7 @@ package com.kdn.data.remote.api
 
 import com.kdn.data.remote.dto.order.request.OrderRequest
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface OrderAPI {
@@ -9,5 +10,8 @@ interface OrderAPI {
     suspend fun buyItem(
         @Body orderRequest: List<OrderRequest>,
     )
+
+    @GET("/order")
+    suspend fun getOrderedItem()
 
 }

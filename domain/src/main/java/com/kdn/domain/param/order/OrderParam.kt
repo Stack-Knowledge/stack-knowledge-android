@@ -1,4 +1,4 @@
-package com.kdn.domain.param
+package com.kdn.domain.param.order
 
 import java.util.UUID
 

@@ -8,6 +8,8 @@ import com.kdn.data.remote.datasource.mission.RemoteMissionDataSource
 import com.kdn.data.remote.datasource.mission.RemoteMissionDataSourceImpl
 import com.kdn.data.remote.datasource.order.RemoteOrderDataSource
 import com.kdn.data.remote.datasource.order.RemoteOrderDataSourceImpl
+import com.kdn.data.remote.datasource.solve.RemoteSolveDataSource
+import com.kdn.data.remote.datasource.solve.RemoteSolveDataSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -35,4 +37,9 @@ abstract class RemoteDataSourceModule {
     abstract fun proveRemoteMissionDataSource(
         remoteMissionDataSourceImpl: RemoteMissionDataSourceImpl,
     ): RemoteMissionDataSource
+
+    @Binds
+    abstract fun proveRemoteSolveDataSource(
+        remoteSolveDataSourceImpl: RemoteSolveDataSourceImpl,
+    ): RemoteSolveDataSource
 }

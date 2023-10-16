@@ -1,7 +1,7 @@
 package com.kdn.data.remote.dto.order.request
 
 import com.google.gson.annotations.SerializedName
-import com.kdn.domain.param.OrderParam
+import com.kdn.domain.param.order.OrderParam
 import java.util.UUID
 
 data class OrderRequest(

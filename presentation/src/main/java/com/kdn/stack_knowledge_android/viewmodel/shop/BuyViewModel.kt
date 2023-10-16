@@ -1,10 +1,9 @@
 package com.kdn.stack_knowledge_android.viewmodel.shop
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kdn.domain.entity.ItemEntity
-import com.kdn.domain.param.OrderParam
+import com.kdn.domain.param.order.OrderParam
 import com.kdn.domain.usecase.shop.BuyItemUseCase
 import com.kdn.stack_knowledge_android.data.order.DetailOrderData
 import dagger.hilt.android.lifecycle.HiltViewModel

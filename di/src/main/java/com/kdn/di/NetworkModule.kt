@@ -5,6 +5,7 @@ import com.kdn.data.remote.api.AuthAPI
 import com.kdn.data.remote.api.ItemAPI
 import com.kdn.data.remote.api.MissionAPI
 import com.kdn.data.remote.api.OrderAPI
+import com.kdn.data.remote.api.SolveAPI
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -77,5 +78,11 @@ object NetworkModule {
     @Singleton
     fun provideMissionService(retrofit: Retrofit): MissionAPI {
         return retrofit.create(MissionAPI::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideSolveService(retrofit: Retrofit): SolveAPI {
+        return retrofit.create(SolveAPI::class.java)
     }
 }
