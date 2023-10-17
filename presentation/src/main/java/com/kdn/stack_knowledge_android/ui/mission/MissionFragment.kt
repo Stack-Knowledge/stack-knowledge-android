@@ -1,9 +1,8 @@
 package com.kdn.stack_knowledge_android.ui.mission
 
-import android.util.Log
-import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import com.kdn.domain.entity.mission.MissionEntity
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.FragmentMissionBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
@@ -15,14 +14,20 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MissionFragment : BaseFragment<FragmentMissionBinding>(R.layout.fragment_mission) {
     private val solveViewModel by viewModels<SolveViewModel>()
+    private var missionDetailList = mutableListOf<MissionEntity>()
     override fun createView() {
-
+        initMission()
     }
 
     override fun observeEvent() {
         repeatOnStart {
             solveViewModel.eventFlow.collect { event -> observeSolveData(event) }
         }
+    }
+
+    private fun initMission() {
+        val title = missionDetailList.firstOrNull()?.title ?: "Default Title"
+        binding.tvMissionTitle.text = title
     }
 
     private fun observeSolveData(event: SolveViewModel.Event) = when (event) {

@@ -47,14 +47,14 @@ class ItemListAdapter(private val onCheckBoxClickListener: (Boolean, ItemEntity)
         val diffUtil = object : DiffUtil.ItemCallback<ItemEntity>() {
             override fun areItemsTheSame(
                 oldItem: ItemEntity,
-                newItem: ItemEntity
+                newItem: ItemEntity,
             ): Boolean {
                 return oldItem == newItem
             }
 
             override fun areContentsTheSame(
                 oldItem: ItemEntity,
-                newItem: ItemEntity
+                newItem: ItemEntity,
             ): Boolean {
                 return oldItem == newItem
             }

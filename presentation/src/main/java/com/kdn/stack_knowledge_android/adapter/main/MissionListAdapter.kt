@@ -10,22 +10,20 @@ import com.kdn.domain.entity.mission.MissionEntity
 import com.kdn.stack_knowledge_android.databinding.ItemMissionBinding
 
 
-class MissionListAdapter(private val missionList: List<MissionEntity>?) :
-    ListAdapter<MissionEntity, MissionListAdapter.MissionListViewHolder>(diffUtil) {
+class MissionListAdapter : ListAdapter<MissionEntity, MissionListAdapter.MissionListViewHolder>(diffUtil) {
 
     private lateinit var itemClickListener: OnItemClickListener
 
     class MissionListViewHolder(
         val context: Context,
         private val binding: ItemMissionBinding,
-        val listener: OnItemClickListener
+        val listener: OnItemClickListener,
     ) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: MissionEntity?) = binding.apply {
             tvTeacherName.text = item?.user?.name
             tvTitle.text = item?.title
             tvMileage.text = item?.point.toString()
-
             missionItemLayout.setOnClickListener {
                 listener.detail(item)
             }
@@ -34,7 +32,7 @@ class MissionListAdapter(private val missionList: List<MissionEntity>?) :
     }
 
     override fun onBindViewHolder(holder: MissionListViewHolder, position: Int) {
-        holder.bind(missionList?.get(position))
+        holder.bind(getItem(position))
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MissionListViewHolder =
@@ -55,6 +53,7 @@ class MissionListAdapter(private val missionList: List<MissionEntity>?) :
     fun setItemOnClickListener(onItemClickListener: OnItemClickListener) {
         this.itemClickListener = onItemClickListener
     }
+
 
     companion object {
         val diffUtil = object : DiffUtil.ItemCallback<MissionEntity>() {

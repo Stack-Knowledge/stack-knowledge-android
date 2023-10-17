@@ -14,6 +14,7 @@ import com.kdn.stack_knowledge_android.utils.ItemDecorator
 import com.kdn.stack_knowledge_android.utils.repeatOnStart
 import com.kdn.stack_knowledge_android.viewmodel.mission.MissionViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collect
 
 @AndroidEntryPoint
 class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
@@ -45,14 +46,13 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
 
     private fun initRecyclerView() {
         missionViewModel.getMissionList()
-        missionListAdapter.apply {
+        missionListAdapter = MissionListAdapter().apply {
             setItemOnClickListener(object: MissionListAdapter.OnItemClickListener{
                 override fun detail(item: MissionEntity?) {
                     item?.id?.let { missionViewModel.getDetailMission(it) }
                 }
             })
         }
-        missionListAdapter = MissionListAdapter(listOf())
         rankingListAdapter = RankingListAdapter(listOf())
         binding.rvMission.adapter = missionListAdapter
         binding.rvRanking.adapter = rankingListAdapter
