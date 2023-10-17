@@ -1,13 +1,11 @@
 package com.kdn.stack_knowledge_android.ui.shop
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.kdn.domain.entity.ItemEntity
 import com.kdn.stack_knowledge_android.adapter.shop.OrderDetailListAdapter
 import com.kdn.stack_knowledge_android.data.order.DetailOrderData
 import com.kdn.stack_knowledge_android.databinding.BottomSheetOrderBinding

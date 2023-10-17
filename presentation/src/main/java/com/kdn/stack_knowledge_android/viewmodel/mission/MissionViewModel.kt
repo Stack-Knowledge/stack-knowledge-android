@@ -5,12 +5,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kdn.domain.entity.DetailMissionEntity
-import com.kdn.domain.entity.MissionEntity
+import com.kdn.domain.entity.mission.DetailMissionEntity
+import com.kdn.domain.entity.mission.MissionEntity
 import com.kdn.domain.param.mission.CreateMissionParam
 import com.kdn.domain.usecase.mission.CreateMissionUseCase
 import com.kdn.domain.usecase.mission.GetDetailMissionUseCase
 import com.kdn.domain.usecase.mission.GetMissionListUseCase
+import com.kdn.stack_knowledge_android.utils.EventFlow
 import com.kdn.stack_knowledge_android.utils.MutableEventFlow
 import com.kdn.stack_knowledge_android.utils.asEvetFlow
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -27,10 +28,6 @@ class MissionViewModel @Inject constructor(
 
     private val _eventFlow = MutableEventFlow<Event>()
     val eventFlow = _eventFlow.asEvetFlow()
-
-    private val _detailEventData = MutableLiveData<Event>()
-    val detailEventData: LiveData<Event> get() = _detailEventData
-
 
     fun getMissionList() = viewModelScope.launch {
         getMissionListUseCase().onSuccess {
@@ -60,7 +57,6 @@ class MissionViewModel @Inject constructor(
             Log.e("미션 생성 실패", "실패 $it")
         }
     }
-
 
     private fun event(event: Event) = viewModelScope.launch {
         _eventFlow.emit(event)

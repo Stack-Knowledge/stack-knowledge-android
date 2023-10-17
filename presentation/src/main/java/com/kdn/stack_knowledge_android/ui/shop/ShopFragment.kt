@@ -1,10 +1,9 @@
 package com.kdn.stack_knowledge_android.ui.shop
 
-import android.util.Log
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
-import com.kdn.domain.entity.ItemEntity
+import com.kdn.domain.entity.item.ItemEntity
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.shop.ItemListAdapter
 import com.kdn.stack_knowledge_android.adapter.shop.OrderDetailListAdapter

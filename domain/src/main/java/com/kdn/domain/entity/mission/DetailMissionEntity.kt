@@ -1,7 +1,6 @@
-package com.kdn.domain.entity
+package com.kdn.domain.entity.mission
 
 data class DetailMissionEntity(
     val title: String,
-    val content: String,
     val timeLimit: Int,
 )

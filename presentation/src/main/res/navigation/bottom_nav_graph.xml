@@ -18,6 +18,10 @@
     <fragment
         android:id="@+id/missionFragment"
         android:name="com.kdn.stack_knowledge_android.ui.mission.MissionFragment"
-        android:label="MissionFragment" />
+        android:label="MissionFragment">
+        <action
+            android:id="@+id/action_missionFragment_to_missionFragment"
+            app:destination="@id/missionFragment" />
+    </fragment>
 
 </navigation>

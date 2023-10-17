@@ -1,4 +1,4 @@
-package com.kdn.domain.entity
+package com.kdn.domain.entity.mission
 
 import java.util.UUID
 
@@ -7,7 +7,7 @@ data class MissionEntity(
     val title: String,
     val point: Int,
     val missionStatus: String,
-    val user:User,
+    val user: User,
 ) {
     data class User(
         val id: UUID,

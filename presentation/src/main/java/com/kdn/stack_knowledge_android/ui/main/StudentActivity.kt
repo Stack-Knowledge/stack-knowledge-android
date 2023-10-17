@@ -3,12 +3,12 @@ package com.kdn.stack_knowledge_android.ui.main
 import androidx.navigation.ui.setupWithNavController
 import androidx.navigation.fragment.findNavController
 import com.kdn.stack_knowledge_android.R
-import com.kdn.stack_knowledge_android.databinding.ActivityMainBinding
+import com.kdn.stack_knowledge_android.databinding.ActivityStudentBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
+class StudentActivity : BaseActivity<ActivityStudentBinding>(R.layout.activity_student) {
     override fun createView() {
         initBottomNav()
     }

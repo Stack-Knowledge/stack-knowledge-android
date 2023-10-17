@@ -1,7 +1,7 @@
 package com.kdn.domain.repository.mission
 
-import com.kdn.domain.entity.DetailMissionEntity
-import com.kdn.domain.entity.MissionEntity
+import com.kdn.domain.entity.mission.DetailMissionEntity
+import com.kdn.domain.entity.mission.MissionEntity
 import com.kdn.domain.param.mission.CreateMissionParam
 import java.util.UUID
 

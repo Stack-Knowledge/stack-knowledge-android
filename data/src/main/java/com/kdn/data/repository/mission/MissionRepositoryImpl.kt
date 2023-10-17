@@ -3,8 +3,8 @@ package com.kdn.data.repository.mission
 import com.kdn.data.remote.datasource.mission.RemoteMissionDataSource
 import com.kdn.data.remote.dto.mission.request.toRequest
 import com.kdn.data.remote.dto.mission.response.toEntity
-import com.kdn.domain.entity.DetailMissionEntity
-import com.kdn.domain.entity.MissionEntity
+import com.kdn.domain.entity.mission.DetailMissionEntity
+import com.kdn.domain.entity.mission.MissionEntity
 import com.kdn.domain.param.mission.CreateMissionParam
 import com.kdn.domain.repository.mission.MissionRepository
 import java.util.UUID

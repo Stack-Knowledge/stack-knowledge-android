@@ -1,4 +1,4 @@
-package com.kdn.domain.entity
+package com.kdn.domain.entity.item
 
 import java.util.UUID
 

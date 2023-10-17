@@ -1,7 +1,7 @@
 package com.kdn.data.remote.dto.mission.response
 
 import com.google.gson.annotations.SerializedName
-import com.kdn.domain.entity.MissionEntity
+import com.kdn.domain.entity.mission.MissionEntity
 import java.util.UUID
 
 data class MissionResponse(

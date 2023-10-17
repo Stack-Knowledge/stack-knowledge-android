@@ -8,6 +8,6 @@ data class SolveRequest(
     val solvation: String,
 )
 
-fun SolveParam.toParam() = SolveParam(
+fun SolveParam.toRequest() = SolveRequest(
     solvation = solvation,
 )

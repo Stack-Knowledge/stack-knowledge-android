@@ -1,4 +1,4 @@
-package com.kdn.domain.model.response
+package com.kdn.domain.model.response.auth
 
 data class RefreshTokenResponseModel(
     val accessToken: String,

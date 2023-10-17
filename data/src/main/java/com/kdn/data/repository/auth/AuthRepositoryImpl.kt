@@ -5,9 +5,9 @@ import com.kdn.data.remote.datasource.auth.RemoteAuthDataSource
 import com.kdn.data.remote.dto.auth.request.GAuthLoginRequest
 import com.kdn.data.remote.dto.auth.response.toLoginModel
 import com.kdn.data.remote.dto.auth.response.toRefreshModel
-import com.kdn.domain.model.request.GAuthLoginRequestModel
-import com.kdn.domain.model.response.GAuthLoginResponseModel
-import com.kdn.domain.model.response.RefreshTokenResponseModel
+import com.kdn.domain.model.request.auth.GAuthLoginRequestModel
+import com.kdn.domain.model.response.auth.GAuthLoginResponseModel
+import com.kdn.domain.model.response.auth.RefreshTokenResponseModel
 import com.kdn.domain.repository.auth.AuthRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

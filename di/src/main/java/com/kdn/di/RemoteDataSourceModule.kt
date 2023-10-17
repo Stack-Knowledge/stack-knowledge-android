@@ -34,12 +34,12 @@ abstract class RemoteDataSourceModule {
     ): RemoteOrderDataSource
 
     @Binds
-    abstract fun proveRemoteMissionDataSource(
+    abstract fun provideRemoteMissionDataSource(
         remoteMissionDataSourceImpl: RemoteMissionDataSourceImpl,
     ): RemoteMissionDataSource
 
     @Binds
-    abstract fun proveRemoteSolveDataSource(
+    abstract fun provideRemoteSolveDataSource(
         remoteSolveDataSourceImpl: RemoteSolveDataSourceImpl,
     ): RemoteSolveDataSource
 }

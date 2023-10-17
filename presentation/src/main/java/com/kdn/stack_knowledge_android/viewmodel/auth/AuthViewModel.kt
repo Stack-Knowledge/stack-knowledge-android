@@ -6,8 +6,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kdn.stack_knowledge_android.utils.Event
 import com.kdn.stack_knowledge_android.utils.errorHandling
-import com.kdn.domain.model.request.GAuthLoginRequestModel
-import com.kdn.domain.model.response.GAuthLoginResponseModel
+import com.kdn.domain.model.request.auth.GAuthLoginRequestModel
+import com.kdn.domain.model.response.auth.GAuthLoginResponseModel
 import com.kdn.domain.usecase.auth.DeleteTokenUseCase
 import com.kdn.domain.usecase.auth.GAuthLoginUseCase
 import com.kdn.domain.usecase.auth.GetAuthorityInfoUseCase

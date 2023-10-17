@@ -1,6 +1,6 @@
 package com.kdn.data.remote.dto.auth.response
 
-import com.kdn.domain.model.response.RefreshTokenResponseModel
+import com.kdn.domain.model.response.auth.RefreshTokenResponseModel
 
 data class RefreshTokenResponse(
     val accessToken: String,

@@ -1,7 +1,7 @@
 package com.kdn.data.remote.dto.item.response
 
 import com.google.gson.annotations.SerializedName
-import com.kdn.domain.entity.ItemEntity
+import com.kdn.domain.entity.item.ItemEntity
 import java.util.UUID
 
 data class ItemResponse(

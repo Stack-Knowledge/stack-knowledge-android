@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.kdn.domain.entity.MissionEntity
+import com.kdn.domain.entity.mission.MissionEntity
 import com.kdn.stack_knowledge_android.databinding.ItemMissionBinding
 
 

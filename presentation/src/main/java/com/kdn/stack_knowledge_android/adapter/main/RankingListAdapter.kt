@@ -18,13 +18,23 @@ class RankingListAdapter(private val rankingList: List<RankingResponseModel>?) :
         val context: Context,
         private val binding: ItemRankingBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
-
-        fun bind(item: RankingResponseModel?) = binding.apply {
+        fun bind(ranking: Int, item: RankingResponseModel?) = binding.apply {
+            when(ranking) {
+                1 -> {
+                    // 1등일때 View 바꾸기
+                }
+                2 -> {
+                    // 2등일때 View 바꾸기
+                }
+                3 -> {
+                    // 3등일때 View 바꾸기
+                }
+                else -> {}
+            }
             Glide.with(ivProfile).load(item?.user?.profileImage ?: R.drawable.ic_default_profile)
             tvMileage.text = item?.user?.name
             tvMileage.text = item?.cumulatePoint.toString()
         }
-
     }
 
 
@@ -43,7 +53,7 @@ class RankingListAdapter(private val rankingList: List<RankingResponseModel>?) :
 
 
     override fun onBindViewHolder(holder: RankingListViewHolder, position: Int) {
-        holder.bind(rankingList?.get(position))
+        holder.bind(position+1,rankingList?.get(position))
     }
 
     companion object {
