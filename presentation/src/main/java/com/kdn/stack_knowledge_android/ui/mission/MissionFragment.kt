@@ -26,8 +26,6 @@ class MissionFragment : BaseFragment<FragmentMissionBinding>(R.layout.fragment_m
     }
 
     private fun initMission() {
-        val title = missionDetailList.firstOrNull()?.title ?: "Default Title"
-        binding.tvMissionTitle.text = title
     }
 
     private fun observeSolveData(event: SolveViewModel.Event) = when (event) {

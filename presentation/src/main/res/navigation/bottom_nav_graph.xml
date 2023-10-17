@@ -14,11 +14,18 @@
         android:id="@+id/mainFragment"
         android:name="com.kdn.stack_knowledge_android.ui.main.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_missionFragment"
+            app:destination="@id/missionFragment" />
+    </fragment>
     <fragment
         android:id="@+id/missionFragment"
         android:name="com.kdn.stack_knowledge_android.ui.mission.MissionFragment"
         android:label="MissionFragment">
+        <argument
+            app:argType="string"
+            android:defaultValue="default title"/>
         <action
             android:id="@+id/action_missionFragment_to_missionFragment"
             app:destination="@id/missionFragment" />

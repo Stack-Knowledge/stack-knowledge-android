@@ -2,6 +2,7 @@ package com.kdn.stack_knowledge_android.ui.main
 
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.kdn.domain.entity.mission.MissionEntity
 import com.kdn.stack_knowledge_android.R
@@ -14,6 +15,7 @@ import com.kdn.stack_knowledge_android.utils.ItemDecorator
 import com.kdn.stack_knowledge_android.utils.repeatOnStart
 import com.kdn.stack_knowledge_android.viewmodel.mission.MissionViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import org.junit.experimental.theories.internal.SpecificDataPointsSupplier
 import java.util.UUID
 
 @AndroidEntryPoint
@@ -45,6 +47,8 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     }
 
     private fun initRecyclerView() {
+        var title: String = "블라블라"
+
         missionViewModel.getMissionList()
         missionListAdapter = MissionListAdapter().apply {
             setItemOnClickListener(object : MissionListAdapter.OnItemClickListener {
@@ -64,10 +68,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
         is MissionViewModel.Event.Mission -> {
             missionListAdapter.submitList(event.missionList)
         }
-
         is MissionViewModel.Event.DetailMission -> {
-            requireActivity().findNavController(R.id.missionFragment)
-                .navigate(R.id.missionFragment)
+            findNavController()
+                .navigate(R.id.action_mainFragment_to_missionFragment)
         }
 
         else -> {}

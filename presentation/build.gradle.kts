@@ -6,6 +6,7 @@ plugins {
     id("kotlin-android")
     id("org.jetbrains.kotlin.android")
     id("dagger.hilt.android.plugin")
+    id("androidx.navigation.safeargs.kotlin")
     kotlin("kapt")
 }
 
@@ -72,6 +73,8 @@ android {
     }
     packagingOptions {
         exclude("META-INF/gradle/incremental.annotation.processors")
+        pickFirst("META-INF/AL2.0")
+        pickFirst("META-INF/LGPL2.1")
     }
 }
 
@@ -114,5 +117,6 @@ dependencies {
     implementation(Dependency.AndroidTest.ESPRESSO_CORE)
 
     implementation(Dependency.AndroidX.NAVIGATION_FRAGMENT)
+    implementation(Dependency.AndroidX.SAFE_ARGS)
     implementation(Dependency.AndroidX.NAVIGATION_UI)
 }

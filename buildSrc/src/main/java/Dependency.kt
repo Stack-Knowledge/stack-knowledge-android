@@ -40,6 +40,7 @@ object Dependency {
         const val RECYCLER_VIEW = "androidx.recyclerview:recyclerview:${Versions.RECYCLERVIEW}"
         const val NAVIGATION_FRAGMENT = "androidx.navigation:navigation-fragment-ktx:${Versions.NAVIGATION}"
         const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx:${Versions.NAVIGATION}"
+        const val SAFE_ARGS = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.SAFE_ARGS}"
     }
 
     object Accompanist {

@@ -1,7 +1,7 @@
 package com.kdn.di
 
-import com.kdn.data.local.auth.datastorage.AuthDataStorage
-import com.kdn.data.local.auth.datastorage.AuthDataStorageImpl
+import com.kdn.data.local.auth.datastorage.AuthPreference
+import com.kdn.data.local.auth.datastorage.AuthPreferenceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -12,6 +12,6 @@ import dagger.hilt.components.SingletonComponent
 abstract class StorageModule {
     @Binds
     abstract fun provideAuthDataStorage(
-        authDataStorageImpl: AuthDataStorageImpl
-    ): AuthDataStorage
+        authDataStorageImpl: AuthPreferenceImpl
+    ): AuthPreference
 }

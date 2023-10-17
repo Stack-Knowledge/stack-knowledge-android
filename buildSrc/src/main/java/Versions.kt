@@ -55,6 +55,8 @@ object Versions {
 
     const val INJECT = "1"
 
+    const val SAFE_ARGS = "2.5.3"
+
     const val PREFERENCES = "1.0.0"
 
     const val GMS_GOOGLE_SERVICE = "4.3.15"

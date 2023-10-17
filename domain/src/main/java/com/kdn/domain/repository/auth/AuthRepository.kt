@@ -9,6 +9,4 @@ interface AuthRepository {
     suspend fun gAuthLogin(body: GAuthLoginRequestModel): Flow<GAuthLoginResponseModel>
     suspend fun saveTheLoginData(data: GAuthLoginResponseModel)
     suspend fun provideRefreshToken(refreshToken: String): Flow<RefreshTokenResponseModel>
-    suspend fun getAuthorityInfo(): Flow<String>
-    suspend fun deleteLoginData()
 }
