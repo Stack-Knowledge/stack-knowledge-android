@@ -75,11 +75,14 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
             when (event) {
                 is Event.Success -> {
                     authViewModel.saveTheLoginData(event.data!!)
+                    startActivity(Intent(this, StudentActivity::class.java))
+                    finish()
                 }
                 else -> {
                     Log.d("login", event.toString())
                 }
             }
+
         }
     }
 
@@ -98,18 +101,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
             exitProcess(0)
         }
     }
-
-    private fun pageController() {
-        startActivity(
-            Intent(
-                this, StudentActivity::class.java
-            )
-        )
-        finish()
-    }
-
     interface OnBackPressedListener {
         fun onBackPressed()
     }
-
 }

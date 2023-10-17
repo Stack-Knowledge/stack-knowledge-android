@@ -13,6 +13,6 @@ data class MissionEntity(
         val id: UUID,
         val email: String,
         val name: String,
-        val profileImage: String
+        val profileImage: String,
     )
 }

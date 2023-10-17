@@ -1,6 +1,7 @@
 package com.kdn.di
 
 import android.util.Log
+import com.kdn.data.interceptor.AuthorizationInterceptor
 import com.kdn.data.remote.api.AuthAPI
 import com.kdn.data.remote.api.ItemAPI
 import com.kdn.data.remote.api.MissionAPI
@@ -28,14 +29,17 @@ object NetworkModule {
             .setLevel(HttpLoggingInterceptor.Level.BODY)
 
     @Provides
+    @Singleton
     fun provideOkhttpClient(
         httpLoggingInterceptor: HttpLoggingInterceptor,
+        authorizationInterceptor: AuthorizationInterceptor,
     ): OkHttpClient {
         return OkHttpClient.Builder()
             .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
             .addInterceptor(httpLoggingInterceptor)
+            .addInterceptor(authorizationInterceptor)
             .build()
     }
 

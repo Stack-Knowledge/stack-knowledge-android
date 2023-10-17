@@ -1,5 +1,6 @@
 package com.kdn.data.interceptor
 
+import android.util.Log
 import com.google.gson.Gson
 import com.kdn.data.BuildConfig
 import com.kdn.data.local.auth.datastorage.AuthDataStorage
@@ -47,11 +48,11 @@ class AuthorizationInterceptor @Inject constructor(
                     authDataStorage.setExpiredAt(expiredAt = token.expiredAt)
                 } else throw NeedLoginException("")
             }
+            val accessToken = authDataStorage.getAccessToken()
             return chain.proceed(
-                request.newBuilder().addHeader(
-                    "Authorization",
-                    "Bearer ${authDataStorage.getAccessToken()}"
-                ).build()
+                request.newBuilder()
+                    .addHeader("Authorization", "Bearer $accessToken")
+                    .build()
             )
         }
         return chain.proceed(request)

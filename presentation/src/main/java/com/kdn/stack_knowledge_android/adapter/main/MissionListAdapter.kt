@@ -10,11 +10,11 @@ import com.kdn.domain.entity.mission.MissionEntity
 import com.kdn.stack_knowledge_android.databinding.ItemMissionBinding
 
 
-class MissionListAdapter : ListAdapter<MissionEntity, MissionListAdapter.MissionListViewHolder>(diffUtil) {
-
+class MissionListAdapter :
+    ListAdapter<MissionEntity, MissionListAdapter.MissionListViewHolder>(diffUtil) {
     private lateinit var itemClickListener: OnItemClickListener
 
-    class MissionListViewHolder(
+    inner class MissionListViewHolder(
         val context: Context,
         private val binding: ItemMissionBinding,
         val listener: OnItemClickListener,
@@ -31,10 +31,6 @@ class MissionListAdapter : ListAdapter<MissionEntity, MissionListAdapter.Mission
 
     }
 
-    override fun onBindViewHolder(holder: MissionListViewHolder, position: Int) {
-        holder.bind(getItem(position))
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MissionListViewHolder =
         MissionListViewHolder(
             parent.context,
@@ -46,6 +42,11 @@ class MissionListAdapter : ListAdapter<MissionEntity, MissionListAdapter.Mission
             itemClickListener
         )
 
+    override fun onBindViewHolder(holder: MissionListViewHolder, position: Int) {
+        holder.bind(getItem(position))
+    }
+
+
     interface OnItemClickListener {
         fun detail(item: MissionEntity?)
     }
@@ -53,7 +54,6 @@ class MissionListAdapter : ListAdapter<MissionEntity, MissionListAdapter.Mission
     fun setItemOnClickListener(onItemClickListener: OnItemClickListener) {
         this.itemClickListener = onItemClickListener
     }
-
 
     companion object {
         val diffUtil = object : DiffUtil.ItemCallback<MissionEntity>() {
@@ -70,7 +70,6 @@ class MissionListAdapter : ListAdapter<MissionEntity, MissionListAdapter.Mission
             ): Boolean {
                 return oldItem == newItem
             }
-
         }
     }
 }

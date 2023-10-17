@@ -40,3 +40,9 @@ fun MissionResponse.toEntity() = MissionEntity(
         profileImage = user.profileImage
     )
 )
+
+enum class MissionStatus {
+    CLOSED,
+    COMPLETED,
+    AVAILABLE_OPEN,
+}

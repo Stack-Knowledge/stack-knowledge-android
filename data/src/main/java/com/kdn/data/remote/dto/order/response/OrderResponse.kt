@@ -13,7 +13,7 @@ data class OrderResponse(
     @SerializedName("orderStatus")
     val orderStatus: OrderStatus,
 ) {
-    data class item(
+    data class Item(
         @SerializedName("id")
         val id: UUID,
         @SerializedName("name")
@@ -24,14 +24,14 @@ data class OrderResponse(
         val image: String,
     )
 
-    data class user(
+    data class User(
         @SerializedName("id")
         val id: UUID,
         @SerializedName("email")
         val email: String,
         @SerializedName("name")
         val name: String,
-        @SerializedName("profile")
+        @SerializedName("profileImage")
         val profile: String,
     )
 }
