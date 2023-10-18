@@ -1,10 +1,6 @@
 package com.kdn.stack_knowledge_android.ui.main
 
-import android.util.Log
-import android.widget.TextView
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.kdn.domain.entity.mission.MissionEntity
@@ -14,13 +10,10 @@ import com.kdn.stack_knowledge_android.adapter.main.RankingListAdapter
 import com.kdn.stack_knowledge_android.adapter.viewpager.MainViewPagerAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentMainBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
-import com.kdn.stack_knowledge_android.ui.mission.MissionFragmentDirections
 import com.kdn.stack_knowledge_android.utils.ItemDecorator
 import com.kdn.stack_knowledge_android.utils.repeatOnStart
 import com.kdn.stack_knowledge_android.viewmodel.mission.MissionViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import org.junit.experimental.theories.internal.SpecificDataPointsSupplier
-import java.util.UUID
 
 @AndroidEntryPoint
 class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
@@ -75,7 +68,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
             val title :String = event.detailMission.title
             val action =
                 MainFragmentDirections
-                    .actionMainFragmentToMissionFragment(title)
+                    .actionMainFragmentToSolveFragment(title)
             findNavController()
                 .navigate(action)
         }

@@ -16,16 +16,13 @@
         android:label="MainFragment"
         tools:layout="@layout/fragment_main">
         <action
-            android:id="@+id/action_mainFragment_to_missionFragment"
-            app:destination="@id/missionFragment" />
+            android:id="@+id/action_mainFragment_to_solveFragment"
+            app:destination="@id/solveFragment" />
     </fragment>
     <fragment
-        android:id="@+id/missionFragment"
-        android:name="com.kdn.stack_knowledge_android.ui.mission.MissionFragment"
-        android:label="MissionFragment">
-        <action
-            android:id="@+id/action_missionFragment_to_missionFragment"
-            app:destination="@id/missionFragment" />
+        android:id="@+id/solveFragment"
+        android:name="com.kdn.stack_knowledge_android.ui.mission.SolveFragment"
+        android:label="SolveFragment">
         <action
             android:id="@+id/action_missionFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
@@ -37,6 +34,9 @@
             android:name="timeLimit"
             app:argType="integer"
             android:defaultValue="30" />
+        <action
+            android:id="@+id/action_solveFragment_self"
+            app:destination="@id/solveFragment" />
     </fragment>
 
 </navigation>
