@@ -18,14 +18,15 @@
         <action
             android:id="@+id/action_mainFragment_to_solveFragment"
             app:destination="@id/solveFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_missionFragment"
+            app:destination="@id/missionFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/solveFragment"
-        android:name="com.kdn.stack_knowledge_android.ui.mission.SolveFragment"
+        android:name="com.kdn.stack_knowledge_android.ui.solve.SolveFragment"
         android:label="SolveFragment">
-        <action
-            android:id="@+id/action_missionFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
         <argument
             android:name="title"
             app:argType="string"
@@ -36,6 +37,15 @@
             android:defaultValue="30" />
         <action
             android:id="@+id/action_solveFragment_self"
+            app:destination="@id/solveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/missionFragment"
+        android:name="com.kdn.stack_knowledge_android.ui.mission.MissionFragment"
+        android:label="MissionFragment"
+        tools:layout="@layout/fragment_mission">
+        <action
+            android:id="@+id/action_missionFragment_to_solveFragment"
             app:destination="@id/solveFragment" />
     </fragment>
 

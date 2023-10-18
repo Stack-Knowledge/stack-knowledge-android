@@ -1,4 +1,4 @@
-package com.kdn.stack_knowledge_android.ui.mission
+package com.kdn.stack_knowledge_android.ui.solve
 
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
@@ -17,7 +17,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class SolveFragment : BaseFragment<FragmentSolveBinding>(R.layout.fragment_solve) {
     private val solveViewModel by viewModels<SolveViewModel>()
     private val missionViewModel by activityViewModels<MissionViewModel>()
-    private var missionDetailList = mutableListOf<DetailMissionData>()
     override fun createView() {
         setMission()
     }
@@ -29,14 +28,14 @@ class SolveFragment : BaseFragment<FragmentSolveBinding>(R.layout.fragment_solve
     }
 
     private fun setMission() {
-        val args: MissionFragmentArgs by navArgs()
+        val args: SolveFragmentArgs by navArgs()
         val title = args.title
         binding.tvMissionTitle.text = title
     }
 
     private fun observeSolveData(event: SolveViewModel.Event) = when (event) {
         is SolveViewModel.Event.SolveMission -> {
-            requireActivity().findNavController(R.id.missionFragment)
+            requireActivity().findNavController(R.id.solveFragment)
                 .navigate(R.id.action_solveFragment_self)
         }
     }

@@ -13,12 +13,18 @@
         android:background="@color/white">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_mission"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:spanCount="2"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             android:orientation="vertical"
-            tools:listitem="@layout/item_mission" />
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:listitem="@layout/item_mission"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

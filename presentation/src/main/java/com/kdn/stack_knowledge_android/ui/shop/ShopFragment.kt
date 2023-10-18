@@ -9,7 +9,7 @@ import com.kdn.stack_knowledge_android.adapter.shop.ItemListAdapter
 import com.kdn.stack_knowledge_android.adapter.shop.OrderDetailListAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentShopBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
-import com.kdn.stack_knowledge_android.utils.ItemDecorator
+import com.kdn.stack_knowledge_android.utils.VerticalItemDecorator
 import com.kdn.stack_knowledge_android.utils.repeatOnStart
 import com.kdn.stack_knowledge_android.viewmodel.shop.BuyViewModel
 import com.kdn.stack_knowledge_android.viewmodel.shop.ItemListVewModel
@@ -46,7 +46,7 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
             binding.btnSelect.isVisible = selectedItemList.isNotEmpty()
         }
         binding.rvGoods.adapter = itemListAdapter
-        binding.rvGoods.addItemDecoration(ItemDecorator(16))
+        binding.rvGoods.addItemDecoration(VerticalItemDecorator(16))
     }
 
     private fun observeItemData(event: ItemListVewModel.Event) = when (event) {

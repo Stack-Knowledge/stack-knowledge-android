@@ -9,7 +9,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.kdn.stack_knowledge_android.adapter.shop.OrderDetailListAdapter
 import com.kdn.stack_knowledge_android.data.order.DetailOrderData
 import com.kdn.stack_knowledge_android.databinding.BottomSheetOrderBinding
-import com.kdn.stack_knowledge_android.utils.ItemDecorator
+import com.kdn.stack_knowledge_android.utils.VerticalItemDecorator
 import com.kdn.stack_knowledge_android.viewmodel.shop.BuyViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -51,7 +51,7 @@ class OrderBottomSheet : BottomSheetDialogFragment() {
         }
         binding.rvDetailOrder.adapter = orderDetailListAdapter
         orderDetailListAdapter.submitList(buyViewModel.orderDataList)
-        binding.rvDetailOrder.addItemDecoration(ItemDecorator(10))
+        binding.rvDetailOrder.addItemDecoration(VerticalItemDecorator(10))
     }
 
     private fun setTotalPrice() {

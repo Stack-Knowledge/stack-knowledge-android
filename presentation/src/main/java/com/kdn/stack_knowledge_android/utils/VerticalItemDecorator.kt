@@ -4,7 +4,7 @@ import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
-class ItemDecorator(private val divHeight: Int) : RecyclerView.ItemDecoration() {
+class VerticalItemDecorator(private val divHeight: Int) : RecyclerView.ItemDecoration() {
 
     override fun getItemOffsets(
         outRect: Rect,
@@ -14,7 +14,7 @@ class ItemDecorator(private val divHeight: Int) : RecyclerView.ItemDecoration() 
     ) {
         super.getItemOffsets(outRect, view, parent, state)
         val position = parent.getChildAdapterPosition(view)
-        if(position != 0) {
+        if(position == 0) {
             outRect.top = divHeight
         }
     }
