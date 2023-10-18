@@ -14,7 +14,7 @@
         android:id="@+id/mainFragment"
         android:name="com.kdn.stack_knowledge_android.ui.main.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/fragment_main" >
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_missionFragment"
             app:destination="@id/missionFragment" />
@@ -23,12 +23,20 @@
         android:id="@+id/missionFragment"
         android:name="com.kdn.stack_knowledge_android.ui.mission.MissionFragment"
         android:label="MissionFragment">
-        <argument
-            app:argType="string"
-            android:defaultValue="default title"/>
         <action
             android:id="@+id/action_missionFragment_to_missionFragment"
             app:destination="@id/missionFragment" />
+        <action
+            android:id="@+id/action_missionFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="default_title" />
+        <argument
+            android:name="timeLimit"
+            app:argType="integer"
+            android:defaultValue="30" />
     </fragment>
 
 </navigation>

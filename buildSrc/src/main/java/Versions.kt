@@ -25,7 +25,7 @@ object Versions {
     const val PAGING = "3.1.1"
     const val PAGING_COMPOSE = "1.0.0-alpha16"
     const val LEANBACK = "1.0.0"
-    const val NAVIGATION = "2.4.1"
+    const val NAVIGATION = "2.5.3"
 
     const val COMPOSE_ACTIVITY = "1.6.1"
     const val COMPOSE = "1.4.3"
@@ -54,8 +54,6 @@ object Versions {
     const val GLIDE = "4.13.0"
 
     const val INJECT = "1"
-
-    const val SAFE_ARGS = "2.5.3"
 
     const val PREFERENCES = "1.0.0"
 

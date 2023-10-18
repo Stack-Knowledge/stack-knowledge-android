@@ -3,7 +3,6 @@ buildscript {
         google()
         mavenCentral()
     }
-
     dependencies {
         classpath(Dependency.GradlePlugin.GRADLE_HILT)
         classpath(Dependency.AndroidX.SAFE_ARGS)
