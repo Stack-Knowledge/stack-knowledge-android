@@ -14,7 +14,7 @@ class VerticalItemDecorator(private val divHeight: Int) : RecyclerView.ItemDecor
     ) {
         super.getItemOffsets(outRect, view, parent, state)
         val position = parent.getChildAdapterPosition(view)
-        if(position == 0) {
+        if(position == position) {
             outRect.top = divHeight
         }
     }

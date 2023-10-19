@@ -100,44 +100,16 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_colon"
+            android:id="@+id/tv_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="4dp"
             android:fontFamily="@font/pretendard_medium"
-            android:text=":"
+            android:text="00 : 00"
             android:textColor="@color/black"
             android:textSize="40sp"
-            app:layout_constraintBottom_toBottomOf="@id/tv_timer_countdown"
-            app:layout_constraintEnd_toEndOf="@id/et_second"
-            app:layout_constraintStart_toStartOf="@id/et_minute"
-            app:layout_constraintTop_toTopOf="@id/tv_timer_countdown" />
-
-        <EditText
-            android:id="@+id/et_minute"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="29dp"
-            android:fontFamily="@font/pretendard_medium"
-            android:hint="00"
-            android:textColorHint="@color/black"
-            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="@id/tv_timer_countdown"
             app:layout_constraintBottom_toBottomOf="@id/tv_timer_countdown"
             app:layout_constraintStart_toStartOf="@id/tv_timer_countdown"
-            app:layout_constraintTop_toTopOf="@id/tv_timer_countdown" />
-
-
-        <EditText
-            android:id="@+id/et_second"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="29dp"
-            android:fontFamily="@font/pretendard_medium"
-            android:hint="00"
-            android:textColorHint="@color/black"
-            android:textSize="40sp"
-            app:layout_constraintBottom_toBottomOf="@id/tv_timer_countdown"
-            app:layout_constraintEnd_toEndOf="@id/tv_timer_countdown"
             app:layout_constraintTop_toTopOf="@id/tv_timer_countdown" />
 
 

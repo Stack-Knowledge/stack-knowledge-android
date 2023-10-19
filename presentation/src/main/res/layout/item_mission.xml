@@ -17,11 +17,11 @@
             android:id="@+id/tv_teacher_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="38dp"
             android:layout_marginBottom="109dp"
             android:fontFamily="@font/pretendard_medium"
             android:textColor="@color/black"
             android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -29,11 +29,11 @@
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/pretendard_regular"
             android:textColor="@color/black"
             android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_teacher_name" />
 
@@ -41,11 +41,11 @@
             android:id="@+id/tv_mileage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="31dp"
             android:layout_marginTop="48dp"
             android:fontFamily="@font/pretendard_medium"
             android:textColor="@color/black"
             android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title" />
 

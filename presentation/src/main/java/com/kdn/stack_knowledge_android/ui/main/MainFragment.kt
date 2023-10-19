@@ -69,9 +69,10 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
 
         is MissionViewModel.Event.DetailMission -> {
             val title: String = event.detailMission.title
+            val timeLimit: Int = event.detailMission.timeLimit
             val action =
                 MainFragmentDirections
-                    .actionMainFragmentToSolveFragment(title)
+                    .actionMainFragmentToSolveFragment(title, timeLimit)
             findNavController()
                 .navigate(action)
         }

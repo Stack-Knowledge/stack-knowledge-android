@@ -14,7 +14,7 @@ class HorizontalItemDecorator(private val divWidth: Int): RecyclerView.ItemDecor
         super.getItemOffsets(outRect, view, parent, state)
         outRect.right += divWidth
         val position = parent.getChildAdapterPosition(view)
-        if(position == 0) {
+        if(position == position) {
             outRect.left += divWidth
         }
     }
