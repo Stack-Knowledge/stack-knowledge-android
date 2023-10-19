@@ -8,9 +8,11 @@ import com.kdn.stack_knowledge_android.adapter.main.MissionListAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentMissionBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
 import com.kdn.stack_knowledge_android.ui.main.MainFragmentDirections
+import com.kdn.stack_knowledge_android.utils.HorizontalItemDecorator
 import com.kdn.stack_knowledge_android.utils.VerticalItemDecorator
 import com.kdn.stack_knowledge_android.utils.repeatOnStart
 import com.kdn.stack_knowledge_android.viewmodel.mission.MissionViewModel
+import java.util.UUID
 
 class MissionFragment : BaseFragment<FragmentMissionBinding>(R.layout.fragment_mission) {
     private val missionViewModel by activityViewModels<MissionViewModel>()
@@ -37,6 +39,7 @@ class MissionFragment : BaseFragment<FragmentMissionBinding>(R.layout.fragment_m
             })
         }
         binding.rvMission.adapter = missionListAdapter
+        binding.rvMission.addItemDecoration(HorizontalItemDecorator(16))
         binding.rvMission.addItemDecoration(VerticalItemDecorator(16))
     }
 
@@ -47,9 +50,11 @@ class MissionFragment : BaseFragment<FragmentMissionBinding>(R.layout.fragment_m
 
         is MissionViewModel.Event.DetailMission -> {
             val title: String = event.detailMission.title
+            val timeLimit: Int = event.detailMission.timeLimit
+            val missionId: UUID = event.missionId
             val action =
                 MissionFragmentDirections
-                    .actionMissionFragmentToSolveFragment(title)
+                    .actionMissionFragmentToSolveFragment(missionId.toString(), title, timeLimit)
             findNavController()
                 .navigate(action)
         }

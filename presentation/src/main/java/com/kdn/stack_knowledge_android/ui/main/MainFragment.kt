@@ -26,7 +26,6 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     private val missionViewModel by activityViewModels<MissionViewModel>()
     private val missionIdList = mutableListOf<MissionEntity>()
     override fun createView() {
-        Log.e("메인프래그먼트 도착", "메인프래그먼트 도 성공")
         showViewPager()
         initRecyclerView()
         observeEvent()
