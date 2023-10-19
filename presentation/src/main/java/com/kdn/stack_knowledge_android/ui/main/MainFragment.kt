@@ -1,5 +1,6 @@
 package com.kdn.stack_knowledge_android.ui.main
 
+import android.util.Log
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
@@ -15,6 +16,7 @@ import com.kdn.stack_knowledge_android.utils.VerticalItemDecorator
 import com.kdn.stack_knowledge_android.utils.repeatOnStart
 import com.kdn.stack_knowledge_android.viewmodel.mission.MissionViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import java.util.UUID
 
 @AndroidEntryPoint
 class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
@@ -22,7 +24,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     private lateinit var missionListAdapter: MissionListAdapter
     private lateinit var rankingListAdapter: RankingListAdapter
     private val missionViewModel by activityViewModels<MissionViewModel>()
+    private val missionIdList = mutableListOf<MissionEntity>()
     override fun createView() {
+        Log.e("메인프래그먼트 도착", "메인프래그먼트 도 성공")
         showViewPager()
         initRecyclerView()
         observeEvent()
@@ -70,9 +74,10 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
         is MissionViewModel.Event.DetailMission -> {
             val title: String = event.detailMission.title
             val timeLimit: Int = event.detailMission.timeLimit
+            val missionId: UUID = event.missionId
             val action =
                 MainFragmentDirections
-                    .actionMainFragmentToSolveFragment(title, timeLimit)
+                    .actionMainFragmentToSolveFragment(missionId.toString(), title, timeLimit)
             findNavController()
                 .navigate(action)
         }

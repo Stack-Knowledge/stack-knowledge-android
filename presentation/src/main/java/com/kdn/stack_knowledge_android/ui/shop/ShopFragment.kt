@@ -19,7 +19,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
     private lateinit var orderBottomSheet: OrderBottomSheet
     private lateinit var itemListAdapter: ItemListAdapter
-    private lateinit var detailListAdapter: OrderDetailListAdapter
     private val buyViewModel by activityViewModels<BuyViewModel>()
     private val itemListViewModel by viewModels<ItemListVewModel>()
     private var selectedItemList = mutableListOf<ItemEntity>()

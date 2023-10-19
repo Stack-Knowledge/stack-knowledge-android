@@ -1,20 +1,15 @@
 package com.kdn.stack_knowledge_android.viewmodel.mission
 
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kdn.domain.entity.item.ItemEntity
 import com.kdn.domain.entity.mission.DetailMissionEntity
 import com.kdn.domain.entity.mission.MissionEntity
 import com.kdn.domain.param.mission.CreateMissionParam
 import com.kdn.domain.usecase.mission.CreateMissionUseCase
 import com.kdn.domain.usecase.mission.GetDetailMissionUseCase
 import com.kdn.domain.usecase.mission.GetMissionListUseCase
-import com.kdn.stack_knowledge_android.data.mission.DetailMissionData
-import com.kdn.stack_knowledge_android.data.order.DetailOrderData
-import com.kdn.stack_knowledge_android.utils.EventFlow
+import com.kdn.stack_knowledge_android.data.mission.MissionId
 import com.kdn.stack_knowledge_android.utils.MutableEventFlow
 import com.kdn.stack_knowledge_android.utils.asEvetFlow
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -32,6 +27,8 @@ class MissionViewModel @Inject constructor(
     private val _eventFlow = MutableEventFlow<Event>()
     val eventFlow = _eventFlow.asEvetFlow()
 
+    val missionIdList: MutableList<MissionId> = mutableListOf()
+
     fun getMissionList() = viewModelScope.launch {
         getMissionListUseCase().onSuccess {
             event(Event.Mission(it))
@@ -44,7 +41,7 @@ class MissionViewModel @Inject constructor(
         getDetailMissionUseCase(
             missionId = missionId
         ).onSuccess {
-            event(Event.DetailMission(it))
+            event(Event.DetailMission(it, missionId = missionId))
         }.onFailure {
             Log.e("미션 상세보기 가져오기 실패", "실패 $it")
         }
@@ -67,7 +64,7 @@ class MissionViewModel @Inject constructor(
 
     sealed class Event {
         data class Mission(val missionList: List<MissionEntity>) : Event()
-        data class DetailMission(val detailMission: DetailMissionEntity) : Event()
+        data class DetailMission(val detailMission: DetailMissionEntity, val missionId: UUID) : Event()
         data class CreateMission(val createMission: CreateMissionParam) : Event()
     }
 }

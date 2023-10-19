@@ -18,6 +18,7 @@ class BuyViewModel @Inject constructor(
 
     fun setOrderDataList(orderDataList: List<ItemEntity>) {
         this.orderDataList.clear()
+        // addAll + map 고려 해보기
         orderDataList.forEach { itemEntity ->
             val detailOrderData = DetailOrderData(
                 itemId = itemEntity.itemId,
