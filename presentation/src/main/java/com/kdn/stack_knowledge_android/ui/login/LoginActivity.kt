@@ -13,7 +13,7 @@ import com.kdn.stack_knowledge_android.ui.base.BaseActivity
 import com.kdn.stack_knowledge_android.viewmodel.auth.AuthViewModel
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.ActivityLoginBinding
-import com.kdn.stack_knowledge_android.ui.main.MainActivity
+import com.kdn.stack_knowledge_android.ui.main.StudentActivity
 import com.kdn.stack_knowledge_android.utils.Event
 import com.msg.gauthsignin.GAuthSigninWebView
 import com.msg.gauthsignin.component.GAuthButton
@@ -75,11 +75,14 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
             when (event) {
                 is Event.Success -> {
                     authViewModel.saveTheLoginData(event.data!!)
+                    startActivity(Intent(this, StudentActivity::class.java))
+                    finish()
                 }
                 else -> {
                     Log.d("login", event.toString())
                 }
             }
+
         }
     }
 
@@ -98,18 +101,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
             exitProcess(0)
         }
     }
-
-    private fun pageController() {
-        startActivity(
-            Intent(
-                this, MainActivity::class.java
-            )
-        )
-        finish()
-    }
-
     interface OnBackPressedListener {
         fun onBackPressed()
     }
-
 }

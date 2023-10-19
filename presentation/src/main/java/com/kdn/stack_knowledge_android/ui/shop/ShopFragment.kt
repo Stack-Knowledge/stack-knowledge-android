@@ -1,16 +1,15 @@
 package com.kdn.stack_knowledge_android.ui.shop
 
-import android.util.Log
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
-import com.kdn.domain.entity.ItemEntity
+import com.kdn.domain.entity.item.ItemEntity
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.shop.ItemListAdapter
 import com.kdn.stack_knowledge_android.adapter.shop.OrderDetailListAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentShopBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
-import com.kdn.stack_knowledge_android.utils.ItemDecorator
+import com.kdn.stack_knowledge_android.utils.VerticalItemDecorator
 import com.kdn.stack_knowledge_android.utils.repeatOnStart
 import com.kdn.stack_knowledge_android.viewmodel.shop.BuyViewModel
 import com.kdn.stack_knowledge_android.viewmodel.shop.ItemListVewModel
@@ -20,7 +19,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
     private lateinit var orderBottomSheet: OrderBottomSheet
     private lateinit var itemListAdapter: ItemListAdapter
-    private lateinit var detailListAdapter: OrderDetailListAdapter
     private val buyViewModel by activityViewModels<BuyViewModel>()
     private val itemListViewModel by viewModels<ItemListVewModel>()
     private var selectedItemList = mutableListOf<ItemEntity>()
@@ -47,7 +45,7 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
             binding.btnSelect.isVisible = selectedItemList.isNotEmpty()
         }
         binding.rvGoods.adapter = itemListAdapter
-        binding.rvGoods.addItemDecoration(ItemDecorator(16))
+        binding.rvGoods.addItemDecoration(VerticalItemDecorator(16))
     }
 
     private fun observeItemData(event: ItemListVewModel.Event) = when (event) {

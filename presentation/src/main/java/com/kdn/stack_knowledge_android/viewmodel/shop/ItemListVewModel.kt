@@ -3,7 +3,7 @@ package com.kdn.stack_knowledge_android.viewmodel.shop
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kdn.domain.entity.ItemEntity
+import com.kdn.domain.entity.item.ItemEntity
 import com.kdn.domain.usecase.shop.GetItemListUseCase
 import com.kdn.stack_knowledge_android.utils.MutableEventFlow
 import com.kdn.stack_knowledge_android.utils.asEvetFlow

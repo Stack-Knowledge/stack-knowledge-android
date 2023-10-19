@@ -1,14 +1,15 @@
 package com.kdn.data.repository.auth
 
+import android.util.Log
 import com.kdn.data.local.auth.datasource.LocalAuthDataSource
 import com.kdn.data.remote.datasource.auth.RemoteAuthDataSource
 import com.kdn.data.remote.dto.auth.request.GAuthLoginRequest
 import com.kdn.data.remote.dto.auth.response.toLoginModel
 import com.kdn.data.remote.dto.auth.response.toRefreshModel
-import com.kdn.domain.model.request.GAuthLoginRequestModel
-import com.kdn.domain.model.response.GAuthLoginResponseModel
-import com.kdn.domain.model.response.RefreshTokenResponseModel
-import com.kdn.domain.repository.AuthRepository
+import com.kdn.domain.model.request.auth.GAuthLoginRequestModel
+import com.kdn.domain.model.response.auth.GAuthLoginResponseModel
+import com.kdn.domain.model.response.auth.RefreshTokenResponseModel
+import com.kdn.domain.repository.auth.AuthRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
@@ -27,6 +28,7 @@ class AuthRepositoryImpl @Inject constructor(
     }
 
     override suspend fun saveTheLoginData(data: GAuthLoginResponseModel) {
+        Log.e("저장 expiredAt", data.expiredAt)
         data.let {
             localDataSource.setAccessToken(it.accessToken)
             localDataSource.setRefreshToken(it.refreshToken)
@@ -41,16 +43,4 @@ class AuthRepositoryImpl @Inject constructor(
             }
         }
     }
-
-    override suspend fun getAuthorityInfo(): Flow<String> {
-        return localDataSource.getAuthorityInfo()
-    }
-
-    override suspend fun deleteLoginData() {
-        localDataSource.removeAccessToken()
-        localDataSource.removeRefreshToken()
-        localDataSource.removeExpiredAt()
-        localDataSource.removeAuthorityInfo()
-    }
-
 }

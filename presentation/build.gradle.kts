@@ -4,6 +4,7 @@ import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    id("androidx.navigation.safeargs.kotlin")
     id("org.jetbrains.kotlin.android")
     id("dagger.hilt.android.plugin")
     kotlin("kapt")
@@ -71,7 +72,11 @@ android {
         compose = true
     }
     packagingOptions {
+        exclude("mozilla/public-suffix-list.txt")
+        exclude("kotlin/coroutines/coroutines.kotlin_builtins")
         exclude("META-INF/gradle/incremental.annotation.processors")
+        pickFirst("META-INF/AL2.0")
+        pickFirst("META-INF/LGPL2.1")
     }
 }
 

@@ -1,6 +1,6 @@
 package com.kdn.data.remote.dto.auth.response
 
-import com.kdn.domain.model.response.GAuthLoginResponseModel
+import com.kdn.domain.model.response.auth.GAuthLoginResponseModel
 
 data class GAuthLoginResponse(
     val accessToken: String,

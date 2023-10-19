@@ -2,8 +2,15 @@ package com.kdn.di
 
 import com.kdn.data.repository.auth.*
 import com.kdn.data.repository.item.ItemRepositoryImpl
+import com.kdn.data.repository.mission.MissionRepositoryImpl
 import com.kdn.data.repository.order.OrderRepositoryImpl
+import com.kdn.data.repository.solve.SolveRepositoryImpl
 import com.kdn.domain.repository.*
+import com.kdn.domain.repository.auth.AuthRepository
+import com.kdn.domain.repository.item.ItemRepository
+import com.kdn.domain.repository.mission.MissionRepository
+import com.kdn.domain.repository.order.OrderRepository
+import com.kdn.domain.repository.solve.SolveRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -30,4 +37,16 @@ abstract class RepositoryModule {
     abstract fun provideOrderRepository(
         orderRepositoryImpl: OrderRepositoryImpl,
     ): OrderRepository
+
+    @Singleton
+    @Binds
+    abstract fun provideMissionRepository(
+        missionRepositoryImpl: MissionRepositoryImpl,
+    ): MissionRepository
+
+    @Singleton
+    @Binds
+    abstract fun provideSolveRepository(
+        solveRepositoryImpl: SolveRepositoryImpl,
+    ): SolveRepository
 }

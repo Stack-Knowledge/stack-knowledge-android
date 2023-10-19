@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.kdn.domain.entity.ItemEntity
+import com.kdn.domain.entity.item.ItemEntity
 import com.kdn.stack_knowledge_android.databinding.ItemGoodsBinding
 
 class ItemListAdapter(private val onCheckBoxClickListener: (Boolean, ItemEntity) -> Unit) :
@@ -47,14 +47,14 @@ class ItemListAdapter(private val onCheckBoxClickListener: (Boolean, ItemEntity)
         val diffUtil = object : DiffUtil.ItemCallback<ItemEntity>() {
             override fun areItemsTheSame(
                 oldItem: ItemEntity,
-                newItem: ItemEntity
+                newItem: ItemEntity,
             ): Boolean {
                 return oldItem == newItem
             }
 
             override fun areContentsTheSame(
                 oldItem: ItemEntity,
-                newItem: ItemEntity
+                newItem: ItemEntity,
             ): Boolean {
                 return oldItem == newItem
             }

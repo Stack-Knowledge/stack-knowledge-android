@@ -1,17 +1,15 @@
 package com.kdn.stack_knowledge_android.ui.shop
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.kdn.domain.entity.ItemEntity
 import com.kdn.stack_knowledge_android.adapter.shop.OrderDetailListAdapter
 import com.kdn.stack_knowledge_android.data.order.DetailOrderData
 import com.kdn.stack_knowledge_android.databinding.BottomSheetOrderBinding
-import com.kdn.stack_knowledge_android.utils.ItemDecorator
+import com.kdn.stack_knowledge_android.utils.VerticalItemDecorator
 import com.kdn.stack_knowledge_android.viewmodel.shop.BuyViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -53,7 +51,7 @@ class OrderBottomSheet : BottomSheetDialogFragment() {
         }
         binding.rvDetailOrder.adapter = orderDetailListAdapter
         orderDetailListAdapter.submitList(buyViewModel.orderDataList)
-        binding.rvDetailOrder.addItemDecoration(ItemDecorator(10))
+        binding.rvDetailOrder.addItemDecoration(VerticalItemDecorator(10))
     }
 
     private fun setTotalPrice() {

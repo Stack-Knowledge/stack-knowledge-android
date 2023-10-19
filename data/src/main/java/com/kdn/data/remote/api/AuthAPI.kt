@@ -12,11 +12,11 @@ interface AuthAPI {
 
     @POST("/auth")
     suspend fun gAuthLogin(
-        @Body body: GAuthLoginRequest
+        @Body body: GAuthLoginRequest,
     ): GAuthLoginResponse
 
     @PATCH("/auth")
     suspend fun provideAccessToken(
-        @Header ("refreshToken") refreshToken: String
+        @Header ("refreshToken") refreshToken: String,
     ): RefreshTokenResponse
 }

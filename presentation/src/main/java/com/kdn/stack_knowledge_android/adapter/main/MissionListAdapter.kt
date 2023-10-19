@@ -5,36 +5,31 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.kdn.domain.model.response.MissionResponseModel
 import androidx.recyclerview.widget.RecyclerView
+import com.kdn.domain.entity.mission.MissionEntity
 import com.kdn.stack_knowledge_android.databinding.ItemMissionBinding
 
 
-class MissionListAdapter(private val missionList: List<MissionResponseModel>?) :
-    ListAdapter<MissionResponseModel, MissionListAdapter.MissionListViewHolder>(diffUtil) {
-
+class MissionListAdapter :
+    ListAdapter<MissionEntity, MissionListAdapter.MissionListViewHolder>(diffUtil) {
     private lateinit var itemClickListener: OnItemClickListener
 
-    class MissionListViewHolder(
+    inner class MissionListViewHolder(
         val context: Context,
         private val binding: ItemMissionBinding,
-        val listener: OnItemClickListener
+        val listener: OnItemClickListener,
     ) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: MissionResponseModel?) = binding.apply {
+        fun bind(item: MissionEntity?) = binding.apply {
             tvTeacherName.text = item?.user?.name
             tvTitle.text = item?.title
             tvMileage.text = item?.point.toString()
-
             missionItemLayout.setOnClickListener {
                 listener.detail(item)
+
             }
         }
 
-    }
-
-    override fun onBindViewHolder(holder: MissionListViewHolder, position: Int) {
-        holder.bind(missionList?.get(position))
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MissionListViewHolder =
@@ -48,8 +43,13 @@ class MissionListAdapter(private val missionList: List<MissionResponseModel>?) :
             itemClickListener
         )
 
+    override fun onBindViewHolder(holder: MissionListViewHolder, position: Int) {
+        holder.bind(getItem(position))
+    }
+
+
     interface OnItemClickListener {
-        fun detail(item: MissionResponseModel?)
+        fun detail(item: MissionEntity?)
     }
 
     fun setItemOnClickListener(onItemClickListener: OnItemClickListener) {
@@ -57,21 +57,20 @@ class MissionListAdapter(private val missionList: List<MissionResponseModel>?) :
     }
 
     companion object {
-        val diffUtil = object : DiffUtil.ItemCallback<MissionResponseModel>() {
+        val diffUtil = object : DiffUtil.ItemCallback<MissionEntity>() {
             override fun areItemsTheSame(
-                oldItem: MissionResponseModel,
-                newItem: MissionResponseModel
+                oldItem: MissionEntity,
+                newItem: MissionEntity,
             ): Boolean {
                 return oldItem == newItem
             }
 
             override fun areContentsTheSame(
-                oldItem: MissionResponseModel,
-                newItem: MissionResponseModel
+                oldItem: MissionEntity,
+                newItem: MissionEntity,
             ): Boolean {
                 return oldItem == newItem
             }
-
         }
     }
 }

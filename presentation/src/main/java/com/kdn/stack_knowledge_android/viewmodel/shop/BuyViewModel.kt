@@ -1,10 +1,9 @@
 package com.kdn.stack_knowledge_android.viewmodel.shop
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kdn.domain.entity.ItemEntity
-import com.kdn.domain.param.OrderParam
+import com.kdn.domain.entity.item.ItemEntity
+import com.kdn.domain.param.order.OrderParam
 import com.kdn.domain.usecase.shop.BuyItemUseCase
 import com.kdn.stack_knowledge_android.data.order.DetailOrderData
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -19,6 +18,7 @@ class BuyViewModel @Inject constructor(
 
     fun setOrderDataList(orderDataList: List<ItemEntity>) {
         this.orderDataList.clear()
+        // addAll + map 고려 해보기
         orderDataList.forEach { itemEntity ->
             val detailOrderData = DetailOrderData(
                 itemId = itemEntity.itemId,
