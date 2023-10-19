@@ -1,5 +1,6 @@
-package com.kdn.stack_knowledge_android.ui.mission
+package com.kdn.stack_knowledge_android.ui.solve
 
+import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -11,10 +12,7 @@ import android.view.Window
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.DialogTimeOutBinding
-import com.kdn.stack_knowledge_android.ui.main.MainFragment
-import com.kdn.stack_knowledge_android.ui.solve.SolveFragmentDirections
 import com.kdn.stack_knowledge_android.viewmodel.solve.SolveViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.Timer
@@ -28,7 +26,6 @@ class TimeOutDialog(
 ) : DialogFragment(){
     private val closeTime = 3
     private var second = closeTime % 60
-
     private lateinit var binding: DialogTimeOutBinding
     private lateinit var timer: Timer
     private val solveViewModel by activityViewModels<SolveViewModel>()
@@ -54,8 +51,8 @@ class TimeOutDialog(
         timer = timer(period = 1000, initialDelay = 1000) {
             requireActivity().runOnUiThread {
                 if (second == 0) {
+                    timer?.cancel()
                     findNavController().popBackStack()
-                    Log.e("메인프래그먼트 이동", "메인프래그먼트 이동 성공")
                     dialog?.dismiss()
                 }
                 second--

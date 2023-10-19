@@ -6,14 +6,10 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.google.android.material.bottomnavigation.BottomNavigationMenuView
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.FragmentSolveBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
 import com.kdn.stack_knowledge_android.ui.base.BottomNavigationViewVisibilityListener
-import com.kdn.stack_knowledge_android.ui.mission.MovePageDialog
-import com.kdn.stack_knowledge_android.ui.mission.SubmitAnswerDialog
-import com.kdn.stack_knowledge_android.ui.mission.TimeOutDialog
 import com.kdn.stack_knowledge_android.utils.repeatOnStart
 import com.kdn.stack_knowledge_android.viewmodel.solve.SolveViewModel
 import java.util.Timer

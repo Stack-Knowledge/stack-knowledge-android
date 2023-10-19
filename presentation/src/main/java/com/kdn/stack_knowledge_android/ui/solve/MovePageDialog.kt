@@ -1,4 +1,4 @@
-package com.kdn.stack_knowledge_android.ui.mission
+package com.kdn.stack_knowledge_android.ui.solve
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.kdn.stack_knowledge_android.databinding.DialogMovePageFromMissionBinding
 import com.kdn.stack_knowledge_android.databinding.DialogSubmitAnswerBinding
 import com.kdn.stack_knowledge_android.viewmodel.solve.SolveViewModel
@@ -35,7 +36,13 @@ class MovePageDialog(
         dialog?.setCancelable(false)
         binding.btnCheck.setOnClickListener {
             solveViewModel.solveMission(missionId = missionId, solvation = answer)
+            findNavController().popBackStack()
+            dialog?.dismiss()
         }
+        binding.btnCancel.setOnClickListener {
+            dialog?.dismiss()
+        }
+
 
         return binding.root
     }

@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/timeOutDialog"
-        android:name="com.kdn.stack_knowledge_android.ui.mission.TimeOutDialog"
+        android:name="com.kdn.stack_knowledge_android.ui.solve.TimeOutDialog"
         android:label="TimeOutDialog" >
         <action
             android:id="@+id/action_timeOutDialog_to_mainFragment"
@@ -64,7 +64,7 @@
     </fragment>
     <fragment
         android:id="@+id/submitAnswerDialog"
-        android:name="com.kdn.stack_knowledge_android.ui.mission.SubmitAnswerDialog"
+        android:name="com.kdn.stack_knowledge_android.ui.solve.SubmitAnswerDialog"
         android:label="SubmitAnswerDialog" >
         <action
             android:id="@+id/action_submitAnswerDialog_to_missionFragment"
@@ -75,7 +75,7 @@
     </fragment>
     <fragment
         android:id="@+id/movePageDialog"
-        android:name="com.kdn.stack_knowledge_android.ui.mission.MovePageDialog"
+        android:name="com.kdn.stack_knowledge_android.ui.solve.MovePageDialog"
         android:label="MovePageDialog" >
         <action
             android:id="@+id/action_movePageDialog_to_solveFragment"
