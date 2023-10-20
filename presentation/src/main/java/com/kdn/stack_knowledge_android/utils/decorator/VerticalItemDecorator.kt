@@ -1,10 +1,11 @@
-package com.kdn.stack_knowledge_android.utils
+package com.kdn.stack_knowledge_android.utils.decorator
 
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
-class HorizontalItemDecorator(private val divWidth: Int): RecyclerView.ItemDecoration() {
+class VerticalItemDecorator(private val divHeight: Int) : RecyclerView.ItemDecoration() {
+
     override fun getItemOffsets(
         outRect: Rect,
         view: View,
@@ -12,10 +13,10 @@ class HorizontalItemDecorator(private val divWidth: Int): RecyclerView.ItemDecor
         state: RecyclerView.State
     ) {
         super.getItemOffsets(outRect, view, parent, state)
-        outRect.right += divWidth
         val position = parent.getChildAdapterPosition(view)
         if(position == position) {
-            outRect.left += divWidth
+            outRect.top = divHeight
         }
     }
+
 }

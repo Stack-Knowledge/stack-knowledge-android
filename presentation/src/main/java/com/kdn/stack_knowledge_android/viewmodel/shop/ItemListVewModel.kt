@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.kdn.domain.entity.item.ItemEntity
 import com.kdn.domain.usecase.shop.GetItemListUseCase
 import com.kdn.stack_knowledge_android.utils.MutableEventFlow
-import com.kdn.stack_knowledge_android.utils.asEvetFlow
+import com.kdn.stack_knowledge_android.utils.asEventFlow
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -17,7 +17,7 @@ class ItemListVewModel @Inject constructor(
 ) : ViewModel() {
 
     private val _eventFlow = MutableEventFlow<Event>()
-    val eventFlow = _eventFlow.asEvetFlow()
+    val eventFlow = _eventFlow.asEventFlow()
 
     private val checkedItems = mutableListOf<ItemEntity>()
 

@@ -9,10 +9,9 @@ import com.kdn.domain.param.mission.CreateMissionParam
 import com.kdn.domain.usecase.mission.CreateMissionUseCase
 import com.kdn.domain.usecase.mission.GetDetailMissionUseCase
 import com.kdn.domain.usecase.mission.GetMissionListUseCase
-import com.kdn.domain.usecase.student.GetRankingListUseCase
 import com.kdn.stack_knowledge_android.data.mission.MissionId
 import com.kdn.stack_knowledge_android.utils.MutableEventFlow
-import com.kdn.stack_knowledge_android.utils.asEvetFlow
+import com.kdn.stack_knowledge_android.utils.asEventFlow
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import java.util.UUID
@@ -26,7 +25,7 @@ class MissionViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val _eventFlow = MutableEventFlow<Event>()
-    val eventFlow = _eventFlow.asEvetFlow()
+    val eventFlow = _eventFlow.asEventFlow()
 
     val missionIdList: MutableList<MissionId> = mutableListOf()
 

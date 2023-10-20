@@ -5,8 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kdn.stack_knowledge_android.utils.Event
-import com.kdn.stack_knowledge_android.utils.errorHandling
+import com.kdn.stack_knowledge_android.utils.error.Event
+import com.kdn.stack_knowledge_android.utils.error.errorHandling
 import com.kdn.domain.model.request.auth.GAuthLoginRequestModel
 import com.kdn.domain.model.response.auth.GAuthLoginResponseModel
 import com.kdn.domain.usecase.auth.GAuthLoginUseCase

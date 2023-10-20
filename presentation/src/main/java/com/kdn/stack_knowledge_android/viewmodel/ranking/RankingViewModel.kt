@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.kdn.domain.entity.student.RankingEntity
 import com.kdn.domain.usecase.student.GetRankingListUseCase
 import com.kdn.stack_knowledge_android.utils.MutableEventFlow
-import com.kdn.stack_knowledge_android.utils.asEvetFlow
+import com.kdn.stack_knowledge_android.utils.asEventFlow
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -17,7 +17,7 @@ class RankingViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val _eventFlow = MutableEventFlow<Event>()
-    val eventFlow = _eventFlow.asEvetFlow()
+    val eventFlow = _eventFlow.asEventFlow()
 
     fun getRankingList() = viewModelScope.launch {
         getRankingListUseCase().onSuccess {

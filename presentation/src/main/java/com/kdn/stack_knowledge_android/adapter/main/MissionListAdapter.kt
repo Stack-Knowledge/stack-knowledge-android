@@ -20,10 +20,10 @@ class MissionListAdapter :
         val listener: OnItemClickListener,
     ) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: MissionEntity?) = binding.apply {
-            tvTeacherName.text = item?.user?.name
-            tvTitle.text = item?.title
-            tvMileage.text = item?.point.toString()
+        fun bind(item: MissionEntity) = binding.apply {
+            tvTeacherName.text = item.user.name
+            tvTitle.text = item.title
+            tvMileage.text = item.point.toString()
             missionItemLayout.setOnClickListener {
                 listener.detail(item)
 
@@ -49,7 +49,7 @@ class MissionListAdapter :
 
 
     interface OnItemClickListener {
-        fun detail(item: MissionEntity?)
+        fun detail(item: MissionEntity)
     }
 
     fun setItemOnClickListener(onItemClickListener: OnItemClickListener) {

@@ -6,10 +6,9 @@ import androidx.fragment.app.viewModels
 import com.kdn.domain.entity.item.ItemEntity
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.shop.ItemListAdapter
-import com.kdn.stack_knowledge_android.adapter.shop.OrderDetailListAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentShopBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
-import com.kdn.stack_knowledge_android.utils.VerticalItemDecorator
+import com.kdn.stack_knowledge_android.utils.decorator.VerticalItemDecorator
 import com.kdn.stack_knowledge_android.utils.repeatOnStart
 import com.kdn.stack_knowledge_android.viewmodel.shop.BuyViewModel
 import com.kdn.stack_knowledge_android.viewmodel.shop.ItemListVewModel

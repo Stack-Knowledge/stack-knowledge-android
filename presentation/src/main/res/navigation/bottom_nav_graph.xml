@@ -18,12 +18,6 @@
         <action
             android:id="@+id/action_mainFragment_to_solveFragment"
             app:destination="@id/solveFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_missionFragment"
-            app:destination="@id/missionFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_rankingFragment2"
-            app:destination="@id/rankingFragment2" />
     </fragment>
 
     <fragment
@@ -41,12 +35,6 @@
         <argument
             android:name="missionId"
             app:argType="string" />
-        <action
-            android:id="@+id/action_solveFragment_self"
-            app:destination="@id/solveFragment" />
-        <action
-            android:id="@+id/action_solveFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/missionFragment"
@@ -73,7 +61,7 @@
         android:label="MovePageDialog" >
       </fragment>
     <fragment
-        android:id="@+id/rankingFragment2"
+        android:id="@+id/rankingFragment"
         android:name="com.kdn.stack_knowledge_android.ui.ranking.RankingFragment"
         android:label="RankingFragment" />
 

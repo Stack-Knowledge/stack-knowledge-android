@@ -7,9 +7,8 @@ import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.main.MissionListAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentMissionBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
-import com.kdn.stack_knowledge_android.ui.main.MainFragmentDirections
-import com.kdn.stack_knowledge_android.utils.HorizontalItemDecorator
-import com.kdn.stack_knowledge_android.utils.VerticalItemDecorator
+import com.kdn.stack_knowledge_android.utils.decorator.HorizontalItemDecorator
+import com.kdn.stack_knowledge_android.utils.decorator.VerticalItemDecorator
 import com.kdn.stack_knowledge_android.utils.repeatOnStart
 import com.kdn.stack_knowledge_android.viewmodel.mission.MissionViewModel
 import java.util.UUID

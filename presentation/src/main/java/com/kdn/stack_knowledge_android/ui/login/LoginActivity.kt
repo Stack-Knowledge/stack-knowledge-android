@@ -14,7 +14,7 @@ import com.kdn.stack_knowledge_android.viewmodel.auth.AuthViewModel
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.ActivityLoginBinding
 import com.kdn.stack_knowledge_android.ui.main.StudentActivity
-import com.kdn.stack_knowledge_android.utils.Event
+import com.kdn.stack_knowledge_android.utils.error.Event
 import com.msg.gauthsignin.GAuthSigninWebView
 import com.msg.gauthsignin.component.GAuthButton
 import com.msg.gauthsignin.component.utils.Types
