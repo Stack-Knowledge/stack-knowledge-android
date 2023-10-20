@@ -7,7 +7,6 @@ import retrofit2.http.Path
 import java.util.UUID
 
 interface SolveAPI {
-
     @POST("/solve/{missionId}")
     suspend fun solveMission(
         @Path("missionId") missionId: UUID,

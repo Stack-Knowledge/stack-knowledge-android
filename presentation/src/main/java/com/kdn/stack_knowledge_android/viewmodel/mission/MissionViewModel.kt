@@ -9,6 +9,7 @@ import com.kdn.domain.param.mission.CreateMissionParam
 import com.kdn.domain.usecase.mission.CreateMissionUseCase
 import com.kdn.domain.usecase.mission.GetDetailMissionUseCase
 import com.kdn.domain.usecase.mission.GetMissionListUseCase
+import com.kdn.domain.usecase.student.GetRankingListUseCase
 import com.kdn.stack_knowledge_android.data.mission.MissionId
 import com.kdn.stack_knowledge_android.utils.MutableEventFlow
 import com.kdn.stack_knowledge_android.utils.asEvetFlow
