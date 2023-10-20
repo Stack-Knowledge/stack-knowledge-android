@@ -29,7 +29,7 @@ class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_r
     private fun initRecyclerView() {
         rankingViewModel.getRankingList()
         rankingListAdapter = RankingPageRakingListAdapter().apply {
-
+        binding.rvRanking.adapter = rankingListAdapter
         }
     }
 
