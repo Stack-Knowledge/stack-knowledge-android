@@ -32,8 +32,8 @@ class MissionFragment : BaseFragment<FragmentMissionBinding>(R.layout.fragment_m
         missionViewModel.getMissionList()
         missionListAdapter = MissionListAdapter().apply {
             setItemOnClickListener(object : MissionListAdapter.OnItemClickListener {
-                override fun detail(item: MissionEntity?) {
-                    item?.id?.let { missionViewModel.getDetailMission(it) }
+                override fun detail(item: MissionEntity) {
+                    item.id.let { missionViewModel.getDetailMission(it) }
                 }
             })
         }

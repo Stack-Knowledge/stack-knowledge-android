@@ -102,9 +102,8 @@ class SolveFragment : BaseFragment<FragmentSolveBinding>(R.layout.fragment_solve
     private fun observeSolveData(event: SolveViewModel.Event) = when (event) {
         is SolveViewModel.Event.SolveMission -> {
             requireActivity().findNavController(R.id.solveFragment)
-                .navigate(R.id.action_solveFragment_self)
+                .navigate(R.id.solveFragment)
         }
-
         else -> {}
     }
 
