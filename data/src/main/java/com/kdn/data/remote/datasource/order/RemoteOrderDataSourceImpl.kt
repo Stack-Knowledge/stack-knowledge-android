@@ -1,6 +1,6 @@
 package com.kdn.data.remote.datasource.order
 
-import com.kdn.data.remote.api.OrderAPI
+import com.kdn.data.remote.api.order.OrderAPI
 import com.kdn.data.remote.dto.order.request.OrderRequest
 import com.kdn.data.utils.StackApiHandler
 import javax.inject.Inject

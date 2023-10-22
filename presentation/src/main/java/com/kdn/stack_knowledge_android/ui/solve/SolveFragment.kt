@@ -4,7 +4,6 @@ import android.content.Context
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.FragmentSolveBinding

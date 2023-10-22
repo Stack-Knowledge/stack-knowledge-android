@@ -1,6 +1,6 @@
 package com.kdn.stack_knowledge_android.ui.ranking
 
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import com.bumptech.glide.Glide
 import com.kdn.domain.entity.student.MyInfoEntity
 import com.kdn.stack_knowledge_android.R
@@ -15,10 +15,10 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_ranking) {
-    private val rankingItemBinding = ItemDetailRankingBinding.inflate(layoutInflater)
-    private val rankingViewModel by viewModels<RankingViewModel>()
+    private val rankingViewModel by activityViewModels<RankingViewModel>()
+    private val myInfoViewModel by activityViewModels<MyInfoViewModel>()
     private lateinit var rankingListAdapter: RankingPageRakingListAdapter
-    private val myInfoViewModel by viewModels<MyInfoViewModel>()
+    private val rankingItemBinding = ItemDetailRankingBinding.inflate(layoutInflater)
 
     override fun createView() {
         initRecyclerView()
@@ -61,7 +61,6 @@ class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_r
         is RankingViewModel.Event.Ranking -> {
             rankingListAdapter.submitList(event.rankingList)
         }
-        else -> {}
     }
 
 }

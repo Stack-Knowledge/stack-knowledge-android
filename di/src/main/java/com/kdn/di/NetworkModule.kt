@@ -2,12 +2,12 @@ package com.kdn.di
 
 import android.util.Log
 import com.kdn.data.interceptor.AuthorizationInterceptor
-import com.kdn.data.remote.api.AuthAPI
-import com.kdn.data.remote.api.ItemAPI
-import com.kdn.data.remote.api.MissionAPI
-import com.kdn.data.remote.api.OrderAPI
-import com.kdn.data.remote.api.SolveAPI
-import com.kdn.data.remote.api.StudentAPI
+import com.kdn.data.remote.api.auth.AuthAPI
+import com.kdn.data.remote.api.item.ItemAPI
+import com.kdn.data.remote.api.mission.MissionAPI
+import com.kdn.data.remote.api.order.OrderAPI
+import com.kdn.data.remote.api.solve.SolveAPI
+import com.kdn.data.remote.api.student.StudentAPI
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,6 +1,6 @@
 package com.kdn.data.remote.datasource.solve
 
-import com.kdn.data.remote.api.SolveAPI
+import com.kdn.data.remote.api.solve.SolveAPI
 import com.kdn.data.remote.dto.solve.request.SolveRequest
 import com.kdn.data.utils.StackApiHandler
 import java.util.UUID

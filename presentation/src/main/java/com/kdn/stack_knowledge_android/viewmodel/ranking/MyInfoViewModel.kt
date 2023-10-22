@@ -15,8 +15,8 @@ import javax.inject.Inject
 class MyInfoViewModel @Inject constructor(
     private val getMyInfoUseCase: GetMyInfoUseCase,
 ) : ViewModel() {
-    private val _eventFLow = MutableEventFlow<Event>()
-    val eventFLow = _eventFLow.asEventFlow()
+    private val _eventFlow = MutableEventFlow<Event>()
+    val eventFLow = _eventFlow.asEventFlow()
 
     fun getMyInfo() = viewModelScope.launch {
         getMyInfoUseCase().onSuccess {
@@ -26,7 +26,7 @@ class MyInfoViewModel @Inject constructor(
         }
     }
     private fun event(event: Event) = viewModelScope.launch {
-        _eventFLow.emit(event)
+        _eventFlow.emit(event)
     }
 
     sealed class Event {
