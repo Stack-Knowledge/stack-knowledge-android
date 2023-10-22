@@ -63,6 +63,7 @@
     <fragment
         android:id="@+id/rankingFragment"
         android:name="com.kdn.stack_knowledge_android.ui.ranking.RankingFragment"
-        android:label="RankingFragment" />
+        android:label="RankingFragment"
+        tools:layout="@layout/fragment_ranking"/>
 
 </navigation>

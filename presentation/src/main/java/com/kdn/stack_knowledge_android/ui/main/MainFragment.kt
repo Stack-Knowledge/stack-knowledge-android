@@ -26,6 +26,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     private lateinit var rankingListAdapter: MainPageRankingListAdapter
     private val missionViewModel by activityViewModels<MissionViewModel>()
     private val rankingViewModel by viewModels<RankingViewModel>()
+
     override fun createView() {
         showViewPager()
         initRecyclerView()
@@ -73,8 +74,8 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
         is RankingViewModel.Event.Ranking -> {
             rankingListAdapter.submitList(event.rankingList)
         }
-        else -> {}
     }
+
     private fun observeMissionData(event: MissionViewModel.Event) = when (event) {
         is MissionViewModel.Event.Mission -> {
             missionListAdapter.submitList(event.missionList)

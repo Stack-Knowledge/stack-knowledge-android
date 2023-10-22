@@ -26,7 +26,6 @@ class MissionListAdapter :
             tvMileage.text = item.point.toString()
             missionItemLayout.setOnClickListener {
                 listener.detail(item)
-
             }
         }
 

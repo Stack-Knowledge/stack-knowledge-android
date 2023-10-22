@@ -1,5 +1,6 @@
 package com.kdn.stack_knowledge_android.ui.ranking
 
+import android.util.Log
 import androidx.fragment.app.activityViewModels
 import com.bumptech.glide.Glide
 import com.kdn.domain.entity.student.MyInfoEntity
@@ -54,6 +55,7 @@ class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_r
 
     private fun observeMyInfoData(event: MyInfoViewModel.Event) = when (event) {
         is MyInfoViewModel.Event.MyInfo -> {
+            Log.e("MyInfoEvent", event.toString())
             initMyInfo(data = event.myInfo)
         }
     }

@@ -11,26 +11,14 @@ import com.kdn.domain.entity.student.RankingEntity
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.ItemRankingBinding
 
-class MainPageRankingListAdapter() :
+class MainPageRankingListAdapter :
     ListAdapter<RankingEntity, MainPageRankingListAdapter.RankingListViewHolder>(diffUtil) {
 
-    class RankingListViewHolder(
+    inner class RankingListViewHolder(
         val context: Context,
         private val binding: ItemRankingBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(ranking: Int, item: RankingEntity?) = binding.apply {
-            when(ranking) {
-                1 -> {
-                    // 1등일때 View 바꾸기
-                }
-                2 -> {
-                    // 2등일때 View 바꾸기
-                }
-                3 -> {
-                    // 3등일때 View 바꾸기
-                }
-                else -> {}
-            }
             Glide.with(ivProfile).load(item?.user?.profileImage ?: R.drawable.ic_default_profile)
             tvStudentName.text = item?.user?.name
             tvMileage.text = item?.cumulatePoint.toString()
@@ -53,7 +41,7 @@ class MainPageRankingListAdapter() :
 
 
     override fun onBindViewHolder(holder: RankingListViewHolder, position: Int) {
-        holder.bind(position+1,getItem(position))
+        holder.bind(position+1, getItem(position))
     }
 
     companion object {
