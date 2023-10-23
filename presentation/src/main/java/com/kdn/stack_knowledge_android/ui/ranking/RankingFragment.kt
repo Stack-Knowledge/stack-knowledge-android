@@ -1,5 +1,6 @@
 package com.kdn.stack_knowledge_android.ui.ranking
 
+import android.util.Log
 import androidx.fragment.app.activityViewModels
 import com.bumptech.glide.Glide
 import com.kdn.domain.entity.student.MyInfoEntity
@@ -7,7 +8,6 @@ import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.ranking.RankingPageRakingListAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentRankingBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
-import com.kdn.stack_knowledge_android.utils.decorator.HorizontalItemDecorator
 import com.kdn.stack_knowledge_android.utils.decorator.VerticalItemDecorator
 import com.kdn.stack_knowledge_android.utils.repeatOnStart
 import com.kdn.stack_knowledge_android.viewmodel.ranking.MyInfoViewModel
@@ -27,10 +27,10 @@ class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_r
 
     override fun observeEvent() {
         repeatOnStart {
-            rankingViewModel.eventFlow.collect { event -> observeRankingData(event) }
+            myInfoViewModel.eventFlow.collect { event -> observeMyInfoData(event) }
         }
         repeatOnStart {
-            myInfoViewModel.eventFLow.collect { event -> observeMyInfoData(event) }
+            rankingViewModel.eventFlow.collect { event -> observeRankingData(event) }
         }
     }
 
@@ -38,8 +38,8 @@ class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_r
         rankingViewModel.getRankingList()
         rankingListAdapter = RankingPageRakingListAdapter()
         binding.rvRanking.adapter = rankingListAdapter
-        binding.rvRanking.addItemDecoration(HorizontalItemDecorator(16))
         binding.rvRanking.addItemDecoration(VerticalItemDecorator(8))
+        Log.e("initRecyclerView함수 실행", rankingViewModel.getRankingList().toString())
     }
 
     private fun initMyInfo(data: List<MyInfoEntity>) {
@@ -72,8 +72,6 @@ class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_r
         is RankingViewModel.Event.Ranking -> {
             rankingListAdapter.submitList(event.rankingList)
         }
-
-        else -> {}
     }
 
 }

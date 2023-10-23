@@ -1,7 +1,6 @@
 package com.kdn.stack_knowledge_android.ui.main
 
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.kdn.domain.entity.mission.MissionEntity
