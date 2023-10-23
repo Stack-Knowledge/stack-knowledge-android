@@ -15,6 +15,7 @@ import javax.inject.Inject
 class MyInfoViewModel @Inject constructor(
     private val getMyInfoUseCase: GetMyInfoUseCase,
 ) : ViewModel() {
+
     private val _eventFlow = MutableEventFlow<Event>()
     val eventFlow = _eventFlow.asEventFlow()
 

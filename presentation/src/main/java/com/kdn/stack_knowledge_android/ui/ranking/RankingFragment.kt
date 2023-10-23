@@ -27,10 +27,10 @@ class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_r
 
     override fun observeEvent() {
         repeatOnStart {
-            myInfoViewModel.eventFlow.collect { event -> observeMyInfoData(event) }
+            rankingViewModel.eventFlow.collect { event -> observeRankingData(event) }
         }
         repeatOnStart {
-            rankingViewModel.eventFlow.collect { event -> observeRankingData(event) }
+            myInfoViewModel.eventFlow.collect { event -> observeMyInfoData(event) }
         }
     }
 
@@ -39,7 +39,6 @@ class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_r
         rankingListAdapter = RankingPageRakingListAdapter()
         binding.rvRanking.adapter = rankingListAdapter
         binding.rvRanking.addItemDecoration(VerticalItemDecorator(8))
-        Log.e("initRecyclerView함수 실행", rankingViewModel.getRankingList().toString())
     }
 
     private fun initMyInfo(data: List<MyInfoEntity>) {
@@ -55,7 +54,7 @@ class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_r
                 val itemIndex = rankingViewModel.findItemIndex(uuid, rankingListAdapter.currentList)
 
                 itemIndex?.let { index ->
-                    val ranking = rankingListAdapter.currentList[index+1].id.toString()
+                    val ranking = rankingListAdapter.currentList[index + 1].id.toString()
                     binding.tvRanking.text = ranking
                 }
             }
@@ -64,7 +63,7 @@ class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_r
 
     private fun observeMyInfoData(event: MyInfoViewModel.Event) = when (event) {
         is MyInfoViewModel.Event.MyInfo -> {
-            initMyInfo(data = event.myInfo)
+            initMyInfo(event.myInfo)
         }
     }
 
@@ -73,5 +72,4 @@ class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_r
             rankingListAdapter.submitList(event.rankingList)
         }
     }
-
 }

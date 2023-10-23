@@ -15,9 +15,13 @@ data class MyInfoResponse(
     val user: User
 ) {
     data class User(
+        @SerializedName("id")
         val id: UUID,
+        @SerializedName("email")
         val email: String,
+        @SerializedName("name")
         val name: String,
+        @SerializedName("profileImage")
         val profileImage: String?,
     )
 }

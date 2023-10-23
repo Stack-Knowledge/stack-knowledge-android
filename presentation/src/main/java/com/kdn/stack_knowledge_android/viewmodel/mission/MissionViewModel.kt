@@ -25,6 +25,7 @@ class MissionViewModel @Inject constructor(
 
     private val _eventFlow = MutableEventFlow<Event>()
     val eventFlow = _eventFlow.asEventFlow()
+
     fun getMissionList() = viewModelScope.launch {
         getMissionListUseCase().onSuccess {
             event(Event.Mission(it))

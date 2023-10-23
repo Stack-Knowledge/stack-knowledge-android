@@ -47,6 +47,6 @@ abstract class RemoteDataSourceModule {
 
     @Binds
     abstract fun provideRemoteStudentDataSource(
-        remoteStudentDataSourceImpl: RemoteStudentDataSourceImpl
+        remoteStudentDataSourceImpl: RemoteStudentDataSourceImpl,
     ): RemoteStudentDataSource
 }

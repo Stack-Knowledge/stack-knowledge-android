@@ -6,7 +6,7 @@ data class MyInfoEntity (
     val id: UUID,
     val currentPoint: Int,
     val cumulatePoint: Int,
-    val user: User
+    val user: User,
 ) {
     data class User(
         val id: UUID,
