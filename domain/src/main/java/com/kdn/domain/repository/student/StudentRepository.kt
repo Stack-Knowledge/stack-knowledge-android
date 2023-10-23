@@ -5,5 +5,5 @@ import com.kdn.domain.entity.student.RankingEntity
 
 interface StudentRepository {
     suspend fun getRankingList(): List<RankingEntity>
-    suspend fun getMyInfo(): List<MyInfoEntity>
+    suspend fun getMyInfo(): MyInfoEntity
 }

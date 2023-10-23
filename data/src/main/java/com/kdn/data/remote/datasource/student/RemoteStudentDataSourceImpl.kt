@@ -15,8 +15,8 @@ class RemoteStudentDataSourceImpl @Inject constructor(
             .sendRequest()
     }
 
-    override suspend fun getMyInfo(): List<MyInfoResponse> {
-        return StackApiHandler<List<MyInfoResponse>>()
+    override suspend fun getMyInfo(): MyInfoResponse {
+        return StackApiHandler<MyInfoResponse>()
             .httpRequest { service.getMyInfo() }
             .sendRequest()
     }

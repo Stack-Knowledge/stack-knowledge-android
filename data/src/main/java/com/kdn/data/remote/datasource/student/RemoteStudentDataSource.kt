@@ -5,5 +5,5 @@ import com.kdn.data.remote.dto.student.response.RankingResponse
 
 interface RemoteStudentDataSource {
     suspend fun getRankingList(): List<RankingResponse>
-    suspend fun getMyInfo(): List<MyInfoResponse>
+    suspend fun getMyInfo(): MyInfoResponse
 }

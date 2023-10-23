@@ -32,6 +32,6 @@ class MyInfoViewModel @Inject constructor(
     }
 
     sealed class Event {
-        data class MyInfo(val myInfo: List<MyInfoEntity>) : Event()
+        data class MyInfo(val myInfo: MyInfoEntity) : Event()
     }
 }

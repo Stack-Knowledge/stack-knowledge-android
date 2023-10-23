@@ -13,6 +13,6 @@ class StudentRepositoryImpl @Inject constructor(
     override suspend fun getRankingList(): List<RankingEntity> =
         remoteDataSource.getRankingList().map { it.toEntity() }
 
-    override suspend fun getMyInfo(): List<MyInfoEntity> =
-        remoteDataSource.getMyInfo().map { it.toEntity() }
+    override suspend fun getMyInfo(): MyInfoEntity =
+        remoteDataSource.getMyInfo().toEntity()
 }

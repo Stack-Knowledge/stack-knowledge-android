@@ -23,6 +23,7 @@ class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_r
     override fun createView() {
         initRecyclerView()
         observeEvent()
+        myInfoViewModel.getMyInfo()
     }
 
     override fun observeEvent() {
@@ -41,25 +42,28 @@ class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_r
         binding.rvRanking.addItemDecoration(VerticalItemDecorator(8))
     }
 
-    private fun initMyInfo(data: List<MyInfoEntity>) {
-        myInfoViewModel.getMyInfo()
-        for (myInfoEntity in data) {
+    private fun initMyInfo(data: MyInfoEntity) {
             binding.apply {
                 Glide.with(ivProfile)
-                    .load(myInfoEntity.user.profileImage ?: R.drawable.ic_default_profile)
-                tvName.text = myInfoEntity.user.name
-                tvCumulatePoint.text = myInfoEntity.cumulatePoint.toString()
+                    .load(data.user.profileImage ?: R.drawable.ic_default_profile)
+                tvName.text = data.user.name
+                tvCumulatePoint.text = data.cumulatePoint.toString()
 
-                val uuid = myInfoEntity.user.id.toString()
+                val uuid = data.user.id.toString()
                 val itemIndex = rankingViewModel.findItemIndex(uuid, rankingListAdapter.currentList)
 
                 itemIndex?.let { index ->
-                    val ranking = rankingListAdapter.currentList[index + 1].id.toString()
-                    binding.tvRanking.text = ranking
+                    val myInfoUuid = data.user.id.toString()
+                    val itemIndex = rankingListAdapter.currentList.indexOfFirst { it.user.id.toString() == myInfoUuid }
+
+                    if (itemIndex != -1) {
+                        val ranking = itemIndex + 1
+                        binding.tvRanking.text = ranking.toString()
+                    }
+
                 }
             }
         }
-    }
 
     private fun observeMyInfoData(event: MyInfoViewModel.Event) = when (event) {
         is MyInfoViewModel.Event.MyInfo -> {

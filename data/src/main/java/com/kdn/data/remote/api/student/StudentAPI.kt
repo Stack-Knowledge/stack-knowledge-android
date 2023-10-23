@@ -10,7 +10,7 @@ interface StudentAPI {
     suspend fun getRankingList() : List<RankingResponse>
 
     @GET("/student/my")
-    suspend fun getMyInfo() : List<MyInfoResponse>
+    suspend fun getMyInfo() : MyInfoResponse
 
     @POST("/student/image")
     suspend fun updateProfileImage()
