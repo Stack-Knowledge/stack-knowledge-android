@@ -62,5 +62,9 @@
         android:name="com.kdn.stack_knowledge_android.ui.ranking.RankingFragment"
         android:label="RankingFragment"
         tools:layout="@layout/fragment_ranking" />
+    <fragment
+        android:id="@+id/orderDialog"
+        android:name="com.kdn.stack_knowledge_android.ui.shop.OrderDialog"
+        android:label="OrderDialog" />
 
 </navigation>
