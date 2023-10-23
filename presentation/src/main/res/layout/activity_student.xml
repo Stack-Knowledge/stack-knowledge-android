@@ -101,13 +101,13 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fcv_fragment_container"
-            android:layout_width="match_parent"
             android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             app:defaultNavHost="true"
-            app:navGraph="@navigation/bottom_nav_graph"
             app:layout_constraintBottom_toTopOf="@id/bn_main_bottom_navi"
-            app:layout_constraintTop_toTopOf="@id/g_vp_view_pager_t" />
+            app:layout_constraintTop_toTopOf="@id/g_vp_view_pager_t"
+            app:navGraph="@navigation/bottom_nav_graph" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bn_main_bottom_navi"
@@ -121,7 +121,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/main_menu" />
+            app:menu="@menu/student_menu" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

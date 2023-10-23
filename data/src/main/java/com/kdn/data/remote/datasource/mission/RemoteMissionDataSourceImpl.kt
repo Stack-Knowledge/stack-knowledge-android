@@ -1,6 +1,6 @@
 package com.kdn.data.remote.datasource.mission
 
-import com.kdn.data.remote.api.MissionAPI
+import com.kdn.data.remote.api.mission.MissionAPI
 import com.kdn.data.remote.dto.mission.request.CreateMissionRequest
 import com.kdn.data.remote.dto.mission.response.DetailMissionResponse
 import com.kdn.data.remote.dto.mission.response.MissionResponse

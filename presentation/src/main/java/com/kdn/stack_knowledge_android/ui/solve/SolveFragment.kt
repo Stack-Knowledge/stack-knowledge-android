@@ -4,7 +4,6 @@ import android.content.Context
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.FragmentSolveBinding
@@ -102,9 +101,8 @@ class SolveFragment : BaseFragment<FragmentSolveBinding>(R.layout.fragment_solve
     private fun observeSolveData(event: SolveViewModel.Event) = when (event) {
         is SolveViewModel.Event.SolveMission -> {
             requireActivity().findNavController(R.id.solveFragment)
-                .navigate(R.id.action_solveFragment_self)
+                .navigate(R.id.solveFragment)
         }
-
         else -> {}
     }
 

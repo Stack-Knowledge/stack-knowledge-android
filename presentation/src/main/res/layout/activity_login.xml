@@ -4,6 +4,7 @@
     android:background="@color/white">
 
     <data>
+
         <variable
             name="login"
             type="com.kdn.stack_knowledge_android.ui.login.LoginActivity" />
@@ -88,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.8725"/>
+            app:layout_constraintGuide_percent="0.8725" />
 
         <View
             android:id="@+id/v_ic_background_t"

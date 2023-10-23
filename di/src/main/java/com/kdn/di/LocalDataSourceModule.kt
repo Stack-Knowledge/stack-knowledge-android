@@ -16,5 +16,4 @@ abstract class LocalDataSourceModule {
     abstract fun provideLocalAuthDataSource(
         localAuthDataSourceImpl: LocalAuthDataSourceImpl,
     ): LocalAuthDataSource
-
 }

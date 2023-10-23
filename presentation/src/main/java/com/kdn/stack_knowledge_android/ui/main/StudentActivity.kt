@@ -10,7 +10,8 @@ import com.kdn.stack_knowledge_android.ui.base.BottomNavigationViewVisibilityLis
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class StudentActivity : BaseActivity<ActivityStudentBinding>(R.layout.activity_student),BottomNavigationViewVisibilityListener {
+class StudentActivity : BaseActivity<ActivityStudentBinding>(R.layout.activity_student)
+    ,BottomNavigationViewVisibilityListener {
     override fun createView() {
         initBottomNav()
     }

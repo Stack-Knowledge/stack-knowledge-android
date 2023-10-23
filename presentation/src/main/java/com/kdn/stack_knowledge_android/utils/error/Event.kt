@@ -1,4 +1,4 @@
-package com.kdn.stack_knowledge_android.utils
+package com.kdn.stack_knowledge_android.utils.error
 
 sealed class Event<out T>(
     val data: T? = null

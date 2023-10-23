@@ -71,7 +71,7 @@
             app:layout_constraintTop_toBottomOf="@id/iv_profile" />
 
         <TextView
-            android:id="@+id/tv_current_point"
+            android:id="@+id/tv_cumulate_point"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
@@ -93,33 +93,33 @@
             android:text="M"
             android:textColor="@color/black"
             android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@id/tv_current_point"
+            app:layout_constraintStart_toEndOf="@id/tv_cumulate_point"
             app:layout_constraintTop_toBottomOf="@id/iv_profile" />
 
         <TextView
             android:id="@+id/tv_notice_ranking"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
             android:layout_marginTop="61dp"
             android:fontFamily="@font/pretendard_medium"
             android:text="랭킹"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_marginStart="28dp"
-            app:layout_constraintTop_toBottomOf="@id/tv_ranking"
             app:layout_constraintStart_toStartOf="parent"
-            />
+            app:layout_constraintTop_toBottomOf="@id/tv_ranking" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_ranking"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginHorizontal="16dp"
-            app:layout_constraintTop_toBottomOf="@id/tv_notice_ranking"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:listitem="@layout/item_detail_ranking"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_notice_ranking"
+            tools:listitem="@layout/item_detail_ranking" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -2,7 +2,6 @@ package com.kdn.stack_knowledge_android.ui.solve
 
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.kdn.stack_knowledge_android.adapter.main.MissionListAdapter
 import com.kdn.stack_knowledge_android.databinding.DialogSubmitAnswerBinding
-import com.kdn.stack_knowledge_android.ui.main.MainFragment
 import com.kdn.stack_knowledge_android.viewmodel.solve.SolveViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.UUID

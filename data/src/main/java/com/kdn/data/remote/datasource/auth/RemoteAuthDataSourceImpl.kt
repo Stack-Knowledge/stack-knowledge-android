@@ -1,6 +1,6 @@
 package com.kdn.data.remote.datasource.auth
 
-import com.kdn.data.remote.api.AuthAPI
+import com.kdn.data.remote.api.auth.AuthAPI
 import com.kdn.data.remote.dto.auth.request.GAuthLoginRequest
 import com.kdn.data.remote.dto.auth.response.GAuthLoginResponse
 import com.kdn.data.remote.dto.auth.response.RefreshTokenResponse

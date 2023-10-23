@@ -17,22 +17,23 @@ class MissionListAdapter :
     inner class MissionListViewHolder(
         val context: Context,
         private val binding: ItemMissionBinding,
-        val listener: OnItemClickListener,
-    ) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: MissionEntity?) = binding.apply {
-            tvTeacherName.text = item?.user?.name
-            tvTitle.text = item?.title
-            tvMileage.text = item?.point.toString()
+        private val listener: OnItemClickListener,
+    ) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: MissionEntity) = binding.apply {
+            tvTeacherName.text = item.user.name
+            tvTitle.text = item.title
+            tvMileage.text = item.point.toString()
             missionItemLayout.setOnClickListener {
                 listener.detail(item)
-
             }
         }
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MissionListViewHolder =
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): MissionListViewHolder =
         MissionListViewHolder(
             parent.context,
             ItemMissionBinding.inflate(
@@ -49,7 +50,7 @@ class MissionListAdapter :
 
 
     interface OnItemClickListener {
-        fun detail(item: MissionEntity?)
+        fun detail(item: MissionEntity)
     }
 
     fun setItemOnClickListener(onItemClickListener: OnItemClickListener) {

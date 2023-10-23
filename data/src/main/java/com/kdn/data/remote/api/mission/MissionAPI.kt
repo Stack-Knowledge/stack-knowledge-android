@@ -1,4 +1,4 @@
-package com.kdn.data.remote.api
+package com.kdn.data.remote.api.mission
 
 import com.kdn.data.remote.dto.mission.request.CreateMissionRequest
 import com.kdn.data.remote.dto.mission.response.DetailMissionResponse

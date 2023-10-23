@@ -18,9 +18,6 @@
         <action
             android:id="@+id/action_mainFragment_to_solveFragment"
             app:destination="@id/solveFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_missionFragment"
-            app:destination="@id/missionFragment" />
     </fragment>
 
     <fragment
@@ -29,21 +26,15 @@
         android:label="SolveFragment">
         <argument
             android:name="title"
-            app:argType="string"
-            android:defaultValue="default_title" />
+            android:defaultValue="default_title"
+            app:argType="string" />
         <argument
             android:name="timeLimit"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
         <argument
             android:name="missionId"
             app:argType="string" />
-        <action
-            android:id="@+id/action_solveFragment_self"
-            app:destination="@id/solveFragment" />
-        <action
-            android:id="@+id/action_solveFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/missionFragment"
@@ -57,32 +48,19 @@
     <fragment
         android:id="@+id/timeOutDialog"
         android:name="com.kdn.stack_knowledge_android.ui.solve.TimeOutDialog"
-        android:label="TimeOutDialog" >
-        <action
-            android:id="@+id/action_timeOutDialog_to_mainFragment"
-            app:destination="@id/mainFragment" />
-    </fragment>
+        android:label="TimeOutDialog"></fragment>
     <fragment
         android:id="@+id/submitAnswerDialog"
         android:name="com.kdn.stack_knowledge_android.ui.solve.SubmitAnswerDialog"
-        android:label="SubmitAnswerDialog" >
-        <action
-            android:id="@+id/action_submitAnswerDialog_to_missionFragment"
-            app:destination="@id/missionFragment" />
-        <action
-            android:id="@+id/action_submitAnswerDialog_to_solveFragment"
-            app:destination="@id/solveFragment" />
-    </fragment>
+        android:label="SubmitAnswerDialog"></fragment>
     <fragment
         android:id="@+id/movePageDialog"
         android:name="com.kdn.stack_knowledge_android.ui.solve.MovePageDialog"
-        android:label="MovePageDialog" >
-        <action
-            android:id="@+id/action_movePageDialog_to_solveFragment"
-            app:destination="@id/solveFragment" />
-        <action
-            android:id="@+id/action_movePageDialog_to_mainFragment"
-            app:destination="@id/mainFragment" />
-    </fragment>
+        android:label="MovePageDialog"></fragment>
+    <fragment
+        android:id="@+id/rankingFragment"
+        android:name="com.kdn.stack_knowledge_android.ui.ranking.RankingFragment"
+        android:label="RankingFragment"
+        tools:layout="@layout/fragment_ranking" />
 
 </navigation>

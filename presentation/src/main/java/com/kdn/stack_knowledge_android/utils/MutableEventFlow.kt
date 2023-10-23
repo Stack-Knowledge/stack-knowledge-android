@@ -18,7 +18,7 @@ fun <T>MutableEventFlow(
     replay: Int = EventFlow.DEFAULT_REPLAY
 ): MutableEventFlow<T> = EventFlowImpl(replay)
 
-fun <T> MutableEventFlow<T>.asEvetFlow(): EventFlow<T> = ReadOnlyEventFlow(this)
+fun <T> MutableEventFlow<T>.asEventFlow(): EventFlow<T> = ReadOnlyEventFlow(this)
 
 private class ReadOnlyEventFlow<T>(flow: EventFlow<T>): EventFlow<T> by flow
 

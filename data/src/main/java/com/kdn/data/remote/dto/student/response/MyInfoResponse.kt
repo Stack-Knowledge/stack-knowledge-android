@@ -1,19 +1,19 @@
-package com.kdn.data.remote.dto.ranking.response
+package com.kdn.data.remote.dto.student.response
 
 import com.google.gson.annotations.SerializedName
-import com.kdn.domain.model.response.RankingResponseModel
+import com.kdn.domain.entity.student.MyInfoEntity
 import java.util.UUID
-import com.kdn.domain.model.response.RankingResponseModel.User as DomainUser
 
-
-data class RankingResponse (
+data class MyInfoResponse(
     @SerializedName("id")
     val id: UUID,
+    @SerializedName("currentPoint")
+    val currentPoint: Int,
     @SerializedName("cumulatePoint")
     val cumulatePoint: Int,
     @SerializedName("user")
-    val user: User,
-    ) {
+    val user: User
+) {
     data class User(
         @SerializedName("id")
         val id: UUID,
@@ -22,12 +22,18 @@ data class RankingResponse (
         @SerializedName("name")
         val name: String,
         @SerializedName("profileImage")
-        val profileImage: String?
+        val profileImage: String?,
     )
 }
 
-fun RankingResponse.toRankingModel() = RankingResponseModel (
+fun MyInfoResponse.toEntity() = MyInfoEntity(
     id = id,
+    currentPoint = currentPoint,
     cumulatePoint = cumulatePoint,
-    user = DomainUser(id = user.id, email = user.email, name = user.name, profileImage = user.profileImage)
+    user = MyInfoEntity.User(
+        id = user.id,
+        email = user.email,
+        name = user.name,
+        profileImage = user.profileImage,
+    )
 )

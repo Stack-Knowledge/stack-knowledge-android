@@ -1,4 +1,4 @@
-package com.kdn.data.remote.api
+package com.kdn.data.remote.api.order
 
 import com.kdn.data.remote.dto.order.request.OrderRequest
 import retrofit2.http.Body

@@ -18,7 +18,6 @@ class AuthorizationInterceptor @Inject constructor(
     private val authPreference: AuthPreference,
 ) : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
-        Log.e("인터셉터 호출", "성공")
         val request = chain.request()
         val path = request.url.encodedPath
         val ignorePath = listOf(
@@ -26,9 +25,7 @@ class AuthorizationInterceptor @Inject constructor(
         )
         if (ignorePath.contains(path)) return chain.proceed(request)
         val refreshToken = authPreference.getRefreshToken()
-        Log.e("인터셉터", refreshToken.toString())
         if (!refreshToken.isNullOrBlank()) {
-            Log.e("인터셉터", "김현승")
             val expiredAt = authPreference.getExpiredAt() ?: throw UnknownException(message = null)
             val currentTime = LocalDateTime.now(ZoneId.systemDefault())
             if (currentTime.isAfter(expiredAt)) {

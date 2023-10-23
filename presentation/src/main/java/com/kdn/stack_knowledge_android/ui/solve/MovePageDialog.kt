@@ -11,7 +11,6 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.kdn.stack_knowledge_android.databinding.DialogMovePageFromMissionBinding
-import com.kdn.stack_knowledge_android.databinding.DialogSubmitAnswerBinding
 import com.kdn.stack_knowledge_android.viewmodel.solve.SolveViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.UUID

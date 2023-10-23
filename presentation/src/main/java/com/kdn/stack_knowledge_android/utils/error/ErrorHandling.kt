@@ -1,4 +1,4 @@
-package com.kdn.stack_knowledge_android.utils
+package com.kdn.stack_knowledge_android.utils.error
 
 import android.util.Log
 import com.kdn.domain.exception.ConflictDataException
@@ -9,7 +9,6 @@ import com.kdn.domain.exception.NotFoundException
 import com.kdn.domain.exception.ServerErrorException
 import com.kdn.domain.exception.TooManyRequestException
 import com.kdn.domain.exception.WrongDataException
-
 
 
 suspend fun<T> Throwable.errorHandling(

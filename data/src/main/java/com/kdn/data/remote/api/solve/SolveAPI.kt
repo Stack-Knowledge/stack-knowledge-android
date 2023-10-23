@@ -1,4 +1,4 @@
-package com.kdn.data.remote.api
+package com.kdn.data.remote.api.solve
 
 import com.kdn.data.remote.dto.solve.request.SolveRequest
 import retrofit2.http.Body
@@ -7,7 +7,6 @@ import retrofit2.http.Path
 import java.util.UUID
 
 interface SolveAPI {
-
     @POST("/solve/{missionId}")
     suspend fun solveMission(
         @Path("missionId") missionId: UUID,

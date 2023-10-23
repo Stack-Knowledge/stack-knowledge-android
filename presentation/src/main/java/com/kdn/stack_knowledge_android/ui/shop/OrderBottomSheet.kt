@@ -9,7 +9,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.kdn.stack_knowledge_android.adapter.shop.OrderDetailListAdapter
 import com.kdn.stack_knowledge_android.data.order.DetailOrderData
 import com.kdn.stack_knowledge_android.databinding.BottomSheetOrderBinding
-import com.kdn.stack_knowledge_android.utils.VerticalItemDecorator
+import com.kdn.stack_knowledge_android.utils.decorator.VerticalItemDecorator
 import com.kdn.stack_knowledge_android.viewmodel.shop.BuyViewModel
 import dagger.hilt.android.AndroidEntryPoint
 

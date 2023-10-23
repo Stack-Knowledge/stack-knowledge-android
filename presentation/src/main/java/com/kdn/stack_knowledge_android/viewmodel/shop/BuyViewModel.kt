@@ -14,6 +14,7 @@ import javax.inject.Inject
 class BuyViewModel @Inject constructor(
     private val buyItemUseCase: BuyItemUseCase,
 ) : ViewModel() {
+
     val orderDataList: MutableList<DetailOrderData> = mutableListOf()
 
     fun setOrderDataList(orderDataList: List<ItemEntity>) {
