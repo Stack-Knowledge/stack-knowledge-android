@@ -38,7 +38,6 @@ class OrderDialog(
         }
 
         binding.btnCancel.setOnClickListener {
-            orderDataList.clear()
             dialog?.dismiss()
         }
 
