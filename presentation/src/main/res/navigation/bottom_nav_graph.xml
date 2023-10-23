@@ -26,12 +26,12 @@
         android:label="SolveFragment">
         <argument
             android:name="title"
-            app:argType="string"
-            android:defaultValue="default_title" />
+            android:defaultValue="default_title"
+            app:argType="string" />
         <argument
             android:name="timeLimit"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
         <argument
             android:name="missionId"
             app:argType="string" />
@@ -48,22 +48,19 @@
     <fragment
         android:id="@+id/timeOutDialog"
         android:name="com.kdn.stack_knowledge_android.ui.solve.TimeOutDialog"
-        android:label="TimeOutDialog" >
-    </fragment>
+        android:label="TimeOutDialog"></fragment>
     <fragment
         android:id="@+id/submitAnswerDialog"
         android:name="com.kdn.stack_knowledge_android.ui.solve.SubmitAnswerDialog"
-        android:label="SubmitAnswerDialog" >
-    </fragment>
+        android:label="SubmitAnswerDialog"></fragment>
     <fragment
         android:id="@+id/movePageDialog"
         android:name="com.kdn.stack_knowledge_android.ui.solve.MovePageDialog"
-        android:label="MovePageDialog" >
-      </fragment>
+        android:label="MovePageDialog"></fragment>
     <fragment
         android:id="@+id/rankingFragment"
         android:name="com.kdn.stack_knowledge_android.ui.ranking.RankingFragment"
         android:label="RankingFragment"
-        tools:layout="@layout/fragment_ranking"/>
+        tools:layout="@layout/fragment_ranking" />
 
 </navigation>

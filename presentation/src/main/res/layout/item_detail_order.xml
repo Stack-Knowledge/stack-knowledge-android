@@ -75,21 +75,21 @@
             android:id="@+id/tv_goods_count"
             android:layout_width="wrap_content"
             android:layout_height="17dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="24dp"
             android:fontFamily="@font/pretendard_medium"
             android:text="1"
             android:textColor="@color/black"
-            android:layout_marginBottom="24dp"
-            android:layout_marginStart="6dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/v_plus"/>
-        
+            app:layout_constraintStart_toEndOf="@id/v_plus" />
+
         <View
             android:id="@+id/v_minus"
-            android:background="@drawable/ic_minus"
             android:layout_width="11dp"
             android:layout_height="1dp"
-            android:layout_marginBottom="30dp"
             android:layout_marginStart="6dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/ic_minus"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_goods_count" />
     </androidx.constraintlayout.widget.ConstraintLayout>

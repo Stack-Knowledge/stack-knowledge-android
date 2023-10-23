@@ -25,6 +25,7 @@ class MyInfoViewModel @Inject constructor(
             Log.e("내정보 가져오기 실패", "실패 $it")
         }
     }
+
     private fun event(event: Event) = viewModelScope.launch {
         _eventFlow.emit(event)
     }

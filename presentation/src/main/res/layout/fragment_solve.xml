@@ -107,8 +107,8 @@
             android:text="00 : 00"
             android:textColor="@color/black"
             android:textSize="40sp"
-            app:layout_constraintEnd_toEndOf="@id/tv_timer_countdown"
             app:layout_constraintBottom_toBottomOf="@id/tv_timer_countdown"
+            app:layout_constraintEnd_toEndOf="@id/tv_timer_countdown"
             app:layout_constraintStart_toStartOf="@id/tv_timer_countdown"
             app:layout_constraintTop_toTopOf="@id/tv_timer_countdown" />
 

@@ -25,7 +25,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     private lateinit var missionListAdapter: MissionListAdapter
     private lateinit var rankingListAdapter: MainPageRankingListAdapter
     private val missionViewModel by activityViewModels<MissionViewModel>()
-    private val rankingViewModel by viewModels<RankingViewModel>()
+    private val rankingViewModel by activityViewModels<RankingViewModel>()
 
     override fun createView() {
         showViewPager()
@@ -36,6 +36,8 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     override fun observeEvent() {
         repeatOnStart {
             missionViewModel.eventFlow.collect { event -> observeMissionData(event) }
+        }
+        repeatOnStart {
             rankingViewModel.eventFlow.collect { event -> observeRankingData(event) }
         }
     }

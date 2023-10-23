@@ -27,6 +27,16 @@ class RankingViewModel @Inject constructor(
         }
     }
 
+    fun findItemIndex(uuidToCompare: String, rankingList: List<RankingEntity>): Int? {
+        for ((index, rankingEntity) in rankingList.withIndex()) {
+            if (rankingEntity.user.id.toString() == uuidToCompare) {
+                return index
+            }
+        }
+        return null
+    }
+
+
     private fun event(event: Event) = viewModelScope.launch {
         _eventFlow.emit(event)
     }

@@ -17,9 +17,8 @@ class MissionListAdapter :
     inner class MissionListViewHolder(
         val context: Context,
         private val binding: ItemMissionBinding,
-        val listener: OnItemClickListener,
-    ) :
-        RecyclerView.ViewHolder(binding.root) {
+        private val listener: OnItemClickListener,
+    ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: MissionEntity) = binding.apply {
             tvTeacherName.text = item.user.name
             tvTitle.text = item.title
@@ -31,7 +30,10 @@ class MissionListAdapter :
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MissionListViewHolder =
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): MissionListViewHolder =
         MissionListViewHolder(
             parent.context,
             ItemMissionBinding.inflate(

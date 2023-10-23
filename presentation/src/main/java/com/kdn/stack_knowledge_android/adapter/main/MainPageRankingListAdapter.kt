@@ -18,13 +18,12 @@ class MainPageRankingListAdapter :
         val context: Context,
         private val binding: ItemRankingBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(ranking: Int, item: RankingEntity?) = binding.apply {
-            Glide.with(ivProfile).load(item?.user?.profileImage ?: R.drawable.ic_default_profile)
-            tvStudentName.text = item?.user?.name
-            tvMileage.text = item?.cumulatePoint.toString()
+        fun bind(ranking: Int, item: RankingEntity) = binding.apply {
+            Glide.with(ivProfile).load(item.user.profileImage ?: R.drawable.ic_default_profile)
+            tvStudentName.text = item.user.name
+            tvMileage.text = item.cumulatePoint.toString()
         }
     }
-
 
     override fun onCreateViewHolder(
         parent: ViewGroup,

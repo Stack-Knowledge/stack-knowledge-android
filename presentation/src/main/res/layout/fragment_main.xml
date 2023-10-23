@@ -124,11 +124,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_marginBottom="3dp"
             android:fontFamily="@font/pretendard_semibold"
             android:text="문제 풀기"
             android:textColor="@color/black"
             android:textSize="18sp"
-            android:layout_marginBottom="3dp"
             app:layout_constraintBottom_toTopOf="@id/rv_mission"
             app:layout_constraintStart_toStartOf="parent" />
 
