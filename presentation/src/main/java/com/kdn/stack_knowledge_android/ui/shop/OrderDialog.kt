@@ -9,6 +9,7 @@ import android.view.Window
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.data.order.DetailOrderData
 import com.kdn.stack_knowledge_android.databinding.DialogBuyBinding
 import com.kdn.stack_knowledge_android.viewmodel.shop.BuyViewModel
@@ -35,9 +36,11 @@ class OrderDialog(
             buyViewModel.buyItem()
             findNavController().popBackStack()
             dialog?.dismiss()
+            binding.btnCheck.setBackgroundColor(resources.getColor(R.color.main))
         }
 
         binding.btnCancel.setOnClickListener {
+            binding.btnCancel.setBackgroundColor(resources.getColor(R.color.main))
             dialog?.dismiss()
         }
 
