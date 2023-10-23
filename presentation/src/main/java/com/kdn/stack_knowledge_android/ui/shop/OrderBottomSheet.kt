@@ -15,6 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class OrderBottomSheet : BottomSheetDialogFragment() {
+    private lateinit var orderDialog: OrderDialog
     private lateinit var binding: BottomSheetOrderBinding
     private lateinit var orderDetailListAdapter: OrderDetailListAdapter
     private val buyViewModel by activityViewModels<BuyViewModel>()
@@ -27,7 +28,7 @@ class OrderBottomSheet : BottomSheetDialogFragment() {
         binding = BottomSheetOrderBinding.inflate(layoutInflater)
         binding.lifecycleOwner = this
         binding.btnBuy.setOnClickListener {
-            buyViewModel.buyItem()
+            initOrderDialog()
         }
 
         setTotalPrice()
@@ -56,5 +57,13 @@ class OrderBottomSheet : BottomSheetDialogFragment() {
 
     private fun setTotalPrice() {
         binding.tvTotalPrice.text = buyViewModel.orderDataList.sumOf { it.count * it.price }.toString()
+    }
+
+    private fun initOrderDialog() {
+        orderDialog = OrderDialog(orderDataList = buyViewModel.orderDataList)
+        orderDialog.show(
+            requireActivity().supportFragmentManager,
+            "OrderDialog"
+        )
     }
 }
