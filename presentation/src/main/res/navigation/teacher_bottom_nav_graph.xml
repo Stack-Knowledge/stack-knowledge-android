@@ -10,11 +10,6 @@
         android:label="CreateMissionFragment" />
 
     <fragment
-        android:id="@+id/missionFragment"
-        android:name="com.kdn.stack_knowledge_android.ui.mission.MissionFragment"
-        android:label="MissionFragment" />
-
-    <fragment
         android:id="@+id/mainFragment"
         android:name="com.kdn.stack_knowledge_android.ui.main.MainFragment"
         android:label="MainFragment" />
