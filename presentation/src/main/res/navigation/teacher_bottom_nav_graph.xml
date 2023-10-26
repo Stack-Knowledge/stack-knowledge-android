@@ -18,4 +18,34 @@
         android:id="@+id/rankingFragment"
         android:name="com.kdn.stack_knowledge_android.ui.ranking.RankingFragment"
         android:label="RankingFragment" />
+    <fragment
+        android:id="@+id/itemDeductionDialog"
+        android:name="com.kdn.stack_knowledge_android.ui.shop.ItemDeductionDialog"
+        android:label="ItemDeductionDialog" >
+    <argument
+        android:name="count"
+        app:argType="integer" />
+
+    <argument
+        android:name="orderId"
+        app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/teacherShopFragment"
+        android:name="com.kdn.stack_knowledge_android.ui.shop.TeacherShopFragment"
+        android:label="TeacherShopFragment" >
+
+        <argument
+            android:name="count"
+            app:argType="integer" />
+
+        <argument
+            android:name="orderId"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_teacherShopFragment_to_itemDeductionDialog"
+            app:destination="@id/itemDeductionDialog" />
+    </fragment>
 </navigation>

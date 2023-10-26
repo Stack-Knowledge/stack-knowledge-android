@@ -1,18 +1,24 @@
 package com.kdn.data.remote.dto.order.response
 
 import com.google.gson.annotations.SerializedName
+import com.kdn.domain.entity.order.OrderedItemEntity
 import java.util.UUID
 
-data class OrderResponse(
+data class OrderedItemResponse(
     @SerializedName("id")
     val id: UUID,
     @SerializedName("count")
     val count: Int,
     @SerializedName("price")
     val price: Int,
-    @SerializedName("orderStatus")
-    val orderStatus: OrderStatus,
-) {
+    @SerializedName("orderStatis")
+    val orderStatus: String,
+    @SerializedName("user")
+    val user: User,
+    @SerializedName("item")
+    val item: Item,
+
+    ) {
     data class Item(
         @SerializedName("id")
         val id: UUID,
@@ -22,8 +28,8 @@ data class OrderResponse(
         val price: Int,
         @SerializedName("image")
         val image: String,
-    )
 
+    )
     data class User(
         @SerializedName("id")
         val id: UUID,
@@ -32,12 +38,25 @@ data class OrderResponse(
         @SerializedName("name")
         val name: String,
         @SerializedName("profileImage")
-        val profile: String,
+        val profileImage: String,
     )
 }
 
-enum class OrderStatus {
-    IS_ORDERED,
-    COMPLETED,
-}
-
+fun OrderedItemResponse.toEntity() = OrderedItemEntity(
+    id = id,
+    count = count,
+    price = price,
+    orderStatus = orderStatus,
+    item = OrderedItemEntity.Item(
+        id = item.id,
+        name = item.name,
+        price = item.price,
+        image = item.image,
+    ),
+    user = OrderedItemEntity.User(
+        id = user.id,
+        email = user.email,
+        name = user.name,
+        profileImage = user.profileImage,
+    ),
+)

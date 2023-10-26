@@ -30,7 +30,6 @@ class OrderBottomSheet : BottomSheetDialogFragment() {
         binding.btnBuy.setOnClickListener {
             initOrderDialog()
         }
-
         setTotalPrice()
         initRecyclerView()
         return binding.root
@@ -60,10 +59,14 @@ class OrderBottomSheet : BottomSheetDialogFragment() {
     }
 
     private fun initOrderDialog() {
-        orderDialog = OrderDialog(orderDataList = buyViewModel.orderDataList)
+        orderDialog = OrderDialog {
+            this.dismiss()
+        }
         orderDialog.show(
             requireActivity().supportFragmentManager,
             "OrderDialog"
         )
     }
+
+
 }
