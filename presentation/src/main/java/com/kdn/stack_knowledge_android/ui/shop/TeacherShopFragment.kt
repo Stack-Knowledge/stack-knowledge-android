@@ -42,9 +42,15 @@ class TeacherShopFragment :
         orderedItemListAdapter.setOnItemClickListener(object :
             OrderedItemListAdapter.OnItemClickListener {
             override fun onItemClick(item: OrderedItemEntity) {
+                orderedItemList.add(item)
+                orderViewModel.orderedItemList = orderedItemList
                 val itemId: UUID = item.item.id
                 val count: Int = item.count
-                val action = TeacherShopFragmentDirections.actionTeacherShopFragmentToItemDeductionDialog(count, itemId.toString())
+                val action =
+                    TeacherShopFragmentDirections.actionTeacherShopFragmentToItemDeductionDialog(
+                        count,
+                        itemId.toString()
+                    )
                 findNavController()
                     .navigate(action)
                 initItemDeductionDialog()

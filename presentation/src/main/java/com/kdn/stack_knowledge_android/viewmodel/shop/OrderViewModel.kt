@@ -4,18 +4,22 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kdn.domain.entity.order.OrderedItemEntity
+import com.kdn.domain.param.order.UpdateOrderedParam
 import com.kdn.domain.usecase.shop.GetOrderedItemListUseCase
+import com.kdn.domain.usecase.shop.UpdateOrderedItemUseCase
 import com.kdn.stack_knowledge_android.utils.MutableEventFlow
 import com.kdn.stack_knowledge_android.utils.asEventFlow
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import java.util.UUID
 import javax.inject.Inject
 
 @HiltViewModel
 class OrderViewModel @Inject constructor(
     private val getOrderedItemListUseCase: GetOrderedItemListUseCase,
+    private val updateOrderedItemUseCase: UpdateOrderedItemUseCase,
 ) : ViewModel() {
-    val orderedItemList: MutableList<OrderedItemEntity> = mutableListOf()
+    var orderedItemList: List<OrderedItemEntity> = mutableListOf()
 
 
     private val _eventFlow = MutableEventFlow<Event>()
@@ -28,6 +32,14 @@ class OrderViewModel @Inject constructor(
         }.onFailure {
             Log.e("주문된 아이템 가져오기 실패", "실패 $it")
         }
+    }
+
+    fun updateOrderedItem() = viewModelScope.launch {
+        val orderId = orderedItemList.sumBy { it.id.hashCode() }
+        val totalCount = orderedItemList.sumBy { it.count }
+        val orderIdAsUUID = UUID.fromString(orderId.toString())
+        val updateOrderedParam = UpdateOrderedParam(orderIdAsUUID, totalCount)
+        updateOrderedItemUseCase(updateOrderedParam)
     }
 
     private fun event(event: Event) = viewModelScope.launch {

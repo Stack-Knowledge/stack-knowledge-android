@@ -38,7 +38,7 @@ class ShopFragment : BaseFragment<FragmentShopBinding>(R.layout.fragment_shop) {
         itemListAdapter = ItemListAdapter { isChecked, itemEntity ->
             if (isChecked) {
                 selectedItemList.add(itemEntity)
-            } else if (!isChecked){
+            } else if (!isChecked) {
                 selectedItemList.remove(itemEntity)
             }
             binding.btnSelect.isVisible = selectedItemList.isNotEmpty()

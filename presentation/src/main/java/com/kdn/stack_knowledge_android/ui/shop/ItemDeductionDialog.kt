@@ -33,6 +33,7 @@ class ItemDeductionDialog(
         dialog?.window?.requestFeature(Window.FEATURE_NO_TITLE)
 
         binding.btnCheck.setOnClickListener {
+            orderViewModel.updateOrderedItem()
             dialog?.dismiss()
             binding.btnCheck.setBackgroundColor(resources.getColor(R.color.main))
         }
