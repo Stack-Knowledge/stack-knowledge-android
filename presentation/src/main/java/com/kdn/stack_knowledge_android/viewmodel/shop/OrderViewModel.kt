@@ -35,8 +35,8 @@ class OrderViewModel @Inject constructor(
     }
 
     fun updateOrderedItem() = viewModelScope.launch {
-        val orderId = orderedItemList.sumBy { it.id.hashCode() }
-        val totalCount = orderedItemList.sumBy { it.count }
+        val orderId = orderedItemList.sumOf { it.id.hashCode() }
+        val totalCount = orderedItemList.sumOf { it.count }
         val orderIdAsUUID = UUID.fromString(orderId.toString())
         val updateOrderedParam = UpdateOrderedParam(orderIdAsUUID, totalCount)
         updateOrderedItemUseCase(updateOrderedParam)
