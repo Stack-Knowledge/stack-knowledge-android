@@ -9,7 +9,7 @@ data class UpdateOrderedRequest(
     @SerializedName("orderId")
     val orderId: UUID,
     @SerializedName("count")
-    val count: Int,
+    val count: Int = 1,
 )
 
 fun UpdateOrderedParam.toRequest() = UpdateOrderedRequest(

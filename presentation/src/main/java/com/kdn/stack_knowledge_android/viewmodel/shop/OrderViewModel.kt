@@ -19,7 +19,7 @@ class OrderViewModel @Inject constructor(
     private val getOrderedItemListUseCase: GetOrderedItemListUseCase,
     private val updateOrderedItemUseCase: UpdateOrderedItemUseCase,
 ) : ViewModel() {
-    var orderedItemList: List<OrderedItemEntity> = mutableListOf()
+    var orderedItem: OrderedItemEntity? = null
 
 
     private val _eventFlow = MutableEventFlow<Event>()
@@ -35,11 +35,9 @@ class OrderViewModel @Inject constructor(
     }
 
     fun updateOrderedItem() = viewModelScope.launch {
-        val orderId = orderedItemList.sumOf { it.id.hashCode() }
-        val totalCount = orderedItemList.sumOf { it.count }
-        val orderIdAsUUID = UUID.fromString(orderId.toString())
-        val updateOrderedParam = UpdateOrderedParam(orderIdAsUUID, totalCount)
-        updateOrderedItemUseCase(updateOrderedParam)
+        orderedItem?.let {
+            updateOrderedItemUseCase(UpdateOrderedParam(it.id))
+        }
     }
 
     private fun event(event: Event) = viewModelScope.launch {

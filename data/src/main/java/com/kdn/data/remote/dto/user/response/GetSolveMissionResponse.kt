@@ -1,6 +1,7 @@
 package com.kdn.data.remote.dto.user.response
 
 import com.google.gson.annotations.SerializedName
+import com.kdn.domain.entity.user.GetSolveMissionEntity
 import java.util.UUID
 
 data class GetSolveMissionResponse(
@@ -26,3 +27,16 @@ data class GetSolveMissionResponse(
         val profileImage: String?,
     )
 }
+
+fun GetSolveMissionResponse.toEntity() = GetSolveMissionEntity(
+    solveId = solveId,
+    solveStatus = solveStatus,
+    title = title,
+    point = point,
+    user = GetSolveMissionEntity.User(
+        id = user.id,
+        email = user.email,
+        name = user.name,
+        profileImage = user.profileImage,
+    )
+)

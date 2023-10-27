@@ -22,7 +22,6 @@ class TeacherShopFragment :
     private lateinit var itemDeductionDialog: ItemDeductionDialog
     private lateinit var orderedItemListAdapter: OrderedItemListAdapter
     private val orderViewModel by activityViewModels<OrderViewModel>()
-    private var orderedItemList = mutableListOf<OrderedItemEntity>()
 
 
     override fun createView() {
@@ -42,8 +41,7 @@ class TeacherShopFragment :
         orderedItemListAdapter.setOnItemClickListener(object :
             OrderedItemListAdapter.OnItemClickListener {
             override fun onItemClick(item: OrderedItemEntity) {
-                orderedItemList.add(item)
-                orderViewModel.orderedItemList = orderedItemList
+                orderViewModel.orderedItem = item
                 val itemId: UUID = item.item.id
                 val count: Int = item.count
                 val action =
@@ -68,11 +66,7 @@ class TeacherShopFragment :
     }
 
     private fun initItemDeductionDialog() {
-        val args: TeacherShopFragmentArgs by navArgs()
-        val itemId = args.orderId
-        val parsedOrder = UUID.fromString(itemId)
-        val count = args.count
-        itemDeductionDialog = ItemDeductionDialog(itemId = parsedOrder, count)
+        itemDeductionDialog = ItemDeductionDialog()
         itemDeductionDialog.show(
             requireActivity().supportFragmentManager,
             "ItemDialogDeduction"

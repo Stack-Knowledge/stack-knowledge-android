@@ -11,9 +11,7 @@ import java.util.UUID
 
 interface UserAPI {
     @GET("/user/scoring")
-    suspend fun getSolvedMission(
-        @Path("page") page: Int,
-    ): GetSolveMissionResponse
+    suspend fun getSolvedMission(): List<GetSolveMissionResponse>
 
     @GET("/user/scoring/{solveId}")
     suspend fun getDetailSolveMission(

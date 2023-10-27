@@ -4,5 +4,5 @@ import java.util.UUID
 
 data class UpdateOrderedParam (
     val orderId: UUID,
-    val count: Int,
+    val count: Int = 1,
 )

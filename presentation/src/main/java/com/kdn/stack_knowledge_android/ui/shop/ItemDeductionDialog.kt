@@ -16,10 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import java.util.UUID
 
 @AndroidEntryPoint
-class ItemDeductionDialog(
-    private val itemId: UUID,
-    private val count: Int,
-) : DialogFragment() {
+class ItemDeductionDialog: DialogFragment() {
     private lateinit var binding: DialogItemDeductionBinding
     private val orderViewModel by activityViewModels<OrderViewModel>()
 
