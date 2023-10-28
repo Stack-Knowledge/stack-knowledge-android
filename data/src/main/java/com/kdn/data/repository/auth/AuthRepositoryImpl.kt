@@ -43,4 +43,8 @@ class AuthRepositoryImpl @Inject constructor(
             }
         }
     }
+
+    override suspend fun getRoleInfo(): Flow<String> {
+        TODO("Not yet implemented")
+    }
 }

@@ -33,4 +33,16 @@ class LocalAuthDataSourceImpl @Inject constructor(
     override suspend fun setExpiredAt(expiredAt: String) =
         authPreferences.setExpiredAt(expiredAt = expiredAt)
 
+    override suspend fun getRoleInfo(): Flow<String> {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun setRoleInfo(role: String) {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun removeRoleInfo() {
+        TODO("Not yet implemented")
+    }
+
 }

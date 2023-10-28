@@ -5,11 +5,15 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kdn.domain.entity.mission.DetailMissionEntity
 import com.kdn.domain.entity.mission.MissionEntity
+import com.kdn.domain.entity.user.DetailSolveMissionEntity
+import com.kdn.domain.entity.user.GetSolveMissionEntity
 import com.kdn.domain.param.mission.CreateMissionParam
 import com.kdn.domain.param.user.ScoreParam
 import com.kdn.domain.usecase.mission.CreateMissionUseCase
 import com.kdn.domain.usecase.mission.GetDetailMissionUseCase
+import com.kdn.domain.usecase.mission.GetDetailSolvedMissionUseCase
 import com.kdn.domain.usecase.mission.GetMissionListUseCase
+import com.kdn.domain.usecase.mission.GetSolvedMissionListUseCase
 import com.kdn.domain.usecase.mission.ScoreSolveMissionUseCase
 import com.kdn.stack_knowledge_android.utils.MutableEventFlow
 import com.kdn.stack_knowledge_android.utils.asEventFlow
@@ -24,6 +28,8 @@ class MissionViewModel @Inject constructor(
     private val getDetailMissionUseCase: GetDetailMissionUseCase,
     private val createMissionUseCase: CreateMissionUseCase,
     private val scoreSolveMissionUseCase: ScoreSolveMissionUseCase,
+    private val getSolvedMissionListUseCase: GetSolvedMissionListUseCase,
+    private val getDetailSolvedMissionUseCase: GetDetailSolvedMissionUseCase,
 ) : ViewModel() {
 
     private val _eventFlow = MutableEventFlow<Event>()
@@ -47,6 +53,23 @@ class MissionViewModel @Inject constructor(
         }
     }
 
+    fun getSolvedMissionList() = viewModelScope.launch {
+        getSolvedMissionListUseCase().onSuccess {
+            event(Event.SolvedMission(it))
+        }.onFailure {
+            Log.e("푼 미션 가져오기 실패", "실패 $it")
+        }
+    }
+
+    fun getDetailSolvedMission(solveId: UUID) = viewModelScope.launch {
+        getDetailSolvedMissionUseCase(
+            solveId = solveId
+        ).onSuccess {
+            event(Event.DetailSolvedMission(it, solveId = solveId))
+        }.onFailure {
+            Log.e("푼 미션 상세보기 가져오기 실패", "실패 $it")
+        }
+    }
     fun createMission(title: String, content: String, timeLimit: Int) = viewModelScope.launch {
         val createMissionParam = CreateMissionParam(
             title, content, timeLimit,
@@ -77,5 +100,7 @@ class MissionViewModel @Inject constructor(
         data class DetailMission(val detailMission: DetailMissionEntity, val missionId: UUID) : Event()
         data class CreateMission(val createMission: CreateMissionParam) : Event()
         data class ScoreSolveMission(val scoreSolveMission: ScoreParam, val solveId: UUID) : Event()
+        data class SolvedMission(val solvedMissionList: List<GetSolveMissionEntity>) : Event()
+        data class DetailSolvedMission(val detailSolvedMission: DetailSolveMissionEntity, val solveId: UUID) : Event()
     }
 }
