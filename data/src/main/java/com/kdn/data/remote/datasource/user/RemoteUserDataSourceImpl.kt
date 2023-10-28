@@ -1,6 +1,7 @@
 package com.kdn.data.remote.datasource.user
 
 import com.kdn.data.remote.api.user.UserAPI
+import com.kdn.data.remote.dto.user.request.ScoreRequest
 import com.kdn.data.remote.dto.user.response.DetailSolveMissionResponse
 import com.kdn.data.remote.dto.user.response.GetSolveMissionResponse
 import com.kdn.data.utils.StackApiHandler
@@ -25,7 +26,11 @@ class RemoteUserDataSourceImpl @Inject constructor(
             .sendRequest()
     }
 
-    override suspend fun scoreSolveMission() {
-        TODO("Not yet implemented")
+    override suspend fun scoreSolveMission(solveId: UUID, scoreRequest: ScoreRequest) {
+        return StackApiHandler<Unit>()
+            .httpRequest { service.scoreSolveMission(solveId, scoreRequest) }
+            .sendRequest()
     }
+
+
 }

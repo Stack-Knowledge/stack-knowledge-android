@@ -4,6 +4,7 @@ import com.kdn.data.remote.datasource.user.RemoteUserDataSource
 import com.kdn.data.remote.dto.user.response.toEntity
 import com.kdn.domain.entity.user.DetailSolveMissionEntity
 import com.kdn.domain.entity.user.GetSolveMissionEntity
+import com.kdn.domain.param.user.ScoreParam
 import com.kdn.domain.repository.user.UserRepository
 import java.util.UUID
 import javax.inject.Inject
@@ -17,7 +18,8 @@ class UserRepositoryImpl @Inject constructor(
     override suspend fun getDetailSolveMission(solveId: UUID): DetailSolveMissionEntity =
         remoteDataSource.getDetailSolveMission(solveId).toEntity()
 
-    override suspend fun scoreSolveMission() {
+    override suspend fun scoreSolveMission(solveId: UUID, scoreParam: ScoreParam) {
         TODO("Not yet implemented")
     }
+
 }
