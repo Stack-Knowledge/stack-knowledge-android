@@ -5,8 +5,6 @@ import com.kdn.data.remote.dto.user.request.ScoreRequest
 import com.kdn.data.remote.dto.user.response.DetailSolveMissionResponse
 import com.kdn.data.remote.dto.user.response.GetSolveMissionResponse
 import com.kdn.data.utils.StackApiHandler
-import com.kdn.domain.entity.user.DetailSolveMissionEntity
-import com.kdn.domain.entity.user.GetSolveMissionEntity
 import java.util.UUID
 import javax.inject.Inject
 
