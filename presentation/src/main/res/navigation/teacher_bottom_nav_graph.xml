@@ -48,4 +48,29 @@
             android:id="@+id/action_teacherShopFragment_to_itemDeductionDialog"
             app:destination="@id/itemDeductionDialog" />
     </fragment>
+
+
+    <fragment
+        android:id="@+id/teacherMissionFragment"
+        android:name="com.kdn.stack_knowledge_android.ui.mission.TeacherMissionFragment"
+        android:label="TeacherMissionFragment" >
+        <action
+            android:id="@+id/action_teacherMissionFragment_to_scoringFragment"
+            app:destination="@id/scoringFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scoringFragment"
+        android:name="com.kdn.stack_knowledge_android.ui.mission.ScoringFragment"
+        android:label="ScoringFragment" >
+        <argument
+            android:name="solveId"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="solvation"
+            app:argType="string" />
+    </fragment>
 </navigation>

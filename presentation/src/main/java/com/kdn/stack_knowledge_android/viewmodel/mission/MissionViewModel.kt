@@ -70,6 +70,7 @@ class MissionViewModel @Inject constructor(
             Log.e("푼 미션 상세보기 가져오기 실패", "실패 $it")
         }
     }
+
     fun createMission(title: String, content: String, timeLimit: Int) = viewModelScope.launch {
         val createMissionParam = CreateMissionParam(
             title, content, timeLimit,
