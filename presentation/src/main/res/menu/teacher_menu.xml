@@ -6,16 +6,17 @@
         android:title="홈" />
 
     <item
-        android:id="@+id/missionFragment"
+        android:id="@+id/teacherMissionFragment"
         android:icon="@drawable/ic_action_mission"
-        android:title="문제" />
+        android:title="채점" />
 
     <item
+        android:id="@+id/createMissionFragment"
         android:icon="@drawable/ic_create"
         android:title="만들기" />
 
     <item
-        android:id="@+id/shopFragment"
+        android:id="@+id/teacherShopFragment"
         android:icon="@drawable/ic_action_shop"
         android:title="상점" />
 

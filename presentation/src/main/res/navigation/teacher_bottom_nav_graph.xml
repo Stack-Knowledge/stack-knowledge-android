@@ -7,7 +7,23 @@
     <fragment
         android:id="@+id/createMissionFragment"
         android:name="com.kdn.stack_knowledge_android.ui.mission.CreateMissionFragment"
-        android:label="CreateMissionFragment" />
+        android:label="CreateMissionFragment">
+        <argument
+            android:name="title"
+            app:argType="string" />
+
+        <argument
+            android:name="content"
+            app:argType="string" />
+
+        <argument
+            android:name="timeLimit"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_createMissionFragment_to_createMissionDialog"
+            app:destination="@id/createMissionDialog" />
+    </fragment>
 
     <fragment
         android:id="@+id/mainFragment"
@@ -21,20 +37,21 @@
     <fragment
         android:id="@+id/itemDeductionDialog"
         android:name="com.kdn.stack_knowledge_android.ui.shop.ItemDeductionDialog"
-        android:label="ItemDeductionDialog" >
-    <argument
-        android:name="count"
-        app:argType="integer" />
+        android:label="ItemDeductionDialog">
 
-    <argument
-        android:name="orderId"
-        app:argType="string" />
+        <argument
+            android:name="count"
+            app:argType="integer" />
+
+        <argument
+            android:name="orderId"
+            app:argType="string" />
     </fragment>
 
     <fragment
         android:id="@+id/teacherShopFragment"
         android:name="com.kdn.stack_knowledge_android.ui.shop.TeacherShopFragment"
-        android:label="TeacherShopFragment" >
+        android:label="TeacherShopFragment">
 
         <argument
             android:name="count"
@@ -53,7 +70,8 @@
     <fragment
         android:id="@+id/teacherMissionFragment"
         android:name="com.kdn.stack_knowledge_android.ui.mission.TeacherMissionFragment"
-        android:label="TeacherMissionFragment" >
+        android:label="TeacherMissionFragment">
+
         <action
             android:id="@+id/action_teacherMissionFragment_to_scoringFragment"
             app:destination="@id/scoringFragment" />
@@ -62,7 +80,7 @@
     <fragment
         android:id="@+id/scoringFragment"
         android:name="com.kdn.stack_knowledge_android.ui.mission.ScoringFragment"
-        android:label="ScoringFragment" >
+        android:label="ScoringFragment">
         <argument
             android:name="solveId"
             app:argType="string" />
@@ -73,4 +91,9 @@
             android:name="solvation"
             app:argType="string" />
     </fragment>
+
+    <fragment
+        android:id="@+id/createMissionDialog"
+        android:name="com.kdn.stack_knowledge_android.ui.mission.CreateMissionDialog"
+        android:label="CreateMissionDialog" />
 </navigation>
