@@ -9,6 +9,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class CreateMissionFragment : BaseFragment<FragmentCreateMissionBinding>(R.layout.fragment_create_mission) {
+    private lateinit var createMissionDialog: CreateMissionDialog
     private val missionViewModel by activityViewModels<MissionViewModel>()
 
     override fun createView() {
@@ -17,5 +18,9 @@ class CreateMissionFragment : BaseFragment<FragmentCreateMissionBinding>(R.layou
 
     override fun observeEvent() {
         TODO("Not yet implemented")
+    }
+
+    private fun createMission() {
+
     }
 }

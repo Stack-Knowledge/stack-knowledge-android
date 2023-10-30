@@ -91,17 +91,22 @@ class MissionViewModel @Inject constructor(
         }
     }
 
-
     private fun event(event: Event) = viewModelScope.launch {
         _eventFlow.emit(event)
     }
 
     sealed class Event {
         data class Mission(val missionList: List<MissionEntity>) : Event()
-        data class DetailMission(val detailMission: DetailMissionEntity, val missionId: UUID) : Event()
+        data class DetailMission(
+            val detailMission: DetailMissionEntity,
+            val missionId: UUID
+        ) : Event()
         data class CreateMission(val createMission: CreateMissionParam) : Event()
         data class ScoreSolveMission(val scoreSolveMission: ScoreParam, val solveId: UUID) : Event()
         data class SolvedMission(val solvedMissionList: List<GetSolveMissionEntity>) : Event()
-        data class DetailSolvedMission(val detailSolvedMission: DetailSolveMissionEntity, val solveId: UUID) : Event()
+        data class DetailSolvedMission(
+            val detailSolvedMission: DetailSolveMissionEntity,
+            val solveId: UUID,
+        ) : Event()
     }
 }
