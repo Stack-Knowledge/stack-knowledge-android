@@ -7,6 +7,6 @@ class GetRoleInfoUseCase @Inject constructor(
     private val authRepository: AuthRepository,
 ) {
     suspend operator fun invoke() = kotlin.runCatching {
-
+        authRepository.getRoleInfo()
     }
 }

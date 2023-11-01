@@ -14,6 +14,7 @@ import com.kdn.stack_knowledge_android.viewmodel.auth.AuthViewModel
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.ActivityLoginBinding
 import com.kdn.stack_knowledge_android.ui.main.StudentActivity
+import com.kdn.stack_knowledge_android.ui.main.TeacherActivity
 import com.kdn.stack_knowledge_android.utils.error.Event
 import com.msg.gauthsignin.GAuthSigninWebView
 import com.msg.gauthsignin.component.GAuthButton
@@ -28,8 +29,18 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
 
     override fun createView() {
         binding.login = this
+        authViewModel.getRoleInfo()
         setGAuthButtonComponent()
         setGAuthWebViewComponent()
+        if (authViewModel.getAuthorityResponse.value?.toString() == "ROLE_STUDENT") {
+            val intent = Intent(this, StudentActivity::class.java)
+            startActivity(intent)
+            finish()
+        } else if (authViewModel.getAuthorityResponse.value?.toString() == "ROLE_TEACHER") {
+            val intent = Intent(this, TeacherActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     override fun observeEvent() {

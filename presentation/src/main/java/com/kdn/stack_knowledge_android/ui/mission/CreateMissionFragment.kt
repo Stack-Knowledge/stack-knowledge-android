@@ -18,7 +18,6 @@ class CreateMissionFragment : BaseFragment<FragmentCreateMissionBinding>(R.layou
     }
 
     override fun observeEvent() {
-        TODO("Not yet implemented")
     }
 
     private fun createMission() {

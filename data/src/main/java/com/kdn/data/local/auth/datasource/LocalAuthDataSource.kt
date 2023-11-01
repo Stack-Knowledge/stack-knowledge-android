@@ -11,7 +11,6 @@ interface LocalAuthDataSource {
     suspend fun setRefreshToken(refreshToken: String)
     suspend fun getExpiredAt(): LocalDateTime?
     suspend fun setExpiredAt(expiredAt: String)
-    suspend fun getRoleInfo(): Flow<String>
+    suspend fun getRoleInfo(): String?
     suspend fun setRoleInfo(role: String)
-    suspend fun removeRoleInfo()
 }

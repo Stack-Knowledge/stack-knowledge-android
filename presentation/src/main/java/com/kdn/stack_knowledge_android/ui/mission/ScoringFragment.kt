@@ -2,7 +2,6 @@ package com.kdn.stack_knowledge_android.ui.mission
 
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.navArgs
-import com.kdn.domain.entity.user.GetSolveMissionEntity
 import com.kdn.domain.param.user.ScoreParam
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.FragmentScoringBinding
