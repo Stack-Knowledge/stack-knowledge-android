@@ -33,10 +33,7 @@ class AuthViewModel @Inject constructor(
     private val _saveTokenRequest = MutableLiveData<Event<Nothing>>()
     val saveTokenRequest: LiveData<Event<Nothing>> get() = _saveTokenRequest
 
-    private val _saveAuthorityResponse = MutableStateFlow<Event<Unit>>(Event.Loading)
-    val saveAuthorityResponse = _saveAuthorityResponse.asStateFlow()
-
-    private val _getAuthorityResponse = MutableStateFlow<Event<String>>(Event.Loading)
+    private val _getAuthorityResponse = MutableStateFlow<String>("")
     val getAuthorityResponse = _getAuthorityResponse.asStateFlow()
 
     fun gAuthLogin(code: String) = viewModelScope.launch {
@@ -46,6 +43,7 @@ class AuthViewModel @Inject constructor(
             it.catch { remoteError ->
                 _gAuthLoginRequest.value = remoteError.errorHandling(unknownAction = {})
             }.collect { response ->
+                _getAuthorityResponse.emit(response.authority)
                 _gAuthLoginRequest.value = Event.Success(data = response)
             }
         }.onFailure {
@@ -68,13 +66,12 @@ class AuthViewModel @Inject constructor(
     fun getRoleInfo() = viewModelScope.launch {
         getRoleInfoUseCase()
             .onSuccess {
-                it.catch { remoteError ->
-                    _getAuthorityResponse.value = remoteError.errorHandling(unknownAction = {})
-                }.collect { response ->
-                    _getAuthorityResponse.value = Event.Success(data = response)
+                it.collect { response ->
+                    _getAuthorityResponse.emit(response)
                 }
             }.onFailure { error ->
-                _getAuthorityResponse.value = error.errorHandling(unknownAction = {})
+                Log.e("error", error.toString())
+                _getAuthorityResponse.value
             }
     }
 }

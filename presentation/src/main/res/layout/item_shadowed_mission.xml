@@ -6,6 +6,7 @@
 
     </data>
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mission_item_layout"
         android:layout_width="116dp"
@@ -61,7 +62,6 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_mileage" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

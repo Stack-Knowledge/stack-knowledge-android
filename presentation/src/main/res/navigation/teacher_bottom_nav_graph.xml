@@ -53,14 +53,6 @@
         android:name="com.kdn.stack_knowledge_android.ui.shop.TeacherShopFragment"
         android:label="TeacherShopFragment">
 
-        <argument
-            android:name="count"
-            app:argType="integer" />
-
-        <argument
-            android:name="orderId"
-            app:argType="string" />
-
         <action
             android:id="@+id/action_teacherShopFragment_to_itemDeductionDialog"
             app:destination="@id/itemDeductionDialog" />

@@ -30,6 +30,9 @@
         <activity
             android:name=".ui.main.StudentActivity"
             android:exported="true" />
+
+        <activity android:name=".ui.main.TeacherActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
