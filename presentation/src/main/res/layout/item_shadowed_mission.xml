@@ -11,6 +11,7 @@
         android:id="@+id/mission_item_layout"
         android:layout_width="116dp"
         android:layout_height="158dp"
+        android:elevation="1dp"
         android:background="@drawable/bg_main_recycler_view_item">
 
         <TextView

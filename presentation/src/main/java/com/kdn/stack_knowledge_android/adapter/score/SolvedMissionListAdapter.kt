@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.kdn.domain.entity.user.GetSolveMissionEntity
-import com.kdn.stack_knowledge_android.databinding.ItemMissionBinding
+import com.kdn.stack_knowledge_android.databinding.ItemShadowedMissionBinding
 
 class SolvedMissionListAdapter :
     ListAdapter<GetSolveMissionEntity, SolvedMissionListAdapter.SolvedMissionListViewHolder>(diffUtil) {
@@ -15,7 +15,7 @@ class SolvedMissionListAdapter :
 
     inner class SolvedMissionListViewHolder(
         val context: Context,
-        private val binding: ItemMissionBinding,
+        private val binding: ItemShadowedMissionBinding,
         private val listener: OnItemClickListener,
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: GetSolveMissionEntity) = binding.apply {
@@ -39,7 +39,7 @@ class SolvedMissionListAdapter :
     ): SolvedMissionListViewHolder =
         SolvedMissionListViewHolder(
             parent.context,
-            ItemMissionBinding.inflate(
+            ItemShadowedMissionBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
