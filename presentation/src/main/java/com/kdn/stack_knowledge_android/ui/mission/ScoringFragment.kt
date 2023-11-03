@@ -15,9 +15,9 @@ class ScoringFragment : BaseFragment<FragmentScoringBinding>(R.layout.fragment_s
     private lateinit var finishGradingDialog: FinishGradingDialog
     private val missionViewModel by activityViewModels<MissionViewModel>()
     private var scoreStatusList = mutableListOf<ScoreParam>()
-   override fun createView() {
-       setSolvedMission()
-       scoreSolvedMission()
+    override fun createView() {
+        setSolvedMission()
+        scoreSolvedMission()
     }
 
     override fun observeEvent() {
@@ -45,11 +45,11 @@ class ScoringFragment : BaseFragment<FragmentScoringBinding>(R.layout.fragment_s
         )
     }
 
-   private fun setSolvedMission() {
-       val args: ScoringFragmentArgs by navArgs()
-       val title = args.title
-       val solvation = args.solvation
-       binding.tvAnswer.text = solvation
-       binding.tvTitle.text = title
-   }
+    private fun setSolvedMission() {
+        val args: ScoringFragmentArgs by navArgs()
+        val title = args.title
+        val solvation = args.solvation
+        binding.tvAnswer.text = solvation
+        binding.tvTitle.text = title
+    }
 }

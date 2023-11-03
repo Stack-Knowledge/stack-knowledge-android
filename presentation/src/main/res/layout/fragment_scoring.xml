@@ -11,6 +11,21 @@
         android:layout_height="match_parent"
         android:background="@color/white">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_radio_group_s"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6444" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_radio_group_e"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9556" />
+
         <TextView
             android:id="@+id/tv_question"
             android:layout_width="wrap_content"
@@ -69,54 +84,49 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_answer" />
 
-        <RadioButton
-            android:id="@+id/rbtn_correct"
+        <RadioGroup
+            android:id="@+id/rg_radio_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/radiobutton_selector"
-            android:layout_marginStart="6dp"
             android:layout_marginTop="8dp"
-            android:buttonTint="@color/gray"
-            app:layout_constraintStart_toEndOf="@id/tv_correct"
-            app:layout_constraintTop_toBottomOf="@id/tv_student_answer" />
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/g_radio_group_e"
+            app:layout_constraintStart_toStartOf="@id/g_radio_group_s"
+            app:layout_constraintTop_toBottomOf="@id/tv_student_answer">
 
-        <TextView
-            android:id="@+id/tv_correct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="232dp"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/pretendard_semibold"
-            android:text="정답"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_student_answer" />
+            <RadioButton
+                android:id="@+id/rbtn_correct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="8dp"
+                android:buttonTint="@color/gray"
+                android:fontFamily="@font/pretendard_semibold"
+                android:layoutDirection="rtl"
+                android:text="정답"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_student_answer" />
+
+            <RadioButton
+                android:id="@+id/rbtn_incorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="8dp"
+                android:buttonTint="@color/gray"
+                android:fontFamily="@font/pretendard_semibold"
+                android:layoutDirection="rtl"
+                android:text="오답"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_student_answer" />
 
 
-        <TextView
-            android:id="@+id/tv_incorrect"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/pretendard_semibold"
-            android:text="오답"
-            android:textColor="@color/black"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="12dp"
-            android:textSize="16sp"
-            app:layout_constraintTop_toBottomOf="@id/tv_student_answer"
-            app:layout_constraintStart_toEndOf="@id/rbtn_correct"
-            />
+        </RadioGroup>
 
-        <RadioButton
-            android:id="@+id/rbtn_incorrect"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="8dp"
-            android:buttonTint="@color/gray"
-            app:layout_constraintStart_toEndOf="@id/tv_incorrect"
-            app:layout_constraintTop_toBottomOf="@id/tv_student_answer" />
 
         <Button
             android:id="@+id/btn_submit"
