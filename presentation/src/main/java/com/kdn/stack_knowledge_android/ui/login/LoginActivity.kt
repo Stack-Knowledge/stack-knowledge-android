@@ -39,7 +39,6 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
     private fun checkRole() = lifecycleScope.launch {
         Log.e("checkRole 함수 실행", "롤 함수 실해 ㅇ성공")
         authViewModel.getAuthorityResponse.collect { response ->
-            print(response)
             if (response == "ROLE_STUDENT") {
                 val intent = Intent(this@LoginActivity, StudentActivity::class.java)
                 startActivity(intent)

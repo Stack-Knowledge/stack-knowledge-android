@@ -6,11 +6,52 @@
 
     </data>
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/ranking_item_layout"
-        android:layout_width="116dp"
-        android:layout_height="158dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/bg_main_recycler_view_item">
+
+        <TextView
+            android:id="@+id/tv_first_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_first_rank"
+            android:text="1"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginBottom="137dp"
+            android:layout_marginEnd="95dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_second_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_second_rank"
+            android:text="2"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginBottom="137dp"
+            android:layout_marginEnd="95dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_third_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_third_rank"
+            android:text="3"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginBottom="137dp"
+            android:layout_marginEnd="95dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <ImageView
             android:id="@+id/iv_profile"
@@ -43,9 +84,9 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/pretendard_medium"
+            android:text="1000"
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:text="1000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_student_name" />

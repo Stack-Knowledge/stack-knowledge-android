@@ -3,6 +3,7 @@ package com.kdn.stack_knowledge_android.adapter.main
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -19,6 +20,26 @@ class MainPageRankingListAdapter :
         private val binding: ItemRankingBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(ranking: Int, item: RankingEntity) = binding.apply {
+            when (ranking) {
+                1 -> {
+                    binding.tvSecondRank.isVisible = false
+                    binding.tvThirdRank.isVisible = false
+
+                }
+                2 -> {
+                    binding.tvFirstRank.isVisible = false
+                    binding.tvThirdRank.isVisible = false
+                }
+                3 -> {
+                    binding.tvFirstRank.isVisible = false
+                    binding.tvSecondRank.isVisible = false
+                }
+                else -> {
+                    binding.tvFirstRank.isVisible = false
+                    binding.tvSecondRank.isVisible = false
+                    binding.tvThirdRank.isVisible = false
+                }
+            }
             Glide.with(ivProfile).load(item.user.profileImage ?: R.drawable.ic_default_profile)
             tvStudentName.text = item.user.name
             tvMileage.text = item.cumulatePoint.toString()

@@ -16,6 +16,7 @@ import com.kdn.stack_knowledge_android.utils.repeatOnStart
 import com.kdn.stack_knowledge_android.viewmodel.mission.MissionViewModel
 import com.kdn.stack_knowledge_android.viewmodel.ranking.RankingViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collect
 import java.util.UUID
 
 @AndroidEntryPoint
