@@ -2,6 +2,7 @@ package com.kdn.stack_knowledge_android.adapter.main
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
@@ -21,24 +22,11 @@ class MainPageRankingListAdapter :
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(ranking: Int, item: RankingEntity) = binding.apply {
             when (ranking) {
-                1 -> {
-                    binding.tvSecondRank.isVisible = false
-                    binding.tvThirdRank.isVisible = false
+                1 -> binding.tvFirstRank.visibility = View.VISIBLE
 
-                }
-                2 -> {
-                    binding.tvFirstRank.isVisible = false
-                    binding.tvThirdRank.isVisible = false
-                }
-                3 -> {
-                    binding.tvFirstRank.isVisible = false
-                    binding.tvSecondRank.isVisible = false
-                }
-                else -> {
-                    binding.tvFirstRank.isVisible = false
-                    binding.tvSecondRank.isVisible = false
-                    binding.tvThirdRank.isVisible = false
-                }
+                2 -> binding.tvSecondRank.visibility = View.VISIBLE
+
+                3 -> binding.tvThirdRank.visibility = View.VISIBLE
             }
             Glide.with(ivProfile).load(item.user.profileImage ?: R.drawable.ic_default_profile)
             tvStudentName.text = item.user.name
@@ -48,7 +36,7 @@ class MainPageRankingListAdapter :
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        viewType: Int
+        viewType: Int,
     ): RankingListViewHolder =
         RankingListViewHolder(
             parent.context,
@@ -61,7 +49,7 @@ class MainPageRankingListAdapter :
 
 
     override fun onBindViewHolder(holder: RankingListViewHolder, position: Int) {
-        holder.bind(position+1, getItem(position))
+        holder.bind(position + 1, getItem(position))
     }
 
     companion object {

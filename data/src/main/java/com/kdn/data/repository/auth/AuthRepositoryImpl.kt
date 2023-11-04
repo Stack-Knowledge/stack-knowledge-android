@@ -37,7 +37,7 @@ class AuthRepositoryImpl @Inject constructor(
     }
 
     override suspend fun provideRefreshToken(refreshToken: String): Flow<RefreshTokenResponseModel> {
-        return flow{
+        return flow {
             remoteDataSource.refreshToken(refreshToken).collect {
                 emit(it.toRefreshModel())
             }

@@ -21,7 +21,7 @@ import kotlin.concurrent.timer
 class TimeOutDialog(
     private val missionId: UUID,
     private val answer: String,
-) : DialogFragment(){
+) : DialogFragment() {
     private val closeTime = 3
     private var second = closeTime % 60
     private lateinit var binding: DialogTimeOutBinding
@@ -31,7 +31,7 @@ class TimeOutDialog(
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         binding = DialogTimeOutBinding.inflate(layoutInflater)
         binding.lifecycleOwner = this

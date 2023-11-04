@@ -12,7 +12,7 @@ import java.util.UUID
 import javax.inject.Inject
 
 class MissionRepositoryImpl @Inject constructor(
-    private val remoteDataSource: RemoteMissionDataSource
+    private val remoteDataSource: RemoteMissionDataSource,
 ) : MissionRepository {
     override suspend fun getMissionList(): List<MissionEntity> =
         remoteDataSource.getMissionList().map { it.toEntity() }

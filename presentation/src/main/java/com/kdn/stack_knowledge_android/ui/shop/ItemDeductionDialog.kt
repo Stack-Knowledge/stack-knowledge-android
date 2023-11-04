@@ -16,14 +16,14 @@ import dagger.hilt.android.AndroidEntryPoint
 import java.util.UUID
 
 @AndroidEntryPoint
-class ItemDeductionDialog: DialogFragment() {
+class ItemDeductionDialog : DialogFragment() {
     private lateinit var binding: DialogItemDeductionBinding
     private val orderViewModel by activityViewModels<OrderViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         binding = DialogItemDeductionBinding.inflate(layoutInflater)
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))

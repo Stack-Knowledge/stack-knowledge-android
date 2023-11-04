@@ -6,7 +6,8 @@ import com.kdn.stack_knowledge_android.ui.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class CreateMissionFragment : BaseFragment<FragmentCreateMissionBinding>(R.layout.fragment_create_mission) {
+class CreateMissionFragment :
+    BaseFragment<FragmentCreateMissionBinding>(R.layout.fragment_create_mission) {
     private lateinit var createMissionDialog: CreateMissionDialog
 
     override fun createView() {

@@ -15,7 +15,8 @@ import dagger.hilt.android.AndroidEntryPoint
 import java.util.UUID
 
 @AndroidEntryPoint
-class TeacherMissionFragment : BaseFragment<FragmentTeacherMissionBinding>(R.layout.fragment_teacher_mission) {
+class TeacherMissionFragment :
+    BaseFragment<FragmentTeacherMissionBinding>(R.layout.fragment_teacher_mission) {
     private val missionViewModel by activityViewModels<MissionViewModel>()
     private lateinit var solvedMissionListAdapter: SolvedMissionListAdapter
 
@@ -27,7 +28,7 @@ class TeacherMissionFragment : BaseFragment<FragmentTeacherMissionBinding>(R.lay
 
     override fun observeEvent() {
         repeatOnStart {
-            missionViewModel.eventFlow.collect { event -> observeMissionData(event)}
+            missionViewModel.eventFlow.collect { event -> observeMissionData(event) }
         }
     }
 
@@ -45,7 +46,7 @@ class TeacherMissionFragment : BaseFragment<FragmentTeacherMissionBinding>(R.lay
         binding.rvSolvedMission.addItemDecoration(VerticalItemDecorator(16))
     }
 
-    private fun observeMissionData(event: MissionViewModel.Event) = when (event){
+    private fun observeMissionData(event: MissionViewModel.Event) = when (event) {
         is MissionViewModel.Event.SolvedMission -> {
             solvedMissionListAdapter.submitList(event.solvedMissionList)
         }
@@ -56,10 +57,15 @@ class TeacherMissionFragment : BaseFragment<FragmentTeacherMissionBinding>(R.lay
             val title: String = event.detailSolvedMission.title
             val action =
                 TeacherMissionFragmentDirections
-                    .actionTeacherMissionFragmentToScoringFragment(solveId.toString(), title, solvation)
+                    .actionTeacherMissionFragmentToScoringFragment(
+                        solveId.toString(),
+                        title,
+                        solvation
+                    )
             findNavController()
                 .navigate(action)
         }
+
         else -> {}
     }
 }

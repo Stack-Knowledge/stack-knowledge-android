@@ -15,7 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class OrderDialog(
-    private val bottomSheetShow: () -> Unit
+    private val bottomSheetShow: () -> Unit,
 ) : DialogFragment() {
     private lateinit var binding: DialogBuyBinding
     private val buyViewModel by activityViewModels<BuyViewModel>()
@@ -23,7 +23,7 @@ class OrderDialog(
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         binding = DialogBuyBinding.inflate(layoutInflater)
         binding.lifecycleOwner = this

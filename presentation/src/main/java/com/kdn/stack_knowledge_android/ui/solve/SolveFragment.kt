@@ -103,6 +103,7 @@ class SolveFragment : BaseFragment<FragmentSolveBinding>(R.layout.fragment_solve
             requireActivity().findNavController(R.id.solveFragment)
                 .navigate(R.id.solveFragment)
         }
+
         else -> {}
     }
 

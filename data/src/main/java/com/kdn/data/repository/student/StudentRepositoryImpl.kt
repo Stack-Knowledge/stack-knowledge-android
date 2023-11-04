@@ -8,7 +8,7 @@ import com.kdn.domain.repository.student.StudentRepository
 import javax.inject.Inject
 
 class StudentRepositoryImpl @Inject constructor(
-    private val remoteDataSource: RemoteStudentDataSource
+    private val remoteDataSource: RemoteStudentDataSource,
 ) : StudentRepository {
     override suspend fun getRankingList(): List<RankingEntity> =
         remoteDataSource.getRankingList().map { it.toEntity() }

@@ -31,6 +31,7 @@ class TooManyRequestException(
 class UnknownException(
     override val message: String?,
 ) : RuntimeException()
+
 class BadRequestException(
     override val message: String?,
 ) : RuntimeException()
@@ -38,9 +39,11 @@ class BadRequestException(
 class TimeOutException(
     override val message: String?,
 ) : RuntimeException()
+
 class NeedLoginException(
     override val message: String?,
 ) : RuntimeException()
+
 class ForBiddenException(
     override val message: String?,
 ) : RuntimeException()

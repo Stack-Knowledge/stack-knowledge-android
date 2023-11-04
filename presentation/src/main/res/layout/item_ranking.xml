@@ -17,12 +17,13 @@
             android:id="@+id/tv_first_rank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="95dp"
+            android:layout_marginBottom="137dp"
             android:background="@drawable/bg_first_rank"
+            android:gravity="center"
+            android:visibility="invisible"
             android:text="1"
             android:textColor="@color/black"
-            android:gravity="center"
-            android:layout_marginBottom="137dp"
-            android:layout_marginEnd="95dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -30,12 +31,13 @@
             android:id="@+id/tv_second_rank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="95dp"
+            android:layout_marginBottom="137dp"
             android:background="@drawable/bg_second_rank"
+            android:gravity="center"
             android:text="2"
             android:textColor="@color/black"
-            android:gravity="center"
-            android:layout_marginBottom="137dp"
-            android:layout_marginEnd="95dp"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -44,12 +46,13 @@
             android:id="@+id/tv_third_rank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="95dp"
+            android:layout_marginBottom="137dp"
             android:background="@drawable/bg_third_rank"
+            android:gravity="center"
             android:text="3"
             android:textColor="@color/black"
-            android:gravity="center"
-            android:layout_marginBottom="137dp"
-            android:layout_marginEnd="95dp"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -58,11 +61,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="90dp"
             android:src="@drawable/ic_default_profile"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_student_name"

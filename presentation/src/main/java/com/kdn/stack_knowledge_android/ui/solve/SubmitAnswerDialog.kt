@@ -29,7 +29,7 @@ class SubmitAnswerDialog(
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         binding = DialogSubmitAnswerBinding.inflate(layoutInflater)
         binding.lifecycleOwner = this

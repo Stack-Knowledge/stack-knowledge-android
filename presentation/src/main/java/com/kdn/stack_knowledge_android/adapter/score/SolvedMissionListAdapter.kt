@@ -22,7 +22,7 @@ class SolvedMissionListAdapter :
             tvTeacherName.text = item.user.name
             tvTitle.text = item.title
             tvMileage.text = item.point.toString()
-            missionItemLayout.setOnClickListener {
+            shadowedMissionItemLayout.setOnClickListener {
                 listener.detail(item)
             }
         }

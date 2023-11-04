@@ -8,12 +8,11 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/mission_item_layout"
+        android:id="@+id/shadowed_mission_item_layout"
         android:layout_width="116dp"
-        android:padding="20dp"
         android:layout_height="158dp"
-        android:elevation="100dp"
-        android:background="@drawable/shadow">
+        android:background="@drawable/shadow"
+        android:elevation="20dp">
 
         <TextView
             android:id="@+id/tv_teacher_name"

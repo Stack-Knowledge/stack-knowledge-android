@@ -38,8 +38,8 @@
             android:background="@drawable/bg_modal_check"
             android:fontFamily="@font/pretendard_medium"
             android:text="취소"
-            android:textSize="16sp"
             android:textColor="@color/main"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_check"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/btn_cancel"
             app:layout_constraintTop_toBottomOf="@id/tv_submit_question" />
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

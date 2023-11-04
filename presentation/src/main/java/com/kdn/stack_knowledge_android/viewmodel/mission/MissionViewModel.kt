@@ -99,8 +99,9 @@ class MissionViewModel @Inject constructor(
         data class Mission(val missionList: List<MissionEntity>) : Event()
         data class DetailMission(
             val detailMission: DetailMissionEntity,
-            val missionId: UUID
+            val missionId: UUID,
         ) : Event()
+
         data class CreateMission(val createMission: CreateMissionParam) : Event()
         data class ScoreSolveMission(val scoreSolveMission: ScoreParam, val solveId: UUID) : Event()
         data class SolvedMission(val solvedMissionList: List<GetSolveMissionEntity>) : Event()

@@ -11,7 +11,7 @@ import java.util.UUID
 import javax.inject.Inject
 
 class UserRepositoryImpl @Inject constructor(
-    private val remoteDataSource: RemoteUserDataSource
+    private val remoteDataSource: RemoteUserDataSource,
 ) : UserRepository {
     override suspend fun getSolvedMission(): List<GetSolveMissionEntity> =
         remoteDataSource.getSolvedMission().map { it.toEntity() }

@@ -52,11 +52,11 @@
     <fragment
         android:id="@+id/submitAnswerDialog"
         android:name="com.kdn.stack_knowledge_android.ui.solve.SubmitAnswerDialog"
-        android:label="SubmitAnswerDialog"/>
+        android:label="SubmitAnswerDialog" />
     <fragment
         android:id="@+id/movePageDialog"
         android:name="com.kdn.stack_knowledge_android.ui.solve.MovePageDialog"
-        android:label="MovePageDialog"/>
+        android:label="MovePageDialog" />
     <fragment
         android:id="@+id/rankingFragment"
         android:name="com.kdn.stack_knowledge_android.ui.ranking.RankingFragment"

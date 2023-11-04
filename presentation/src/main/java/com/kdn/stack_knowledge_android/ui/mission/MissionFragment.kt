@@ -5,6 +5,7 @@ import androidx.navigation.fragment.findNavController
 import com.kdn.domain.entity.mission.MissionEntity
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.main.MissionListAdapter
+import com.kdn.stack_knowledge_android.adapter.mission.MissionPageMissionListAdapter
 import com.kdn.stack_knowledge_android.databinding.FragmentMissionBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
 import com.kdn.stack_knowledge_android.utils.decorator.HorizontalItemDecorator
@@ -15,7 +16,7 @@ import java.util.UUID
 
 class MissionFragment : BaseFragment<FragmentMissionBinding>(R.layout.fragment_mission) {
     private val missionViewModel by activityViewModels<MissionViewModel>()
-    private lateinit var missionListAdapter: MissionListAdapter
+    private lateinit var missionListAdapter: MissionPageMissionListAdapter
 
     override fun createView() {
         initRecyclerView()
@@ -30,8 +31,8 @@ class MissionFragment : BaseFragment<FragmentMissionBinding>(R.layout.fragment_m
 
     private fun initRecyclerView() {
         missionViewModel.getMissionList()
-        missionListAdapter = MissionListAdapter().apply {
-            setItemOnClickListener(object : MissionListAdapter.OnItemClickListener {
+        missionListAdapter = MissionPageMissionListAdapter().apply {
+            setItemOnClickListener(object : MissionPageMissionListAdapter.OnItemClickListener {
                 override fun detail(item: MissionEntity) {
                     item.id.let { missionViewModel.getDetailMission(it) }
                 }

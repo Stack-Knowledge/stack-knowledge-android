@@ -10,8 +10,10 @@ import com.bumptech.glide.Glide
 import com.kdn.domain.entity.order.OrderedItemEntity
 import com.kdn.stack_knowledge_android.databinding.ItemOrderedItemBinding
 
-class OrderedItemListAdapter : ListAdapter<OrderedItemEntity, OrderedItemListAdapter.OrderedItemListViewHolder>(diffUtil) {
+class OrderedItemListAdapter :
+    ListAdapter<OrderedItemEntity, OrderedItemListAdapter.OrderedItemListViewHolder>(diffUtil) {
     private lateinit var itemClickListener: OnItemClickListener
+
     inner class OrderedItemListViewHolder(
         val context: Context,
         private val binding: ItemOrderedItemBinding,
@@ -32,11 +34,12 @@ class OrderedItemListAdapter : ListAdapter<OrderedItemEntity, OrderedItemListAda
     fun setOnItemClickListener(listener: OnItemClickListener) {
         itemClickListener = listener
     }
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        viewType: Int
-    ) : OrderedItemListViewHolder = OrderedItemListViewHolder(
-      parent.context,
+        viewType: Int,
+    ): OrderedItemListViewHolder = OrderedItemListViewHolder(
+        parent.context,
         ItemOrderedItemBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,

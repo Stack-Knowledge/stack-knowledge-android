@@ -23,7 +23,7 @@ class OrderBottomSheet : BottomSheetDialogFragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         binding = BottomSheetOrderBinding.inflate(layoutInflater)
         binding.lifecycleOwner = this
@@ -55,7 +55,8 @@ class OrderBottomSheet : BottomSheetDialogFragment() {
     }
 
     private fun setTotalPrice() {
-        binding.tvTotalPrice.text = buyViewModel.orderDataList.sumOf { it.count * it.price }.toString()
+        binding.tvTotalPrice.text =
+            buyViewModel.orderDataList.sumOf { it.count * it.price }.toString()
     }
 
     private fun initOrderDialog() {
