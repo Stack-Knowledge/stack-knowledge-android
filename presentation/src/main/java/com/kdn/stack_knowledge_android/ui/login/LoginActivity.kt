@@ -1,5 +1,6 @@
 package com.kdn.stack_knowledge_android.ui.login
 
+import android.content.Context
 import android.content.Intent
 import android.util.DisplayMetrics
 import android.util.Log
@@ -96,13 +97,33 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
                     authViewModel.saveTheLoginData(event.data!!)
                     checkRole()
                 }
-
                 else -> {
                     Log.d("login", event.toString())
                 }
             }
 
         }
+    }
+
+    private fun observeSaveTokenEvent() {
+        authViewModel.saveTokenRequest.observe(this) { event ->
+            when (event) {
+                is Event.Success -> {
+                    val token = event.data.toString()
+                    saveTokenToSharedPreferences(token)
+                }
+                else -> {
+                    Log.d("login", event.toString())
+                }
+            }
+        }
+    }
+
+    private fun saveTokenToSharedPreferences(token: String) {
+        val sharedPrefs = getSharedPreferences("MyAppPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPrefs.edit()
+        editor.putString("token", token)
+        editor.apply()
     }
 
     override fun onBackPressed() {

@@ -36,6 +36,9 @@ class AuthViewModel @Inject constructor(
     private val _getAuthorityResponse = MutableStateFlow<String>("")
     val getAuthorityResponse = _getAuthorityResponse.asStateFlow()
 
+    private val _saveRoleResponse = MutableStateFlow<Event<Unit>>(Event.Loading)
+    val saveRoleResponse = _saveRoleResponse.asStateFlow()
+
     fun gAuthLogin(code: String) = viewModelScope.launch {
         gAuthLoginUseCase(
             GAuthLoginRequestModel(code = code)
