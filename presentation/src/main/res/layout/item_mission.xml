@@ -31,6 +31,8 @@
             android:layout_marginTop="12dp"
             android:fontFamily="@font/pretendard_regular"
             android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginHorizontal="25dp"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -39,7 +39,6 @@ class MyInfoViewModel @Inject constructor(
 
     fun changeProfileImage(imageFile: File) = viewModelScope.launch {
         val mediaType = "image/${imageFile.extension}".toMediaTypeOrNull()
-
         val requestBody = RequestBody.create(mediaType, imageFile)
         val part = MultipartBody.Part.createFormData("image", imageFile.name, RequestBody.create(mediaType, imageFile))
         changeProfileImageUseCase(

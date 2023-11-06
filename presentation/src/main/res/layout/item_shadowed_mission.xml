@@ -9,8 +9,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shadowed_mission_item_layout"
-        android:layout_width="116dp"
-        android:layout_height="158dp"
+        android:layout_width="156dp"
+        android:layout_height="180dp"
         android:background="@drawable/shadow"
         android:elevation="20dp">
 
@@ -28,8 +28,10 @@
 
         <TextView
             android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:gravity="center"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/pretendard_regular"
             android:textColor="@color/black"
