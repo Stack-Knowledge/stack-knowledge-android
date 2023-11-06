@@ -1,7 +1,6 @@
 package com.kdn.stack_knowledge_android.ui.main
 
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.viewpager2.widget.ViewPager2
@@ -32,7 +31,6 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     private val authViewModel by activityViewModels<AuthViewModel>()
 
     override fun createView() {
-        authViewModel.getRoleInfo()
         showViewPager()
         initRecyclerView()
         observeEvent()

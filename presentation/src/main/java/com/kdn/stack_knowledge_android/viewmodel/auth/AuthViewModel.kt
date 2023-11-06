@@ -9,6 +9,7 @@ import com.kdn.stack_knowledge_android.utils.error.Event
 import com.kdn.stack_knowledge_android.utils.error.errorHandling
 import com.kdn.domain.model.request.auth.GAuthLoginRequestModel
 import com.kdn.domain.model.response.auth.GAuthLoginResponseModel
+import com.kdn.domain.usecase.auth.AutoLoginUseCase
 import com.kdn.domain.usecase.auth.GAuthLoginUseCase
 import com.kdn.domain.usecase.auth.GetRoleInfoUseCase
 import com.kdn.domain.usecase.auth.SaveTheLoginDataUseCase
@@ -25,6 +26,7 @@ class AuthViewModel @Inject constructor(
     private val gAuthLoginUseCase: GAuthLoginUseCase,
     private val saveTheLoginDataUseCase: SaveTheLoginDataUseCase,
     private val getRoleInfoUseCase: GetRoleInfoUseCase,
+    private val authLoginUseCase: AutoLoginUseCase,
 ) : ViewModel() {
 
     private val _gAuthLoginRequest = MutableLiveData<Event<GAuthLoginResponseModel>>()
@@ -38,6 +40,9 @@ class AuthViewModel @Inject constructor(
 
     private val _saveRoleResponse = MutableStateFlow<Event<Unit>>(Event.Loading)
     val saveRoleResponse = _saveRoleResponse.asStateFlow()
+
+    private val _autoLoginStatus = MutableLiveData<String?>(null)
+    val autoLoginStatus: LiveData<String?> get() =_autoLoginStatus
 
     fun gAuthLogin(code: String) = viewModelScope.launch {
         gAuthLoginUseCase(
@@ -66,15 +71,12 @@ class AuthViewModel @Inject constructor(
         }
     }
 
-    fun getRoleInfo() = viewModelScope.launch {
-        getRoleInfoUseCase()
+    fun autoLogin() = viewModelScope.launch {
+        authLoginUseCase()
             .onSuccess {
-                it.collect { response ->
-                    _getAuthorityResponse.emit(response)
-                }
-            }.onFailure { error ->
-                Log.e("error", error.toString())
-                _getAuthorityResponse.value
+                _autoLoginStatus.value = it
+            }.onFailure {
+                Log.e("자동 로그인 실패", "$it")
             }
     }
 }

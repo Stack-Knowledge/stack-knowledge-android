@@ -45,7 +45,12 @@ class AuthRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun getRoleInfo(): Flow<String> {
+    override suspend fun getRoleInfo(): String {
         TODO("Not yet implemented")
     }
+
+    override suspend fun autoLogin(): String? {
+        return localDataSource.getRoleInfo()
+    }
+
 }

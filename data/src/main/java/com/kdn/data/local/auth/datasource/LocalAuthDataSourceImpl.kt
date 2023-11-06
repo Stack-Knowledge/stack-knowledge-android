@@ -1,6 +1,5 @@
 package com.kdn.data.local.auth.datasource
 
-import kotlinx.coroutines.flow.Flow
 import com.kdn.data.local.auth.datastorage.AuthPreference
 import java.time.LocalDateTime
 import javax.inject.Inject

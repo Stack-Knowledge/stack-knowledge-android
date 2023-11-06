@@ -31,8 +31,8 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
     private var backButtonWait: Long = 0
 
     override fun createView() {
+        authViewModel.autoLogin()
         binding.login = this
-        authViewModel.getRoleInfo()
         setGAuthButtonComponent()
         setGAuthWebViewComponent()
         observeEvent()
@@ -53,6 +53,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
     }
 
     override fun observeEvent() {
+        observeAutoLoginEvent()
         observeLoginEvent()
         observeSaveTokenEvent()
     }
@@ -103,6 +104,20 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
                 }
             }
 
+        }
+    }
+
+    private fun observeAutoLoginEvent() {
+        authViewModel.autoLoginStatus.observe(this) {
+            if (it == "ROLE_STUDENT") {
+                val intent = Intent(this@LoginActivity, StudentActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else if (it == "ROLE_TEACHER") {
+                val intent = Intent(this@LoginActivity, TeacherActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
         }
     }
 
