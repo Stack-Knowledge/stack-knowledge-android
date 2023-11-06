@@ -7,6 +7,7 @@ import com.kdn.domain.entity.student.MyInfoEntity
 import com.kdn.domain.entity.student.RankingEntity
 import com.kdn.domain.param.student.ChangeProfileImageParam
 import com.kdn.domain.repository.student.StudentRepository
+import okhttp3.MultipartBody
 import javax.inject.Inject
 
 class StudentRepositoryImpl @Inject constructor(
@@ -18,6 +19,6 @@ class StudentRepositoryImpl @Inject constructor(
     override suspend fun getMyInfo(): MyInfoEntity =
         remoteDataSource.getMyInfo().toEntity()
 
-    override suspend fun changeProfileImage(changeProfileImageParam: ChangeProfileImageParam) =
-        remoteDataSource.changeProfileImage(changeProfileImageParam.toRequest())
+    override suspend fun changeProfileImage(image: MultipartBody.Part) =
+        remoteDataSource.changeProfileImage(image = image)
 }

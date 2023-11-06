@@ -12,9 +12,11 @@ import com.kdn.stack_knowledge_android.utils.asEventFlow
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import okhttp3.MediaType
+import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
 import javax.inject.Inject
 
@@ -35,33 +37,18 @@ class MyInfoViewModel @Inject constructor(
         }
     }
 
-    fun saveProfileImage(imageUri: File) = viewModelScope.launch{
-        val mediaType = "image/*".toMediaTypeOrNull()
-
-        val requestBody = RequestBody.create(mediaType, imageUri)
-        val part = MultipartBody.Part.createFormData("image", imageUri.name, requestBody)
-
-        val changeProfileImageParam = ChangeProfileImageParam(part)
-
-        _eventFlow.emit(Event.ProfileImage(changeProfileImageParam))
-    }
-
     fun changeProfileImage(imageFile: File) = viewModelScope.launch {
-        val mediaType = "image/*".toMediaTypeOrNull()
+        val mediaType = "image/${imageFile.extension}".toMediaTypeOrNull()
 
         val requestBody = RequestBody.create(mediaType, imageFile)
-        val part = MultipartBody.Part.createFormData("image", imageFile.name, requestBody)
-
-        val changeProfileImageParam = ChangeProfileImageParam(part)
-
+        val part = MultipartBody.Part.createFormData("image", imageFile.name, RequestBody.create(mediaType, imageFile))
         changeProfileImageUseCase(
-            changeProfileImageParam
+            part
         ).onSuccess {
-            _eventFlow.emit(Event.ProfileImage(changeProfileImageParam))
+            event(Event.ProfileImage(it.toString()))
+        }.onFailure {
+            Log.e("프로필 사진 업로드 실패", "프로필 사진 업로드에 실패하였습니다.")
         }
-            .onFailure {
-
-            }
     }
 
 
@@ -71,6 +58,6 @@ class MyInfoViewModel @Inject constructor(
 
     sealed class Event {
         data class MyInfo(val myInfo: MyInfoEntity) : Event()
-        data class ProfileImage(val changeProfileImage: ChangeProfileImageParam) : Event()
+        data class ProfileImage(val fileName: String) : Event()
     }
 }

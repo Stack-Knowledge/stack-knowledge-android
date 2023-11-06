@@ -6,6 +6,7 @@ import com.kdn.data.remote.dto.student.response.MyInfoResponse
 import com.kdn.data.remote.dto.student.response.ProfileImageResponse
 import com.kdn.data.remote.dto.student.response.RankingResponse
 import com.kdn.data.utils.StackApiHandler
+import okhttp3.MultipartBody
 import javax.inject.Inject
 
 class RemoteStudentDataSourceImpl @Inject constructor(
@@ -23,9 +24,9 @@ class RemoteStudentDataSourceImpl @Inject constructor(
             .sendRequest()
     }
 
-    override suspend fun changeProfileImage(changeProfileImageRequest: ChangeProfileImageRequest) {
+    override suspend fun changeProfileImage(image: MultipartBody.Part) {
         return StackApiHandler<Unit>()
-            .httpRequest { service.updateProfileImage(changeProfileImageRequest) }
+            .httpRequest { service.updateProfileImage(image) }
             .sendRequest()
     }
 }

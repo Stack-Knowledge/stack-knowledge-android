@@ -26,7 +26,6 @@ class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_r
     private val myInfoViewModel by activityViewModels<MyInfoViewModel>()
     private val pickMedia = registerForActivityResult(PickVisualMedia()) { uri ->
         if (uri != null) {
-            myInfoViewModel.saveProfileImage(uri.toFile(requireContext()))
             myInfoViewModel.changeProfileImage(uri.toFile(requireContext()))
             Glide.with(binding.ivProfile).load(uri)
         }

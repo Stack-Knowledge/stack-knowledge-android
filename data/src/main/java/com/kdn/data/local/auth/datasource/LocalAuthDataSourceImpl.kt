@@ -14,7 +14,6 @@ class LocalAuthDataSourceImpl @Inject constructor(
     override suspend fun setAccessToken(accessToken: String) =
         authPreferences.setAccessToken(accessToken = accessToken)
 
-
     override suspend fun getRefreshToken(): String? =
         authPreferences.getRefreshToken()
 
