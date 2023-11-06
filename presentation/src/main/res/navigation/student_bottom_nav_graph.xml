@@ -18,6 +18,10 @@
         <action
             android:id="@+id/action_mainFragment_to_solveFragment"
             app:destination="@id/solveFragment" />
+        <argument
+            android:name="isStudent"
+            app:argType="boolean"
+            android:defaultValue="true" />
     </fragment>
 
     <fragment
@@ -48,15 +52,15 @@
     <fragment
         android:id="@+id/timeOutDialog"
         android:name="com.kdn.stack_knowledge_android.ui.solve.TimeOutDialog"
-        android:label="TimeOutDialog"></fragment>
+        android:label="TimeOutDialog" />
     <fragment
         android:id="@+id/submitAnswerDialog"
         android:name="com.kdn.stack_knowledge_android.ui.solve.SubmitAnswerDialog"
-        android:label="SubmitAnswerDialog"></fragment>
+        android:label="SubmitAnswerDialog" />
     <fragment
         android:id="@+id/movePageDialog"
         android:name="com.kdn.stack_knowledge_android.ui.solve.MovePageDialog"
-        android:label="MovePageDialog"></fragment>
+        android:label="MovePageDialog" />
     <fragment
         android:id="@+id/rankingFragment"
         android:name="com.kdn.stack_knowledge_android.ui.ranking.RankingFragment"

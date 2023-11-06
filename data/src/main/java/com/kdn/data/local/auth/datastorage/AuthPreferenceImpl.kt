@@ -14,6 +14,7 @@ class AuthPreferenceImpl @Inject constructor(
         const val ACCESS_TOKEN = "accessToken"
         const val REFRESH_TOKEN = "refreshToken"
         const val EXPIRED_AT = "expiredAt"
+        const val ROLE = "authority"
     }
 
     override fun setAccessToken(accessToken: String?) =
@@ -37,6 +38,12 @@ class AuthPreferenceImpl @Inject constructor(
             LocalDateTime.parse(it, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH-mm-ss"))
         }
     }
+
+    override fun getRoleInfo(): String? =
+        sharedPreferences.getString(ROLE, "")
+
+    override fun setRoleInfo(role: String?) =
+        setData(ROLE, role)
 
     private fun setData(id: String, data: String?) =
         sharedPreferences.edit().let {

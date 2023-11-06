@@ -3,14 +3,19 @@ package com.kdn.stack_knowledge_android.adapter.main
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.activity.viewModels
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.kdn.domain.entity.mission.MissionEntity
 import com.kdn.stack_knowledge_android.databinding.ItemMissionBinding
+import com.kdn.stack_knowledge_android.viewmodel.auth.AuthViewModel
 
 
-class MissionListAdapter :
+
+class MissionListAdapter(
+    private val isStudent: Boolean,
+) :
     ListAdapter<MissionEntity, MissionListAdapter.MissionListViewHolder>(diffUtil) {
     private lateinit var itemClickListener: OnItemClickListener
 
@@ -23,8 +28,10 @@ class MissionListAdapter :
             tvTeacherName.text = item.user.name
             tvTitle.text = item.title
             tvMileage.text = item.point.toString()
-            missionItemLayout.setOnClickListener {
-                listener.detail(item)
+            if (isStudent) {
+                missionItemLayout.setOnClickListener {
+                    listener.detail(item)
+                }
             }
         }
 
@@ -32,7 +39,7 @@ class MissionListAdapter :
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        viewType: Int
+        viewType: Int,
     ): MissionListViewHolder =
         MissionListViewHolder(
             parent.context,

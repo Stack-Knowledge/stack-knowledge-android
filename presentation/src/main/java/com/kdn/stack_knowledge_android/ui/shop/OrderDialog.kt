@@ -8,15 +8,14 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
-import com.kdn.stack_knowledge_android.data.order.DetailOrderData
+import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.DialogBuyBinding
 import com.kdn.stack_knowledge_android.viewmodel.shop.BuyViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class OrderDialog(
-    private val orderDataList: MutableList<DetailOrderData> = mutableListOf()
+    private val bottomSheetShow: () -> Unit,
 ) : DialogFragment() {
     private lateinit var binding: DialogBuyBinding
     private val buyViewModel by activityViewModels<BuyViewModel>()
@@ -24,7 +23,7 @@ class OrderDialog(
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         binding = DialogBuyBinding.inflate(layoutInflater)
         binding.lifecycleOwner = this
@@ -32,12 +31,15 @@ class OrderDialog(
         dialog?.window?.requestFeature(Window.FEATURE_NO_TITLE)
 
         binding.btnCheck.setOnClickListener {
+            bottomSheetShow()
             buyViewModel.buyItem()
-            findNavController().popBackStack()
             dialog?.dismiss()
+            binding.btnCheck.setBackgroundColor(resources.getColor(R.color.main))
         }
 
         binding.btnCancel.setOnClickListener {
+            bottomSheetShow()
+            binding.btnCancel.setBackgroundColor(resources.getColor(R.color.main))
             dialog?.dismiss()
         }
 

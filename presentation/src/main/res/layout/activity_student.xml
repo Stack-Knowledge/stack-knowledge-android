@@ -107,7 +107,7 @@
             app:defaultNavHost="true"
             app:layout_constraintBottom_toTopOf="@id/bn_main_bottom_navi"
             app:layout_constraintTop_toTopOf="@id/g_vp_view_pager_t"
-            app:navGraph="@navigation/bottom_nav_graph" />
+            app:navGraph="@navigation/student_bottom_nav_graph" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bn_main_bottom_navi"

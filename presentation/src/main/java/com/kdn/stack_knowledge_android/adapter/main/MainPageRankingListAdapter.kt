@@ -2,7 +2,9 @@ package com.kdn.stack_knowledge_android.adapter.main
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -19,7 +21,15 @@ class MainPageRankingListAdapter :
         private val binding: ItemRankingBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(ranking: Int, item: RankingEntity) = binding.apply {
-            Glide.with(ivProfile).load(item.user.profileImage ?: R.drawable.ic_default_profile)
+            when (ranking) {
+                1 -> binding.tvFirstRank.visibility = View.VISIBLE
+
+                2 -> binding.tvSecondRank.visibility = View.VISIBLE
+
+                3 -> binding.tvThirdRank.visibility = View.VISIBLE
+            }
+            Glide.with(context)
+                .load(if (item.user.profileImage.isNullOrBlank()) R.drawable.ic_default_profile else item.user.profileImage).circleCrop().into(ivProfile)
             tvStudentName.text = item.user.name
             tvMileage.text = item.cumulatePoint.toString()
         }
@@ -27,7 +37,7 @@ class MainPageRankingListAdapter :
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        viewType: Int
+        viewType: Int,
     ): RankingListViewHolder =
         RankingListViewHolder(
             parent.context,
@@ -40,7 +50,7 @@ class MainPageRankingListAdapter :
 
 
     override fun onBindViewHolder(holder: RankingListViewHolder, position: Int) {
-        holder.bind(position+1, getItem(position))
+        holder.bind(position + 1, getItem(position))
     }
 
     companion object {

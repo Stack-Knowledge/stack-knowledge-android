@@ -7,8 +7,6 @@ import java.util.UUID
 
 interface RemoteMissionDataSource {
     suspend fun getMissionList(): List<MissionResponse>
-
     suspend fun getDetailMission(missionId: UUID): DetailMissionResponse
-
     suspend fun createMission(createMissionRequest: CreateMissionRequest)
 }

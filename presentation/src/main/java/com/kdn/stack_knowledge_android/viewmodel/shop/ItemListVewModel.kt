@@ -4,6 +4,8 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kdn.domain.entity.item.ItemEntity
+import com.kdn.domain.entity.student.MyInfoEntity
+import com.kdn.domain.entity.user.UserEntity
 import com.kdn.domain.usecase.shop.GetItemListUseCase
 import com.kdn.stack_knowledge_android.utils.MutableEventFlow
 import com.kdn.stack_knowledge_android.utils.asEventFlow
@@ -47,5 +49,6 @@ class ItemListVewModel @Inject constructor(
 
     sealed class Event {
         data class Item(val itemList: List<ItemEntity>) : Event()
+        data class User(val user: MyInfoEntity) : Event()
     }
 }

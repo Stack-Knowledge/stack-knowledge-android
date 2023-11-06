@@ -9,7 +9,9 @@ import com.kdn.stack_knowledge_android.utils.error.Event
 import com.kdn.stack_knowledge_android.utils.error.errorHandling
 import com.kdn.domain.model.request.auth.GAuthLoginRequestModel
 import com.kdn.domain.model.response.auth.GAuthLoginResponseModel
+import com.kdn.domain.usecase.auth.AutoLoginUseCase
 import com.kdn.domain.usecase.auth.GAuthLoginUseCase
+import com.kdn.domain.usecase.auth.GetRoleInfoUseCase
 import com.kdn.domain.usecase.auth.SaveTheLoginDataUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -23,6 +25,8 @@ import javax.inject.Inject
 class AuthViewModel @Inject constructor(
     private val gAuthLoginUseCase: GAuthLoginUseCase,
     private val saveTheLoginDataUseCase: SaveTheLoginDataUseCase,
+    private val getRoleInfoUseCase: GetRoleInfoUseCase,
+    private val authLoginUseCase: AutoLoginUseCase,
 ) : ViewModel() {
 
     private val _gAuthLoginRequest = MutableLiveData<Event<GAuthLoginResponseModel>>()
@@ -31,11 +35,14 @@ class AuthViewModel @Inject constructor(
     private val _saveTokenRequest = MutableLiveData<Event<Nothing>>()
     val saveTokenRequest: LiveData<Event<Nothing>> get() = _saveTokenRequest
 
-    private val _saveAuthorityResponse = MutableStateFlow<Event<Unit>>(Event.Loading)
-    val saveAuthorityResponse = _saveAuthorityResponse.asStateFlow()
-
-    private val _getAuthorityResponse = MutableStateFlow<Event<String>>(Event.Loading)
+    private val _getAuthorityResponse = MutableStateFlow<String>("")
     val getAuthorityResponse = _getAuthorityResponse.asStateFlow()
+
+    private val _saveRoleResponse = MutableStateFlow<Event<Unit>>(Event.Loading)
+    val saveRoleResponse = _saveRoleResponse.asStateFlow()
+
+    private val _autoLoginStatus = MutableLiveData<String?>(null)
+    val autoLoginStatus: LiveData<String?> get() =_autoLoginStatus
 
     fun gAuthLogin(code: String) = viewModelScope.launch {
         gAuthLoginUseCase(
@@ -44,6 +51,7 @@ class AuthViewModel @Inject constructor(
             it.catch { remoteError ->
                 _gAuthLoginRequest.value = remoteError.errorHandling(unknownAction = {})
             }.collect { response ->
+                _getAuthorityResponse.emit(response.authority)
                 _gAuthLoginRequest.value = Event.Success(data = response)
             }
         }.onFailure {
@@ -61,5 +69,14 @@ class AuthViewModel @Inject constructor(
             _saveTokenRequest.value = it.errorHandling(unknownAction = {})
             Log.e("로그인 정보 저장 실패", "$it")
         }
+    }
+
+    fun autoLogin() = viewModelScope.launch {
+        authLoginUseCase()
+            .onSuccess {
+                _autoLoginStatus.value = it
+            }.onFailure {
+                Log.e("자동 로그인 실패", "$it")
+            }
     }
 }

@@ -9,4 +9,6 @@ interface AuthPreference {
     fun getRefreshToken(): String?
     fun setExpiredAt(expiredAt: String?)
     fun getExpiredAt(): LocalDateTime?
+    fun getRoleInfo(): String?
+    fun setRoleInfo(role: String?)
 }

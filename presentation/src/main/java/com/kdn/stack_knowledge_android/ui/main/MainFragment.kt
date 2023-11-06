@@ -2,6 +2,7 @@ package com.kdn.stack_knowledge_android.ui.main
 
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.viewpager2.widget.ViewPager2
 import com.kdn.domain.entity.mission.MissionEntity
 import com.kdn.stack_knowledge_android.R
@@ -13,9 +14,11 @@ import com.kdn.stack_knowledge_android.ui.base.BaseFragment
 import com.kdn.stack_knowledge_android.utils.decorator.HorizontalItemDecorator
 import com.kdn.stack_knowledge_android.utils.decorator.VerticalItemDecorator
 import com.kdn.stack_knowledge_android.utils.repeatOnStart
+import com.kdn.stack_knowledge_android.viewmodel.auth.AuthViewModel
 import com.kdn.stack_knowledge_android.viewmodel.mission.MissionViewModel
 import com.kdn.stack_knowledge_android.viewmodel.ranking.RankingViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import java.util.UUID
 
 @AndroidEntryPoint
@@ -25,6 +28,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     private lateinit var rankingListAdapter: MainPageRankingListAdapter
     private val missionViewModel by activityViewModels<MissionViewModel>()
     private val rankingViewModel by activityViewModels<RankingViewModel>()
+    private val authViewModel by activityViewModels<AuthViewModel>()
 
     override fun createView() {
         showViewPager()
@@ -55,7 +59,8 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     private fun initRecyclerView() {
         missionViewModel.getMissionList()
         rankingViewModel.getRankingList()
-        missionListAdapter = MissionListAdapter().apply {
+        val navArgs: MainFragmentArgs by navArgs()
+        missionListAdapter = MissionListAdapter(isStudent = navArgs.isStudent).apply {
             setItemOnClickListener(object : MissionListAdapter.OnItemClickListener {
                 override fun detail(item: MissionEntity) {
                     item.id.let { missionViewModel.getDetailMission(it) }

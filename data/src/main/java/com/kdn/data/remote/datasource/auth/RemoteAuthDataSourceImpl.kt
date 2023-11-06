@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class RemoteAuthDataSourceImpl @Inject constructor(
-    private val service: AuthAPI
+    private val service: AuthAPI,
 ) : RemoteAuthDataSource {
     override suspend fun gAuthLogin(body: GAuthLoginRequest): Flow<GAuthLoginResponse> = flow {
         emit(
@@ -19,6 +19,7 @@ class RemoteAuthDataSourceImpl @Inject constructor(
                 .sendRequest()
         )
     }
+
     override suspend fun refreshToken(refreshToken: String): Flow<RefreshTokenResponse> = flow {
         emit(
             StackApiHandler<RefreshTokenResponse>()

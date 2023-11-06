@@ -8,6 +8,7 @@ import com.kdn.data.remote.api.mission.MissionAPI
 import com.kdn.data.remote.api.order.OrderAPI
 import com.kdn.data.remote.api.solve.SolveAPI
 import com.kdn.data.remote.api.student.StudentAPI
+import com.kdn.data.remote.api.user.UserAPI
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,6 +17,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -94,5 +96,11 @@ object NetworkModule {
     @Singleton
     fun provideStudentService(retrofit: Retrofit): StudentAPI {
         return retrofit.create(StudentAPI::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideUserService(retrofit: Retrofit): UserAPI {
+        return retrofit.create(UserAPI::class.java)
     }
 }

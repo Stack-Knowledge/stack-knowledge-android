@@ -6,6 +6,7 @@ import com.kdn.data.repository.mission.MissionRepositoryImpl
 import com.kdn.data.repository.order.OrderRepositoryImpl
 import com.kdn.data.repository.solve.SolveRepositoryImpl
 import com.kdn.data.repository.student.StudentRepositoryImpl
+import com.kdn.data.repository.user.UserRepositoryImpl
 import com.kdn.domain.repository.*
 import com.kdn.domain.repository.auth.AuthRepository
 import com.kdn.domain.repository.item.ItemRepository
@@ -13,6 +14,7 @@ import com.kdn.domain.repository.mission.MissionRepository
 import com.kdn.domain.repository.order.OrderRepository
 import com.kdn.domain.repository.solve.SolveRepository
 import com.kdn.domain.repository.student.StudentRepository
+import com.kdn.domain.repository.user.UserRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -57,4 +59,10 @@ abstract class RepositoryModule {
     abstract fun provideStudentRepository(
         studentRepositoryImpl: StudentRepositoryImpl,
     ): StudentRepository
+
+    @Singleton
+    @Binds
+    abstract fun provideUserRepository(
+        userRepositoryImpl: UserRepositoryImpl,
+    ): UserRepository
 }

@@ -11,6 +11,6 @@ class SolveRepositoryImpl @Inject constructor(
     private val remoteDataSource: RemoteSolveDataSource,
 ) : SolveRepository {
     override suspend fun solveMission(missionId: UUID, solveParam: SolveParam) {
-        remoteDataSource.solveMission(missionId = missionId ,solveParam.toRequest())
+        remoteDataSource.solveMission(missionId = missionId, solveParam.toRequest())
     }
 }

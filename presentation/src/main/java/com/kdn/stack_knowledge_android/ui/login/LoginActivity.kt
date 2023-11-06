@@ -1,5 +1,6 @@
 package com.kdn.stack_knowledge_android.ui.login
 
+import android.content.Context
 import android.content.Intent
 import android.util.DisplayMetrics
 import android.util.Log
@@ -8,17 +9,20 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.lifecycleScope
 import com.kdn.stack_knowledge_android.BuildConfig
 import com.kdn.stack_knowledge_android.ui.base.BaseActivity
 import com.kdn.stack_knowledge_android.viewmodel.auth.AuthViewModel
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.databinding.ActivityLoginBinding
 import com.kdn.stack_knowledge_android.ui.main.StudentActivity
+import com.kdn.stack_knowledge_android.ui.main.TeacherActivity
 import com.kdn.stack_knowledge_android.utils.error.Event
 import com.msg.gauthsignin.GAuthSigninWebView
 import com.msg.gauthsignin.component.GAuthButton
 import com.msg.gauthsignin.component.utils.Types
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import kotlin.system.exitProcess
 
 @AndroidEntryPoint
@@ -27,13 +31,31 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
     private var backButtonWait: Long = 0
 
     override fun createView() {
+        authViewModel.autoLogin()
         binding.login = this
         setGAuthButtonComponent()
         setGAuthWebViewComponent()
+        observeEvent()
+    }
+
+    private fun checkRole() = lifecycleScope.launch {
+        authViewModel.getAuthorityResponse.collect { response ->
+            if (response == "ROLE_STUDENT") {
+                val intent = Intent(this@LoginActivity, StudentActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else if (response == "ROLE_TEACHER") {
+                val intent = Intent(this@LoginActivity, TeacherActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
     }
 
     override fun observeEvent() {
+        observeAutoLoginEvent()
         observeLoginEvent()
+        observeSaveTokenEvent()
     }
 
     private fun setGAuthButtonComponent() {
@@ -49,7 +71,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
                 actionType = Types.ActionType.SIGNIN,
                 colors = Types.Colors.COLORED,
                 horizontalMargin = (dpWidth / 2 - 120).dp
-            ){
+            ) {
                 binding.vGauthWebView.visibility = View.VISIBLE
             }
         }
@@ -60,7 +82,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
             GAuthSigninWebView(
                 clientId = BuildConfig.GAUTH_CLIENT_ID,
                 redirectUri = BuildConfig.REDIRECT_URI,
-                ) {code ->
+            ) { code ->
                 binding.vGauthWebView.visibility = View.INVISIBLE
 
                 authViewModel.gAuthLogin(
@@ -75,8 +97,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
             when (event) {
                 is Event.Success -> {
                     authViewModel.saveTheLoginData(event.data!!)
-                    startActivity(Intent(this, StudentActivity::class.java))
-                    finish()
+                    checkRole()
                 }
                 else -> {
                     Log.d("login", event.toString())
@@ -84,6 +105,41 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
             }
 
         }
+    }
+
+    private fun observeAutoLoginEvent() {
+        authViewModel.autoLoginStatus.observe(this) {
+            if (it == "ROLE_STUDENT") {
+                val intent = Intent(this@LoginActivity, StudentActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else if (it == "ROLE_TEACHER") {
+                val intent = Intent(this@LoginActivity, TeacherActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
+    }
+
+    private fun observeSaveTokenEvent() {
+        authViewModel.saveTokenRequest.observe(this) { event ->
+            when (event) {
+                is Event.Success -> {
+                    val token = event.data.toString()
+                    saveTokenToSharedPreferences(token)
+                }
+                else -> {
+                    Log.d("login", event.toString())
+                }
+            }
+        }
+    }
+
+    private fun saveTokenToSharedPreferences(token: String) {
+        val sharedPrefs = getSharedPreferences("MyAppPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPrefs.edit()
+        editor.putString("token", token)
+        editor.apply()
     }
 
     override fun onBackPressed() {
@@ -101,6 +157,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
             exitProcess(0)
         }
     }
+
     interface OnBackPressedListener {
         fun onBackPressed()
     }

@@ -120,20 +120,22 @@
             android:textColor="@color/black"
             android:textSize="22sp"
             app:layout_constraintBottom_toBottomOf="@id/g_tv_current_point_b"
-            app:layout_constraintEnd_toEndOf="@id/g_tv_current_point_e"
-            app:layout_constraintStart_toStartOf="@id/g_tv_current_point_s"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/g_tv_current_point_t" />
 
         <TextView
             android:id="@+id/tv_mileage"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
+            android:text="1000"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/pretendard_medium"
             android:textColor="@color/black"
             android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/g_tv_mileage_b"
-            app:layout_constraintStart_toStartOf="@id/g_tv_mileage_s"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_current_point" />
 
 

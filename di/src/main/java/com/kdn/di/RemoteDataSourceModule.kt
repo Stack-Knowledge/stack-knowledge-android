@@ -12,6 +12,8 @@ import com.kdn.data.remote.datasource.solve.RemoteSolveDataSource
 import com.kdn.data.remote.datasource.solve.RemoteSolveDataSourceImpl
 import com.kdn.data.remote.datasource.student.RemoteStudentDataSource
 import com.kdn.data.remote.datasource.student.RemoteStudentDataSourceImpl
+import com.kdn.data.remote.datasource.user.RemoteUserDataSource
+import com.kdn.data.remote.datasource.user.RemoteUserDataSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -49,4 +51,9 @@ abstract class RemoteDataSourceModule {
     abstract fun provideRemoteStudentDataSource(
         remoteStudentDataSourceImpl: RemoteStudentDataSourceImpl,
     ): RemoteStudentDataSource
+
+    @Binds
+    abstract fun provideRemoteUserDataSource(
+        remoteUserDataSourceImpl: RemoteUserDataSourceImpl,
+    ): RemoteUserDataSource
 }

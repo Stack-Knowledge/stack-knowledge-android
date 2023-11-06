@@ -7,11 +7,12 @@ import com.kdn.domain.entity.mission.DetailMissionEntity
 import com.kdn.domain.entity.mission.MissionEntity
 import com.kdn.domain.param.mission.CreateMissionParam
 import com.kdn.domain.repository.mission.MissionRepository
+import kotlinx.coroutines.flow.Flow
 import java.util.UUID
 import javax.inject.Inject
 
 class MissionRepositoryImpl @Inject constructor(
-    private val remoteDataSource: RemoteMissionDataSource
+    private val remoteDataSource: RemoteMissionDataSource,
 ) : MissionRepository {
     override suspend fun getMissionList(): List<MissionEntity> =
         remoteDataSource.getMissionList().map { it.toEntity() }

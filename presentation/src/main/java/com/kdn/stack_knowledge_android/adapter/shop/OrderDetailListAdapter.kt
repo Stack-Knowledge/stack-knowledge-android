@@ -40,7 +40,7 @@ class OrderDetailListAdapter :
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        viewType: Int
+        viewType: Int,
     ): OrderDetailListViewHolder = OrderDetailListViewHolder(
         parent.context,
         ItemDetailOrderBinding.inflate(
@@ -68,14 +68,14 @@ class OrderDetailListAdapter :
         val diffUtil = object : DiffUtil.ItemCallback<DetailOrderData>() {
             override fun areItemsTheSame(
                 oldItem: DetailOrderData,
-                newItem: DetailOrderData
+                newItem: DetailOrderData,
             ): Boolean {
                 return oldItem == newItem
             }
 
             override fun areContentsTheSame(
                 oldItem: DetailOrderData,
-                newItem: DetailOrderData
+                newItem: DetailOrderData,
             ): Boolean {
                 return oldItem == newItem
             }

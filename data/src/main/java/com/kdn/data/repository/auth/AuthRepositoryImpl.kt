@@ -33,14 +33,24 @@ class AuthRepositoryImpl @Inject constructor(
             localDataSource.setAccessToken(it.accessToken)
             localDataSource.setRefreshToken(it.refreshToken)
             localDataSource.setExpiredAt(it.expiredAt)
+            localDataSource.setRoleInfo(it.authority)
         }
     }
 
     override suspend fun provideRefreshToken(refreshToken: String): Flow<RefreshTokenResponseModel> {
-        return flow{
+        return flow {
             remoteDataSource.refreshToken(refreshToken).collect {
                 emit(it.toRefreshModel())
             }
         }
     }
+
+    override suspend fun getRoleInfo(): String {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun autoLogin(): String? {
+        return localDataSource.getRoleInfo()
+    }
+
 }
