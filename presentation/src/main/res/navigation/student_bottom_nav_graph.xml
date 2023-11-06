@@ -18,6 +18,10 @@
         <action
             android:id="@+id/action_mainFragment_to_solveFragment"
             app:destination="@id/solveFragment" />
+        <argument
+            android:name="isStudent"
+            app:argType="boolean"
+            android:defaultValue="true" />
     </fragment>
 
     <fragment

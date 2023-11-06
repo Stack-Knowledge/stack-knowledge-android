@@ -3,6 +3,7 @@ package com.kdn.stack_knowledge_android.ui.main
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.viewpager2.widget.ViewPager2
 import com.kdn.domain.entity.mission.MissionEntity
 import com.kdn.stack_knowledge_android.R
@@ -31,6 +32,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     private val authViewModel by activityViewModels<AuthViewModel>()
 
     override fun createView() {
+        authViewModel.getRoleInfo()
         showViewPager()
         initRecyclerView()
         observeEvent()
@@ -57,16 +59,10 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     }
 
     private fun initRecyclerView() {
-        lifecycleScope.launch {
-            authViewModel.getAuthorityResponse.collect { response ->
-                if (response == "ROLE_TEACHER") {
-                    binding.rvMission.isClickable = false
-                }
-            }
-        }
         missionViewModel.getMissionList()
         rankingViewModel.getRankingList()
-        missionListAdapter = MissionListAdapter().apply {
+        val navArgs: MainFragmentArgs by navArgs()
+        missionListAdapter = MissionListAdapter(isStudent = navArgs.isStudent).apply {
             setItemOnClickListener(object : MissionListAdapter.OnItemClickListener {
                 override fun detail(item: MissionEntity) {
                     item.id.let { missionViewModel.getDetailMission(it) }

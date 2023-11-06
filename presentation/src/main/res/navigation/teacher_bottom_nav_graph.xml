@@ -28,7 +28,12 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.kdn.stack_knowledge_android.ui.main.MainFragment"
-        android:label="MainFragment" />
+        android:label="MainFragment">
+        <argument
+            android:name="isStudent"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
 
     <fragment
         android:id="@+id/rankingFragment"
