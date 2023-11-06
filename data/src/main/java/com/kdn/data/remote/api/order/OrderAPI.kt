@@ -19,6 +19,6 @@ interface OrderAPI {
 
     @PATCH("/order")
     suspend fun updateOrderedItem(
-        @Body updateOrderedRequest: UpdateOrderedRequest,
+        @Body updateOrderedRequest: List<UpdateOrderedRequest>,
     )
 }

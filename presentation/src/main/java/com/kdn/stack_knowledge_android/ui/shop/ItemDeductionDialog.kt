@@ -16,7 +16,9 @@ import dagger.hilt.android.AndroidEntryPoint
 import java.util.UUID
 
 @AndroidEntryPoint
-class ItemDeductionDialog : DialogFragment() {
+class ItemDeductionDialog(
+    private val itemId: UUID,
+) : DialogFragment() {
     private lateinit var binding: DialogItemDeductionBinding
     private val orderViewModel by activityViewModels<OrderViewModel>()
 
@@ -30,9 +32,10 @@ class ItemDeductionDialog : DialogFragment() {
         dialog?.window?.requestFeature(Window.FEATURE_NO_TITLE)
 
         binding.btnCheck.setOnClickListener {
-            orderViewModel.updateOrderedItem()
+            orderViewModel.updateOrderedItem(itemId)
             dialog?.dismiss()
             binding.btnCheck.setBackgroundColor(resources.getColor(R.color.main))
+            orderViewModel.getOrderedItemList()
         }
 
         binding.btnCancel.setOnClickListener {

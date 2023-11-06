@@ -11,7 +11,7 @@
         android:id="@+id/shadowed_mission_item_layout"
         android:layout_width="156dp"
         android:layout_height="180dp"
-        android:background="@drawable/shadow"
+        android:background="@drawable/mission_item_shadow"
         android:elevation="20dp">
 
         <TextView

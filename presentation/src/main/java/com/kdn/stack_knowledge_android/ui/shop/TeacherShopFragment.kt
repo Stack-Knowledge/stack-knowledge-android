@@ -1,12 +1,11 @@
 package com.kdn.stack_knowledge_android.ui.shop
 
+import android.util.Log
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import com.kdn.domain.entity.order.OrderedItemEntity
 import com.kdn.stack_knowledge_android.R
 import com.kdn.stack_knowledge_android.adapter.shop.OrderedItemListAdapter
-import com.kdn.stack_knowledge_android.databinding.DialogItemDeductionBinding
 import com.kdn.stack_knowledge_android.databinding.FragmentTeacherShopBinding
 import com.kdn.stack_knowledge_android.ui.base.BaseFragment
 import com.kdn.stack_knowledge_android.utils.decorator.HorizontalItemDecorator
@@ -42,16 +41,8 @@ class TeacherShopFragment :
             OrderedItemListAdapter.OnItemClickListener {
             override fun onItemClick(item: OrderedItemEntity) {
                 orderViewModel.orderedItem = item
-                val itemId: UUID = item.item.id
-                val count: Int = item.count
-                val action =
-                    TeacherShopFragmentDirections.actionTeacherShopFragmentToItemDeductionDialog(
-                        count,
-                        itemId.toString()
-                    )
-                findNavController()
-                    .navigate(action)
-                initItemDeductionDialog()
+                val itemId: UUID = item.id
+                initItemDeductionDialog(itemId)
             }
         })
         binding.rvOrderedItem.adapter = orderedItemListAdapter
@@ -63,10 +54,11 @@ class TeacherShopFragment :
         is OrderViewModel.Event.OrderedItem -> {
             orderedItemListAdapter.submitList(event.orderedItemList)
         }
+        else -> {}
     }
 
-    private fun initItemDeductionDialog() {
-        itemDeductionDialog = ItemDeductionDialog()
+    private fun initItemDeductionDialog(itemId: UUID) {
+        itemDeductionDialog = ItemDeductionDialog(itemId)
         itemDeductionDialog.show(
             requireActivity().supportFragmentManager,
             "ItemDialogDeduction"

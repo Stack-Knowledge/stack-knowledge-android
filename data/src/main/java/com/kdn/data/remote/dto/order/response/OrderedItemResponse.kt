@@ -11,8 +11,6 @@ data class OrderedItemResponse(
     val count: Int,
     @SerializedName("price")
     val price: Int,
-    @SerializedName("orderStatis")
-    val orderStatus: String,
     @SerializedName("user")
     val user: User,
     @SerializedName("item")
@@ -20,8 +18,8 @@ data class OrderedItemResponse(
 
     ) {
     data class Item(
-        @SerializedName("id")
-        val id: UUID,
+        @SerializedName("itemId")
+        val itemId: UUID,
         @SerializedName("name")
         val name: String,
         @SerializedName("price")
@@ -46,9 +44,8 @@ fun OrderedItemResponse.toEntity() = OrderedItemEntity(
     id = id,
     count = count,
     price = price,
-    orderStatus = orderStatus,
     item = OrderedItemEntity.Item(
-        id = item.id,
+        id = item.itemId,
         name = item.name,
         price = item.price,
         image = item.image,

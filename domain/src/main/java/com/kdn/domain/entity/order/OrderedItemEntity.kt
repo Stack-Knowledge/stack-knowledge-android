@@ -6,7 +6,6 @@ data class OrderedItemEntity(
     val id: UUID,
     val count: Int,
     val price: Int,
-    val orderStatus: String,
     val user: User,
     val item: Item,
 

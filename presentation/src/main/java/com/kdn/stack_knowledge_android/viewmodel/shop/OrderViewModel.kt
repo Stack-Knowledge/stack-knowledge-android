@@ -34,9 +34,9 @@ class OrderViewModel @Inject constructor(
         }
     }
 
-    fun updateOrderedItem() = viewModelScope.launch {
+    fun updateOrderedItem(itemId: UUID) = viewModelScope.launch {
         orderedItem?.let {
-            updateOrderedItemUseCase(UpdateOrderedParam(it.id))
+            updateOrderedItemUseCase(listOf(UpdateOrderedParam(itemId)))
         }
     }
 

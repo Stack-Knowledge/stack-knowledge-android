@@ -18,6 +18,6 @@ class OrderRepositoryImpl @Inject constructor(
     override suspend fun getOrderedItem(): List<OrderedItemEntity> =
         remoteDataSource.getOrderedItem().map { it.toEntity() }
 
-    override suspend fun updateOrderedItem(updateOrderedParam: UpdateOrderedParam) =
-        remoteDataSource.updateOrderedItem(updateOrderedParam.toRequest())
+    override suspend fun updateOrderedItem(updateOrderedParam: List<UpdateOrderedParam>) =
+        remoteDataSource.updateOrderedItem(updateOrderedParam.map{it.toRequest() })
 }

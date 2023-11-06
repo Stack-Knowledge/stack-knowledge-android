@@ -7,9 +7,10 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ordered_item_layout"
         android:layout_width="156dp"
-        android:layout_height="180dp"
-        android:background="@color/white">
+        android:layout_height="185dp"
+        android:background="@drawable/ordered_item_shadow">
 
         <ImageView
             android:id="@+id/iv_ordered_item"

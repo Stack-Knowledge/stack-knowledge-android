@@ -22,7 +22,7 @@ class RemoteOrderDataSourceImpl @Inject constructor(
             .sendRequest()
     }
 
-    override suspend fun updateOrderedItem(updateOrderedRequest: UpdateOrderedRequest) {
+    override suspend fun updateOrderedItem(updateOrderedRequest: List<UpdateOrderedRequest>) {
         return StackApiHandler<Unit>()
             .httpRequest { service.updateOrderedItem(updateOrderedRequest = updateOrderedRequest) }
             .sendRequest()

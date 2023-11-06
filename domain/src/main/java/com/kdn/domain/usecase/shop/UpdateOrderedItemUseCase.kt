@@ -7,7 +7,7 @@ import javax.inject.Inject
 class UpdateOrderedItemUseCase @Inject constructor(
     private val orderRepository: OrderRepository,
 ) {
-    suspend operator fun invoke(updateOrderedParam: UpdateOrderedParam) = kotlin.runCatching {
+    suspend operator fun invoke(updateOrderedParam: List<UpdateOrderedParam>) = kotlin.runCatching {
         orderRepository.updateOrderedItem(updateOrderedParam)
     }
 }

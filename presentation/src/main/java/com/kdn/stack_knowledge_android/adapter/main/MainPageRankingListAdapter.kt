@@ -28,7 +28,8 @@ class MainPageRankingListAdapter :
 
                 3 -> binding.tvThirdRank.visibility = View.VISIBLE
             }
-            Glide.with(ivProfile).load(item.user.profileImage ?: R.drawable.ic_default_profile)
+            Glide.with(context)
+                .load(if (item.user.profileImage.isNullOrBlank()) R.drawable.ic_default_profile else item.user.profileImage).circleCrop().into(ivProfile)
             tvStudentName.text = item.user.name
             tvMileage.text = item.cumulatePoint.toString()
         }

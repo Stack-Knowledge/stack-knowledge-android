@@ -56,8 +56,8 @@ class RankingFragment : BaseFragment<FragmentRankingBinding>(R.layout.fragment_r
 
     private fun initMyInfo(data: MyInfoEntity) {
         binding.apply {
-            Glide.with(ivProfile)
-                .load(data.user.profileImage ?: R.drawable.ic_default_profile)
+            Glide.with(this@RankingFragment)
+                .load(if (data.user.profileImage.isNullOrBlank()) R.drawable.ic_default_profile else data.user.profileImage).circleCrop().into(ivProfile)
             tvName.text = data.user.name
             tvCumulatePoint.text = data.cumulatePoint.toString()
 

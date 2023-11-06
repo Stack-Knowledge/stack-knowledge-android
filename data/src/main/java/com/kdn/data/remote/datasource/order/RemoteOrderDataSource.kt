@@ -8,5 +8,5 @@ interface RemoteOrderDataSource {
     suspend fun buyItem(orderRequest: List<OrderRequest>)
     suspend fun getOrderedItem(): List<OrderedItemResponse>
 
-    suspend fun updateOrderedItem(updateOrderedRequest: UpdateOrderedRequest)
+    suspend fun updateOrderedItem(updateOrderedRequest: List<UpdateOrderedRequest>)
 }
