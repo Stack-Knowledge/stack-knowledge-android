@@ -75,7 +75,9 @@ class MissionViewModel @Inject constructor(
         val createMissionParam = CreateMissionParam(
             title, content, timeLimit,
         )
-        createMissionUseCase(createMissionParam).onSuccess {
+        createMissionUseCase(
+            createMissionParam
+        ).onSuccess {
             event(Event.CreateMission(createMissionParam))
         }.onFailure {
             Log.e("미션 생성 실패", "실패 $it")

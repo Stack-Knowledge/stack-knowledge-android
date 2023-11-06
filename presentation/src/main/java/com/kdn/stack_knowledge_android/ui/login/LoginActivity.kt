@@ -35,6 +35,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
         authViewModel.getRoleInfo()
         setGAuthButtonComponent()
         setGAuthWebViewComponent()
+        observeEvent()
     }
 
     private fun checkRole() = lifecycleScope.launch {
@@ -54,6 +55,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
 
     override fun observeEvent() {
         observeLoginEvent()
+        observeSaveTokenEvent()
     }
 
     private fun setGAuthButtonComponent() {

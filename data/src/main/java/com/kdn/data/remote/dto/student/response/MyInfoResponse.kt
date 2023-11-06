@@ -12,7 +12,7 @@ data class MyInfoResponse(
     @SerializedName("cumulatePoint")
     val cumulatePoint: Int,
     @SerializedName("user")
-    val user: User
+    val user: User,
 ) {
     data class User(
         @SerializedName("id")
