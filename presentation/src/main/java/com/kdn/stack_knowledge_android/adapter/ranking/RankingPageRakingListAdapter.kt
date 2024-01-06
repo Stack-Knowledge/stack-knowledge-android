@@ -1,6 +1,7 @@
 package com.kdn.stack_knowledge_android.adapter.ranking
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
@@ -44,6 +45,7 @@ ListAdapter<RankingEntity, RankingPageRakingListAdapter.RankingListViewHolder>(d
 
     override fun onBindViewHolder(holder: RankingListViewHolder, position: Int) {
         holder.bind(position+1, getItem(position))
+       println(position.toString())
     }
 
     companion object {

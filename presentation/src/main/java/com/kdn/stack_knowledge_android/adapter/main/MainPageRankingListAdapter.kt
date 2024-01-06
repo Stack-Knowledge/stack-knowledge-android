@@ -22,16 +22,25 @@ class MainPageRankingListAdapter :
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(ranking: Int, item: RankingEntity) = binding.apply {
             when (ranking) {
-                1 -> binding.tvFirstRank.visibility = View.VISIBLE
+                1 -> {
+                    tvFirstRank.visibility = View.VISIBLE
+                }
 
-                2 -> binding.tvSecondRank.visibility = View.VISIBLE
+                2 -> tvSecondRank.visibility = View.VISIBLE
 
-                3 -> binding.tvThirdRank.visibility = View.VISIBLE
+                3 -> tvThirdRank.visibility = View.VISIBLE
+                else -> {
+                    listOf(tvFirstRank, tvSecondRank, tvThirdRank).forEach {
+                        it.visibility = View.INVISIBLE
+                    }
+                }
             }
             Glide.with(context)
-                .load(if (item.user.profileImage.isNullOrBlank()) R.drawable.ic_default_profile else item.user.profileImage).circleCrop().into(ivProfile)
+                .load(if (item.user.profileImage.isNullOrBlank()) R.drawable.ic_default_profile else item.user.profileImage)
+                .circleCrop().into(ivProfile)
             tvStudentName.text = item.user.name
             tvMileage.text = item.cumulatePoint.toString()
+            println(ranking.toString())
         }
     }
 

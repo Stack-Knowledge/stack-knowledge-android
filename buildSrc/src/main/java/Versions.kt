@@ -51,7 +51,7 @@ object Versions {
 
     const val GAUTH = "v1.1.2"
 
-    const val GLIDE = "4.13.0"
+    const val GLIDE = "4.16.0"
 
     const val INJECT = "1"
 

@@ -12,6 +12,13 @@
         android:layout_height="match_parent"
         android:background="@color/white">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_tv_info_s"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3633" />
+
         <ImageView
             android:id="@+id/iv_profile"
             android:layout_width="110dp"
@@ -28,13 +35,12 @@
             android:id="@+id/tv_ranking"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/pretendard_medium"
             android:text="10위"
             android:textColor="@color/black"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/g_tv_info_s"
             app:layout_constraintTop_toBottomOf="@id/iv_profile" />
 
         <View
