@@ -76,6 +76,34 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.0890" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_v_logout_button_s"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8889" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_v_logout_button_e"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9556" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_v_logout_button_t"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0250" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g_v_logout_button_b"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0554" />
+
         <TextView
             android:id="@+id/tv_black_stack_knowledge"
             android:layout_width="0dp"
@@ -90,10 +118,14 @@
             app:layout_constraintTop_toTopOf="@id/g_tv_black_stack_knowledge_t" />
 
         <View
+            android:id="@+id/v_logout_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-
-            />
+            android:background="@drawable/ic_logout_button"
+            app:layout_constraintBottom_toBottomOf="@id/g_v_logout_button_b"
+            app:layout_constraintEnd_toEndOf="@id/g_v_logout_button_e"
+            app:layout_constraintStart_toStartOf="@id/g_v_logout_button_s"
+            app:layout_constraintTop_toTopOf="@id/g_v_logout_button_t" />
 
         <View
             android:id="@+id/v_black_stack_logo"
