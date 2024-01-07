@@ -11,4 +11,6 @@ interface AuthRepository {
     suspend fun provideRefreshToken(refreshToken: String): Flow<RefreshTokenResponseModel>
     suspend fun getRoleInfo(): String
     suspend fun autoLogin(): String?
+    suspend fun logout()
+    suspend fun deleteToken()
 }

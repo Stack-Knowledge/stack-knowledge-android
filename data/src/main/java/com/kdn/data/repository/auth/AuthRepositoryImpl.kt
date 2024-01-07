@@ -1,6 +1,7 @@
 package com.kdn.data.repository.auth
 
 import android.util.Log
+import android.view.WindowManager.BadTokenException
 import com.kdn.data.local.auth.datasource.LocalAuthDataSource
 import com.kdn.data.remote.datasource.auth.RemoteAuthDataSource
 import com.kdn.data.remote.dto.auth.request.GAuthLoginRequest
@@ -51,6 +52,20 @@ class AuthRepositoryImpl @Inject constructor(
 
     override suspend fun autoLogin(): String? {
         return localDataSource.getRoleInfo()
+    }
+
+    override suspend fun logout() {
+        val refreshToken = localDataSource.getRefreshToken() ?: throw BadTokenException()
+        remoteDataSource.logout(refreshToken = refreshToken)
+        deleteToken()
+    }
+
+    override suspend fun deleteToken() {
+        with(localDataSource) {
+            deleteAccessToken()
+            deleteRefreshToken()
+            deleteExpiredAt()
+        }
     }
 
 }
