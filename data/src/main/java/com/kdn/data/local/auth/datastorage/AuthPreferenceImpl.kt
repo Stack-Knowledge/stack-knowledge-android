@@ -45,6 +45,10 @@ class AuthPreferenceImpl @Inject constructor(
     override fun setRoleInfo(role: String?) =
         setData(ROLE, role)
 
+    override fun deleteToken() {
+
+    }
+
     private fun setData(id: String, data: String?) =
         sharedPreferences.edit().let {
             it.putString(id, data)

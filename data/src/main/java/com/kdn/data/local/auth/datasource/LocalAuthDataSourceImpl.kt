@@ -30,4 +30,16 @@ class LocalAuthDataSourceImpl @Inject constructor(
 
     override suspend fun setRoleInfo(role: String) =
         authPreferences.setRoleInfo(role = role)
+
+    override suspend fun deleteRefreshToken() {
+
+    }
+
+    override suspend fun deleteExpiredAt() {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun deleteAccessToken() {
+        TODO("Not yet implemented")
+    }
 }

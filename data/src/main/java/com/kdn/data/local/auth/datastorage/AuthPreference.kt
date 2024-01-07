@@ -11,4 +11,5 @@ interface AuthPreference {
     fun getExpiredAt(): LocalDateTime?
     fun getRoleInfo(): String?
     fun setRoleInfo(role: String?)
+    fun deleteToken()
 }
