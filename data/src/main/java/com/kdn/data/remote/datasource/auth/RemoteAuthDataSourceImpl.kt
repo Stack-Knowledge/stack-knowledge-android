@@ -27,4 +27,10 @@ class RemoteAuthDataSourceImpl @Inject constructor(
                 .sendRequest()
         )
     }
+
+    override suspend fun logout(refreshToken: String) {
+        StackApiHandler<Unit>()
+            .httpRequest { service.logout(refreshToken = "Bearer $refreshToken") }
+            .sendRequest()
+    }
 }

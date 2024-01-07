@@ -8,4 +8,5 @@ import kotlinx.coroutines.flow.Flow
 interface RemoteAuthDataSource {
     suspend fun gAuthLogin(body: GAuthLoginRequest): Flow<GAuthLoginResponse>
     suspend fun refreshToken(refreshToken: String): Flow<RefreshTokenResponse>
+    suspend fun logout(refreshToken: String)
 }
