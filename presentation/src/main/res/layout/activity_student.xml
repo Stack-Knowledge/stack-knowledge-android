@@ -90,6 +90,12 @@
             app:layout_constraintTop_toTopOf="@id/g_tv_black_stack_knowledge_t" />
 
         <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            />
+
+        <View
             android:id="@+id/v_black_stack_logo"
             android:layout_width="0dp"
             android:layout_height="0dp"
