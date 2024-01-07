@@ -10,8 +10,10 @@ import com.kdn.stack_knowledge_android.utils.error.errorHandling
 import com.kdn.domain.model.request.auth.GAuthLoginRequestModel
 import com.kdn.domain.model.response.auth.GAuthLoginResponseModel
 import com.kdn.domain.usecase.auth.AutoLoginUseCase
+import com.kdn.domain.usecase.auth.DeleteTokenUseCase
 import com.kdn.domain.usecase.auth.GAuthLoginUseCase
 import com.kdn.domain.usecase.auth.GetRoleInfoUseCase
+import com.kdn.domain.usecase.auth.LogoutUseCase
 import com.kdn.domain.usecase.auth.SaveTheLoginDataUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -27,7 +29,12 @@ class AuthViewModel @Inject constructor(
     private val saveTheLoginDataUseCase: SaveTheLoginDataUseCase,
     private val getRoleInfoUseCase: GetRoleInfoUseCase,
     private val authLoginUseCase: AutoLoginUseCase,
+    private val logoutUseCase: LogoutUseCase,
+    private val deleteTokenUseCase: DeleteTokenUseCase,
 ) : ViewModel() {
+
+    private val _logoutResponse = MutableStateFlow<Event<Unit>>(Event.Loading)
+    val logoutResponse = _logoutResponse.asStateFlow()
 
     private val _gAuthLoginRequest = MutableLiveData<Event<GAuthLoginResponseModel>>()
     val gAuthLoginRequest: LiveData<Event<GAuthLoginResponseModel>> get() = _gAuthLoginRequest
@@ -42,7 +49,7 @@ class AuthViewModel @Inject constructor(
     val saveRoleResponse = _saveRoleResponse.asStateFlow()
 
     private val _autoLoginStatus = MutableLiveData<String?>(null)
-    val autoLoginStatus: LiveData<String?> get() =_autoLoginStatus
+    val autoLoginStatus: LiveData<String?> get() = _autoLoginStatus
 
     fun gAuthLogin(code: String) = viewModelScope.launch {
         gAuthLoginUseCase(
@@ -77,6 +84,16 @@ class AuthViewModel @Inject constructor(
                 _autoLoginStatus.value = it
             }.onFailure {
                 Log.e("자동 로그인 실패", "$it")
+            }
+    }
+
+    fun logout() = viewModelScope.launch {
+        logoutUseCase()
+            .onSuccess {
+                _logoutResponse.value = Event.Success(data = it)
+                deleteTokenUseCase()
+            }.onFailure {
+                _logoutResponse.value = it.errorHandling(unknownAction = {})
             }
     }
 }
